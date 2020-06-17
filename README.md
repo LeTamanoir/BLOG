@@ -3,7 +3,6 @@
 [logoCSS]: https://github.com/darkshark400/BLOG/blob/master/icons/css.png
 [logoJS]: https://github.com/darkshark400/BLOG/blob/master/icons/js.png
 [logoSUPPORT]: https://github.com/darkshark400/BLOG/blob/master/icons/support.png
-[logoSUPPORT2]: https://github.com/darkshark400/BLOG/blob/master/icons/support2.png
 
 ![logoHTML] ![logoCSS] ![logoJS]
 
@@ -17,7 +16,6 @@
 #### - rainbow lol
 #### - noir et blanc
 
-![logoSUPPORT] ![logoSUPPORT2]
-
+![logoSUPPORT]
 
 ### Compatible Android, Iphone, PC et MAC
