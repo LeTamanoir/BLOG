@@ -8,10 +8,8 @@
 
 ### ![logoJS] JavaScript : Implémentation de JavaScript pour plus de réactivité
 
-### ![logoCSS] CSS : Plusieurs thèmes
-
-#####..............- sombre
-##### ..............- rainbow lol
-##### ..............- noir et blanc
+### ![logoCSS] CSS : Plusieurs thèmes : ##### - sombre
+##### - rainbow lol
+##### - noir et blanc
 
 ### Compatible Android, Iphone, PC et MAC
