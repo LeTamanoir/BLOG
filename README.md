@@ -1,9 +1,12 @@
-# Un Blog Nouveau !
-# Une Refonte Design
+# Un Blog Revisité !
+
+## Refonte Design
+
 [logoHTML]: https://github.com/darkshark400/BLOG/blob/master/icons/html.png
 [logoCSS]: https://github.com/darkshark400/BLOG/blob/master/icons/css.png
 [logoJS]: https://github.com/darkshark400/BLOG/blob/master/icons/js.png
 [logoSUPPORT]: https://github.com/darkshark400/BLOG/blob/master/icons/support.png
+[logoHTTPS]: https://github.com/darkshark400/BLOG/blob/master/icons/https.png
 
 ![logoHTML] ![logoCSS] ![logoJS]
 
@@ -24,4 +27,6 @@
 
 # Sécurité
 
-###
+### Certifié HTTPSecure
+
+![logoHTML]
