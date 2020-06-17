@@ -29,4 +29,4 @@
 
 ### Certifié HTTPSecure
 
-![logoHTML]
+![logoHTTPS]
