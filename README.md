@@ -1,6 +1,11 @@
 # BLOG
-nouveau blog de français
+## Refonte design
 
-# H1 Nouvelles idées :
+### **HTML :** Une base HTML commune à toutes les pages
 
-totot
+### **CSS :** Plusieurs thèmes dont un mode sombre
+
+### **Implémentation :** Compatible Android, Iphone, PC et MAC
+
+
+New De
