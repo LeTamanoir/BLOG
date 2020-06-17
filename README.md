@@ -16,6 +16,6 @@
 #### - rainbow lol
 #### - noir et blanc
 
-![logoSUPPORT]
+## Compatible Android, Iphone, PC et MAC
 
-### Compatible Android, Iphone, PC et MAC
+![logoSUPPORT]
