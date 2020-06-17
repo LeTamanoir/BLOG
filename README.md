@@ -6,16 +6,16 @@
 
 ![logoHTML] ![logoCSS] ![logoJS]
 
-## HTML : Une base HTML commune à toutes les pages
+### HTML : Une base HTML commune à toutes les pages
 
-## JavaScript : Implémentation de JavaScript pour plus de réactivité
+### JavaScript : Implémentation de JavaScript pour plus de réactivité
 
-## CSS : Plusieurs thèmes :
+### CSS : Plusieurs thèmes :
 
 #### - sombre
 #### - rainbow lol
 #### - noir et blanc
 
-## Compatible Android, Iphone, PC et MAC
+### Compatible Android, Iphone, PC et MAC
 
 ![logoSUPPORT]
