@@ -7,6 +7,10 @@
 [logoJS]: https://github.com/darkshark400/BLOG/blob/master/icons/js.png
 [logoSUPPORT]: https://github.com/darkshark400/BLOG/blob/master/icons/support.png
 [logoHTTPS]: https://github.com/darkshark400/BLOG/blob/master/icons/https.png
+[logoSQL]: https://github.com/darkshark400/BLOG/blob/master/icons/sql.png
+[logoPHPMYADMIN]: https://github.com/darkshark400/BLOG/blob/master/icons/phpMyAdmin.png
+[logoPHP]: https://github.com/darkshark400/BLOG/blob/master/icons/php.png
+[logoMD5]: https://github.com/darkshark400/BLOG/blob/master/icons/md5.png
 
 ![logoHTML] ![logoCSS] ![logoJS]
 
@@ -27,6 +31,20 @@
 
 # Sécurité
 
-### Certifié HTTPSecure
-
 ![logoHTTPS]
+
+### Utilisation du protocole HTTPS grace au certificat SSL de IONOS
+
+### Aucunes informations / données sauvgardées !
+
+### Les mots de passes ne sont hashés en md5
+
+![logoMD5]
+
+### Base de données SQL sécurisées par IONOS
+
+![logoSQL]
+
+### Base de données geree par phpMyAdmin
+
+![logoPHPMYADMIN]
