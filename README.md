@@ -4,9 +4,9 @@
 
 ### CSS : Plusieurs thèmes
 
-###### - Un mode sombre
-###### - Un mode "rainbow"
-###### - Un mode "noir et blanc"
+##### - sombre
+##### - rainbow
+##### - noir et blanc
 
 ### Compatible Android, Iphone, PC et MAC
 
