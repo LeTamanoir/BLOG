@@ -10,8 +10,8 @@
 
 ### ![logoCSS] CSS : Plusieurs thèmes
 
-#####         - sombre
-#####         - rainbow
+##### \t - sombre
+##### \t - rainbow lol
 #####         - noir et blanc
 
 ### Compatible Android, Iphone, PC et MAC
