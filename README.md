@@ -37,4 +37,4 @@
 
 ### ![logoSQL] - Base de données SQL sécurisées par IONOS
 
-### ![logoPHPMYADMIN] - Base de données gérée par phpMyAdmin
+### ![logoPHPMYADMIN]   - Base de données gérée par phpMyAdmin
