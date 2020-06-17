@@ -33,7 +33,7 @@
 
 ![logoHTTPS]
 
-### Utilisation du protocole HTTPS grace au certificat SSL de IONOS
+### + Utilisation du protocole HTTPS grace au certificat SSL de IONOS
 
 ### Aucunes informations / données sauvgardées !
 
