@@ -1,3 +1,30 @@
-#test {
-  color : blue
+#body {
+  display: block;
+  margin: 0;
+}
+#navbar {
+
+}
+
+.test {
+  background-color: #2d3436;
+  color: #dfe6e9;
+}
+.test:hover {
+  position: relative;
+  animation-name: texte_navbar;
+  animation-duration: 0.75s;
+  animation-fill-mode: forwards;
+}
+
+
+@keyframes texte_navbar {
+ from {
+   color: #dfe6e9;
+   background-color: #636e72;
+ }
+ to {
+   color: #2d3436;
+   background-color: #b2bec3;
+ }
 }
