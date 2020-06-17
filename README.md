@@ -15,6 +15,7 @@
 ##### - sombre
 ##### - rainbow
 ##### - noir et blanc
+##### - et bien d'autres
 
 ### Compatible Android, Iphone, PC et MAC
 
