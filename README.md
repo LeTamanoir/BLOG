@@ -12,9 +12,9 @@
 
 ### CSS : Plusieurs thèmes :
 
-#### - sombre
-#### - rainbow lol
-#### - noir et blanc
+##### - sombre
+##### - rainbow
+##### - noir et blanc
 
 ### Compatible Android, Iphone, PC et MAC
 
