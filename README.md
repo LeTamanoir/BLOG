@@ -1,4 +1,5 @@
-# Refonte design
+# Un Blog Nouveau !
+# Une Refonte Design
 [logoHTML]: https://github.com/darkshark400/BLOG/blob/master/icons/html.png
 [logoCSS]: https://github.com/darkshark400/BLOG/blob/master/icons/css.png
 [logoJS]: https://github.com/darkshark400/BLOG/blob/master/icons/js.png
@@ -20,3 +21,7 @@
 ### Compatible Android, Iphone, PC et MAC
 
 ![logoSUPPORT]
+
+# Sécurité
+
+###
