@@ -31,10 +31,10 @@
 
 # Sécurité
 
-### ![logoHTTPS] - Utilisation du protocole HTTPS grace au certificat SSL de IONOS
+### ![logoHTTPS]  Utilisation du protocole HTTPS grace au certificat SSL de IONOS
 
-### ![logoMD5] - Les mots de passes ne sont hashés en md5
+### ![logoMD5]  Les mots de passes ne sont hashés en md5
 
-### ![logoSQL] - Base de données SQL sécurisées par IONOS
+### ![logoSQL]  Base de données SQL sécurisées par IONOS
 
-### ![logoPHPMYADMIN]   - Base de données gérée par phpMyAdmin
+### ![logoPHPMYADMIN]  Base de données gérée par phpMyAdmin
