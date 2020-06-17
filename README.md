@@ -3,7 +3,7 @@
 [logoCSS]: https://github.com/darkshark400/BLOG/blob/master/icons/css.png
 [logoJS]: https://github.com/darkshark400/BLOG/blob/master/icons/js.png
 
-![logoHMTL]
+![logoHTML]
 ### HTML : Une base HTML commune à toutes les pages
 
 ![logoJS]
