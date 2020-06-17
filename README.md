@@ -6,19 +6,12 @@
 
 ### ![logoHTML] HTML : Une base HTML commune à toutes les pages
 
-![logoJS]
-### JavaScript : Implémentation de JavaScript pour plus de réactivité
+### ![logoJS] JavaScript : Implémentation de JavaScript pour plus de réactivité
 
-![alt text](https://github.com/darkshark400/BLOG/blob/master/icons/html.png "HTML : Une base HTML commune à toutes les pages")
-
-![logoCSS]
-### CSS : Plusieurs thèmes
+### ![logoCSS] CSS : Plusieurs thèmes
 
 ##### - sombre
 ##### - rainbow
 ##### - noir et blanc
 
 ### Compatible Android, Iphone, PC et MAC
-
-
-New De
