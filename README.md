@@ -1,8 +1,12 @@
-## Refonte design
+# Refonte design
 
-### __HTML :__ Une base HTML commune à toutes les pages
+### HTML : Une base HTML commune à toutes les pages
 
-### __CSS :__ Plusieurs thèmes dont un mode sombre
+### CSS : Plusieurs thèmes
+
+###### - Un mode sombre
+###### - Un mode "rainbow"
+###### - Un mode "noir et blanc"
 
 ### Compatible Android, Iphone, PC et MAC
 
