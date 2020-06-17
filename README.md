@@ -10,7 +10,7 @@
 
 ### JavaScript : Implémentation de JavaScript pour plus de réactivité
 
-### CSS : Plusieurs thèmes :
+### CSS : Plusieurs nouveaux thèmes :
 
 ##### - sombre
 ##### - rainbow
