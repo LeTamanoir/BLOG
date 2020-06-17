@@ -12,9 +12,11 @@
 [logoPHP]: https://github.com/darkshark400/BLOG/blob/master/icons/php.png
 [logoMD5]: https://github.com/darkshark400/BLOG/blob/master/icons/md5.png
 
-![logoHTML] ![logoCSS] ![logoJS]
+![logoHTML] ![logoCSS] ![logoJS] ![logoPHP]
 
 ### HTML : Une base HTML commune à toutes les pages
+
+### PHP : Implémentation de PHP pour un site plus fluide
 
 ### JavaScript : Implémentation de JavaScript pour plus de réactivité
 
@@ -35,7 +37,7 @@
 
 ### ![logoHTTPS]  Utilisation du protocole HTTPS grace au certificat SSL de IONOS
 
-### ![logoMD5]  Les mots de passes ne sont hashés en md5
+### ![logoMD5]  Les mots de passes sont hashés en md5
 
 ### ![logoSQL]  Base de données SQL sécurisées par IONOS
 
