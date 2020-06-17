@@ -5,7 +5,9 @@
 [logoHTML]: https://github.com/darkshark400/BLOG/blob/master/icons/html.png
 [logoCSS]: https://github.com/darkshark400/BLOG/blob/master/icons/css.png
 [logoJS]: https://github.com/darkshark400/BLOG/blob/master/icons/js.png
-[logoSUPPORT]: https://github.com/darkshark400/BLOG/blob/master/icons/support.png
+[logoANDROID]: https://github.com/darkshark400/BLOG/blob/master/icons/android.png
+[logoIOS]: https://github.com/darkshark400/BLOG/blob/master/icons/ios.png
+[logoDESKTOP]: https://github.com/darkshark400/BLOG/blob/master/icons/desktop.png
 [logoHTTPS]: https://github.com/darkshark400/BLOG/blob/master/icons/https.png
 [logoSQL]: https://github.com/darkshark400/BLOG/blob/master/icons/sql.png
 [logoPHPMYADMIN]: https://github.com/darkshark400/BLOG/blob/master/icons/phpMyAdmin.png
@@ -29,7 +31,7 @@
 
 ### Compatible Android, Iphone, PC et MAC
 
-![logoSUPPORT]
+![logoANDROID] ![logoIOS] ![logoDESKTOP]
 
 #
 
