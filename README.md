@@ -9,7 +9,7 @@
 ![logoJS]
 ### JavaScript : Implémentation de JavaScript pour plus de réactivité
 
-![alt text](https://github.com/darkshark400/BLOG/blob/master/icons/html.png "### HTML : Une base HTML commune à toutes les pages")
+![alt text](https://github.com/darkshark400/BLOG/blob/master/icons/html.png "HTML : Une base HTML commune à toutes les pages")
 
 ![logoCSS]
 ### CSS : Plusieurs thèmes
