@@ -43,7 +43,7 @@
 .theme_rainbow{
   padding-top: 0.75vw;
   padding-bottom: 0.75vw;
-  color: #673AB7;
+  color: black;
   background-color: #673AB7;
 }
 .theme_rainbow:hover {
