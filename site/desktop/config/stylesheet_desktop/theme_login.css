@@ -47,7 +47,7 @@ footer {
   flex-direction: column;
   margin: auto;
   width: 26vw;
-  height: 64vh;
+  height: 70vh;
   background-color: rgb(255, 255, 255);
   border-radius: 1vw;
   border-color: #57606f;
@@ -131,4 +131,8 @@ footer {
 }
 .login_info {
   font-size: 0.75vw;
+}
+.login_google {
+  margin-bottom: 1.5vw;
+  align-self: center;
 }
