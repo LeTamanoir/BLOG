@@ -1,0 +1,129 @@
+/* correctif style sheet google */
+input:focus {
+    outline-offset: 0px;
+}
+:focus {
+    outline: -webkit-focus-ring-color auto 0px;
+}
+/* correctif style sheet google */
+
+
+@font-face {
+  font-family: Ubuntu-Regular;
+  src: url('../../../../fonts/Ubuntu-Regular.ttf');
+}
+@font-face {
+  font-family: Ubuntu-Bold;
+  src: url('../../../../fonts/Ubuntu-Bold.ttf');
+}
+@font-face {
+  font-family: JosefinSans-Bold;
+  src: url('../../../../fonts/JosefinSans-Bold.ttf');
+}
+html {
+  background: linear-gradient(#dfe6e9, white);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body {
+  margin: 0;
+}
+input {
+  animation:
+}
+#container_body {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+#connexion_box {
+  display: block;
+  flex-direction: column;
+  margin: auto;
+  width: 26vw;
+  height: 64vh;
+  background-color: rgb(255, 255, 255);
+  border-radius: 1vw;
+  border-color: #57606f;
+  border-style: solid;
+  background-color: #acdcfa;
+}
+#login_info_container {
+  height: 46vh;
+  display: flex;
+  flex-direction: column;
+}
+#logo {
+  height: 18vh;
+  text-align: center;
+}
+.image_logo {
+  height: 18vh;
+  width: 18vh;
+}
+.login_info {
+  font-family: Ubuntu-Bold;
+  width: 12vw;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  border-style: solid;
+  border-radius: 1.5vw;
+  padding: 1vw;
+  border-color: #70a1ff;
+
+}
+.texte_login {
+  font-family: Ubuntu-Regular;
+  text-align: center;
+  font-size:1.5vw;
+  font-weight: bold;
+  margin: 0;
+  color: black;
+  margin-bottom: 1vh;
+}
+.texte_login_2 {
+  font-family: Ubuntu-Regular;
+  text-align: center;
+  font-size:1vw;
+  font-weight: bold;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  color: black;
+}
+.login_button {
+  font-family: Ubuntu-Bold;
+  font-size: 1vw;
+  width: 8vw;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  border-style: solid;
+  border-radius: 1.5vw;
+  padding: 0.75vw;
+  border-color: #70a1ff;
+  background-color: #f1f2f6;
+}
+.login_button:hover {
+  animation: login 0.5s forwards;
+}
+.login_info:hover {
+  animation: login 0.5s forwards;
+}
+@keyframes login {
+  from {border-color: #70a1ff}
+  to {border-color: #3742fa;}
+}
+@keyframes login_info {
+  from {background-color: white;}
+  to {background-color: #70a1ff;}
+}
+.login_info:focus {
+  animation: login_info 0.5s forwards;
+}
+.login_info {
+  font-size: 0.75vw;
+}
