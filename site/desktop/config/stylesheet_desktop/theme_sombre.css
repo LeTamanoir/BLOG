@@ -3,15 +3,16 @@
   margin: 0;
 }
 #navbar {
-
+  margin: 0;
 }
+
+
 
 .test {
   background-color: #2d3436;
   color: #dfe6e9;
 }
 .test:hover {
-  position: relative;
   animation-name: texte_navbar;
   animation-duration: 0.75s;
   animation-fill-mode: forwards;
@@ -27,4 +28,57 @@
    color: #2d3436;
    background-color: #b2bec3;
  }
+}
+
+.theme_sombre {
+  padding-top: 0.75vw;
+  padding-bottom: 0.75vw;
+  color: black;
+  background-color: #757575;
+}
+.theme_sombre:hover {
+  color: white;
+  background-color: #212121;
+}
+.theme_rainbow{
+  padding-top: 0.75vw;
+  padding-bottom: 0.75vw;
+  color: #673AB7;
+  background-color: #673AB7;
+}
+.theme_rainbow:hover {
+  color: white;
+  animation-name: rainbow;
+  animation-duration: 5s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+}
+@keyframes rainbow {
+  0% {background-color: #F44336;}
+  6% {background-color: #E91E63;}
+  12% {background-color: #9C27B0;}
+  18% {background-color: #673AB7;}
+  24% {background-color: #3F51B5;}
+  30% {background-color: #2196F3;}
+  36% {background-color: #03A9F4;}
+  42% {background-color: #00BCD4;}
+  48% {background-color: #009688;}
+  54% {background-color: #4CAF50;}
+  60% {background-color: #8BC34A;}
+  66% {background-color: #CDDC39;}
+  72% {background-color: #FFEB3B;}
+  78% {background-color: #FFC107;}
+  84% {background-color: #FF9800;}
+  92% {background-color: #FF5722;}
+  100% {background-color: #e17055;}
+}
+.theme_wood {
+  padding-top: 0.75vw;
+  padding-bottom: 0.75vw;
+  color: black;
+  background-color: #8D6E63;
+}
+.theme_wood:hover {
+  color: white;
+  background-color: #4E342E;
 }
