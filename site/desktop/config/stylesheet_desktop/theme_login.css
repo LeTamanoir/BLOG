@@ -46,8 +46,8 @@ footer {
   display: block;
   flex-direction: column;
   margin: auto;
-  width: 26vw;
-  height: 70vh;
+  width: 505px;
+  height: 660px;
   background-color: rgb(255, 255, 255);
   border-radius: 1vw;
   border-color: #57606f;
@@ -64,18 +64,19 @@ footer {
   text-align: center;
 }
 .image_logo {
-  height: 18vh;
-  width: 18vh;
+  height: 180px;
+  width: 180px;
 }
 .login_info {
   font-family: Ubuntu-Bold;
-  width: 12vw;
+  width: 260px;
+  height: 50px;
   margin-right: auto;
   margin-left: auto;
   margin-top: 1vh;
   margin-bottom: 1vh;
   border-style: solid;
-  border-radius: 1.5vw;
+  border-radius: 35px;
   padding: 1vw;
   border-color: #70a1ff;
 
@@ -83,7 +84,7 @@ footer {
 .texte_login {
   font-family: Ubuntu-Regular;
   text-align: center;
-  font-size:1.5vw;
+  font-size: 30px;
   font-weight: bold;
   margin: 0;
   color: black;
@@ -92,7 +93,7 @@ footer {
 .texte_login_2 {
   font-family: Ubuntu-Regular;
   text-align: center;
-  font-size:1vw;
+  font-size: 15px;
   font-weight: bold;
   margin-top: 1vh;
   margin-bottom: 1vh;
@@ -100,14 +101,15 @@ footer {
 }
 .login_button {
   font-family: Ubuntu-Bold;
-  font-size: 1vw;
-  width: 8vw;
+  font-size: 20px;
+  width: 160px;
+  height: 50px;
   margin-right: auto;
   margin-left: auto;
   margin-top: 1vh;
   margin-bottom: 1vh;
   border-style: solid;
-  border-radius: 1.5vw;
+  border-radius: 30px;
   padding: 0.75vw;
   border-color: #70a1ff;
   background-color: #f1f2f6;
@@ -130,7 +132,7 @@ footer {
   animation: login_info 0.5s forwards;
 }
 .login_info {
-  font-size: 0.75vw;
+  font-size: 15px;
 }
 .login_google {
   margin-bottom: 1.5vw;
