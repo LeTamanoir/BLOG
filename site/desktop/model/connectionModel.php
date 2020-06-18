@@ -3,7 +3,7 @@ if(isset($_POST['submit']))
 {
   $username = htmlspecialchars($_POST['username']);
   $password = md5($_POST['password']);
-  if(!empty($_POST['username']),$_POST['password'])
+  if(!empty($_POST['username']) AND !empty($_POST['password']))
   {
     $requser = $bdd->prepare("SELECT * from clients WHERE name = ? AND password = ?");
     $requser->execute(array($username, $password));
@@ -18,6 +18,7 @@ if(isset($_POST['submit']))
       $_SESSION['name'] = $userinfo['name'];
       $_SESSION['photo'] = $userinfo['photo'];
       $_SESSION['password'] = $userinfo['password'];
+
       if($_SESSION['username'] == 'admin')
       {
           header('Location : ../controller/controllerAdministration.php');
@@ -37,5 +38,9 @@ if(isset($_POST['submit']))
 	{
 		$error = "Veuillez renseigner tous les champs ! ";
 	}
+}
+if(isset($error))
+{
+  echo $error;
 }
 ?>
