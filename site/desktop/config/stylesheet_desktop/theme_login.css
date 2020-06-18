@@ -124,7 +124,7 @@ footer {
 }
 @keyframes login_info {
   from {background-color: white;}
-  to {background-color: #70a1ff;}
+  to {background-color: #70a1ff;color: white}
 }
 .login_info:focus {
   animation: login_info 0.5s forwards;
