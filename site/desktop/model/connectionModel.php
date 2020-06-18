@@ -1,16 +1,17 @@
 <?php
+require_once('../config/dbConnect.php');
+session_start();
 if(isset($_POST['submit']))
 {
   $username = htmlspecialchars($_POST['username']);
   $password = md5($_POST['password']);
   if(!empty($_POST['username']) AND !empty($_POST['password']))
   {
-    $requser = $bdd->prepare("SELECT * from clients WHERE name = ? AND password = ?");
+    $requser = $bdd->prepare("SELECT * from clients WHERE username = ? AND password = ?");
     $requser->execute(array($username, $password));
     $userexist = $requser->rowCount();
     if($userexist == 1)
     {
-      session_start();
       $userinfo = $requser->fetch();
       $_SESSION['id'] = $userinfo['id'];
       $_SESSION['username'] = $userinfo['username'];
@@ -30,17 +31,17 @@ if(isset($_POST['submit']))
     }
     else
     {
-      $error = "Le nom d'utilisateur / adresse mail ou le mot de passe ne sont pas valides ! ";
+      $_SESSION['error'] = "Le nom d'utilisateur / adresse mail ou le mot de passe ne sont pas valides ! ";
+      header('Location : ../controller/controllerConnection.php');
     }
 
   }
   else
 	{
-		$error = "Veuillez renseigner tous les champs ! ";
+  	$_SESSION['error'] = "Veuillez renseigner tous les champs ! ";
+    header('Location : ../controller/controllerConnection.php');
+
 	}
 }
-if(isset($error))
-{
-  echo $error;
-}
+
 ?>

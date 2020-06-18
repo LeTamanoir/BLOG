@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Connexion</title>
+    <script src="../functions/unmask.js" type="text/javascript"></script>
     <link rel="stylesheet" href="../config/stylesheet_desktop/theme_login.css">
   </head>
 
@@ -22,10 +23,26 @@
         <button class="unmask" type="button" title="Mask/Unmask password to check content">Unmask</button>
         <a class=texte_login_2 href="#">Mot de passe oublié ?</a>
         <input class=login_button type="submit" name="submit" value="Se connecter">
+
+        <div style="color:red;text-align:center;"><?php echo $_SESSION['error']; $SESSION['error'] = "";?></div>
       </div>
     </form>
 
+
   </body>
+  <script>
+  $('.unmask').on('click', function(){
+
+  if($(this).prev('input').attr('type') == 'password')
+    changeType($(this).prev('input'), 'text');
+
+  else
+    changeType($(this).prev('input'), 'password');
+
+  return false;
+  });
+
+  </script>
   <footer>
     <?php   require_once('footer.html'); ?>
   </footer>
