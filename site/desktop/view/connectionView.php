@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Connexion</title>
-    <link rel="stylesheet" href="../stylesheet_desktop/theme_position.css">
+    <link rel="stylesheet" href="../config/stylesheet_desktop/theme_position.css">
   </head>
 
 
