@@ -19,6 +19,7 @@
         <p class=texte_login> Ou : </p>
         <input class=login_info type="text" name="username" placeholder="Nom d'utilisateur / Email">
         <input class=login_info type="password" name="password" placeholder="Mot de passe">
+        <button class="unmask" type="button" title="Mask/Unmask password to check content">Unmask</button>
         <a class=texte_login_2 href="#">Mot de passe oublié ?</a>
         <input class=login_button type="submit" name="submit" value="Se connecter">
       </div>

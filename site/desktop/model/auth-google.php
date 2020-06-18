@@ -10,6 +10,7 @@
 		<style>
 			.profile{
 				border: 3px solid #B7B7B7;
+				border-radius: 15px;
 				padding: 10px;
 				margin-top: 10px;
 				width: 350px;

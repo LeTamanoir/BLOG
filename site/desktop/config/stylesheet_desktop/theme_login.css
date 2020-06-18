@@ -16,10 +16,6 @@ input:focus {
   font-family: Ubuntu-Bold;
   src: url('../../../../fonts/Ubuntu-Bold.ttf');
 }
-@font-face {
-  font-family: JosefinSans-Bold;
-  src: url('../../../../fonts/JosefinSans-Bold.ttf');
-}
 html {
   background: linear-gradient(#dfe6e9, white);
   background-repeat: no-repeat;
@@ -32,6 +28,8 @@ input {
   animation:
 }
 footer {
+  font-family: Ubuntu-Regular;
+  font-size: 10px;
   position: absolute;
   align-self: flex-end;
   height: 2vh;
