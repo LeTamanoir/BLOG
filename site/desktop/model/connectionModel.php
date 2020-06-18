@@ -1,5 +1,4 @@
 <?php
-require_once('../config/dbConnect.php');
 session_start();
 if(isset($_POST['submit']))
 {

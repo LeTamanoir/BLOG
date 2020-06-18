@@ -9,7 +9,7 @@
 
 
   <body id="container_body">
-    <form id=connexion_box action="../model/connectionModel.php" method="post">
+    <form id=connexion_box action="" method="post">
       <div id=logo>
         <img class=image_logo src="../../../icons/blog.png" alt="logo blog">
       </div>
