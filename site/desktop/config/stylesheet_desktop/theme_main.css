@@ -1,0 +1,128 @@
+/* correctif style sheet google */
+input:focus {
+    outline-offset: 0px;
+}
+:focus {
+    outline: -webkit-focus-ring-color auto 0px;
+}
+/* correctif style sheet google */
+@font-face {
+  font-family: Ubuntu-Regular;
+  src: url('../../../../fonts/Ubuntu-Regular.ttf');
+}
+@font-face {
+  font-family: Ubuntu-Bold;
+  src: url('../../../../fonts/Ubuntu-Bold.ttf');
+}
+html {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body {
+  margin: 0;
+}
+footer {
+  font-family: Ubuntu-Regular;
+  font-size: 10px;
+  position: absolute;
+  align-self: flex-end;
+  height: 2vh;
+}
+#container_body {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 98vh;
+}
+#container_connexion {
+  display: block;
+  flex-direction: column;
+  margin: auto;
+  width: 505px;
+  height: 700px;
+  border-radius: 1vw;
+  border-style: solid;
+}
+#login_info_container {
+  height: 520px;
+  display: flex;
+  flex-direction: column;
+}
+#logo {
+  height: 180px;
+  text-align: center;
+}
+.center {
+  display: inline-flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+.login_info {
+  font-family: Ubuntu-Bold;
+  width: 260px;
+  height: 25px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-style: solid;
+  border-radius: 35px;
+  padding: 15px;
+}
+.unmask {
+  font-size: 20px;
+  background: none;
+  border: none;
+  margin-left: -42px;
+}
+.image_eye:hover {
+  background-image: url("../../../../icons/eye2.png");
+  background-position: center;
+  background-size: contain;
+}
+.image_eye {
+  height: 30px;
+  width: 30px;
+}
+.image_logo {
+  height: 180px;
+  width: 180px;
+}
+.texte_login {
+  font-family: Ubuntu-Regular;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 10px;
+}
+.texte_login_2 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: Ubuntu-Regular;
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.login_button {
+  font-family: Ubuntu-Bold;
+  font-size: 20px;
+  width: 160px;
+  height: 50px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-style: solid;
+  border-radius: 30px;
+  padding: 10px;
+}
+.login_info {
+  font-size: 15px;
+}
+.login_google {
+  margin-bottom: 20px;
+  align-self: center;
+}
