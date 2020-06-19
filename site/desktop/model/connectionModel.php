@@ -1,4 +1,6 @@
 <?php
+require_once('../functions/accountKey.php');
+
 session_start();
 if(isset($_POST['submit']))
 {
@@ -21,7 +23,10 @@ if(isset($_POST['submit']))
 
       if($_SESSION['username'] == 'admin')
       {
-          header('Location : ../controller/controllerAdministration.php');
+        $accountKey = random_acc(60);
+        $insert = $bdd->prepare('UPDATE clients SET accountKey = ? WHERE id = ?');
+        $insert->execute(array($accountKey,$_SESSION['id']));
+        header('Location : ../controller/controllerAdministration.php');
       }
       else
       {
