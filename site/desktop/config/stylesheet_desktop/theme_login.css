@@ -84,7 +84,7 @@ footer {
   font-size: 20px;
   background: none;
   border: none;
-  margin-left: -52px;
+  margin-left: -42px;
 }
 .image_eye:hover {
   background-image: url("../../../../icons/eye2.png");
@@ -92,8 +92,8 @@ footer {
   background-size: contain;
 }
 .image_eye {
-  height: 25px;
-  width: 25px;
+  height: 30px;
+  width: 30px;
 }
 
 .image_logo {
