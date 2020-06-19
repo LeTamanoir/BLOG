@@ -21,18 +21,28 @@ html {
 body {
   margin: 0;
 }
-footer {
+.footer{
   font-family: Ubuntu-Regular;
-  font-size: 10px;
-  position: absolute;
-  align-self: flex-end;
-  height: 2vh;
+  font-size: 15px;
+  margin: auto;
+  color: grey;
+  border-top-style: solid;
+  border-top-color: grey;
+  border-top-width: thin;
 }
 #container_body {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   width: 100vw;
-  height: 98vh;
+  height: 100vh;
+}
+#container_footer {
+  display: flex;
+  padding-top: 1vh;
+  margin: 0;
+  height: 3vh;
+  width: 100vw;
 }
 #container_connexion {
   display: block;
