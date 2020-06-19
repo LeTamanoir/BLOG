@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <title>Connexion</title>
     <script src="../functions/unmask.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="../config/stylesheet_desktop/theme_main.css">
     <link rel="stylesheet" href="../config/stylesheet_desktop/theme_login.css">
   </head>
 
 
   <body id="container_body">
-    <form id=connexion_box action="" method="post">
+    <form id=container_connexion action="" method="post">
       <div id=logo>
         <img class=image_logo src="../../../icons/blog.png" alt="logo blog">
       </div>
