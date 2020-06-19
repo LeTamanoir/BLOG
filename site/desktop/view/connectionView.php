@@ -25,7 +25,7 @@
         </div>
         <a class=texte_login_2 href="#">Mot de passe oublié ?</a>
         <input class=login_button type="submit" name="submit" value="Se connecter">
-        <div style="color:red;text-align:center;"><?php echo $_SESSION['error']; $SESSION['error'] = "";?></div>
+        <div style="color:red;text-align:center;"><?php echo $_SESSION['error'];?></div>
       </div>
     </form>
     <div id=container_footer><?php   require_once('footer.html'); ?></div>

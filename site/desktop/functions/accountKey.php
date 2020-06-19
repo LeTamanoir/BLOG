@@ -11,8 +11,4 @@ function random_acc($car)
   return $string;
 }
 
-
-
-
-
 ?>
