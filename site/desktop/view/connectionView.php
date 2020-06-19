@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="../config/stylesheet_desktop/theme_login.css">
   </head>
 
-
   <body id="container_body">
     <form id=container_connexion action="" method="post">
       <div id=logo>
@@ -29,6 +28,7 @@
         <div style="color:red;text-align:center;"><?php echo $_SESSION['error']; $SESSION['error'] = "";?></div>
       </div>
     </form>
+    <div id=container_footer><?php   require_once('footer.html'); ?></div>
   </body>
   <script>
   $('.unmask').on('click', function(){
@@ -43,7 +43,4 @@
   });
 
   </script>
-  <footer>
-    <?php   require_once('footer.html'); ?>
-  </footer>
 </html>
