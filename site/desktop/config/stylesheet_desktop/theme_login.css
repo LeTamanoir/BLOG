@@ -45,7 +45,7 @@ footer {
   flex-direction: column;
   margin: auto;
   width: 505px;
-  height: 660px;
+  height: 700px;
   background-color: rgb(255, 255, 255);
   border-radius: 1vw;
   border-color: #57606f;
@@ -53,32 +53,54 @@ footer {
   background-color: #acdcfa;
 }
 #login_info_container {
-  height: 46vh;
+  height: 520px;
   display: flex;
   flex-direction: column;
 }
 #logo {
-  height: 18vh;
+  height: 180px;
   text-align: center;
 }
-.image_logo {
-  height: 180px;
-  width: 180px;
+.center {
+  display: inline-flex;
+  margin-left: auto;
+  margin-right: auto;
 }
 .login_info {
   font-family: Ubuntu-Bold;
   width: 260px;
-  height: 50px;
+  height: 25px;
   margin-right: auto;
   margin-left: auto;
-  margin-top: 1vh;
-  margin-bottom: 1vh;
+  margin-top: 10px;
+  margin-bottom: 10px;
   border-style: solid;
   border-radius: 35px;
-  padding: 1vw;
+  padding: 15px;
   border-color: #70a1ff;
-
 }
+
+.unmask {
+  font-size: 20px;
+  background: none;
+  border: none;
+  margin-left: -52px;
+}
+.image_eye:hover {
+  background-image: url("../../../../icons/eye2.png");
+  background-position: center;
+  background-size: contain;
+}
+.image_eye {
+  height: 40px;
+  width: 40px;
+}
+
+.image_logo {
+  height: 180px;
+  width: 180px;
+}
+
 .texte_login {
   font-family: Ubuntu-Regular;
   text-align: center;
@@ -86,15 +108,15 @@ footer {
   font-weight: bold;
   margin: 0;
   color: black;
-  margin-bottom: 1vh;
+  margin-bottom: 10px;
 }
 .texte_login_2 {
   font-family: Ubuntu-Regular;
   text-align: center;
   font-size: 15px;
   font-weight: bold;
-  margin-top: 1vh;
-  margin-bottom: 1vh;
+  margin-top: 10px;
+  margin-bottom: 10px;
   color: black;
 }
 .login_button {
@@ -104,11 +126,11 @@ footer {
   height: 50px;
   margin-right: auto;
   margin-left: auto;
-  margin-top: 1vh;
-  margin-bottom: 1vh;
+  margin-top: 10px;
+  margin-bottom: 10px;
   border-style: solid;
   border-radius: 30px;
-  padding: 0.75vw;
+  padding: 10px;
   border-color: #70a1ff;
   background-color: #f1f2f6;
 }
@@ -133,6 +155,6 @@ footer {
   font-size: 15px;
 }
 .login_google {
-  margin-bottom: 1.5vw;
+  margin-bottom: 20px;
   align-self: center;
 }
