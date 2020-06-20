@@ -28,6 +28,7 @@ ul {
 html {
   background-repeat: no-repeat;
   background-size: cover;
+
 }
 body {
   margin: 0;
@@ -54,9 +55,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 250px;
-  background-color: #acdcfa;
-  border-color: #57606f;
+  width: 300px;
   border-style: solid;
   border-width: medium;
   border-left-width: 0;
@@ -95,6 +94,38 @@ body {
   position: absolute;
   left: 0;
   top: 0;
+}
+#container_middle_navbar {
+  position: absolute;
+  left: 350px;
+  top: 0;
+  border-style: solid;
+  border-top-style: none;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+#middle_navbar {
+  display: flex;
+  flex-direction: row;
+}
+#capteur_navbar {
+  background: none;
+  border: none;
+  padding: 0;
+}
+#container_profil {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 0;
+  right: 0;
+  font-family: Ubuntu-Bold;
+  width: 130px;
+  height: 120px;
+  border-left-style: solid;
+  border-bottom-style: solid;
+  border-bottom-left-radius: 20px;
 }
 .center {
   display: inline-flex;
@@ -171,38 +202,68 @@ body {
   align-self: center;
 }
 .navbar_content {
-  padding-left: 1vw;
-  padding-right: 1vw;
+  display: flex;
+  flex-direction: row;
+  margin-left: 20px;
+  margin-right: 20px;
   text-align: center;
-  padding-top: 5vh;
-  padding-bottom: 5vh;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.middle_navbar_content {
+  display: flex;
+  flex-direction: row;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: center;
+  margin-top: 12.5px;
+  margin-bottom: 12.5px;
+}
+.navbar_content_text {
+  border-style: solid;
+  border-radius: 20px;
+  padding: 10px;
+  width: 160px;
   font-family: Ubuntu-Regular;
   font-size: 20px;
+}
+.container_navbar_content_text {
+  display: flex;
+  align-items: center;
+  margin: auto;
+}
+.middle_navbar_content_text {
+  border-style: solid;
+  border-radius: 20px;
+  padding: 10px;
+  font-family: Ubuntu-Regular;
+  font-size: 17.5px;
 }
 .image_navbar {
   margin: 5px;
   width: 70px;
   height: 70px;
   border-radius: 100%;
-  background-color: white;
-  border-color: white;
   border-style: solid;
-  border-color: #57606f;
+}
+.navbar_content_image {
 
+  left: 0;
+  width: 80px;
+  height: 80px;
 }
-#capteur_navbar {
-  background: none;
-  border: none;
-  padding: 0;
-}
+
 #capteur_navbar:hover .image_navbar {
   animation: capteur_navbar 1s forwards;
 }
 #capteur_navbar:focus #container_navbar {
   display: flex;
-
-
 }
+#capteur_navbar:focus .navbar_content {
+  animation: navbar_content 1s forwards;
+}
+
+
 @keyframes capteur_navbar {
   from {  transform: rotate(0deg);
 }
@@ -210,5 +271,17 @@ body {
     transform: rotate(180deg);
     background-color: #acdcfa;
     background-size: contain;
+  }
+}
+@keyframes navbar_content {
+  from {
+    opacity: 0;
+    position: relative;
+    left: -50px;
+  }
+  to {
+    opacity: 1;
+    position: relative;
+    left: 0px;
   }
 }
