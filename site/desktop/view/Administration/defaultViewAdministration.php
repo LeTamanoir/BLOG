@@ -42,7 +42,7 @@
 
     <div id=container_profil><img class=navbar_content_image src="../../../../icons/profil.png"><a href="#">Mon profil</a></div>
 
-    <div id=container_footer><div class="footer">sdsdsdsd</div><?php require_once('../view/footer.html'); ?></div>
+    <div id=container_footer><?php require_once('../view/footer.html'); ?></div>
 
   </body>
 
