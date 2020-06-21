@@ -28,7 +28,7 @@ ul {
 html {
   background-repeat: no-repeat;
   background-size: cover;
-  background: linear-gradient(#dfe6e9, white);
+  background-color: #ececec;
 
 }
 body {
@@ -274,7 +274,17 @@ body {
   width: 80px;
   height: 80px;
 }
-
+.image_404 {
+  width: auto;
+  height: auto;
+}
+.erreur_404 {
+  display: block;
+  text-align: center;
+  padding: 5vw;
+  font-family: Ubuntu-Bold;
+  font-size: 30px;
+}
 
 
 /* ======================= HOVER ===================== */
@@ -287,9 +297,7 @@ body {
 #capteur_navbar:focus #container_navbar {
   display: flex;
 }
-#capteur_navbar:not(focus) #container_navbar {
-  animation-delay: 2s;
-
+#container_navbar:hover {
   display: flex;
 }
 #capteur_navbar:focus .navbar_content {
@@ -298,9 +306,7 @@ body {
 #container_navbar:focus {
   display: flex;
 }
-.navbar_content_text:focus #container_navbar {
-  display: flex;
-}
+
 .navbar_content:hover .navbar_content_text {
   animation: navbar_text_upscale 0.25s forwards;
 }

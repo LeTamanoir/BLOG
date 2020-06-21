@@ -28,7 +28,7 @@ ul {
 html {
   background-repeat: no-repeat;
   background-size: cover;
-  background: linear-gradient(#dfe6e9, white);
+  background-color: #ececec;
 
 }
 body {
@@ -273,6 +273,17 @@ body {
   left: 0;
   width:55px;
   height:55px;
+}
+.image_404 {
+  width: auto;
+  height: auto;
+}
+.erreur_404 {
+  display: block;
+  text-align: center;
+  padding: 5vw;
+  font-family: Ubuntu-Bold;
+  font-size: 30px;
 }
 
 
