@@ -28,63 +28,67 @@ ul {
 html {
   background-repeat: no-repeat;
   background-size: cover;
+  background: linear-gradient(#dfe6e9, white);
 
 }
 body {
   margin: 0;
 }
-.footer{
-  font-family: Ubuntu-Regular;
-  font-size: 15px;
-  margin: auto;
-  color: grey;
-  border-top-style: solid;
-  border-top-color: grey;
-  border-top-width: thin;
-}
+
+
+/* ======================= ID ===================== */
+
+
+
+
 #container_body {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   width: 100vw;
   height: 100vh;
 }
 #container_navbar {
+  border-color: #57606f;
+  background-color: #acdcfa;
   display: none;
   flex-direction: column;
   position: absolute;
   top: 0;
   left: 0;
-  width: 300px;
+  width: 250px;
   border-style: solid;
   border-width: medium;
   border-left-width: 0;
   border-top-width: 0;
-  border-bottom-right-radius: 20px;
+  border-bottom-right-radius: 16.5px;
 }
 #container_footer {
+  position: absolute;
   display: flex;
+  bottom: 0;
   padding-top: 1vh;
-  margin: 0;
   height: 3vh;
   width: 100vw;
 }
 #container_connexion {
+  border-color: #57606f;
+  background-color: #acdcfa;
   display: block;
   flex-direction: column;
   margin: auto;
-  width: 505px;
-  height: 700px;
+  width: 420px;
+  height: 585px;
   border-radius: 1vw;
   border-style: solid;
 }
 #login_info_container {
-  height: 520px;
+  height: 435px;
   display: flex;
   flex-direction: column;
 }
 #logo {
-  height: 180px;
+  height: 150px;
   text-align: center;
 }
 #profil {
@@ -96,13 +100,8 @@ body {
   top: 0;
 }
 #container_middle_navbar {
-  position: absolute;
-  left: 350px;
-  top: 0;
-  border-style: solid;
-  border-top-style: none;
-  border-bottom-left-radius: 40px;
-  border-bottom-right-radius: 40px;
+  border-bottom-left-radius: 12.5px;
+  border-bottom-right-radius: 12.5px;
 }
 #middle_navbar {
   display: flex;
@@ -114,6 +113,8 @@ body {
   padding: 0;
 }
 #container_profil {
+  border-color: #57606f;
+  background-color: #acdcfa;
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -121,11 +122,26 @@ body {
   top: 0;
   right: 0;
   font-family: Ubuntu-Bold;
-  width: 130px;
-  height: 120px;
+  width: 110px;
+  height: 100px;
   border-left-style: solid;
   border-bottom-style: solid;
-  border-bottom-left-radius: 20px;
+  border-bottom-left-radius: 16.5px;
+}
+
+
+/* ======================= CLASS ===================== */
+
+
+.footer{
+  font-family: Ubuntu-Regular;
+  font-size: 12.5px;
+  display: inline-block;
+  margin: auto;
+  color: grey;
+  border-top-style: solid;
+  border-top-color: grey;
+  border-top-width: thin;
 }
 .center {
   display: inline-flex;
@@ -134,21 +150,21 @@ body {
 }
 .login_info {
   font-family: Ubuntu-Bold;
-  width: 260px;
-  height: 25px;
+  width: 212.5px;
+  height: 16.5px;
   margin-right: auto;
   margin-left: auto;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 8px;
+  margin-bottom: 8px;
   border-style: solid;
   border-radius: 35px;
-  padding: 15px;
+  padding: 12.5px;
 }
 .unmask {
-  font-size: 20px;
+  font-size: 16.5px;
   background: none;
   border: none;
-  margin-left: -42px;
+  margin-left: -35px;
 }
 .image_eye:hover {
   background-image: url("../../../../icons/eye2.png");
@@ -156,102 +172,114 @@ body {
   background-size: contain;
 }
 .image_eye {
-  height: 30px;
-  width: 30px;
+  height: 25px;
+  width: 25px;
 }
 .image_logo {
-  height: 180px;
-  width: 180px;
+  height: 150px;
+  width: 150px;
 }
 .texte_login {
+  color: black;
   font-family: Ubuntu-Regular;
   text-align: center;
-  font-size: 30px;
+  font-size: 25px;
   font-weight: bold;
   margin: 0;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 .texte_login_2 {
+  color: black;
   display: block;
   margin-left: auto;
   margin-right: auto;
   font-family: Ubuntu-Regular;
-  font-size: 15px;
+  font-size: 12.5px;
   font-weight: bold;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 .login_button {
+  background-color: #f1f2f6;
+  border-color: #70a1ff;
   font-family: Ubuntu-Bold;
-  font-size: 20px;
-  width: 160px;
-  height: 50px;
+  font-size: 16.5px;
+  width: 135px;
+  height: 40px;
   margin-right: auto;
   margin-left: auto;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 8px;
+  margin-bottom: 8px;
   border-style: solid;
-  border-radius: 30px;
-  padding: 10px;
+  border-radius: 25px;
+  padding: 8px;
 }
 .login_info {
-  font-size: 15px;
+  border-color: #70a1ff;
+  font-size: 12.5px;
 }
 .login_google {
-  margin-bottom: 20px;
+  margin-bottom: 16.5px;
   align-self: center;
 }
 .navbar_content {
   display: flex;
   flex-direction: row;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 16.5px;
+  margin-right: 16.5px;
   text-align: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 .middle_navbar_content {
   display: flex;
   flex-direction: row;
-  margin-left: 20px;
-  margin-right: 20px;
+  border-right-style: solid;
+  border-color: #57606f;
+  padding-left: 16.5px;
+  padding-right: 16.5px;
   text-align: center;
-  margin-top: 12.5px;
-  margin-bottom: 12.5px;
+  margin-top: 10.5px;
+  margin-bottom: 10.5px;
 }
 .navbar_content_text {
-  border-style: solid;
-  border-radius: 20px;
-  padding: 10px;
-  width: 160px;
+  padding: 12.5px;
+  width: 135px;
   font-family: Ubuntu-Regular;
-  font-size: 20px;
+  font-size: 16.5px;
 }
 .container_navbar_content_text {
+  border-color: #57606f;
+  border-left-style: solid;
   display: flex;
   align-items: center;
   margin: auto;
 }
 .middle_navbar_content_text {
-  border-style: solid;
-  border-radius: 20px;
-  padding: 10px;
+  padding: 8px;
   font-family: Ubuntu-Regular;
-  font-size: 17.5px;
+  font-size: 15px;
 }
 .image_navbar {
+  border-color: #57606f;
   margin: 5px;
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   border-radius: 100%;
   border-style: solid;
 }
 .navbar_content_image {
 
   left: 0;
-  width: 80px;
-  height: 80px;
+  width: 65px;
+  height: 65px;
 }
+
+
+
+/* ======================= HOVER ===================== */
+
+
 
 #capteur_navbar:hover .image_navbar {
   animation: capteur_navbar 1s forwards;
@@ -262,8 +290,60 @@ body {
 #capteur_navbar:focus .navbar_content {
   animation: navbar_content 1s forwards;
 }
+.navbar_content:hover .navbar_content_text {
+  animation: navbar_text_upscale 0.25s forwards;
+}
+.navbar_content:not(hover) .navbar_content_text {
+  animation: navbar_text_downscale 0.25s forwards;
+}
+.middle_navbar_content:hover .middle_navbar_content_text {
+  animation: text_upscale 0.1s forwards;
+}
+.middle_navbar_content:not(hover) .middle_navbar_content_text {
+  animation: text_downscale 0.1s forwards;
+}
+
+.login_button:hover {
+  animation: login_info 0.5s forwards;
+
+}
+.login_info:hover {
+  animation: login 0.5s forwards;
+}
+.login_info:focus {
+  animation: login_info 0.5s forwards;
+}
 
 
+
+/* ======================= KEYFRAMES ===================== */
+
+
+
+@keyframes navbar_text_upscale {
+  from {transform: scale(1,1);}
+  to {transform: scale(1.1,1.1);}
+}
+@keyframes navbar_text_downscale {
+  from {transform: scale(1.1,1.1);}
+  to {transform: scale(1,1);}
+}
+@keyframes text_upscale {
+  from {font-size: 15px;}
+  to {font-size: 16.5px;}
+}
+@keyframes text_downscale {
+  from {font-size: 16.5px;}
+  to {font-size: 15px;}
+}
+@keyframes login {
+  from {border-color: #70a1ff}
+  to {border-color: #3742fa;}
+}
+@keyframes login_info {
+  from {background-color: white;}
+  to {background-color: #70a1ff;color: white;}
+}
 @keyframes capteur_navbar {
   from {  transform: rotate(0deg);
 }

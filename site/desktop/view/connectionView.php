@@ -4,8 +4,9 @@
     <meta charset="utf-8">
     <title>Connexion</title>
     <script src="../functions/unmask.js" type="text/javascript"></script>
-    <link rel="stylesheet" href="../config/stylesheet_desktop/theme_main.css">
-    <link rel="stylesheet" href="../config/stylesheet_desktop/theme_login.css">
+    <link rel="stylesheet" media="screen and (max-width: 1280px)" href="../config/stylesheet_desktop/theme_main_720p.css">
+    <link rel="stylesheet" media="screen and (min-width: 1280px)" href="../config/stylesheet_desktop/theme_main_900p.css">
+    <link rel="stylesheet" media="screen and (min-width: 1600px)" href="../config/stylesheet_desktop/theme_main_1080p.css">
   </head>
 
   <body id="container_body">
