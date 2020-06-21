@@ -22,7 +22,7 @@
           <li class=navbar_content><img class=navbar_content_image src="../../../icons/database.png"><div class=container_navbar_content_text><a class=navbar_content_text href="#">Base de données</a></div></li>
           <li class=navbar_content><img class=navbar_content_image src="../../../icons/userlist.png"><div class=container_navbar_content_text><a class=navbar_content_text href="#">Liste des utilisateurs</a></div></li>
           <li class=navbar_content><img class=navbar_content_image src="../../../icons/settings.png"><div class=container_navbar_content_text><a class=navbar_content_text href="#">Paramètres</a></div></li>
-          <li class=navbar_content><img class=navbar_content_image src="../../../icons/logout.png"><div class=container_navbar_content_text><a class=navbar_content_text href="#">Déconnexion</a></div></li>
+          <li class=navbar_content><img class=navbar_content_image src="../../../icons/logout.png"><div class=container_navbar_content_text><a class=navbar_content_text href="../functions/logout.php">Déconnexion</a></div></li>
         </ul>
     <!-- navigation bar -->
       </nav>
@@ -40,7 +40,7 @@
       </nav>
     </div>
 
-    <div id=container_profil><img class=navbar_content_image src="../../../icons/profil.png"><a href="#">Mon profil</a></div>
+    <div id=container_profil><img class=navbar_content_image src="../../../icons/profil.png"><?php echo $_SESSION['username']; ?><a href="#">Mon profil</a></div>
 
     <div id=container_footer><?php require_once('../view/footer.html'); ?></div>
 

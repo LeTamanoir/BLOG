@@ -287,8 +287,19 @@ body {
 #capteur_navbar:focus #container_navbar {
   display: flex;
 }
+#capteur_navbar:not(focus) #container_navbar {
+  animation-delay: 2s;
+
+  display: flex;
+}
 #capteur_navbar:focus .navbar_content {
   animation: navbar_content 1s forwards;
+}
+#container_navbar:focus {
+  display: flex;
+}
+.navbar_content_text:focus #container_navbar {
+  display: flex;
 }
 .navbar_content:hover .navbar_content_text {
   animation: navbar_text_upscale 0.25s forwards;
