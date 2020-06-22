@@ -43,7 +43,6 @@
     <div id=container_profil><img class=navbar_content_image src="../../../icons/profil.png"><?php echo $_SESSION['username']; ?><a href="#">Mon profil</a></div>
 
     <div id=container_footer><?php require_once('../view/footer.html'); ?></div>
-
   </body>
 
 </html>
