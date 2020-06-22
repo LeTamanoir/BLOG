@@ -1,7 +1,7 @@
 <?php
 session_start();
-require_once('/site/desktop/functions/accountKey.php');
-require_once('/site/desktop/functions/logs.php');
+require_once('../functions/accountKey.php');
+require_once('../functions/logs.php');
 if(isset($_POST['submit']))
 {
   $username = htmlspecialchars($_POST['username']);
