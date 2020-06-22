@@ -298,6 +298,9 @@ body {
 #capteur_navbar:focus #container_navbar {
   display: flex;
 }
+#container_navbar:hover {
+  display: flex;
+}
 #capteur_navbar:focus .navbar_content {
   animation: navbar_content 1s forwards;
 }
