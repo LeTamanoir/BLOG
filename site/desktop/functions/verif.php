@@ -1,16 +1,23 @@
 <?php
 
-if(isset($_GET['accountKey']) AND isset($_GET['id']))
+function verif()
 {
-  if(!empty($_GET['accountKey']) AND !empty($_GET['id']))
+  if(isset($_GET['accountKey']) AND isset($_GET['id']))
   {
-    if($_GET['accountKey'] == $_SESSION['accountKey'])
+    if(!empty($_GET['accountKey']) AND !empty($_GET['id']))
     {
-      if($_GET['id'] == $_SESSION['id'])
+      if($_GET['accountKey'] == $_SESSION['accountKey'])
       {
-        if($_GET['status'] == $_SESSION['status'])
+        if($_GET['id'] == $_SESSION['id'])
         {
-          echo "";
+          if($_GET['status'] == $_SESSION['status'])
+          {
+            echo "";
+          }
+          else
+          {
+            header('Location : ../controller/controllerConnection.php');
+          }
         }
         else
         {
@@ -26,16 +33,12 @@ if(isset($_GET['accountKey']) AND isset($_GET['id']))
     {
       header('Location : ../controller/controllerConnection.php');
     }
+
   }
   else
   {
     header('Location : ../controller/controllerConnection.php');
   }
-
-}
-else
-{
-  header('Location : ../controller/controllerConnection.php');
 }
 
 ?>

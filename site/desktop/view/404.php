@@ -11,10 +11,10 @@
 
   <body id="container_body">
     <div>
-      <div class=erreur_404>ERREUR 404</div>
+      <div class=erreur_404>ERREUR 404 : la page recherchée n'existe pas ...</div>
       <img class=image_404 src='../../../icons/404.gif'>
     </div>
-    <div id=container_footer><?php   require_once('footer.html'); ?></div>
+    <div id=container_footer><?php require_once('../view/footer.html'); ?></div>
   </body>
 
 </html>
