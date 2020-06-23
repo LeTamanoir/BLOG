@@ -36,7 +36,7 @@ if(isset($_POST['submit']))
         $_SESSION['accountKey'] = $accountKey;
         $insert = $bdd->prepare('UPDATE clients SET accountKey = ? WHERE id = ?');
         $insert->execute(array($accountKey,$_SESSION['id']));
-        header('Location : '.$root.'controller/controllerPublic.php?id='.$_SESSION['id'].'&accountKey='.$accountKey.'&status='.$_SESSION['status']);
+        header('Location : /site/desktop/controller/frontend/controllerPublic.php?id='.$_SESSION['id'].'&accountKey='.$accountKey.'&status='.$_SESSION['status']);
       }
     }
     else
