@@ -1,7 +1,7 @@
 <?php
 session_start();
-require_once('../functions/accountKey.php');
-require_once('../functions/logs.php');
+require_once($root.'site/desktop/functions/accountKey.php');
+require_once($root.'site/desktop/functions/logs.php');
 if(isset($_POST['submit']))
 {
   $username = htmlspecialchars($_POST['username']);
@@ -28,7 +28,7 @@ if(isset($_POST['submit']))
         $insert = $bdd->prepare('UPDATE clients SET accountKey = ? WHERE id = ?');
         $insert->execute(array($accountKey,$_SESSION['id']));
         connect_logs();
-        header('Location : ../controller/controllerAdministration.php?id='.$_SESSION['id'].'&accountKey='.$accountKey.'&status='.$_SESSION['status']);
+        header('Location : /site/desktop/controller/backend/controllerAdministration.php?id='.$_SESSION['id'].'&accountKey='.$accountKey.'&status='.$_SESSION['status']);
       }
       else
       {
@@ -36,20 +36,20 @@ if(isset($_POST['submit']))
         $_SESSION['accountKey'] = $accountKey;
         $insert = $bdd->prepare('UPDATE clients SET accountKey = ? WHERE id = ?');
         $insert->execute(array($accountKey,$_SESSION['id']));
-        header('Location : ../controller/controllerPublic.php?id='.$_SESSION['id'].'&accountKey='.$accountKey.'&status='.$_SESSION['status']);
+        header('Location : '.$root.'controller/controllerPublic.php?id='.$_SESSION['id'].'&accountKey='.$accountKey.'&status='.$_SESSION['status']);
       }
     }
     else
     {
       $_SESSION['error'] = "Le nom d'utilisateur / adresse mail ou le mot de passe ne sont pas valides ! ";
-      header('Location : ../controller/controllerConnection.php');
+      header('Location : '.$root.'controller/controllerConnection.php');
     }
 
   }
   else
 	{
   	$_SESSION['error'] = "Veuillez renseigner tous les champs ! ";
-    header('Location : ../controller/controllerConnection.php');
+    header('Location : '.$root.'controller/controllerConnection.php');
 
 	}
 }

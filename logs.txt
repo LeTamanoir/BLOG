@@ -1,6 +1,0 @@
-2a01:cb00:65b:1200:4cab:4713:cbe6:a083 => User : admin => Status : admin => Heure de connexion : June 22, 2020, 10:50 pm
-2a01:cb00:65b:1200:4cab:4713:cbe6:a083 => User : admin => Status : admin => Heure de déconnexion : June 22, 2020, 10:50 pm
-2a01:cb00:65b:1200:4cab:4713:cbe6:a083 => User : admin => Status : admin => Heure de connexion : June 22, 2020, 11:05 pm
-2a01:cb00:65b:1200:4cab:4713:cbe6:a083 => User : admin => Status : admin => Heure de connexion : June 22, 2020, 11:10 pm
-2a01:cb00:65b:1200:4cab:4713:cbe6:a083 => User : admin => Status : admin => Heure de déconnexion : June 22, 2020, 11:17 pm
-2a01:cb00:65b:1200:4cab:4713:cbe6:a083 => User : admin => Status : admin => Heure de connexion : June 22, 2020, 11:19 pm

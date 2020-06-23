@@ -1,6 +1,5 @@
 <?php
-
-require_once('../functions/verif.php');
+require_once($root.'site/desktop/functions/verif.php');
 verif();
 
 ?>

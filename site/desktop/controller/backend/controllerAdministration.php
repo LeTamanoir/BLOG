@@ -1,7 +1,8 @@
 <?php
 session_start();
-require_once('/site/desktop/config/dbConnect.php');
-require_once('/site/model/backend/modelAdministration.php');
-require_once('/site/view/Administration/defaultViewAdministration.php');
+$root = "/kunden/homepages/14/d285337155/www/Arthur/sites/blog/";
+require_once($root.'site/desktop/config/conf.php');
+require_once($root.'site/desktop/model/backend/modelAdministration.php');
+require_once($root.'site/desktop/view/Administration/defaultViewAdministration.php');
 
 ?>

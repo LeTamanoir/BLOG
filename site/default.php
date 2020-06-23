@@ -1,3 +1,3 @@
 <?php
-header("Location : desktop/controller/controllerConnection.php");
+header("Location : /site/desktop/controller/controllerConnection.php");
 ?>
