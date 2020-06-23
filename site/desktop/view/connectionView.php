@@ -16,21 +16,29 @@
       </div>
         <!-- auth with google -->
       <div id=login_info_container>
+
         <p class=texte_login> Connectez-vous avec : <p>
         <div class=login_google><?php require_once($root.'site/desktop/model/auth-google.php'); ?></div>
         <p class=texte_login> Ou : </p>
         <input class=login_info type="text" name="username" placeholder="Nom d'utilisateur / Email">
         <div class=center>
+
           <input class=login_info type="password" name="password" placeholder="Mot de passe">
           <button class="unmask" type="button" title="Mask/Unmask"><img class=image_eye src="/icons/eye.png" alt="voir mdp"></button>
+          
         </div>
         <a class=texte_login_2 href="#">Mot de passe oublié ?</a>
         <input class=login_button type="submit" name="submit" value="Se connecter">
         <div style="color:red;text-align:center;"><?php echo $_SESSION['error'];?></div>
+
       </div>
+
     </form>
+
     <div id=container_footer><?php   require_once($root.'site/desktop/view/footer.html'); ?></div>
+
   </body>
+
   <script>
   $('.unmask').on('click', function(){
 

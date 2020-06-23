@@ -16,28 +16,28 @@ function verif()
           }
           else
           {
-            header('Location : ../controller/controllerConnection.php');
+            header('Location : /site/desktop/controller/controllerConnection.php');
           }
         }
         else
         {
-          header('Location : ../controller/controllerConnection.php');
+          header('Location : /site/desktop/controller/controllerConnection.php');
         }
       }
       else
       {
-        header('Location : ../controller/controllerConnection.php');
+        header('Location : /site/desktop/controller/controllerConnection.php');
       }
     }
     else
     {
-      header('Location : ../controller/controllerConnection.php');
+      header('Location : /site/desktop/controller/controllerConnection.php');
     }
 
   }
   else
   {
-    header('Location : ../controller/controllerConnection.php');
+    header('Location : /site/desktop/controller/controllerConnection.php');
   }
 }
 
