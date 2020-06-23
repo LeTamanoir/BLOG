@@ -42,14 +42,14 @@ if(isset($_POST['submit']))
     else
     {
       $_SESSION['error'] = "Le nom d'utilisateur / adresse mail ou le mot de passe ne sont pas valides ! ";
-      header('Location : '.$root.'controller/controllerConnection.php');
+      header('Location : /site/desktop/controller/controllerConnection.php');
     }
 
   }
   else
 	{
   	$_SESSION['error'] = "Veuillez renseigner tous les champs ! ";
-    header('Location : '.$root.'controller/controllerConnection.php');
+    header('Location : /site/desktop/controller/controllerConnection.php');
 
 	}
 }
