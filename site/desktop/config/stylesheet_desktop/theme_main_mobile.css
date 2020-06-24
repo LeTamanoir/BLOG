@@ -27,8 +27,8 @@ ul {
 }
 html {
   background-repeat: no-repeat;
-  background-color: red;
-
+  background-size: cover;
+  background-color: #ececec;
 }
 body {
   margin: 0;
