@@ -242,6 +242,9 @@ body {
   margin-top: 12.5px;
   margin-bottom: 12.5px;
 }
+.navbar_content_profil {
+  display: none;
+}
 .navbar_content_text {
   padding: 15px;
   width: 160px;
@@ -296,17 +299,25 @@ body {
 }
 #capteur_navbar:focus #container_navbar {
   display: flex;
+  animation: navbar_moov_in 1s forwards;
 }
 #container_navbar:hover {
   display: flex;
 }
 #capteur_navbar:focus .navbar_content {
-  animation: navbar_content 1s forwards;
+  animation: navbar_content_moov_in 1s forwards;
 }
 #container_navbar:focus {
   display: flex;
 }
-
+#container_profil:hover {
+  position: fixed;
+  animation: navbar_text_upscale 0.25s forwards;
+}
+#container_profil:not(hover) {
+  position: fixed;
+  animation: navbar_text_downscale 0.25s forwards;
+}
 .navbar_content:hover .navbar_content_text {
   animation: navbar_text_upscale 0.25s forwards;
 }
@@ -319,10 +330,8 @@ body {
 .middle_navbar_content:not(hover) .middle_navbar_content_text {
   animation: text_downscale 0.1s forwards;
 }
-
 .login_button:hover {
   animation: login_info 0.5s forwards;
-
 }
 .login_info:hover {
   animation: login 0.5s forwards;
@@ -338,39 +347,65 @@ body {
 
 
 @keyframes navbar_text_upscale {
-  from {transform: scale(1,1);}
-  to {transform: scale(1.1,1.1);}
+  from {
+    transform: scale(1,1);
+  }
+  to {
+    transform: scale(1.1,1.1);
+  }
 }
 @keyframes navbar_text_downscale {
-  from {transform: scale(1.1,1.1);}
-  to {transform: scale(1,1);}
+  from {
+    transform: scale(1.1,1.1);
+  }
+  to {
+    transform: scale(1,1);
+  }
 }
 @keyframes text_upscale {
-  from {font-size: 17.5px;}
-  to {font-size: 20px;}
+  from {
+    font-size: 17.5px;
+  }
+  to {
+    font-size: 20px;
+  }
 }
 @keyframes text_downscale {
-  from {font-size: 20px;}
-  to {font-size: 17.5px;}
+  from {
+    font-size: 20px;
+  }
+  to {
+    font-size: 17.5px;
+  }
 }
 @keyframes login {
-  from {border-color: #70a1ff}
-  to {border-color: #3742fa;}
+  from {
+    border-color: #70a1ff
+  }
+  to {
+    border-color: #3742fa;
+  }
 }
 @keyframes login_info {
-  from {background-color: white;}
-  to {background-color: #70a1ff;color: white;}
+  from {
+    background-color: white;
+  }
+  to {
+    background-color: #70a1ff;
+    color: white;
+  }
 }
 @keyframes capteur_navbar {
-  from {  transform: rotate(0deg);
-}
+  from {
+    transform: rotate(0deg);
+  }
   to {
     transform: rotate(180deg);
     background-color: #acdcfa;
     background-size: contain;
   }
 }
-@keyframes navbar_content {
+@keyframes navbar_content_moov_in {
   from {
     opacity: 0;
     position: relative;
@@ -379,6 +414,16 @@ body {
   to {
     opacity: 1;
     position: relative;
+    left: 0px;
+  }
+}
+@keyframes navbar_moov_in {
+  from {
+    position: absolute;
+    left: -150px;
+  }
+  to {
+    position: absolute;
     left: 0px;
   }
 }
