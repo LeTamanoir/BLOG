@@ -2,5 +2,5 @@ RewriteEngine on
 Options +FollowSymlinks
 RewriteCond %{SERVER_PORT} !=443
 RewriteRule ^(.*)$ https://blog-template.teyssieux.fr/$1 [R=301,L]
-ErrorDocument 404 /site/desktop/view/404.php
+ErrorDocument 404 /site/desktop/view/view404.php
 #RewriteRule ^toto/([0-9]+)$ controllerAdministration.php?id=$1

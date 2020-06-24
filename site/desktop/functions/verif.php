@@ -16,27 +16,32 @@ function verif()
           }
           else
           {
+            session_destroy();
             header('Location : /site/desktop/controller/controllerConnection.php');
           }
         }
         else
         {
+          session_destroy();
           header('Location : /site/desktop/controller/controllerConnection.php');
         }
       }
       else
       {
+        session_destroy();
         header('Location : /site/desktop/controller/controllerConnection.php');
       }
     }
     else
     {
+      session_destroy();
       header('Location : /site/desktop/controller/controllerConnection.php');
     }
 
   }
   else
   {
+    session_destroy();
     header('Location : /site/desktop/controller/controllerConnection.php');
   }
 }
