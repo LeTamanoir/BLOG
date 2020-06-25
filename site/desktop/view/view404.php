@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8">
     <title>404</title>
-    <script src="/site/desktop/functions/unmask.js" type="text/javascript"></script>
     <link rel="stylesheet" media="screen and (max-width: 1280px)" href="/site/desktop/config/stylesheet_desktop/theme_main_720p.css">
     <link rel="stylesheet" media="screen and (min-width: 1280px)" href="/site/desktop/config/stylesheet_desktop/theme_main_900p.css">
     <link rel="stylesheet" media="screen and (min-width: 1600px)" href="/site/desktop/config/stylesheet_desktop/theme_main_1080p.css">

@@ -30,7 +30,7 @@
         <li class=middle_navbar_content  style="border-left-style: solid;"><a class=middle_navbar_content_text href="#">Pauses à corriger</a></li>
         <li class=middle_navbar_content><a class=middle_navbar_content_text href="#">Pauses publiques</a></li>
         <li class=middle_navbar_content><a class=middle_navbar_content_text href="#">Pauses non publiques</a></li>
-        <li class=middle_navbar_content><a class=middle_navbar_content_text href="/site/desktop/model/modelTextEditor.php">Publier un message</a></li>
+        <li class=middle_navbar_content><a class=middle_navbar_content_text href="/site/desktop/controller/controllerTextEditor.php?id=<?=$_SESSION['id']?>&accountKey=<?=$_SESSION['accountKey']?>&status=<?=$_SESSION['status']?>">Publier un message</a></li>
       </ul>
     </nav>
 
