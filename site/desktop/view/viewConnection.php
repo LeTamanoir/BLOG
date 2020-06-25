@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" content="width=device-width" name="viewport">
     <title>Connexion</title>
     <script src="/site/desktop/functions/unmask.js" type="text/javascript"></script>
-    <link rel="stylesheet" href="../../config/stylesheet_desktop/theme_main.css">
+    <link rel="stylesheet" href="/site/desktop/config/stylesheet_desktop/theme_main.css">
 
   </head>
 
