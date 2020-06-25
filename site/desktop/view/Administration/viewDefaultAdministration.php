@@ -10,7 +10,6 @@
 
 
   <body id=container_body>
-
     <div>
     <button id=capteur_navbar><img class=image_navbar src="/icons/navbar.png" alt="navbar wheel">
       <nav id=container_navbar>
