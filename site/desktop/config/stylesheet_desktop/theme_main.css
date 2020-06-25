@@ -40,8 +40,8 @@ body {
 
 #container_body {
   display: flex;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
   width: 100vw;
   height: 100vh;
 }
@@ -61,10 +61,9 @@ body {
 }
 #container_middle_navbar {
   display: block;
-  align-self: center;
 }
 #container_footer {
-  position: absolute;
+  position: fixed;
   display: block;
   padding-top: 1vh;
   height: 3vh;
@@ -412,7 +411,7 @@ body {
   }
   .navbar_content_text {
     padding: 6.5px;
-    width: 105px;
+    width: 85px;
     font-family: Ubuntu-Regular;
     font-size:13.5px;
   }
