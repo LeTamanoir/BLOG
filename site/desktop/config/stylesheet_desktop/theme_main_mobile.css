@@ -26,9 +26,8 @@ ul {
   src: url('../../../../fonts/Ubuntu-Bold.ttf');
 }
 html {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: #ececec;
+
+  background-color: red;
 }
 body {
   margin: 0;
