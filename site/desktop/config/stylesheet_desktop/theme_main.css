@@ -65,8 +65,6 @@ body {
 #container_footer {
   position: fixed;
   display: block;
-  padding-top: 1vh;
-  height: 3vh;
   bottom: 0;
 }
 #container_connexion {
@@ -324,7 +322,7 @@ body {
     border-radius: 1vw;
   }
   #login_info_container {
-    height: 450px;
+    height: 420px;
   }
   #logo {
     height: 120px;
@@ -388,8 +386,8 @@ body {
   }
   .navbar_content {
     display: inline-flex;
-    margin-left:13.5px;
-    margin-right:13.5px;
+    margin-left: 6px;
+    margin-right: 6px;
     margin-top: 20px;
     margin-bottom: 20px;
   }
@@ -421,8 +419,8 @@ body {
     font-size: 11.5px;
   }
   .image_navbar {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
   }
   .navbar_content_image {
     width:55px;
