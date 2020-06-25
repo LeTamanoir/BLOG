@@ -40,8 +40,8 @@ body {
 
 #container_body {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   width: 100vw;
   height: 100vh;
 }
@@ -59,11 +59,16 @@ body {
   border-top-width: 0;
   border-bottom-right-radius:13.5px;
 }
+#container_middle_navbar {
+  display: block;
+  align-self: center;
+}
 #container_footer {
+  position: absolute;
+  display: block;
   padding-top: 1vh;
   height: 3vh;
-  display: flex;
-  width: 100vw;
+  bottom: 0;
 }
 #container_connexion {
   border-color: #57606f;
@@ -82,6 +87,7 @@ body {
   flex-direction: row;
 }
 #capteur_navbar {
+  display: flex;
   position: absolute;
   left: 0;
   top: 0;
@@ -120,6 +126,7 @@ body {
   margin-right: auto;
 }
 .login_info {
+  border-color: #70a1ff;
   font-family: Ubuntu-Bold;
   margin-right: auto;
   margin-left: auto;
@@ -314,11 +321,11 @@ body {
   }
   #container_connexion {
     width: 90vw;
-    height: ;
+    height: auto;
     border-radius: 1vw;
   }
   #login_info_container {
-    height: 450px;
+    height: 520px;
   }
   #logo {
     height: 120px;
@@ -350,6 +357,9 @@ body {
   .image_eye {
     height: 40px;
     width: 40px;
+  }
+  .footer{
+    font-size: 6.5px;
   }
   .image_logo {
     height: 120px;
@@ -402,9 +412,9 @@ body {
   }
   .navbar_content_text {
     padding: 6.5px;
-    width: 85px;
+    width: 105px;
     font-family: Ubuntu-Regular;
-    font-size: 13.5px;
+    font-size:13.5px;
   }
   .middle_navbar_content_text {
     padding: 6.5px;
@@ -416,8 +426,8 @@ body {
     height: 60px;
   }
   .navbar_content_image {
-    width: 50px;
-    height: 50px;
+    width:55px;
+    height:55px;
   }
   .image_404 {
     width: auto;
@@ -697,13 +707,6 @@ body {
   }
 }
 @media only screen and (min-width: 1600px) {
-  #container_body {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100vw;
-    height: 100vh;
-  }
   #container_navbar {
     width: 300px;
     border-bottom-right-radius: 20px;
