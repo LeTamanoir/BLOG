@@ -62,9 +62,7 @@ body {
 #container_footer {
   padding-top: 1vh;
   height: 3vh;
-  position: absolute;
   display: flex;
-  bottom: 0;
   width: 100vw;
 }
 #container_connexion {
@@ -316,11 +314,11 @@ body {
   }
   #container_connexion {
     width: 90vw;
-    height: auto;
+    height: ;
     border-radius: 1vw;
   }
   #login_info_container {
-    height: 520px;
+    height: 450px;
   }
   #logo {
     height: 120px;
@@ -380,6 +378,7 @@ body {
     align-self: center;
   }
   .navbar_content {
+    display: inline-flex;
     margin-left:13.5px;
     margin-right:13.5px;
     margin-top: 20px;
@@ -403,9 +402,9 @@ body {
   }
   .navbar_content_text {
     padding: 6.5px;
-    width: 105px;
+    width: 85px;
     font-family: Ubuntu-Regular;
-    font-size:13.5px;
+    font-size: 13.5px;
   }
   .middle_navbar_content_text {
     padding: 6.5px;
@@ -417,8 +416,8 @@ body {
     height: 60px;
   }
   .navbar_content_image {
-    width:55px;
-    height:55px;
+    width: 50px;
+    height: 50px;
   }
   .image_404 {
     width: auto;
