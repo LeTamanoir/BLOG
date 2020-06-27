@@ -29,7 +29,7 @@
 
         <a class=texte_login_2 href="#">Mot de passe oublié ?</a>
         <input class=login_button type="submit" name="submit" value="Connexion">
-        <div style="color:red;text-align:center;"><?php echo $_SESSION['error'];?></div>
+        <div style="color:red;text-align:center;margin-bottom: 1vh"><?php echo $_SESSION['error'];?></div>
 
       </div>
 
