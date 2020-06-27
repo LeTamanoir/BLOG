@@ -1,45 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html style='background-color: #acdcfa;'>
   <head>
     <title>Editor</title>
-    <meta charset="utf-8">
+    <meta charset="utf-8" content="width=device-width" name="viewport">
+    <link rel="stylesheet" href="../../config/stylesheet_desktop/theme_main.css">
+
   </head>
 
 
   <body>
-    <div class="toolbar">
+    <div class=tool-bar>
     	<ul class="tool-list">
 
     		<li class="tool">
-    			<button type="button" data-command='justifyLeft' class="tool--btn"><i>justifyLeft</i></button>
+    			<button type="button" data-command='justifyLeft' class="tool--btn"><img class=image_text_editor src='../../../../icons/text_editor/left.png'></button>
     		</li>
 
     		<li class="tool">
-    			<button type="button" data-command='justifyCenter' class="tool--btn"><i>justifyCenter</i></button>
+    			<button type="button" data-command='justifyCenter' class="tool--btn"><img class=image_text_editor src='../../../../icons/text_editor/center.png'></button>
     		</li>
 
     		<li class="tool">
-    			<button type="button"	data-command="bold"	class="tool--btn"><i>bold</i></button>
+    			<button type="button"	data-command="bold"	class="tool--btn"><img class=image_text_editor src='../../../../icons/text_editor/bold.png'></button>
     		</li>
 
     		<li class="tool">
-    			<button	type="button"	data-command="italic"	class="tool--btn"><i>italic</i></button>
+    			<button	type="button"	data-command="italic"	class="tool--btn"><img class=image_text_editor src='../../../../icons/text_editor/italic.png'></button>
     		</li>
 
     		<li class="tool">
-    			<button type="button"	data-command="underline" class="tool--btn"><i>underline</i></button>
+    			<button type="button"	data-command="underline" class="tool--btn"><img class=image_text_editor src='../../../../icons/text_editor/underline.png'></button>
     		</li>
 
     		<li class="tool">
-    			<button	type="button" data-command="insertOrderedList" class="tool--btn"><i>ol</i></button>
+    			<button	type="button" data-command="insertOrderedList" class="tool--btn"><img class=image_text_editor src='../../../../icons/text_editor/number.png'></button>
     		</li>
 
     		<li class="tool">
-    			<button type="button" data-command="insertUnorderedList" class="tool--btn"><i>ul</i></button>
+    			<button type="button" data-command="insertUnorderedList" class="tool--btn"><img class=image_text_editor src='../../../../icons/text_editor/bullet.png'></button>
     		</li>
 
     		<li class="tool">
-    			<button type="button" data-command="createlink"	class="tool--btn"><i>link</i></button>
+    			<button type="button" data-command="createlink"	class="tool--btn"><img class=image_text_editor src='../../../../icons/text_editor/link.png'></button>
     		</li>
 
         <li class="tool">
@@ -61,7 +63,7 @@
     	</ul>
     </div>
 
-    <div id="output" contenteditable="true"></div>
+    <div id="output_text_editor" contenteditable="true"></div>
 
     <script>
     let size_text = '';
@@ -100,36 +102,3 @@
 
 
 </html>
-
-
-<!-- A dégager -->
-<style>*,
-*:before,
-*:after {
-	box-sizing: border-box;
-}
-
-.toolbar {}
-.tool-list {
-	display: flex;
-	flex-flow: row nowrap;
-	list-style: none;
-	padding: 0;
-	margin: 1rem;
-	overflow: hidden;
-	border-raduis: 10px;
-}
-.tool {}
-.tool--btn {
-	display: block;
-	border: none;
-	padding: .5rem;
-	font-size: 20px;
-}
-
-#output {
-	height: 400px;
-	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-	margin: 1rem;
-	padding: 1rem;
-}</style>
