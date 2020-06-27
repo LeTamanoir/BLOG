@@ -43,23 +43,19 @@
     		</li>
 
         <li class="tool">
-    			<button type="button" data-command="FontSize"	class="tool--btn"><i>increase</i></button>
-    		</li>
+          <ul>
+            <?php $i = 0;
 
-        <li class="tool">
-          <button type="button" data-command="FontSizeD"	class="tool--btn"><i>decrease</i></button>
+            while ($i<7){
+              $i = $i +1;
+              ?> <li><button type="button" data-command="FontSize" class="tool--btn" onclick="size(<?=$i?>)"><?=$i?></button></li>
+
+            <?php;} ?>
+          </ul>
         </li>
 
         <li class="tool">
-          <ul>
-            <li id=size value="1"><button type="button" value= data-command="FontSize"	onclick="size()" class="tool--btn">1</button></li>
-            <li id=size value="2"><button type="button" data-command="FontSize"	onclick="size()" class="tool--btn">2</button></li>
-            <li id=size value="3"><button type="button" data-command="FontSize"	onclick="size()" class="tool--btn">3</button></li>
-            <li id=size value="4"><button type="button" data-command="FontSize"	onclick="size()" class="tool--btn">4</button></li>
-            <li id=size value="5"><button type="button" data-command="FontSize"	onclick="size()" class="tool--btn">5</button></li>
-            <li id=size value="6"><button type="button" data-command="FontSize"	onclick="size()" class="tool--btn">6</button></li>
-            <li id=size value="7"><button type="button" data-command="FontSize"	onclick="size()" class="tool--btn">7</button></li>
-          </ul>
+          <button type="button" data-command="FontSizeD"	class="tool--btn"><i>highlighting</i></button>
         </li>
 
     	</ul>
@@ -68,10 +64,11 @@
     <div id="output" contenteditable="true"></div>
 
     <script>
-    function size()
+    let size_text = '';
+    function size(x)
     {
-      var size = document.getElementById('size').value;
-      prompt(size);
+      size_text = x;
+
     }
 
     let output = document.getElementById('output');
@@ -89,20 +86,9 @@
         }
         else if (cmd === "FontSize")
         {
-
+          console.log(size_text);
+          document.execCommand(cmd, false, size_text);
         }
-
-        /*else if (cmd === 'FontSize')
-        {
-          size = size + 1;
-          document.execCommand(cmd, false,size);
-        }
-        else if (cmd === 'FontSizeD')
-        {
-          size = size - 1;
-          document.execCommand("FontSize", false,size);
-        }*/
-
         else
         {
           document.execCommand(cmd, false, null);
