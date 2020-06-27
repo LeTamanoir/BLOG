@@ -172,8 +172,12 @@ body {
   background-color: #f1f2f6;
   border-color: #70a1ff;
   font-family: Ubuntu-Bold;
-  margin-right: auto;
-  margin-left: auto;
+  align-self: center;
+  font-size: 2vh;
+  padding: 1vh;
+  margin-bottom: 2vh;
+  margin-top: 2vh;
+  border-radius: 100px;
   border-style: solid;
 }
 .navbar_content {
@@ -308,7 +312,7 @@ body {
 @keyframes navbar_moov_in {
   from {
     position: absolute;
-    left: -100px;
+    left: -10vw;
   }
   to {
     position: absolute;
@@ -320,13 +324,13 @@ body {
     opacity: 0;
     position: relative;
     top: 0;
-    left: -50px;
+    left: -5vw;
   }
   to {
     opacity: 1;
     position: relative;
     top: 0;
-    left: 0px;
+    left: 0;
   }
 }
 /* ----------------------------------------------
@@ -362,15 +366,17 @@ body {
     border-right-width: 0;
   }
   #container_connexion {
-    width: 90vw;
+    width: auto;
     height: auto;
     border-radius: 1vw;
   }
   #login_info_container {
-    height: 420px;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    height: auto;
   }
   #logo {
-    height: 120px;
+    height: 15vh;
     text-align: center;
   }
   #profil {
@@ -378,8 +384,6 @@ body {
   }
   #container_middle_navbar {
     display: none;
-    border-bottom-left-radius: 6.5px;
-    border-bottom-right-radius: 6.5px;
   }
   #container_profil {
     display: none;
@@ -388,87 +392,65 @@ body {
     font-size: 6.5px;
   }
   .login_info {
-    font-size: 20px;
-    width: 260px;
-    height: 40px;
-  }
-  .unmask {
-    font-size:13.5px;
+    font-size: 2vh;
+    width: 50vw;
+    height: 5vh;
   }
   .image_eye {
-    height: 40px;
-    width: 40px;
+    height: 5vh;
+    width: 5vh;
   }
   .footer{
     font-size: 6.5px;
   }
   .image_logo {
-    height: 120px;
-    width: 120px;
+    height: 15vh;
+    width: 15vh;
   }
   .texte_login {
-    font-size: 30px;
-    margin-bottom: 6.5px;
+    font-size: 5vw;
+    margin-bottom: 1vh;
   }
   .texte_login_2 {
-    font-size: 15px;
-    margin-top: 6.5px;
-    margin-bottom: 6.5px;
+    font-size: 3vw;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
   }
-  .login_button {
-    font-size:13.5px;
-    width: 105px;
-    height: 35px;
-    margin-top: 6.5px;
-    margin-bottom: 6.5px;
-    border-radius: 20px;
-    padding: 6.5px;
-  }
+
   .login_google {
-    margin-bottom:13.5px;
+    margin-bottom: 3vh;
     align-self: center;
   }
   .navbar_content {
     display: inline-flex;
-    margin-left: 6px;
-    margin-right: 6px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
   }
   .navbar_content_profil {
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-left:13.5px;
-    margin-right:13.5px;
+    margin-left: 1vw;
+    margin-right: 1vw;
     text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-  .middle_navbar_content {
-    padding-left:13.5px;
-    padding-right:13.5px;
-    margin-top: 8px;
-    margin-bottom: 8px;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
   }
   .navbar_content_text {
-    padding: 6.5px;
-    width: 85px;
+    padding: 1vw;
+    width: 20vw;
     font-family: Ubuntu-Regular;
-    font-size:13.5px;
-  }
-  .middle_navbar_content_text {
-    padding: 6.5px;
-    font-family: Ubuntu-Regular;
-    font-size: 11.5px;
+    font-size: 2vh;
   }
   .image_navbar {
-    width: 50px;
-    height: 50px;
+    width: 6.5vh;
+    height: 6.5vh;
   }
   .navbar_content_image {
-    width:55px;
-    height:55px;
+    width: 6vh;
+    height: 6vh;
   }
   .image_404 {
     width: auto;
@@ -476,17 +458,17 @@ body {
   }
 
   @keyframes text_upscale {
-    from {font-size: 11.5px;}
-    to {font-size:13.5px;}
+    from {font-size: 2vh;}
+    to {font-size: 2.25vh;}
   }
   @keyframes text_downscale {
-    from {font-size:13.5px;}
-    to {font-size: 11.5px;}
+    from {font-size: 2.25vh;}
+    to {font-size: 2vh;}
   }
   @keyframes navbar_moov_in {
     from {
       position: absolute;
-      top: -150px;
+      top: -25vh;
     }
     to {
       position: absolute;
@@ -497,7 +479,7 @@ body {
     from {
       opacity: 0;
       position: relative;
-      top: -100px;
+      top: -25vh;
     }
     to {
       opacity: 1;
@@ -508,362 +490,107 @@ body {
 }
 @media only screen and (min-width: 850px) {
   #container_navbar {
-    width: 200px;
+    width: auto;
+    height: auto;
   }
   #container_connexion {
-    width: 335px;
-    height: 466px;
+    width: auto;
+    height: auto;
     border-radius: 1vw;
   }
   #login_info_container {
-    height: 520px;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    height: auto;
   }
   #logo {
-    height: 120px;
+    height: 20vh;
     text-align: center;
   }
   #profil {
     display: none;
   }
-  #container_middle_navbar {
-    border-bottom-left-radius: 6.5px;
-    border-bottom-right-radius: 6.5px;
-  }
   #container_profil {
-    width: 85px;
-    height: 80px;
-    border-bottom-left-radius:13.5px;
+    width: auto;
+    height: auto;
+    padding: 2vw;
+    padding-top: 1vw;
+    border-bottom-left-radius: 1vw;
   }
   .footer{
-    font-size: 6.5px;
+    font-size: 2vh;
   }
   .login_info {
-    width: 260px;
-    height: 25px;
-  }
-  .unmask {
-    font-size:13.5px;
+    font-size: 2vh;
+    width: 20vw;
+    height: 5vh;
   }
   .image_eye {
-    height: 20px;
-    width: 20px;
+    height: 3vh;
+    width: 3vh;
   }
   .image_logo {
-    height: 120px;
-    width: 120px;
+    height: 20vh;
+    width: 20vh;
   }
   .texte_login {
-    font-size: 20px;
-    margin-bottom: 6.5px;
+    font-size: 3vh;
+    margin-bottom: 1vh;
   }
   .texte_login_2 {
-    font-size: 6.5px;
-    margin-top: 6.5px;
-    margin-bottom: 6.5px;
-  }
-  .login_button {
-    font-size:13.5px;
-    width: 105px;
-    height: 35px;
-    margin-top: 6.5px;
-    margin-bottom: 6.5px;
-    border-radius: 20px;
-    padding: 6.5px;
+    font-size: 2vh;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
   }
   .login_google {
-    margin-bottom:13.5px;
+    margin-bottom: 1vh;
     align-self: center;
   }
   .navbar_content {
-    margin-left:13.5px;
-    margin-right:13.5px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
   }
   .navbar_content_profil {
     display: none;
   }
   .middle_navbar_content {
-    padding-left:13.5px;
-    padding-right:13.5px;
-    margin-top: 8px;
-    margin-bottom: 8px;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
   }
   .navbar_content_text {
-    padding: 6.5px;
-    width: 105px;
+    padding: 1vw;
+    width: auto;
     font-family: Ubuntu-Regular;
-    font-size:13.5px;
+    font-size: 2vh;
   }
   .middle_navbar_content_text {
-    padding: 6.5px;
+    padding: 0.5vw;
     font-family: Ubuntu-Regular;
-    font-size: 11.5px;
+    font-size: 1.5vh;
   }
   .image_navbar {
-    width: 45px;
-    height: 45px;
+    width: 7.5vh;
+    height: 7.5vh;
   }
   .navbar_content_image {
-
     left: 0;
-    width:55px;
-    height:55px;
+    align-self: center;
+    width: 7.5vh;
+    height: 7.5vh;
   }
   .image_404 {
     width: auto;
     height: auto;
   }
   @keyframes text_upscale {
-    from {font-size: 11.5px;}
-    to {font-size:13.5px;}
+    from {font-size: 1.5vh;}
+    to {font-size: 2vh;}
   }
   @keyframes text_downscale {
-    from {font-size:13.5px;}
-    to {font-size: 11.5px;}
-  }
-}
-@media only screen and (min-width: 1280px) {
-  #container_navbar {
-    width: 250px;
-    border-bottom-right-radius: 16.5px;
-  }
-  #container_connexion {
-    width: 420px;
-    height: 585px;
-    border-radius: 1vw;
-  }
-  #login_info_container {
-    height: 435px;
-  }
-  #logo {
-    height: 150px;
-    text-align: center;
-  }
-  #profil {
-    display: none;
-  }
-  #container_middle_navbar {
-    border-bottom-left-radius: 12.5px;
-    border-bottom-right-radius: 12.5px;
-  }
-  #container_profil {
-    width: 110px;
-    height: 100px;
-    border-bottom-left-radius: 16.5px;
-  }
-  .footer{
-    font-size: 12.5px;
-  }
-  .login_info {
-    width: 212.5px;
-    height: 16.5px;
-    margin-top: 8px;
-    margin-bottom: 8px;
-    font-size: 12.5px;
-  }
-  .unmask {
-    font-size: 16.5px;
-  }
-
-  .image_eye {
-    height: 25px;
-    width: 25px;
-  }
-  .image_logo {
-    height: 150px;
-    width: 150px;
-  }
-  .texte_login {
-    font-size: 25px;
-    margin-bottom: 8px;
-  }
-  .texte_login_2 {
-    font-size: 12.5px;
-    margin-top: 8px;
-    margin-bottom: 8px;
-  }
-  .login_button {
-    font-size: 16.5px;
-    width: 135px;
-    height: 40px;
-    margin-top: 8px;
-    margin-bottom: 8px;
-    border-radius: 25px;
-    padding: 8px;
-  }
-  .login_google {
-    margin-bottom: 16.5px;
-    align-self: center;
-  }
-  .navbar_content {
-    margin-left: 16.5px;
-    margin-right: 16.5px;
-    margin-top: 25px;
-    margin-bottom: 25px;
-  }
-  .navbar_content_profil {
-    display: none;
-  }
-  .middle_navbar_content {
-    padding-left: 16.5px;
-    padding-right: 16.5px;
-    margin-top: 10.5px;
-    margin-bottom: 10.5px;
-  }
-  .navbar_content_text {
-    padding: 12.5px;
-    width: 135px;
-    font-family: Ubuntu-Regular;
-    font-size: 16.5px;
-  }
-  .middle_navbar_content_text {
-    padding: 8px;
-    font-family: Ubuntu-Regular;
-    font-size: 15px;
-  }
-  .image_navbar {
-    width: 60px;
-    height: 60px;
-  }
-  .navbar_content_image {
-
-    left: 0;
-    width: 65px;
-    height: 65px;
-  }
-  .image_404 {
-    width: auto;
-    height: auto;
-  }
-  @keyframes text_upscale {
-    from {font-size: 15px;}
-    to {font-size: 16.5px;}
-  }
-  @keyframes text_downscale {
-    from {font-size: 16.5px;}
-    to {font-size: 15px;}
-  }
-}
-@media only screen and (min-width: 1600px) {
-  #container_navbar {
-    width: 300px;
-    border-bottom-right-radius: 20px;
-  }
-  #container_connexion {
-    width: 505px;
-    height: 700px;
-    border-radius: 1vw;
-  }
-  #login_info_container {
-    height: 520px;
-  }
-  #logo {
-    height: 180px;
-    text-align: center;
-  }
-  #profil {
-    display: none;
-  }
-  #container_middle_navbar {
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-  }
-  #container_profil {
-    width: 130px;
-    height: 120px;
-    border-bottom-left-radius: 20px;
-  }
-  .footer{
-    font-size: 15px;
-  }
-  .login_info {
-    width: 260px;
-    height: 25px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding: 15px;
-    font-size: 15px;
-  }
-  .unmask {
-    font-size: 20px;
-  }
-  .image_eye {
-    height: 30px;
-    width: 30px;
-  }
-  .image_logo {
-    height: 180px;
-    width: 180px;
-  }
-  .texte_login {
-    font-size: 30px;
-    margin-bottom: 10px;
-  }
-  .texte_login_2 {
-    font-size: 15px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-  .login_button {
-    font-size: 20px;
-    width: 160px;
-    height: 50px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border-radius: 30px;
-    padding: 10px;
-  }
-  .login_google {
-    margin-bottom: 20px;
-    align-self: center;
-  }
-  .navbar_content {
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-  }
-  .middle_navbar_content {
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-top: 12.5px;
-    margin-bottom: 12.5px;
-  }
-  .navbar_content_profil {
-    display: none;
-  }
-  .navbar_content_text {
-    padding: 15px;
-    width: 160px;
-    font-family: Ubuntu-Regular;
-    font-size: 20px;
-  }
-  .middle_navbar_content_text {
-    padding: 10px;
-    font-family: Ubuntu-Regular;
-    font-size: 17.5px;
-  }
-  .image_navbar {
-    width: 70px;
-    height: 70px;
-  }
-  .navbar_content_image {
-
-    left: 0;
-    width: 80px;
-    height: 80px;
-  }
-  .image_404 {
-    width: auto;
-    height: auto;
-  }
-  @keyframes text_upscale {
-    from {font-size: 17.5px;}
-    to {font-size: 20px;}
-  }
-  @keyframes text_downscale {
-    from {font-size: 20px;}
-    to {font-size: 17.5px;}
-  }
+    from {font-size: 2vh;}
+    to {font-size: 1.5vh;}
 }
