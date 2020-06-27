@@ -1,7 +1,5 @@
 <?php
 session_start();
-$root = "/kunden/homepages/14/d285337155/www/Arthur/sites/blog/";
-require_once($root.'site/desktop/config/conf.php');
-require_once($root.'site/desktop/model/modelTextEditor.php');
-require_once($root.'site/desktop/view/Public/viewTextEditor.php');
+$_SESSION['visibility'] = "visible";
+header('Location : /site/desktop/controller/backend/controllerAdministration.php?id='.$_SESSION['id'].'&accountKey='.$accountKey.'&status='.$_SESSION['status']);
 ?>
