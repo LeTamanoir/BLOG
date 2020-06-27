@@ -9,15 +9,8 @@ a {
   color: black;
   text-decoration: none;
 }
-li {
-  list-style: none;
-}
 button {
   display: none;
-}
-ul {
-  padding: 0;
-  margin: 0;
 }
 /* correctif style sheet google */
 @font-face {
@@ -38,6 +31,24 @@ body {
 
 
 /* ======================= ID ===================== */
+
+.container_navbar_font_size {
+  display: inline-block;
+  height: 4vw;
+  width: 5vw;
+  overflow-y: scroll;
+}
+.container_navbar_font_size > ul {
+  padding: 0;
+  margin: 0;
+}
+.navbar_font_size {
+  display: block;
+  padding: 1vw;
+  border-radius: 0.5vw;
+  height: 4vw;
+  width: 3vw;
+}
 
 
 
@@ -76,15 +87,19 @@ body {
   width: 60vw;
   height: 60vh;
 }
-#output_text_editor {
-  overflow-y: scroll;
+#output{
   background-color: white;
+  overflow-y: scroll;
   border-style: solid;
   border-color: #57606f;
   border-radius: 1vw;
-  height: 75vh;
+  height: 60vh;
 	margin: 1vw;
 	padding: 1vw;
+}
+#output > a {
+  text-decoration: underline;
+  color: blue;
 }
 #container_middle_navbar {
   margin: 0.5vw;
@@ -141,20 +156,18 @@ body {
 ::-webkit-scrollbar-track
 {
 	border-radius: 5px;
-  border-top-left-radius: 0px;
-  border-bottom-left-radius: 0px;
 	background-color: #ececec;
 }
 
 ::-webkit-scrollbar
 {
 	width: 12px;
-	background-color: #57606f;
+	background-color: none;
 }
 ::-webkit-scrollbar-thumb
 {
 	border-radius: 5px;
-	background-color: #555;
+	background-color: #57606f;
 }
 .tool-list {
   width: auto;

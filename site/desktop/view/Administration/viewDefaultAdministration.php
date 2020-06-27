@@ -32,7 +32,9 @@
         <li class=middle_navbar_content><a class=middle_navbar_content_text href="/site/desktop/controller/controllerTextEditor.php?id=<?=$_SESSION['id']?>&accountKey=<?=$_SESSION['accountKey']?>&status=<?=$_SESSION['status']?>">Publier un message</a></li>
       </ul>
     </nav>
-
+    <div id=container_main_content>
+      <iframe id=container_iframe src="/site/desktop/view/Public/viewTextEditor.php"></iframe>
+    </div>
     <div id=container_profil><img class=navbar_content_image src="/icons/profil.png"><?php echo $_SESSION['username']; ?><a href="#">Mon profil</a></div>
 
     <div id=container_footer><?php require_once($root.'site/desktop/view/viewFooter.html'); ?></div>
