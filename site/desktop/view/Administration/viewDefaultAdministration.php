@@ -29,12 +29,12 @@
         <li class=middle_navbar_content  style="border-left-style: solid;"><a class=middle_navbar_content_text href="#">Pauses à corriger</a></li>
         <li class=middle_navbar_content><a class=middle_navbar_content_text href="#">Pauses publiques</a></li>
         <li class=middle_navbar_content><a class=middle_navbar_content_text href="#">Pauses non publiques</a></li>
-        <li class=middle_navbar_content><a class=middle_navbar_content_text href="/site/desktop/controller/controllerTextEditor.php">Publier un message</a></li>
+        <li class=middle_navbar_content><a class=middle_navbar_content_text href="/site/desktop/controller/controllerTextEditor.php?id=<?=$_SESSION['id']?>&accountKey=<?=$_SESSION['accountKey']?>&status=<?=$_SESSION['status']?>">Publier un message</a></li>
       </ul>
     </nav>
     <div id=container_main_content>
 
-      <iframe id=container_iframe src="/site/desktop/view/Public/viewTextEditor.php" style='visibility:<?=$_SESSION["visibility"]?>;'></iframe>
+      <iframe id=container_iframe src="/site/desktop/view/Public/viewTextEditor.php" style='visibility:<?=$_COOKIE["TE_visiblity"]?>;'></iframe>
     </div>
 
     <div id=container_profil><img class=navbar_content_image src="/icons/profil.png"><?php echo $_SESSION['username']; ?><a href="#">Mon profil</a></div>

@@ -20,6 +20,7 @@ if(isset($_POST['submit']))
       $_SESSION['name'] = $userinfo['name'];
       $_SESSION['photo'] = $userinfo['photo'];
       $_SESSION['password'] = $userinfo['password'];
+      setcookie('TE_visiblity','hidden', time()+24*3600);
 
       if($_SESSION['username'] == 'admin')
       {
