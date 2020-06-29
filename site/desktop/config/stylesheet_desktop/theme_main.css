@@ -89,6 +89,7 @@ body {
   margin: 5vw;
 }
 #container_iframe {
+  display: none;
   border-style: solid;
   border-color: #57606f;
   background-color: #acdcfa;

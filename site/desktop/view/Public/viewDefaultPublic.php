@@ -12,10 +12,9 @@
   <div>
       <nav id=container_middle_navbar>
         <ul id=middle_navbar>
-          <li class=middle_navbar_content style="border-left-style: solid;"><a class=middle_navbar_content_text href="#">Liste des pauses lectures à corriger</a></li>
+          <li class=middle_navbar_content><a class=middle_navbar_content_text href="#">Accueil</a></li>
           <li class=middle_navbar_content><a class=middle_navbar_content_text href="#">Pause/lecture publiques</a></li>
-          <li class=middle_navbar_content><a class=middle_navbar_content_text href="#">Pause/lecture non publiques</a></li>
-          <li class=middle_navbar_content><a class=middle_navbar_content_text href="/site/desktop/controller/controllerTextEditor.php?id=<?=$_SESSION['id']?>&accountKey=<?=$_SESSION['accountKey']?>&status=<?=$_SESSION['status']?>">Publier un message</a></li>
+          <li class=middle_navbar_content><a class=middle_navbar_content_text href="/site/desktop/controller/controllerTextEditor.php?id=<?=$_SESSION['id']?>&accountKey=<?=$_SESSION['accountKey']?>&status=<?=$_SESSION['status']?>">Publier une pause</a></li>
         </ul>
       </nav>
       <div id=container_main_content>
