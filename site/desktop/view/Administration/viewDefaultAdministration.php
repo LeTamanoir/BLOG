@@ -16,20 +16,20 @@
       <nav id=container_navbar>
         <div class=navbar_content_profil><img class=navbar_content_image src="/icons/profil.png"><?php echo $_SESSION['username']; ?><a href="#">Mon profil</a></div>
         <ul>
-          <li class=navbar_content><img class=navbar_content_image src="/icons/dashboard.png"><div class=container_navbar_content_text><a class=navbar_content_text onclick="showIframe(4)">Tableau de bord</a></div></li>
-          <li class=navbar_content><img class=navbar_content_image src="/icons/database.png"><div class=container_navbar_content_text><a class=navbar_content_text onclick="showIframe(5)">Base de données</a></div></li>
+          <li class=navbar_content><img class=navbar_content_image src="/icons/dashboard.png"><div class=container_navbar_content_text><a class=navbar_content_text onclick="showIframe(4);" href="#">Tableau de bord</a></div></li>
+          <li class=navbar_content><img class=navbar_content_image src="/icons/database.png"><div class=container_navbar_content_text><a class=navbar_content_text onclick="showIframe(5);" href="#">Base de données</a></div></li>
           <li class=navbar_content><img class=navbar_content_image src="/icons/userlist.png"><div class=container_navbar_content_text><a class=navbar_content_text onclick="showIframe(6);" href="#">Liste des utilisateurs</a></div></li>
-          <li class=navbar_content><img class=navbar_content_image src="/icons/settings.png"><div class=container_navbar_content_text><a class=navbar_content_text onclick="showIframe(7)">Paramètres</a></div></li>
-          <li class=navbar_content><img class=navbar_content_image src="/icons/logout.png"><div class=container_navbar_content_text><a class=navbar_content_text onclick="/site/desktop/functions/logout.php">Déconnexion</a></div></li>
+          <li class=navbar_content><img class=navbar_content_image src="/icons/settings.png"><div class=container_navbar_content_text><a class=navbar_content_text onclick="showIframe(7);" href="#">Paramètres</a></div></li>
+          <li class=navbar_content><img class=navbar_content_image src="/icons/logout.png"><div class=container_navbar_content_text><a class=navbar_content_text href="/site/desktop/functions/logout.php">Déconnexion</a></div></li>
         </ul>
       </nav>
     </button>
     </div>
     <nav id=container_middle_navbar>
       <ul id=middle_navbar>
-        <li class=middle_navbar_content  style="border-left-style: solid;"><a class=middle_navbar_content_text onclick="showIframe(0)">Pauses à corriger</a></li>
-        <li class=middle_navbar_content><a class=middle_navbar_content_text onclick="showIframe(1)">Pauses publiques</a></li>
-        <li class=middle_navbar_content><a class=middle_navbar_content_text onclick="showIframe(2);">Pauses non publiques</a></li>
+        <li class=middle_navbar_content  style="border-left-style: solid;"><a class=middle_navbar_content_text onclick="showIframe(0);" href="#">Pauses à corriger</a></li>
+        <li class=middle_navbar_content><a class=middle_navbar_content_text onclick="showIframe(1);" href="#">Pauses publiques</a></li>
+        <li class=middle_navbar_content><a class=middle_navbar_content_text onclick="showIframe(2);" href="#">Pauses non publiques</a></li>
         <li class=middle_navbar_content><a class=middle_navbar_content_text href="#" onclick="showIframe(3);">Publier un message</a></li>
 
       </ul>
