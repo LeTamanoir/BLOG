@@ -34,7 +34,8 @@ button {
 html {
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: #ececec;}
+  background-color: #ececec;
+}
 body {
   margin: 0;
 }
@@ -42,23 +43,6 @@ body {
 
 /* ======================= ID ===================== */
 
-.container_navbar_font_size {
-  display: inline-block;
-  height: 4vw;
-  width: 5vw;
-  overflow-y: scroll;
-}
-.container_navbar_font_size > ul {
-  padding: 0;
-  margin: 0;
-}
-.navbar_font_size {
-  display: block;
-  padding: 1vw;
-  border-radius: 0.5vw;
-  height: 4vw;
-  width: 3vw;
-}
 
 
 
@@ -71,18 +55,14 @@ body {
   height: 100vh;
 }
 #container_navbar {
-  border-color: #57606f;
-  background-color: #acdcfa;
+  border-color: #636e72;
+  background-color: white;
   display: none;
   flex-direction: column;
   position: absolute;
   top: 0;
   left: 0;
-  border-style: solid;
-  border-width: medium;
-  border-left-width: 0;
-  border-top-width: 0;
-  border-bottom-right-radius:13.5px;
+  box-shadow: 0px 0px 20px -5px rgba(0,0,0,0.75);
 }
 #container_main_content {
   align-content: center;
@@ -183,6 +163,23 @@ body {
 /* ======================= CLASS ===================== */
 
 
+.container_navbar_font_size {
+  display: inline-block;
+  height: 4vw;
+  width: 5vw;
+  overflow-y: scroll;
+}
+.container_navbar_font_size > ul {
+  padding: 0;
+  margin: 0;
+}
+.navbar_font_size {
+  display: block;
+  padding: 1vw;
+  border-radius: 0.5vw;
+  height: 4vw;
+  width: 3vw;
+}
 
 ::-webkit-scrollbar-track
 {
@@ -293,26 +290,19 @@ body {
 .navbar_content {
   display: flex;
   flex-direction: row;
-  text-align: center;
+  align-items: center;
 }
 .middle_navbar_content {
-  display: flex;
-  flex-direction: row;
-  border-right-style: solid;
-  border-color: #57606f;
-  text-align: center;
+  display: block;
 }
 .container_navbar_content_text {
-  border-color: #57606f;
-  border-left-style: solid;
-  display: flex;
-  align-items: center;
-  margin: auto;
+  padding: 1vw;
+  margin-left: 1vw;
 }
 .image_navbar {
   border-color: #57606f;
   margin: 5px;
-  border-radius: 100%;
+  border-radius: 100px;
   border-style: solid;
 }
 .erreur_404 {
@@ -322,25 +312,29 @@ body {
   font-family: Ubuntu-Bold;
   font-size: 30px;
 }
+.profil_image {
+  width: 6vh;
+  height: 6vh;
+}
+.nav-icon {
+  margin: 1em;
+  width: 40px;
+}
 
-
-
-
-
-
-
-
+.nav-icon:after,.nav-icon:before,.nav-icon div {
+  background-color: #57606f;
+  border-radius: 3px;
+  content: '';
+  display: block;
+  height: 0.75vh;
+  margin: 1vh 0;
+  transition: all .2s ease-in-out;
+}
 
 
 /* ======================= HOVER ===================== */
 
 
-#capteur_navbar:hover .image_navbar {
-  animation: capteur_navbar 0.75s forwards;
-}
-#capteur_navbar:not(hover) .image_navbar {
-  animation: capteur_navbar_reverse 1.5s forwards;
-}
 #capteur_navbar:focus #container_navbar {
   display: flex;
   animation: navbar_moov_in 1s forwards;
@@ -362,18 +356,24 @@ body {
   position: fixed;
   animation: navbar_text_downscale 0.25s forwards;
 }
+
+.nav-icon:hover:before {
+  transform: translateY(1.75vh) rotate(135deg);
+}
+.nav-icon:hover:after {
+  transform: translateY(-1.75vh) rotate(-135deg);
+}
+.nav-icon:hover div {
+  transform: scale(0);
+}
 .tool--btn:hover {
   animation: white_to_blue 0.25s forwards;
 }
 .tool--btn:not(hover) {
   animation: blue_to_white 0.25s forwards;
 }
-.navbar_content:hover .navbar_content_text {
-  animation: navbar_text_upscale 0.25s forwards;
-}
-.navbar_content:not(hover) .navbar_content_text {
-  animation: navbar_text_downscale 0.25s forwards;
-}
+
+
 .middle_navbar_content:hover .middle_navbar_content_text {
   animation: text_upscale 0.1s forwards;
 }
@@ -395,28 +395,12 @@ body {
 
 
 
-@keyframes capteur_navbar {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(180deg);
-    background-color: #acdcfa;
-    background-size: contain;
-  }
-}
-@keyframes capteur_navbar_reverse {
-  from {transform: rotate(180deg);}
-  to {transform: rotate(0deg);}
-}
-@keyframes navbar_text_upscale {
+
+@keyframes navbar_text_hover {
   from {transform: scale(1,1);}
   to {transform: scale(1.1,1.1);}
 }
-@keyframes navbar_text_downscale {
-  from {transform: scale(1.1,1.1);}
-  to {transform: scale(1,1);}
-}
+
 @keyframes login {
   from {border-color: #70a1ff}
   to {border-color: #3742fa;}
@@ -572,10 +556,7 @@ body {
     width: 6.5vh;
     height: 6.5vh;
   }
-  .navbar_content_image {
-    width: 6vh;
-    height: 6vh;
-  }
+
   .image_404 {
     width: auto;
     height: auto;
@@ -615,7 +596,8 @@ body {
 @media only screen and (min-width: 850px) {
   #container_navbar {
     width: auto;
-    height: auto;
+    height: 100vh;
+
   }
   #container_connexion {
     width: auto;
@@ -671,50 +653,71 @@ body {
     align-self: center;
   }
   .navbar_content {
-    margin-left: 2vw;
-    margin-right: 2vw;
-    margin-top: 3vh;
-    margin-bottom: 3vh;
+    width: auto;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
   }
   .navbar_content_profil {
     display: none;
   }
   .middle_navbar_content {
-    padding-left: 1vw;
-    padding-right: 1vw;
+    padding: .5vh 1.25vh .5vh 1.25vh;
     margin-top: 1vh;
     margin-bottom: 1vh;
   }
-  .navbar_content_text {
-    padding: 1vw;
-    width: auto;
-    font-family: Ubuntu-Regular;
-    font-size: 2vh;
+  .middle_navbar_content::after {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #636e72;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
+  }
+  .middle_navbar_content:hover::after {
+    visibility: visible;
+    transform: scaleX(1);
   }
   .middle_navbar_content_text {
     padding: 0.5vw;
     font-family: Ubuntu-Regular;
-    font-size: 1.5vh;
+    font-size: 1.75vh;
+  }
+  .navbar_content_text {
+    display: inline;
+    font-family: Ubuntu-Regular;
+    font-size: 2vh;
   }
   .image_navbar {
     width: 7.5vh;
     height: 7.5vh;
   }
   .navbar_content_image {
+    width: 6vh;
+    height: 6vh;
+  }
+  .container_navbar_content_text::after {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 2px;
+    bottom: 0;
     left: 0;
-    align-self: center;
-    width: 7.5vh;
-    height: 7.5vh;
+    background-color: black;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
+  }
+  .container_navbar_content_text:hover::after {
+    visibility: visible;
+    transform: scaleX(1);
   }
   .image_404 {
     width: auto;
     height: auto;
   }
-  @keyframes text_upscale {
-    from {font-size: 1.5vh;}
-    to {font-size: 2vh;}
-  }
-  @keyframes text_downscale {
-    from {font-size: 2vh;}
-    to {font-size: 1.5vh;}
-}

@@ -12,7 +12,7 @@
 
   <body id=container_body>
     <div>
-    <button id=capteur_navbar><img class=image_navbar src="/icons/navbar.png" alt="navbar wheel">
+    <button id=capteur_navbar><div class="nav-icon"><div></div></div>
       <nav id=container_navbar>
         <div class=navbar_content_profil><img class=navbar_content_image src="/icons/profil.png"><?php echo $_SESSION['username']; ?><a href="#">Mon profil</a></div>
         <ul>
@@ -27,21 +27,19 @@
     </div>
     <nav id=container_middle_navbar>
       <ul id=middle_navbar>
-        <li class=middle_navbar_content  style="border-left-style: solid;"><a class=middle_navbar_content_text onclick="showIframe(0);" href="#">Pauses à corriger</a></li>
+        <li class=middle_navbar_content><a class=middle_navbar_content_text onclick="showIframe(0);" href="#">Pauses à corriger</a></li>
         <li class=middle_navbar_content><a class=middle_navbar_content_text onclick="showIframe(1);" href="#">Pauses publiques</a></li>
         <li class=middle_navbar_content><a class=middle_navbar_content_text onclick="showIframe(2);" href="#">Pauses non publiques</a></li>
         <li class=middle_navbar_content><a class=middle_navbar_content_text href="#" onclick="showIframe(3);">Publier un message</a></li>
-
       </ul>
     </nav>
 
     <div id=container_main_content>
       <iframe id="container_iframe"></iframe>
-  </div>
+    </div>
 
-    <div id=container_profil><img class=navbar_content_image src="/icons/profil.png"><a href="#"><?php echo $_SESSION['username']; ?></a></div>
+    <div id=container_profil><img class=profil_image src="/icons/profil.png"><a href="#"><?php echo $_SESSION['username']; ?></a></div>
 
     <div id=container_footer><?php require_once($root.'site/desktop/view/viewFooter.html'); ?></div>
   </body>
-
 </html>
