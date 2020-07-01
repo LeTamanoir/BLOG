@@ -312,13 +312,7 @@ body {
   padding: 1vw;
   margin-left: 1vw;
 }
-.erreur_404 {
-  display: block;
-  text-align: center;
-  padding: 5vw;
-  font-family: Ubuntu-Bold;
-  font-size: 30px;
-}
+
 .profil_image {
   width: 6vh;
   height: 6vh;
@@ -524,9 +518,36 @@ body {
   visibility: visible;
   transform: scaleX(1);
 }
-.image_404 {
-  width: auto;
-  height: auto;
+#image_404 {
+  display: block;
+  margin: auto;
+  width: 50vh;
+  height: 50vh;
+  border: solid thin;
+}
+.erreur_404 {
+  display: block;
+  text-align: center;
+  margin: 3vw;
+  font-family: Ubuntu-Bold;
+  font-size: 30px;
+}
+.submit_erreur_404 {
+  display: block;
+  text-align: center;
+  margin: 3vw;
+  font-family: Ubuntu-Bold;
+  font-size: 30px;
+}
+.submit_erreur_404:hover {
+  text-decoration: underline;
+}
+.button_404 {
+  display: block;
+  margin: 2vw auto 2vw auto;
+}
+.button_404:hover {
+  color: red;
 }
 #container_error {
   display: none;
