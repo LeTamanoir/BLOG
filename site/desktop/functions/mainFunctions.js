@@ -139,7 +139,9 @@ function retrieve_cookie(name) {
 
   function myFunction(x) {
     if (x.matches) {
-      document.body.style.display = "none";
+      //document.body.style.display = "none";
+      //document.html.background.image = "url()";
+      window.location.replace('/site/desktop/view/viewErrorWindow.html');
     } else {
       document.body.style.display = "flex";
     }
