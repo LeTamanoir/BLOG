@@ -2,7 +2,7 @@
 
 ## Refonte Design
 
-[logoHTML]: https://github.com/darkshark400/BLOG/blob/master/icons/html.png
+[logoHTML]: https://github.com/darkshark400/BLOG/blob/master/icons/presentation/html.png
 [logoCSS]: https://github.com/darkshark400/BLOG/blob/master/icons/css.png
 [logoJS]: https://github.com/darkshark400/BLOG/blob/master/icons/js.png
 [logoANDROID]: https://github.com/darkshark400/BLOG/blob/master/icons/android.png
