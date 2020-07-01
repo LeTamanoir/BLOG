@@ -51,17 +51,12 @@
         document.getElementById("navbar_image").src = "/icons/navbar/100px/cross.png";
         document.getElementById("container_navbar").style.animation = "scale_x 0.2s forwards";
         document.getElementById("capteur_navbar").style.animation = "navbar_ease_in 0.2s forwards";
-
-
         container_navbar=1;
       }
       else if (container_navbar!=0) {
         document.getElementById("navbar_image").src = "/icons/navbar/100px/navbar.png";
         document.getElementById("container_navbar").style.animation = "scale_x_reverse 0.2s forwards";
         document.getElementById("capteur_navbar").style.animation = "navbar_ease_out 0.2s forwards";
-
-
-
         container_navbar=0;
       }
     }
