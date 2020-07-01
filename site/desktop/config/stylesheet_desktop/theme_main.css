@@ -378,14 +378,22 @@ body {
 
 
 
-
-@keyframes scale_y {
+@keyframes scale_x {
   from {transform-origin: left;transform: scaleX(0);}
   to {transform-origin: left;transform: scaleX(1);}
 }
-@keyframes scale_y_reverse {
+@keyframes scale_x_reverse {
   from {transform-origin: left;transform: scaleX(1);}
   to {transform-origin: left;transform: scaleX(0);}
+}
+
+@keyframes scale_y {
+  from {transform-origin: top;transform: scaleY(0);}
+  to {transform-origin: top;transform: scaleY(1);}
+}
+@keyframes scale_y_reverse {
+  from {transform-origin: top;transform: scaleY(1);}
+  to {transform-origin: top;transform: scaleY(0);}
 }
 @keyframes navbar_ease_in {
   from {background-color: white; width: 100%; transform: scaleX(0);  transform-origin: left;}
