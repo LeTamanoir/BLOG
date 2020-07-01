@@ -9,21 +9,18 @@
 
   <header><!-- --></header>
 
-
   <body id=container_body>
-    <div>
-    <button id=capteur_navbar><div class="nav-icon"><div></div></div>
+    <div id=container_navbar_all>
+    <div id=container_button><button id=capteur_navbar onclick=show_navbar()><img id=navbar_image src="/icons/navbar/100px/navbar.png"></button></div>
       <nav id=container_navbar>
-        <div class=navbar_content_profil><img class=navbar_content_image src="/icons/profil.png"><?php echo $_SESSION['username']; ?><a href="#">Mon profil</a></div>
         <ul>
-          <li class=navbar_content><img class=navbar_content_image src="/icons/dashboard.png"><div class=container_navbar_content_text><a class=navbar_content_text onclick="showIframe(4);" href="#">Tableau de bord</a></div></li>
-          <li class=navbar_content><img class=navbar_content_image src="/icons/database.png"><div class=container_navbar_content_text><a class=navbar_content_text onclick="showIframe(5);" href="#">Base de données</a></div></li>
-          <li class=navbar_content><img class=navbar_content_image src="/icons/userlist.png"><div class=container_navbar_content_text><a class=navbar_content_text onclick="showIframe(6);" href="#">Liste des utilisateurs</a></div></li>
-          <li class=navbar_content><img class=navbar_content_image src="/icons/settings.png"><div class=container_navbar_content_text><a class=navbar_content_text onclick="showIframe(7);" href="#">Paramètres</a></div></li>
-          <li class=navbar_content><img class=navbar_content_image src="/icons/logout.png"><div class=container_navbar_content_text><a class=navbar_content_text href="/site/desktop/functions/logout.php">Déconnexion</a></div></li>
+          <li class=navbar_content><img class=navbar_content_image src="/icons/navbar/100px/dashboard.png"><div class=container_navbar_content_text><a class=navbar_content_text onclick="showIframe(4);" href="#">Tableau de bord</a></div></li>
+          <li class=navbar_content><img class=navbar_content_image src="/icons/navbar/100px/database.png"><div class=container_navbar_content_text><a class=navbar_content_text onclick="showIframe(5);" href="#">Base de données</a></div></li>
+          <li class=navbar_content><img class=navbar_content_image src="/icons/navbar/100px/user_list.png"><div class=container_navbar_content_text><a class=navbar_content_text onclick="showIframe(6);" href="#">Liste des utilisateurs</a></div></li>
+          <li class=navbar_content><img class=navbar_content_image src="/icons/navbar/100px/settings.png"><div class=container_navbar_content_text><a class=navbar_content_text onclick="showIframe(7);" href="#">Paramètres</a></div></li>
+          <li class=navbar_content><img class=navbar_content_image src="/icons/navbar/100px/logout.png"><div class=container_navbar_content_text><a class=navbar_content_text href="/site/desktop/functions/logout.php">Déconnexion</a></div></li>
         </ul>
       </nav>
-    </button>
     </div>
     <nav id=container_middle_navbar>
       <ul id=middle_navbar>
@@ -40,46 +37,93 @@
     else {
       echo 'le cookie n\'existe pas !! ';
     }?>
-    <a href="#" onclick="test(1)">click-me !</a>
+    <a href="#" onclick="test()">click-me !</a>
 
     <script>
-    click = '';
-    function test(x)
+    var value = retrieve_cookie('background');
+    document.getElementById('container_body').style.background = value;
+
+    container_navbar = 0;
+    function show_navbar()
     {
-      if (click == '' && x=='1')
+      if (container_navbar==0)
       {
-        //prompt('salut');
-        console.log('click = '+click);
-        console.log('x = '+x);
-        <?php setcookie('background1','grey',time()+365*24*3600);
-        setcookie('background2','',time()+365*24*3600);
-        #$_COOKIE['background'] = 'white';?>
-        console.log('cookie = <?=$_COOKIE['background']?>');
-        document.getElementById('container_body').style.background = "<?=$_COOKIE['background1']?>";
-        click = '1';
-        x = "0";
-        alert(x+' : dans le if');
+        document.getElementById("navbar_image").src = "/icons/navbar/100px/cross.png";
+        document.getElementById("container_navbar").style.animation = "scale_x 0.2s forwards";
+        document.getElementById("capteur_navbar").style.animation = "navbar_ease_in 0.2s forwards";
+
+
+        container_navbar=1;
       }
-      else if (x == '1' && click=='1')
-      {
-        alert(x+': dans le else if')
-        console.log('click = '+click);
-        console.log('x = '+x);
-        <?php #$_COOKIE['background'] = 'pink';
-        setcookie('background1','',time()-365*24*3600);
-        setcookie('background2','white',time()+365*24*3600);?>
-        console.log('cookie = <?=$_COOKIE['background']?>');
-        document.getElementById('container_body').style.background = "<?=$_COOKIE['background2']?>";
-        click = '';
+      else if (container_navbar!=0) {
+        document.getElementById("navbar_image").src = "/icons/navbar/100px/navbar.png";
+        document.getElementById("container_navbar").style.animation = "scale_x_reverse 0.2s forwards";
+        document.getElementById("capteur_navbar").style.animation = "navbar_ease_out 0.2s forwards";
+
+
+
+        container_navbar=0;
       }
     }
+    x='1';
+    function test()
+    {
+      if (x=='1')
+      {
+        var cookie_name = 'background';
+        var cookie_value = 'pink';
+        create_cookie(cookie_name,cookie_value,1,"/");
+        x = "0";
+        var value = retrieve_cookie('background');
+        document.getElementById('container_body').style.background = value;
+
+      }
+      else if (x == '0')
+      {
+        var cookie_name = 'background';
+        var cookie_value = 'yellow';
+        create_cookie(cookie_name,cookie_value,1,"/");
+        x = '1';
+        var value = retrieve_cookie('background');
+        document.getElementById('container_body').style.background = value;
+      }
+    }
+
+    function create_cookie(name, value, days2expire, path)
+    {
+            var date = new Date();
+            date.setTime(date.getTime() + (days2expire * 24 * 60 * 60 * 1000));
+            var expires = date.toUTCString();
+            document.cookie = name + '=' + value + ';' +
+                             'expires=' + expires + ';' +
+                             'path=' + path + ';';
+    }
+
+
+    function retrieve_cookie(name) {
+        var cookie_value = "",
+                current_cookie = "",
+                name_expr = name + "=",
+                all_cookies = document.cookie.split(';'),
+                n = all_cookies.length;
+
+        for(var i = 0; i < n; i++) {
+                current_cookie = all_cookies[i].trim();
+                if(current_cookie.indexOf(name_expr) == 0) {
+                        cookie_value = current_cookie.substring(name_expr.length, current_cookie.length);
+                        break;
+                }
+        }
+        return cookie_value;
+      }
+
   </script>
 
     <div id=container_main_content>
       <iframe id="container_iframe"></iframe>
     </div>
 
-    <div id=container_profil><img class=profil_image src="/icons/profil.png"><a href="#"><?php echo $_SESSION['username']; ?></a></div>
+    <div id=container_profil><img class=profil_image src="/icons/navbar/100px/user.png"><a href="#"><?php echo $_SESSION['username']; ?></a></div>
 
     <div id=container_footer><?php require_once($root.'site/desktop/view/viewFooter.html'); ?></div>
   </body>

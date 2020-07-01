@@ -1,5 +1,4 @@
-<?php
-session_start();
+<?php session_start();
 require_once('../functions/logs.php');
 deconnect_logs();
 $_SESSION = array();
