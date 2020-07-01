@@ -31,14 +31,8 @@
         <li class=middle_navbar_content><img class=middle_navbar_content_image src="/icons/navbar/100px/message.png"><a class=middle_navbar_content_text href="#" onclick="showIframe(3);">Publier un message</a></li>
       </ul>
     </nav>
-    <?php if(isset($_COOKIE['background']))
-    {
-      echo $_COOKIE['background'];
-    }
-    else {
-      echo 'le cookie n\'existe pas !! ';
-    }?>
-    <a href="#" onclick="test()">click-me !</a>
+
+    <!--<a href="#" onclick="test()">click-me !</a>-->
 
     <script>
     var value = retrieve_cookie('background');
