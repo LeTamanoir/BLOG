@@ -5,7 +5,7 @@
     <title>Accueil</title>
     <link rel="stylesheet" href="/site/desktop/config/stylesheet_desktop/theme_main.css">
     <script src="/site/desktop/functions/showIframe.js"></script>
-    <script src="/site/desktop/functions/mainFunctions.php"></script>
+    <script src="/site/desktop/functions/mainFunctions.js"></script>
   </head>
 
   <header><!-- --></header>
@@ -34,11 +34,17 @@
     </nav>
 
     <!--<a href="#" onclick="test()">click-me !</a>-->
-
+    <script>
+    var x = window.matchMedia("(max-width: 850px)");
+    myFunction(x);
+    x.addListener(myFunction);
+    </script>
 
     <div id=container_main_content>
       <iframe id="container_iframe"></iframe>
     </div>
+
+    <div id=container_error><div class=desktop_mode_text>Passer en version pour ordinateur</div><img class=desktop_mode src="/icons/404/desktop_mode.gif"></div>
 
     <div id=container_profil><img class=profil_image src="/icons/navbar/100px/user.png"><a href="#"><?php echo $_SESSION['username']; ?></a></div>
 

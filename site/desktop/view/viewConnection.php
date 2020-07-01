@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8" content="width=device-width" name="viewport">
     <title>Connexion</title>
-    <script src="/site/desktop/functions/mainFunctions.php" type="text/javascript"></script>
+    <script src="/site/desktop/functions/mainFunctions.js" type="text/javascript"></script>
+
     <link rel="stylesheet" href="/site/desktop/config/stylesheet_desktop/theme_main.css">
 
   </head>
@@ -28,11 +29,18 @@
 
     </form>
 
+    <div id=container_error><div class=desktop_mode_text>Passer en version pour ordinateur</div><img class=desktop_mode src="/icons/404/desktop_mode.gif"><?php echo $_SESSION['username']; ?></div>
+
     <div id=container_footer><?php   require_once($root.'site/desktop/view/viewFooter.html'); ?></div>
 
   </body>
 
   <script>
+
+  var x = window.matchMedia("(max-width: 850px)");
+  myFunction(x);
+  x.addListener(myFunction);
+
   eye_status = 0;
   function switch_eye() {
     if (eye_status==0)
