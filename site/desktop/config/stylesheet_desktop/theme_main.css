@@ -58,7 +58,7 @@ body {
   border-color: #636e72;
   background-color: white;
   display: flex;
-  transform: scaleY(0);
+  transform: scaleX(0);
   flex-direction: column;
   border-bottom: solid thin;
   border-right: solid thin;
@@ -380,20 +380,20 @@ body {
 
 
 @keyframes scale_y {
-  from {transform-origin: top;transform: scaleY(0);}
-  to {transform-origin: top;transform: scaleY(1);}
+  from {transform-origin: left;transform: scaleX(0);}
+  to {transform-origin: left;transform: scaleX(1);}
 }
 @keyframes scale_y_reverse {
-  from {transform-origin: top;transform: scaleY(1);}
-  to {transform-origin: top;transform: scaleY(0);}
+  from {transform-origin: left;transform: scaleX(1);}
+  to {transform-origin: left;transform: scaleX(0);}
 }
 @keyframes navbar_ease_in {
-  from {background-color: none; width: 0%;}
-  to {background-color: white; border-right: solid thin; width: 100%;}
+  from {background-color: white; width: 100%; transform: scaleX(0);  transform-origin: left;}
+  to {background-color: white; border-right: solid thin; width: 100%; transform: scaleX(1);  transform-origin: left;}
 }
 @keyframes navbar_ease_out {
   from {width: 100%; background-color: white; border-right: solid thin;}
-  to {width: 0%;; background-color: none;}
+  to {width: 0%; background-color: white;}
 }
 @keyframes login {
   from {border-color: #70a1ff}
