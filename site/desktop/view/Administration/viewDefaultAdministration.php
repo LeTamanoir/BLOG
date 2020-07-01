@@ -33,6 +33,47 @@
         <li class=middle_navbar_content><a class=middle_navbar_content_text href="#" onclick="showIframe(3);">Publier un message</a></li>
       </ul>
     </nav>
+    <?php if(isset($_COOKIE['background']))
+    {
+      echo $_COOKIE['background'];
+    }
+    else {
+      echo 'le cookie n\'existe pas !! ';
+    }?>
+    <a href="#" onclick="test(1)">click-me !</a>
+
+    <script>
+    click = '';
+    function test(x)
+    {
+      if (click == '' && x=='1')
+      {
+        //prompt('salut');
+        console.log('click = '+click);
+        console.log('x = '+x);
+        <?php setcookie('background1','grey',time()+365*24*3600);
+        setcookie('background2','',time()+365*24*3600);
+        #$_COOKIE['background'] = 'white';?>
+        console.log('cookie = <?=$_COOKIE['background']?>');
+        document.getElementById('container_body').style.background = "<?=$_COOKIE['background1']?>";
+        click = '1';
+        x = "0";
+        alert(x+' : dans le if');
+      }
+      else if (x == '1' && click=='1')
+      {
+        alert(x+': dans le else if')
+        console.log('click = '+click);
+        console.log('x = '+x);
+        <?php #$_COOKIE['background'] = 'pink';
+        setcookie('background1','',time()-365*24*3600);
+        setcookie('background2','white',time()+365*24*3600);?>
+        console.log('cookie = <?=$_COOKIE['background']?>');
+        document.getElementById('container_body').style.background = "<?=$_COOKIE['background2']?>";
+        click = '';
+      }
+    }
+  </script>
 
     <div id=container_main_content>
       <iframe id="container_iframe"></iframe>
