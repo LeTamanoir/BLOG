@@ -5,6 +5,7 @@
     <title>Accueil</title>
     <link rel="stylesheet" href="/site/desktop/config/stylesheet_desktop/theme_main.css">
     <script src="/site/desktop/functions/showIframe.js"></script>
+    <script src="/site/desktop/functions/mainFunctions.php"></script>
   </head>
 
   <header><!-- --></header>
@@ -34,80 +35,6 @@
 
     <!--<a href="#" onclick="test()">click-me !</a>-->
 
-    <script>
-    var value = retrieve_cookie('background');
-    document.getElementById('container_body').style.background = value;
-
-    container_navbar = 0;
-    function show_navbar()
-    {
-      if (container_navbar==0)
-      {
-        document.getElementById("navbar_image").src = "/icons/navbar/100px/cross.png";
-        document.getElementById("container_navbar").style.animation = "scale_x 0.2s forwards";
-        document.getElementById("capteur_navbar").style.animation = "navbar_ease_in 0.2s forwards";
-        container_navbar=1;
-      }
-      else if (container_navbar!=0) {
-        document.getElementById("navbar_image").src = "/icons/navbar/100px/navbar.png";
-        document.getElementById("container_navbar").style.animation = "scale_x_reverse 0.2s forwards";
-        document.getElementById("capteur_navbar").style.animation = "navbar_ease_out 0.2s forwards";
-        container_navbar=0;
-      }
-    }
-    x='1';
-    function test()
-    {
-      if (x=='1')
-      {
-        var cookie_name = 'background';
-        var cookie_value = 'pink';
-        create_cookie(cookie_name,cookie_value,1,"/");
-        x = "0";
-        var value = retrieve_cookie('background');
-        document.getElementById('container_body').style.background = value;
-
-      }
-      else if (x == '0')
-      {
-        var cookie_name = 'background';
-        var cookie_value = 'yellow';
-        create_cookie(cookie_name,cookie_value,1,"/");
-        x = '1';
-        var value = retrieve_cookie('background');
-        document.getElementById('container_body').style.background = value;
-      }
-    }
-
-    function create_cookie(name, value, days2expire, path)
-    {
-            var date = new Date();
-            date.setTime(date.getTime() + (days2expire * 24 * 60 * 60 * 1000));
-            var expires = date.toUTCString();
-            document.cookie = name + '=' + value + ';' +
-                             'expires=' + expires + ';' +
-                             'path=' + path + ';';
-    }
-
-
-    function retrieve_cookie(name) {
-        var cookie_value = "",
-                current_cookie = "",
-                name_expr = name + "=",
-                all_cookies = document.cookie.split(';'),
-                n = all_cookies.length;
-
-        for(var i = 0; i < n; i++) {
-                current_cookie = all_cookies[i].trim();
-                if(current_cookie.indexOf(name_expr) == 0) {
-                        cookie_value = current_cookie.substring(name_expr.length, current_cookie.length);
-                        break;
-                }
-        }
-        return cookie_value;
-      }
-
-  </script>
 
     <div id=container_main_content>
       <iframe id="container_iframe"></iframe>

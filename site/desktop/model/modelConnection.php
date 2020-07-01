@@ -1,7 +1,6 @@
 <?php
 session_start();
-require_once($root.'site/desktop/functions/accountKey.php');
-require_once($root.'site/desktop/functions/logs.php');
+require_once($root.'site/desktop/functions/mainFunctions.php');
 if(isset($_POST['submit']))
 {
   $username = htmlspecialchars($_POST['username']);
@@ -20,8 +19,6 @@ if(isset($_POST['submit']))
       $_SESSION['name'] = $userinfo['name'];
       $_SESSION['photo'] = $userinfo['photo'];
       $_SESSION['password'] = $userinfo['password'];
-      #setcookie('TE_visiblity','none', time()+24*3600);
-      #setcookie('U_visiblity','none', time()+24*3600);
 
 
       if($_SESSION['username'] == 'admin')

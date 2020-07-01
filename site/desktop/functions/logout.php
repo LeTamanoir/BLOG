@@ -1,5 +1,6 @@
 <?php session_start();
-require_once('../functions/logs.php');
+$root = "/kunden/homepages/14/d285337155/www/Arthur/sites/blog/";
+require_once($root.'site/desktop/functions/mainFunctions.php');
 deconnect_logs();
 $_SESSION = array();
 session_destroy();

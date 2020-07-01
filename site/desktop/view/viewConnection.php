@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" content="width=device-width" name="viewport">
     <title>Connexion</title>
-    <script src="/site/desktop/functions/unmask.js" type="text/javascript"></script>
+    <script src="/site/desktop/functions/mainFunctions.php" type="text/javascript"></script>
     <link rel="stylesheet" href="/site/desktop/config/stylesheet_desktop/theme_main.css">
 
   </head>
@@ -33,17 +33,17 @@
   </body>
 
   <script>
-  eye_status = 0
+  eye_status = 0;
   function switch_eye() {
     if (eye_status==0)
     {
-      document.getElementById("image_eye").src = "../../../icons/login/100px/no_eye.png";
-      eye_status = 1
+      document.getElementById("image_eye").src = "/icons/login/100px/no_eye.png";
+      eye_status = 1;
     }
     else if (eye_status==1)
     {
-      document.getElementById("image_eye").src = "../../../icons/login/100px/eye.png";
-      eye_status = 0
+      document.getElementById("image_eye").src = "/icons/login/100px/eye.png";
+      eye_status = 0;
     }
   }
   function login_translate() {
