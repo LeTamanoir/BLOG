@@ -262,6 +262,7 @@ body {
 
 
 .password_container {
+  align-self: center;
   display: flex;
   justify-content: flex-end;
 }
@@ -324,13 +325,19 @@ body {
   margin-bottom: 1vh;
 }
 .login_info {
+  align-self: center;
   border: none;
   display: block;
   font-family: Ubuntu-Bold;
   margin: 1vw;
   padding: 0.25vw;
   border-bottom: solid thin;
+  font-size: 2vh;
+  width: 20vw;
+  height: 5vh;
 }
+
+
 
 .login_info:focus {
   border-color: #8bb7f0;
@@ -472,11 +479,6 @@ body {
 }
 .footer{
   font-size: 2vh;
-}
-.login_info {
-  font-size: 2vh;
-  width: 20vw;
-  height: 5vh;
 }
 
 .image_logo {

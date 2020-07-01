@@ -28,11 +28,25 @@
 
     </form>
 
+    <div id=container_error><div class=desktop_mode_text>Passer en version pour ordinateur</div><img class=desktop_mode src="../../../icons/404/desktop_mode.gif"><?php echo $_SESSION['username']; ?></div>
+
     <div id=container_footer><?php   require_once($root.'site/desktop/view/viewFooter.html'); ?></div>
 
   </body>
 
   <script>
+  function myFunction(x) {
+    if (x.matches) {
+      document.getElementById('container_connexion').style.display = "none";
+      document.getElementById('container_error').style.display = "flex";
+    } else {
+      document.getElementById('container_connexion').style.display = "flex";
+      document.getElementById('container_error').style.display = "none";
+    }
+  }
+  var x = window.matchMedia("(max-width: 650px)")
+  myFunction(x)
+  x.addListener(myFunction)
   eye_status = 0
   function switch_eye() {
     if (eye_status==0)
