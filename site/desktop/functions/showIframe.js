@@ -17,7 +17,7 @@ function showIframe(x)
   }
   else if (x==2 && last_onclick!='2')
   {
-    document.getElementById("container_iframe").src = "/site/desktop/view/Administration/viewUsers.php";
+    document.getElementById("container_iframe").src = "/site/desktop/view/Public/viewTextEditor.php";
     document.getElementById("container_iframe").style.display = "inline";
     last_onclick = x;
   }
@@ -44,7 +44,7 @@ function showIframe(x)
   else if (x==6 && last_onclick!='6')
   {
     //a modif
-    document.getElementById("container_iframe").src = "/site/desktop/view/Public/viewTextEditor.php";
+    document.getElementById("container_iframe").src = "/site/desktop/view/Administration/viewUsers.php";
     document.getElementById("container_iframe").style.display = "inline";
     last_onclick = x;
   }
