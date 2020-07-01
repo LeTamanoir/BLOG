@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html style='background-color: #acdcfa;'>
+<html>
   <head>
     <title>Editor</title>
     <meta charset="utf-8" content="width=device-width" name="viewport">
@@ -11,64 +11,74 @@
   <body id=text_editor>
     <div class=tool-bar>
     	<ul class="tool-list">
-
-    		<li class="tool">
-    			<button type="button" data-command='justifyLeft' class="tool--btn"><img class=image_text_editor src='../../../../icons/text_editor/left.png'></button>
+        <li class="tool">
+    			<button type="button" data-command='justifyCenter' class="tool--btn"><img class=image_text_editor src='../../../../icons/text_editor/100px/center.png'></button>
     		</li>
 
     		<li class="tool">
-    			<button type="button" data-command='justifyCenter' class="tool--btn"><img class=image_text_editor src='../../../../icons/text_editor/center.png'></button>
-    		</li>
-
-    		<li class="tool">
-    			<button type="button"	data-command="bold"	class="tool--btn"><img class=image_text_editor src='../../../../icons/text_editor/bold.png'></button>
-    		</li>
-
-    		<li class="tool">
-    			<button	type="button"	data-command="italic"	class="tool--btn"><img class=image_text_editor src='../../../../icons/text_editor/italic.png'></button>
-    		</li>
-
-    		<li class="tool">
-    			<button type="button"	data-command="underline" class="tool--btn"><img class=image_text_editor src='../../../../icons/text_editor/underline.png'></button>
-    		</li>
-
-    		<li class="tool">
-    			<button	type="button" data-command="insertOrderedList" class="tool--btn"><img class=image_text_editor src='../../../../icons/text_editor/number.png'></button>
-    		</li>
-
-    		<li class="tool">
-    			<button type="button" data-command="insertUnorderedList" class="tool--btn"><img class=image_text_editor src='../../../../icons/text_editor/bullet.png'></button>
-    		</li>
-
-    		<li class="tool">
-    			<button type="button" data-command="createlink"	class="tool--btn"><img class=image_text_editor src='../../../../icons/text_editor/link.png'></button>
+    			<button type="button" data-command='justifyLeft' class="tool--btn"><img class=image_text_editor src='../../../../icons/text_editor/100px/left.png'></button>
     		</li>
 
         <li class="tool">
-          <div class="container_navbar_font_size">
-            <ul>
-              <li><button type="button" data-command="FontSize" class="tool--btn navbar_font_size" onclick="size(<?=$i?>)">1</button></li>
-              <li><button type="button" data-command="FontSize" class="tool--btn navbar_font_size" onclick="size(<?=$i?>)">2</button></li>
-              <li><button type="button" data-command="FontSize" class="tool--btn navbar_font_size" onclick="size(<?=$i?>)">3</button></li>
-              <li><button type="button" data-command="FontSize" class="tool--btn navbar_font_size" onclick="size(<?=$i?>)">4</button></li>
-              <?php $i = 0;
+          <button type="button" data-command='justifyRight' class="tool--btn"><img class=image_text_editor src='../../../../icons/text_editor/100px/right.png'></button>
+        </li>
 
-              while ($i<7){
-                $i = $i +1;
-                ?> <li><button type="button" data-command="FontSize" class="tool--btn navbar_font_size" onclick="size(<?=$i?>)"><?=$i?></button></li>
+    		<li class="tool">
+    			<button type="button"	data-command="bold"	class="tool--btn"><img class=image_text_editor src='../../../../icons/text_editor/100px/bold.png'></button>
+    		</li>
 
-              <?php;} ?>
-            </ul>
-          </div>
-        <li>
+    		<li class="tool">
+    			<button	type="button"	data-command="italic"	class="tool--btn"><img class=image_text_editor src='../../../../icons/text_editor/100px/italic.png'></button>
+    		</li>
+
+    		<li class="tool">
+    			<button type="button"	data-command="underline" class="tool--btn"><img class=image_text_editor src='../../../../icons/text_editor/100px/underline.png'></button>
+    		</li>
+
+    		<li class="tool">
+    			<button	type="button" data-command="insertOrderedList" class="tool--btn"><img class=image_text_editor src='../../../../icons/text_editor/100px/number.png'></button>
+    		</li>
+
+    		<li class="tool">
+    			<button type="button" data-command="insertUnorderedList" class="tool--btn"><img class=image_text_editor src='../../../../icons/text_editor/100px/bullet.png'></button>
+    		</li>
+
+    		<li class="tool">
+    			<button type="button" data-command="createlink"	class="tool--btn"><img class=image_text_editor src='../../../../icons/text_editor/100px/link.png'></button>
+    		</li>
+
+        <div class="tool">
+          <button type="button" class="tool--btn" onclick="show_navbar_font_size()"><img id=image_text_editor_2 src='../../../../icons/text_editor/100px/size.png'></button>
+          <nav id=container_navbar_font_size>
+            <button type="button" data-command="FontSize" class="tool--btn navbar_font_size" onclick="size(1)">1</button>
+            <button type="button" data-command="FontSize" class="tool--btn navbar_font_size" onclick="size(2)">2</button>
+            <button type="button" data-command="FontSize" class="tool--btn navbar_font_size" onclick="size(3)">3</button>
+            <button type="button" data-command="FontSize" class="tool--btn navbar_font_size" onclick="size(4)">4</button>
+          </nav>
+        </div>
+
     	</ul>
     </div>
-
     <div id="output" contenteditable="true"></div>
-
-    <input type="submit" class=login_button name="submit" value="Envoyer"/>
+    <input type="submit" class=login_button_text_editor name="submit" value="Envoyer"/>
 
     <script>
+    container_navbar_font_size_compteur = 0;
+    function show_navbar_font_size()
+    {
+      if (container_navbar_font_size_compteur==0)
+      {
+        document.getElementById("container_navbar_font_size").style.display = "flex";
+        document.getElementById("container_navbar_font_size").style.animation = "scale_y 0.5s forwards";
+        document.getElementById("image_text_editor_2").src = "../../../../icons/text_editor/100px/cross.png";
+        container_navbar_font_size_compteur=1;
+      }
+      else if (container_navbar_font_size_compteur!=0) {
+        document.getElementById("container_navbar_font_size").style.animation = "scale_y_reverse 0.5s forwards";
+        document.getElementById("image_text_editor_2").src = "../../../../icons/text_editor/100px/size.png";
+        container_navbar_font_size_compteur=0;
+      }
+    }
     let size_text = '';
     function size(x)
     {

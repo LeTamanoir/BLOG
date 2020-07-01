@@ -57,59 +57,31 @@ body {
 #container_navbar {
   border-color: #636e72;
   background-color: white;
-  display: none;
-  position: absolute;
+  display: flex;
+  transform: scaleY(0);
   flex-direction: column;
+  border-bottom: solid thin;
+  border-right: solid thin;
+
+}
+#container_navbar_all {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
   top: 0;
   left: 0;
-  box-shadow: 0px 0px 20px -5px rgba(0,0,0,0.75);
-}
-#container_main_content {
-  align-content: center;
-  margin: 5vw;
-}
-#container_iframe {
-  display: none;
-  border-style: solid;
-  border-color: #57606f;
-  background-color: #acdcfa;
-  padding: 1vw;
-  border-radius: 1vw;
-  width: 60vw;
-  height: 60vh;
-}
-#output{
-  background-color: white;
-  overflow-y: scroll;
-  border-style: solid;
-  border-color: #57606f;
-  border-radius: 1vw;
-  height: 60vh;
-	margin: 1vw;
-	padding: 1vw;
-}
-#output > a {
-  text-decoration: underline;
-  color: blue;
-}
-#output > ul {
-  list-style-type: disc;
-  list-style: circle;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  margin-left: 0;
-  margin-right: 0;
-  padding-left: 40px;
 }
 
-#output > ol {
-  list-style-type: decimal;
-  list-style: decimal;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  margin-left: 0;
-  margin-right: 0;
-  padding-left: 40px;
+
+#container_main_content {
+  align-content: center;
+  margin: 4vw;
+}
+#container_iframe {
+  border: none;
+  display: none;
+  width: 70vw;
+  height: 70vh;
 }
 
 #container_middle_navbar {
@@ -138,13 +110,17 @@ body {
   flex-direction: row;
 }
 #capteur_navbar {
-  display: flex;
-  position: absolute;
-  left: 0;
-  top: 0;
+  align-self: flex-start;
+  display: block;
   background: none;
   border: none;
   padding: 0;
+}
+#navbar_image {
+
+  width: 4vw;
+  height: 4vw;
+  margin: 1vw;
 }
 #container_profil {
   box-shadow: 0px 0px 20px -5px rgba(0,0,0,0.75);
@@ -160,23 +136,7 @@ body {
 /* ======================= CLASS ===================== */
 
 
-.container_navbar_font_size {
-  display: inline-block;
-  height: 4vw;
-  width: 5vw;
-  overflow-y: scroll;
-}
-.container_navbar_font_size > ul {
-  padding: 0;
-  margin: 0;
-}
-.navbar_font_size {
-  display: block;
-  padding: 1vw;
-  border-radius: 0.5vw;
-  height: 4vw;
-  width: 3vw;
-}
+
 
 ::-webkit-scrollbar-track
 {
@@ -194,23 +154,102 @@ body {
 	border-radius: 5px;
 	background-color: #57606f;
 }
+
+
+
+#text_editor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tool-bar {
+  display: inline-flex;
+  flex-direction: column;
+  margin: 1vw;
+}
 .tool-list {
+  display: inline-flex;
+  flex-direction: row;
+  box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
   width: auto;
   height: auto;
-	display: flex;
-	flex-flow: row;
-	padding: 0.5vw;
-	margin: 0.5vw;
 }
 .tool {
-  display: inline-block;
-  padding: 0.5vw;
+  display: block;
 }
 .tool--btn {
+  border: none;
 	display: inline-block;
+  height: 70px;
+  width: 70px;
+  padding: 10px;
+}
+#container_navbar_font_size {
+  box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.75);
+  display: none;
+  flex-direction: column;
+  position: absolute;
+}
+#container_navbar_font_size > .navbar_font_size{
+  border-top: solid thin
+}
+.navbar_font_size {
+  display: block;
+  width: 70px;
+  height: 70px;
+}
+.image_text_editor,#image_text_editor_2 {
+  height: 50px;
+  width: 50px;
+}
+.tool--btn:hover {
+  cursor: pointer;
+  box-shadow: inset 0px 0px 2px 0px rgba(0,0,0,1);
+}
+#output{
+  padding: 1vw;
+  font-family: Arial;
+  border-radius: 5px;
+  background-color: white;
+  overflow-y: scroll;
+  border: solid thin;
+  height: 70vh;
+	width: 95vw;
+}
+#output > a {
+  text-decoration: underline;
+  color: blue;
+}
+#output > ul {
+  list-style-type: disc;
+  list-style: circle;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 40px;
+}
+
+#output > ol {
+  list-style-type: decimal;
+  list-style: decimal;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 40px;
+}
+.login_button_text_editor {
+  background-color: #f1f2f6;
+  font-family: Ubuntu-Bold;
+  font-size: 2vw;
   padding: 0.5vw;
-  border-style: solid;
-  border-radius: 0.5vw;
+  margin: 1vw;
+  border-radius: 5px;
+  border: solid thin #70a1ff;
+  box-shadow: 0px 0px 4px 0px #70a1ff;
+
+  }
 }
 .footer{
   font-family: Ubuntu-Regular;
@@ -221,10 +260,7 @@ body {
   border-top-color: grey;
   border-top-width: thin;
 }
-.image_text_editor {
-  height: 2.5vw;
-  width: 2.5vw;
-}
+
 .login_info {
   display: inline-block;
   border-color: #70a1ff;
@@ -296,12 +332,6 @@ body {
   padding: 1vw;
   margin-left: 1vw;
 }
-.image_navbar {
-  border-color: #57606f;
-  margin: 5px;
-  border-radius: 100px;
-  border-style: solid;
-}
 .erreur_404 {
   display: block;
   text-align: center;
@@ -313,53 +343,17 @@ body {
   width: 6vh;
   height: 6vh;
 }
-.nav-icon {
-  margin: 1em;
-  width: 5vh;
-}
-.nav-icon:after,.nav-icon:before,.nav-icon div {
-  background-color: black;
-  border-radius: 100px;
-  content: '';
-  display: block;
-  height: 0.6vh;
-  margin: 1.2vh 0;
-  transition: all .2s ease-in-out;
-}
+
+
 
 
 
 /* ======================= HOVER ===================== */
 
 
-#capteur_navbar:focus #container_navbar {
-  display: flex;
-  animation: navbar_moov_in 1s forwards;
-}
-#container_navbar:focus,#container_navbar:hover {
-  display: flex;
-}
-#capteur_navbar:focus .navbar_content {
-  animation: navbar_content_moov_in 1s forwards;
-}
 
 
 
-.nav-icon:hover::before {
-  transform: translateY(1.8vh) rotate(135deg);
-}
-.nav-icon:hover::after {
-  transform: translateY(-1.8vh) rotate(-135deg);
-}
-.nav-icon:hover div {
-  transform: scale(0);
-}
-.tool--btn:hover {
-  animation: white_to_blue 0.25s forwards;
-}
-.tool--btn:not(hover) {
-  animation: blue_to_white 0.25s forwards;
-}
 
 .middle_navbar_content:hover .middle_navbar_content_text {
   animation: text_upscale 0.1s forwards;
@@ -367,10 +361,12 @@ body {
 .middle_navbar_content:not(hover) .middle_navbar_content_text {
   animation: text_downscale 0.1s forwards;
 }
-.login_button:hover {
+.login_button,.login_button_text_editor:hover {
+  cursor: pointer;
   animation: login_info 0.5s forwards;
 }
 .login_info:hover {
+  cursor: pointer;
   animation: login 0.5s forwards;
 }
 .login_info:focus {
@@ -383,11 +379,22 @@ body {
 
 
 
-@keyframes navbar_text_hover {
-  from {transform: scale(1,1);}
-  to {transform: scale(1.1,1.1);}
+@keyframes scale_y {
+  from {transform-origin: top;transform: scaleY(0);}
+  to {transform-origin: top;transform: scaleY(1);}
 }
-
+@keyframes scale_y_reverse {
+  from {transform-origin: top;transform: scaleY(1);}
+  to {transform-origin: top;transform: scaleY(0);}
+}
+@keyframes navbar_ease_in {
+  from {background-color: none; width: 0%;}
+  to {background-color: white; border-right: solid thin; width: 100%;}
+}
+@keyframes navbar_ease_out {
+  from {width: 100%; background-color: white; border-right: solid thin;}
+  to {width: 0%;; background-color: none;}
+}
 @keyframes login {
   from {border-color: #70a1ff}
   to {border-color: #3742fa;}
@@ -395,56 +402,6 @@ body {
 @keyframes login_info {
   from {background-color: white;}
   to {background-color: #70a1ff;color: white;}
-}
-@keyframes navbar_moov_in {
-  from {
-    position: absolute;
-    left: -10vw;
-  }
-  to {
-    position: absolute;
-    left: 0px;
-  }
-}
-@keyframes navbar_content_moov_in {
-  from {
-    opacity: 0;
-    position: relative;
-    top: 0;
-    left: -5vw;
-  }
-  to {
-    opacity: 1;
-    position: relative;
-    top: 0;
-    left: 0;
-  }
-}
-@keyframes white_to_blue {
-  from {background-color: white;}
-  to {background-color: #acdcfa;}
-}
-@keyframes blue_to_white {
-  from {background-color: #acdcfa;}
-  to {background-color: white;}
-}
-/* ----------------------------------------------
- * Generated by Animista on 2020-6-26 0:42:25
- * Licensed under FreeBSD License.
- * See http://animista.net/license for more info.
- * w: http://animista.net, t: @cssanimista
- * ---------------------------------------------- */
-@keyframes puff-in-center {
-  0% {
-    transform: scale(0.9);
-    filter: blur(4px);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(1);
-    filter: blur(0px);
-    opacity: 1;
-  }
 }
 
 
@@ -583,7 +540,7 @@ body {
 @media only screen and (min-width: 850px) {
   #container_navbar {
     width: auto;
-    height: 100vh;
+    height: auto;
 
   }
   #container_connexion {
