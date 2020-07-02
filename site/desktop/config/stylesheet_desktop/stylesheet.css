@@ -303,12 +303,12 @@ body {
   background: none;
 }
 .tool-bar {
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   margin: 1vw;
 }
 .tool-list {
-  display: inline-flex;
+  display: flex;
   flex-direction: row;
   box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
   width: auto;
@@ -321,8 +321,8 @@ body {
   background-color: white;
   border: none;
 	display: inline-block;
-  height: 8vh;
-  width: 8vh;
+  height: 4vw;
+  width: 4vw;
 }
 #container_navbar_font_size {
   box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.75);
@@ -337,8 +337,8 @@ body {
   display: block;
 }
 .image_text_editor,#image_text_editor_2 {
-  height: 4vh;
-  width: 4vh;
+  height: 3vw;
+  width: 3vw;
 }
 
 .tool--btn:hover {
