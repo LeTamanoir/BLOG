@@ -33,9 +33,7 @@ button {
   src: url('../../../../fonts/Ubuntu-Bold.ttf');
 }
 html {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: white;
+  background: none;
 }
 body {
   margin: 0;
@@ -499,4 +497,27 @@ body {
 }
 .texte_login_2:hover {
   text-decoration: underline;
+}
+
+
+
+/* webkit scroll-bar */
+
+
+
+::-webkit-scrollbar-track
+{
+	border-radius: 5px;
+	background-color: #ececec;
+}
+
+::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: none;
+}
+::-webkit-scrollbar-thumb
+{
+	border-radius: 5px;
+	background-color: #57606f;
 }
