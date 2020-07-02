@@ -324,8 +324,8 @@ body {
   background-color: white;
   border: none;
 	display: inline-block;
-  height: 100%;
-  width: 80%;
+  height: 5vh;
+  width: 5vh;
 }
 #container_navbar_font_size {
   box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.75);
@@ -338,6 +338,7 @@ body {
 }
 .navbar_font_size {
   display: block;
+
 }
 .image_text_editor,#image_text_editor_2 {
   height: 90%;
