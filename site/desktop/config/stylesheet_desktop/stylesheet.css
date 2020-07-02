@@ -1,0 +1,379 @@
+input:focus {
+    outline-offset: 0px;
+}
+:focus {
+    outline: -webkit-focus-ring-color auto 0px;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+button {
+  display: none;
+  background: none;
+  border: none;
+  padding: 0;
+}
+@font-face {
+  font-family: Ubuntu-Regular;
+  src: url('../../../../fonts/Ubuntu-Regular.ttf');
+}
+@font-face {
+  font-family: Ubuntu-Bold;
+  src: url('../../../../fonts/Ubuntu-Bold.ttf');
+}
+html {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: white;
+}
+body {
+  margin: 0;
+}
+
+.grid-container {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 20% 1fr 1fr 10%;
+  grid-template-rows: 10% 1fr 1fr 5%;
+  grid-template-areas:
+  "navbar middle_navbar middle_navbar profil"
+  "navbar main main none"
+  "navbar main main none"
+  "footer footer footer footer";
+}
+
+@media only screen and (max-width: 800px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 10% 10% 75% 5%;
+    grid-template-areas: "navbar navbar navbar profil" "middle_navbar middle_navbar middle_navbar middle_navbar" "main main main main" "footer footer footer footer";
+  }
+}
+
+
+
+/* NAVBAR */
+
+
+.navbar {
+  grid-area: navbar;
+}
+#container_navbar {
+  border-color: #636e72;
+  display: flex;
+  transform: scaleX(0);
+  flex-direction: column;
+  background-color: white;
+  border-bottom: solid thin;
+  border-right: solid thin;
+
+}
+#capteur_navbar {
+  align-self: flex-start;
+  display: block;
+  padding: 0;
+}
+#container_navbar_all {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+}
+#navbar_image {
+  width: 6vh;
+  height: 6vh;
+  margin-left: 1vw;
+  margin-top: 1vh;
+}
+#navbar_image:hover {
+  cursor: pointer;
+}
+.navbar_content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+}
+.container_navbar_content_text {
+  padding: 1vw;
+
+}
+
+.navbar_content_text {
+  text-align: center;
+  display: inline;
+  font-family: Ubuntu-Regular;
+  font-size: 2vh;
+}
+.navbar_content_image {
+  width: 6vh;
+  height: 6vh;
+  padding-right: 1vw;
+}
+.container_navbar_content_text::after {
+  margin-top: 0.5vh;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out 0s;
+}
+.container_navbar_content_text:hover::after {
+  visibility: visible;
+  transform: scaleX(1);
+}
+@keyframes scale_x {
+  from {transform-origin: left;transform: scaleX(0);}
+  to {transform-origin: left;transform: scaleX(1);}
+}
+@keyframes scale_x_reverse {
+  from {transform-origin: left;transform: scaleX(1);}
+  to {transform-origin: left;transform: scaleX(0);}
+}
+@keyframes navbar_ease_in {
+  from {width: 0%;border-right: none;}
+  to {width: 100%;border-right: solid thin;}
+}
+@keyframes navbar_ease_out {
+  from {width: 100%;border-right: solid thin;}
+  to {width: 0%;border-right: none;}
+}
+
+
+
+/* MIDDLE_NAVBAR */
+
+
+
+.middle_navbar {
+  grid-area: middle_navbar;
+}
+#container_navbar {
+  width: auto;
+  height: auto;
+  display: none;
+}
+
+#middle_navbar {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.middle_navbar_content {
+  display: flex;
+  flex-direction: column;
+  padding: .5vh 1.25vh .5vh 1.25vh;
+  margin-left: 1vw;
+  margin-right: 1vw;
+}
+.middle_navbar_content::after {
+  margin-top: 0.25vh;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out 0s;
+}
+.middle_navbar_content:hover::after {
+  visibility: visible;
+  transform: scaleX(1);
+}
+.middle_navbar_content_text {
+  padding: 0.5vw;
+  font-family: Ubuntu-Regular;
+  margin-left: 4vh;
+  font-size: 1.75vh;
+}
+.middle_navbar_content_image {
+  margin-bottom: -3.5vh;
+  width: 3.5vh;
+  height: 3.5vh;
+}
+.middle_navbar_content:hover .middle_navbar_content_text {
+  animation: text_upscale 0.1s forwards;
+}
+.middle_navbar_content:not(hover) .middle_navbar_content_text {
+  animation: text_downscale 0.1s forwards;
+}
+
+
+
+/* PROFIL */
+
+.profil {
+  grid-area: profil;
+}
+#container_profil {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Ubuntu-Bold;
+}
+.profil_image {
+  width: 5vh;
+  height: 5vh;
+  margin: 1vh;
+}
+
+/* FOOTER */
+
+.footer {
+  grid-area: footer;
+}
+#container_footer {
+  font-family: Ubuntu-Regular;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+}
+
+/* SHOW IFRAME */
+
+
+.main {
+  grid-area: main;
+}
+#container_main_content {
+  display: block;
+  height: 100%;
+  width: 100%;
+
+}
+#container_iframe {
+  border: none;
+  display: none;
+  height: 100%;
+  width: 100%;
+}
+
+
+/* TEXT_EDITOR */
+
+
+#text_editor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: none;
+}
+.tool-bar {
+  display: inline-flex;
+  flex-direction: column;
+  margin: 1vw;
+}
+.tool-list {
+  display: inline-flex;
+  flex-direction: row;
+  box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
+  width: auto;
+  height: auto;
+}
+.tool {
+  display: block;
+}
+.tool--btn {
+  background-color: white;
+  border: none;
+	display: inline-block;
+  height: 8vh;
+  width: 8vh;
+}
+#container_navbar_font_size {
+  box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.75);
+  display: none;
+  flex-direction: column;
+  position: absolute;
+}
+#container_navbar_font_size > .navbar_font_size{
+  border-top: solid thin
+}
+.navbar_font_size {
+  display: block;
+}
+.image_text_editor,#image_text_editor_2 {
+  height: 4vh;
+  width: 4vh;
+}
+
+.tool--btn:hover {
+  cursor: pointer;
+  box-shadow: inset 0px 0px 2px 0px rgba(0,0,0,1);
+}
+#output{
+  padding: 1vw;
+  font-family: Arial;
+  border-radius: 5px;
+  background-color: white;
+  overflow-y: scroll;
+  border: solid thin;
+  height: 70vh;
+	width: 95vw;
+}
+#output > a {
+  text-decoration: underline;
+  color: blue;
+}
+#output > ul {
+  list-style-type: disc;
+  list-style: circle;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 40px;
+}
+
+#output > ol {
+  list-style-type: decimal;
+  list-style: decimal;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 40px;
+}
+.login_button_text_editor {
+  background-color: #f1f2f6;
+  font-family: Ubuntu-Regular;
+  font-size: 2vw;
+  padding: 0.5vw;
+  margin: 1vw;
+  border-radius: 5px;
+  border: solid thin #70a1ff;
+  box-shadow: 0px 0px 4px 0px #70a1ff;
+}

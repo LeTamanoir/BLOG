@@ -3,7 +3,8 @@
   <head>
     <title>Editor</title>
     <meta charset="utf-8" content="width=device-width" name="viewport">
-    <link rel="stylesheet" href="/site/desktop/config/stylesheet_desktop/theme_main.css">
+    <link rel="stylesheet" href="/site/desktop/config/stylesheet_desktop/stylesheet.css">
+    <script src="/site/desktop/functions/mainFunctions.js"></script>
 
   </head>
 
@@ -66,22 +67,6 @@
     <input type="submit" class=login_button_text_editor name="submit" value="Envoyer"/>
 
     <script>
-    container_navbar_font_size_compteur = 0;
-    function show_navbar_font_size()
-    {
-      if (container_navbar_font_size_compteur==0)
-      {
-        document.getElementById("container_navbar_font_size").style.display = "flex";
-        document.getElementById("container_navbar_font_size").style.animation = "scale_y 0.5s forwards";
-        document.getElementById("image_text_editor_2").src = "../../../../icons/text_editor/100px/cross.png";
-        container_navbar_font_size_compteur=1;
-      }
-      else if (container_navbar_font_size_compteur!=0) {
-        document.getElementById("container_navbar_font_size").style.animation = "scale_y_reverse 0.5s forwards";
-        document.getElementById("image_text_editor_2").src = "../../../../icons/text_editor/100px/size.png";
-        container_navbar_font_size_compteur=0;
-      }
-    }
     let size_text = '';
     function size(x)
     {

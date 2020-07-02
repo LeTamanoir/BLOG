@@ -10,28 +10,57 @@ document.getElementById('container_body').style.background = value;
 
 */
 
+// ===================== show_navbar ===================== //
+
+
 container_navbar = 0;
-async function show_navbar()
+function show_navbar()
 {
   if (container_navbar==0)
   {
-    document.getElementById("navbar_image").src = "/icons/navbar/100px/cross.png";
+    document.getElementById("navbar_image").src = "../../../../icons/navbar/100px/cross.png";
     document.getElementById("container_navbar").style.animation = "scale_x 0.2s forwards";
     document.getElementById("container_navbar").style.display = "flex";
-
     document.getElementById("capteur_navbar").style.animation = "navbar_ease_in 0.2s forwards";
 
     container_navbar=1;
   }
   else if (container_navbar!=0) {
-    document.getElementById("navbar_image").src = "/icons/navbar/100px/navbar.png";
+    document.getElementById("navbar_image").src = "../../../../icons/navbar/100px/navbar.png";
     document.getElementById("container_navbar").style.animation = "scale_x_reverse 0.2s forwards";
     document.getElementById("capteur_navbar").style.animation = "navbar_ease_out 0.2s forwards";
-    await new Promise(r => setTimeout(r, 200));
-    document.getElementById("container_navbar").style.display = "none";
     container_navbar=0;
   }
 }
+
+
+
+
+// ===============  container_navbar_font_size_compteur ===================== //
+
+
+
+container_navbar_font_size_compteur = 0;
+function show_navbar_font_size()
+{
+  if (container_navbar_font_size_compteur==0)
+  {
+    document.getElementById("container_navbar_font_size").style.display = "flex";
+    document.getElementById("container_navbar_font_size").style.animation = "scale_y 0.5s forwards";
+    document.getElementById("image_text_editor_2").src = "../../../../icons/text_editor/100px/cross.png";
+    container_navbar_font_size_compteur=1;
+  }
+  else if (container_navbar_font_size_compteur!=0) {
+    document.getElementById("container_navbar_font_size").style.animation = "scale_y_reverse 0.5s forwards";
+    document.getElementById("image_text_editor_2").src = "../../../../icons/text_editor/100px/size.png";
+    container_navbar_font_size_compteur=0;
+  }
+}
+
+
+
+
+// ===================== background ===================== //
 
 
 x='1';
@@ -93,56 +122,106 @@ function retrieve_cookie(name) {
 
 
 
-  /*
-  function from : https://gist.github.com/3559343
-  Thank you bminer!
-  */
-  // x = élément du DOM, type = nouveau type à attribuer
-  function changeType(x, type)
+// ===================== viez password ===================== //
+
+function changeType(x, type)
+{
+  if(x.prop('type') == type)
+  return x;
+  try
   {
-    if(x.prop('type') == type)
-    return x; // ça serait facile.
-    try
-    {
-      // Une sécurité d'IE empêche ceci
-      return x.prop('type', type);
-    }
-    catch(e)
-    {
-    // On tente de recréer l'élément
-    // En créant d'abord une div
-      var html = $("<div>").append(x.clone()).html();
-      var regex = /type=(\")?([^\"\s]+)(\")?/;
-      // la regex trouve type=text ou type="text"
-      // si on ne trouve rien, on ajoute le type à la fin, sinon on le remplace
-      var tmp = $(html.match(regex) == null ?
-         html.replace(">", ' type="' + type + '">') :
-         html.replace(regex, 'type="' + type + '"') );
-
-      // on rajoute les vieilles données de l'élément
-      tmp.data('type', x.data('type') );
-      var events = x.data('events');
-      var cb = function(events) {
-         return function() {
-            //Bind all prior events
-            for(i in events) {
-               var y = events[i];
-               for(j in y) tmp.bind(i, y[j].handler);
-            }
-         }
-      }(events);
-      x.replaceWith(tmp);
-      setTimeout(cb, 10); // On attend un peu avant d'appeler la fonction
-      return tmp;
-    }
+    return x.prop('type', type);
   }
+  catch(e)
+  {
+    var html = $("<div>").append(x.clone()).html();
+    var regex = /type=(\")?([^\"\s]+)(\")?/;
+    var tmp = $(html.match(regex) == null ?
+       html.replace(">", ' type="' + type + '">') :
+       html.replace(regex, 'type="' + type + '"') );
 
-  function myFunction(x) {
-    if (x.matches) {
-      //document.body.style.display = "none";
-      //document.html.background.image = "url()";
-      window.location.replace('/site/desktop/view/viewErrorWindow.html');
-    } else {
-      document.body.style.display = "flex";
-    }
+    tmp.data('type', x.data('type') );
+    var events = x.data('events');
+    var cb = function(events) {
+       return function() {
+          for(i in events) {
+             var y = events[i];
+             for(j in y) tmp.bind(i, y[j].handler);
+          }
+       }
+    }(events);
+    x.replaceWith(tmp);
+    setTimeout(cb, 10);
+    return tmp;
   }
+}
+
+
+
+// ===================== showIframe ===================== //
+
+
+let last_onclick = '';
+function showIframe(x)
+{
+  if (x==0 && last_onclick!='0')
+  {
+    document.getElementById("container_iframe").src = "/site/desktop/view/Public/viewTextEditor.php";
+    document.getElementById("container_iframe").style.display = "inline";
+    last_onclick = x;
+  }
+  else if (x==1 && last_onclick!='1')
+  {
+    document.getElementById("container_iframe").src = "/site/desktop/view/Public/viewTextEditor.php";
+    document.getElementById("container_iframe").style.display = "inline";
+    last_onclick = x;
+  }
+  else if (x==2 && last_onclick!='2')
+  {
+    document.getElementById("container_iframe").src = "/site/desktop/view/Public/viewTextEditor.php";
+    document.getElementById("container_iframe").style.display = "inline";
+    last_onclick = x;
+  }
+  else if (x==3 && last_onclick!='3')
+  {
+    document.getElementById("container_iframe").src = "/site/desktop/view/Public/viewTextEditor.php";
+    document.getElementById("container_iframe").style.display = "inline";
+    last_onclick = x;
+  }
+  else if (x==4 && last_onclick!='4')
+  {
+    document.getElementById("container_iframe").src = "/site/desktop/view/Public/viewTextEditor.php";
+    document.getElementById("container_iframe").style.display = "inline";
+    last_onclick = x;
+  }
+  else if (x==5 && last_onclick!='5')
+  {
+    document.getElementById("container_iframe").src = "/site/desktop/view/Public/viewTextEditor.php";
+    document.getElementById("container_iframe").style.display = "inline";
+    last_onclick = x;
+  }
+  else if (x==6 && last_onclick!='6')
+  {
+    document.getElementById("container_iframe").src = "/site/desktop/view/Administration/viewUsers.php";
+    document.getElementById("container_iframe").style.display = "inline";
+    last_onclick = x;
+  }
+  else if (x==7 && last_onclick!='7')
+  {
+    document.getElementById("container_iframe").src = "/site/desktop/view/Public/viewTextEditor.php";
+    document.getElementById("container_iframe").style.display = "inline";
+    last_onclick = x;
+  }
+  else if (x==8 && last_onclick!='8')
+  {
+    document.getElementById("container_iframe").src = "/site/desktop/view/Public/viewTextEditor.php";
+    document.getElementById("container_iframe").style.display = "inline";
+    last_onclick = x;
+  }
+  else if (last_onclick==x)
+  {
+    document.getElementById("container_iframe").src = "";
+    last_onclick = '';
+    document.getElementById("container_iframe").style.display = "none";
+  }
+}

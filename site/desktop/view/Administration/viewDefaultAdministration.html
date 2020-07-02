@@ -1,87 +1,58 @@
 <!DOCTYPE html>
-<html lang="fr" dir="ltr">
+<html lang="en">
   <head>
     <meta charset="utf-8" content="width=device-width" name="viewport">
-    <title>Accueil</title>
-    <link rel="stylesheet" href="../../config/stylesheet_desktop/theme_main.css">
+    <title></title>
+    <link rel="stylesheet" href="../../config/stylesheet_desktop/stylesheet.css">
+    <script src="../../functions/mainFunctions.js"></script>
     <script src="../../functions/showIframe_html.js"></script>
+
+
   </head>
+  <body>
+    <div class="grid-container">
 
-  <header><!-- --></header>
-
-  <body id=container_body>
-    <div id=container_navbar_all>
-    <div id=container_button><button id=capteur_navbar onclick=show_navbar()><img id=navbar_image src="../../../../icons/navbar/100px/navbar.png"></button></div>
-      <nav id=container_navbar>
-        <ul>
-          <li class=navbar_content><img class=navbar_content_image src="../../../../icons/navbar/100px/dashboard.png"><div class=container_navbar_content_text><a class=navbar_content_text onclick="showIframe(4);" href="#">Tableau de bord</a></div></li>
-          <li class=navbar_content><img class=navbar_content_image src="../../../../icons/navbar/100px/database.png"><div class=container_navbar_content_text><a class=navbar_content_text onclick="showIframe(5);" href="#">Base de données</a></div></li>
-          <li class=navbar_content><img class=navbar_content_image src="../../../../icons/navbar/100px/user_list.png"><div class=container_navbar_content_text><a class=navbar_content_text onclick="showIframe(6);" href="#">Liste des utilisateurs</a></div></li>
-          <li class=navbar_content><img class=navbar_content_image src="../../../../icons/navbar/100px/settings.png"><div class=container_navbar_content_text><a class=navbar_content_text onclick="showIframe(7);" href="#">Paramètres</a></div></li>
-          <li class=navbar_content><img class=navbar_content_image src="../../../../icons/navbar/100px/user.png"><div class=container_navbar_content_text><a class=navbar_content_text onclick="showIframe(8);" href="#">Mon profil</a></div></li>
-          <li class=navbar_content><img class=navbar_content_image src="../../../../icons/navbar/100px/logout.png"><div class=container_navbar_content_text><a class=navbar_content_text href="/site/desktop/functions/mainFunctions.php">Déconnexion</a></div></li>
+      <div class="middle_navbar">
+        <ul id=middle_navbar>
+          <li class=middle_navbar_content><img class=middle_navbar_content_image src="../../../../icons/navbar/100px/correct.png"><a class=middle_navbar_content_text onclick="showIframe(0);" href="#">Pauses à corriger</a></li>
+          <li class=middle_navbar_content><img class=middle_navbar_content_image src="../../../../icons/navbar/100px/entry.png"><a class=middle_navbar_content_text onclick="showIframe(1);" href="#">Pauses publiques</a></li>
+          <li class=middle_navbar_content><img class=middle_navbar_content_image src="../../../../icons/navbar/100px/no_entry.png"><a class=middle_navbar_content_text onclick="showIframe(2);" href="#">Pauses non publiques</a></li>
+          <li class=middle_navbar_content><img class=middle_navbar_content_image src="../../../../icons/navbar/100px/message.png"><a class=middle_navbar_content_text href="#" onclick="showIframe(3);">Publier un message</a></li>
         </ul>
-      </nav>
+      </div>
+
+      <div class="profil">
+        <div id=container_profil><img class=profil_image src="../../../../icons/profil_icon/icon_profil_1.png">dada<?php echo $_SESSION['username']; ?></div>
+      </div>
+
+      <div class="navbar">
+        <div id=container_navbar_all>
+        <div id=container_button><button id=capteur_navbar onclick=show_navbar()><img id=navbar_image src="../../../../icons/navbar/100px/navbar.png"></button></div>
+        <nav id=container_navbar>
+          <ul>
+            <li class=navbar_content><img class=navbar_content_image src="../../../../icons/navbar/100px/dashboard.png"><div class=container_navbar_content_text><a class=navbar_content_text onclick="showIframe(4);" href="#">Tableau de bord</a></div></li>
+            <li class=navbar_content><img class=navbar_content_image src="../../../../icons/navbar/100px/database.png"><div class=container_navbar_content_text><a class=navbar_content_text onclick="showIframe(5);" href="#">Base de données</a></div></li>
+            <li class=navbar_content><img class=navbar_content_image src="../../../../icons/navbar/100px/user_list.png"><div class=container_navbar_content_text><a class=navbar_content_text onclick="showIframe(6);" href="#">Liste des utilisateurs</a></div></li>
+            <li class=navbar_content><img class=navbar_content_image src="../../../../icons/navbar/100px/settings.png"><div class=container_navbar_content_text><a class=navbar_content_text onclick="showIframe(7);" href="#">Paramètres</a></div></li>
+            <li class=navbar_content><img class=navbar_content_image src="../../../../icons/navbar/100px/user.png"><div class=container_navbar_content_text><a class=navbar_content_text onclick="showIframe(8);" href="#">Mon profil</a></div></li>
+            <li class=navbar_content><img class=navbar_content_image src="../../../../icons/navbar/100px/logout.png"><div class=container_navbar_content_text><a class=navbar_content_text href="/site/desktop/functions/mainFunctions.php">Déconnexion</a></div></li>
+          </ul>
+        </nav>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div id=container_footer>&copy;  2020 | WebDeveloper : Arthur Teyssieux & Martin Saldinger<?php require_once($root.'site/desktop/view/viewFooter.html'); ?></div>
+
+      </div>
+
+
+      <div class="main">
+        <div id=container_main_content>
+          <iframe id=container_iframe></iframe>
+        </div>
+      </div>
+
     </div>
-    <nav id=container_middle_navbar>
-      <ul id=middle_navbar>
-        <li class=middle_navbar_content><img class=middle_navbar_content_image src="../../../../icons/navbar/100px/correct.png"><a class=middle_navbar_content_text onclick="showIframe(0);" href="#">Pauses à corriger</a></li>
-        <li class=middle_navbar_content><img class=middle_navbar_content_image src="../../../../icons/navbar/100px/entry.png"><a class=middle_navbar_content_text onclick="showIframe(1);" href="#">Pauses publiques</a></li>
-        <li class=middle_navbar_content><img class=middle_navbar_content_image src="../../../../icons/navbar/100px/no_entry.png"><a class=middle_navbar_content_text onclick="showIframe(2);" href="#">Pauses non publiques</a></li>
-        <li class=middle_navbar_content><img class=middle_navbar_content_image src="../../../../icons/navbar/100px/message.png"><a class=middle_navbar_content_text href="#" onclick="showIframe(3);">Publier un message</a></li>
-      </ul>
-    </nav>
-    <div id=container_main_content>
-      <iframe id=container_iframe></iframe>
-    </div>
-
-    <div id=container_error><div class=desktop_mode_text>Passer en version pour ordinateur</div><img class=desktop_mode src="../../../../icons/404/desktop_mode.gif"><?php echo $_SESSION['username']; ?></div>
-
-    <div id=container_profil><img class=profil_image src="../../../../icons/profil_icon/icon_profil_1.png"><?php echo $_SESSION['username']; ?></div>
-
-    <div id=container_footer><div class=footer>zxzxzxzxzxzxz</div><?php require_once($root.'site/desktop/view/viewFooter.html'); ?></div>
-    <script>
-    function myFunction(x) {
-      if (x.matches) {
-        document.getElementById('container_profil').style.display = "none";
-        document.getElementById('container_middle_navbar').style.display = "none";
-        document.getElementById('container_main_content').style.display = "none";
-        document.getElementById('container_navbar_all').style.display = "none";
-        document.getElementById('container_error').style.display = "flex";
-      } else {
-        document.getElementById('container_profil').style.display = "flex";
-        document.getElementById('container_middle_navbar').style.display = "block";
-        document.getElementById('container_main_content').style.display = "block";
-        document.getElementById('container_navbar_all').style.display = "flex";
-        document.getElementById('container_error').style.display = "none";      }
-    }
-    var x = window.matchMedia("(max-width: 650px)")
-    myFunction(x)
-    x.addListener(myFunction)
-
-
-    container_navbar = 0;
-    async function show_navbar()
-    {
-      if (container_navbar==0)
-      {
-        document.getElementById("navbar_image").src = "../../../../icons/navbar/100px/cross.png";
-        document.getElementById("container_navbar").style.animation = "scale_x 0.2s forwards";
-        document.getElementById("container_navbar").style.display = "flex";
-
-        document.getElementById("capteur_navbar").style.animation = "navbar_ease_in 0.2s forwards";
-
-        container_navbar=1;
-      }
-      else if (container_navbar!=0) {
-        document.getElementById("navbar_image").src = "../../../../icons/navbar/100px/navbar.png";
-        document.getElementById("container_navbar").style.animation = "scale_x_reverse 0.2s forwards";
-        document.getElementById("capteur_navbar").style.animation = "navbar_ease_out 0.2s forwards";
-        await new Promise(r => setTimeout(r, 200));
-        document.getElementById("container_navbar").style.display = "none";
-        container_navbar=0;
-      }
-    }
-    </script>
   </body>
 </html>
