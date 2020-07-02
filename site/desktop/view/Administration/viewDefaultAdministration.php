@@ -4,7 +4,6 @@
     <meta charset="utf-8" content="width=device-width" name="viewport">
     <title></title>
     <link rel="stylesheet" href="/site/desktop/config/stylesheet_desktop/stylesheet.css">
-    <script src="/site/desktop/functions/showIframe.js"></script>
     <script src="/site/desktop/functions/mainFunctions.js"></script>
 
   </head>
@@ -21,7 +20,7 @@
       </div>
 
       <div class="profil">
-        <div id=container_profil><img class=profil_image src="/icons/profil_icon/icon_profil_1.png">dada<?php echo $_SESSION['username']; ?></div>
+        <div id=container_profil><img class=profil_image src="/icons/profil_icon/icon_profil_1.png"><?php echo $_SESSION['username']; ?></div>
       </div>
 
       <div class="navbar">
