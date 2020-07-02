@@ -427,6 +427,7 @@ body {
 
 .login-connexion {
   grid-area: login-connexion;
+  background-color: white;
 }
 
 .login-footer {
