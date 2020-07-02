@@ -85,12 +85,12 @@ function show_navbar_font_size()
   {
     document.getElementById("container_navbar_font_size").style.display = "flex";
     document.getElementById("container_navbar_font_size").style.animation = "scale_y 0.5s forwards";
-    document.getElementById("image_text_editor_2").src = "../../../../icons/text_editor/100px/cross.png";
+    document.getElementById("image_text_editor_2").src = "/icons/text_editor/100px/cross.png";
     container_navbar_font_size_compteur=1;
   }
   else if (container_navbar_font_size_compteur!=0) {
     document.getElementById("container_navbar_font_size").style.animation = "scale_y_reverse 0.5s forwards";
-    document.getElementById("image_text_editor_2").src = "../../../../icons/text_editor/100px/size.png";
+    document.getElementById("image_text_editor_2").src = "/icons/text_editor/100px/size.png";
     container_navbar_font_size_compteur=0;
   }
 }

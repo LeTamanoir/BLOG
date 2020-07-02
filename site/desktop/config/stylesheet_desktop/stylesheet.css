@@ -391,6 +391,14 @@ body {
   border: solid thin #70a1ff;
   box-shadow: 0px 0px 4px 0px #70a1ff;
 }
+@keyframes scale_y {
+  from {transform-origin: top;transform: scaleY(0);}
+  to {transform-origin: top;transform: scaleY(1);}
+}
+@keyframes scale_y_reverse {
+  from {transform-origin: top;transform: scaleY(1);}
+  to {transform-origin: top;transform: scaleY(0);}
+}
 
 
 

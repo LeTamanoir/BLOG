@@ -20,22 +20,7 @@
 
 
 
-::-webkit-scrollbar-track
-{
-	border-radius: 5px;
-	background-color: #ececec;
-}
 
-::-webkit-scrollbar
-{
-	width: 12px;
-	background-color: none;
-}
-::-webkit-scrollbar-thumb
-{
-	border-radius: 5px;
-	background-color: #57606f;
-}
 
 
 
@@ -47,107 +32,6 @@
 
 
 
-
-
-
-/* ======================= LOGIN ===================== */
-
-
-.password_container {
-  align-self: center;
-  display: flex;
-  justify-content: flex-end;
-}
-.login_info + .unmask {
-  position: absolute;
-}
-.unmask {
-  display: inline-block;
-  background: none;
-  border: none;
-}
-#image_eye {
-  height: 5vh;
-  width: 5vh;
-  margin: 1vw;
-  padding: 0.25vw;
-
-}
-#image_login {
-  height: 3vw;
-  width: 3vw;
-  transition-timing-function: Linear;
-}
-.login_button {
-  align-self: center;
-  padding: none;
-  display: flex;
-  width: 20vw;
-  padding: 0.25vw;
-  margin: 1vw;
-  border-style: solid;
-  border-color: #8bb7f0;
-  border-radius: 100px;
-}
-@keyframes login_translate {
-  from {transform-origin: left;transform: translateX(0);}
-  to {transform-origin: left;transform: translateX(16.25vw);}
-}
-
-
-
-
-.login_info {
-  align-self: center;
-  border: none;
-  display: block;
-  font-family: Ubuntu-Bold;
-  margin: 1vw;
-  padding: 0.25vw;
-  border-bottom: solid thin;
-  font-size: 2vh;
-  width: 20vw;
-  height: 5vh;
-}
-
-
-
-.login_info:focus {
-  border-color: #8bb7f0;
-  box-shadow: inset 0px -80px 5px -80px #8bb7f0;
-}
-#login_info_container {
-  display: flex;
-  flex-direction: column;
-}
-#container_connexion {
-  border: solid thin;
-  background-color: white;
-  display: block;
-  margin: auto;
-}
-#login_info_container {
-  display: flex;
-  flex-direction: column;
-  padding: 3vw;
-}
-.texte_login {
-  color: black;
-  font-family: Ubuntu-Regular;
-  text-align: center;
-  font-size: 3vh;
-  margin: 1vh;
-}
-.texte_login_2 {
-  color: black;
-  text-align: center;
-  font-family: Ubuntu-Regular;
-  font-size: 2vh;
-  margin: 1vh;
-}
-.texte_login_2:hover {
-  text-decoration: underline;
-}
 
 
 /* ======================= MIDDLE-NAVBAR ===================== */
@@ -172,14 +56,6 @@
 
 
 
-@keyframes scale_y {
-  from {transform-origin: top;transform: scaleY(0);}
-  to {transform-origin: top;transform: scaleY(1);}
-}
-@keyframes scale_y_reverse {
-  from {transform-origin: top;transform: scaleY(1);}
-  to {transform-origin: top;transform: scaleY(0);}
-}
 
 
 
