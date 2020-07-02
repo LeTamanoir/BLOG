@@ -466,7 +466,7 @@ body {
   height: 5vh;
 }
 
-.login_info_username,.login_info_password:focus {
+.login_info_username:focus,.login_info_password:focus {
   border-color: #8bb7f0;
   box-shadow: inset 0px -80px 5px -80px #8bb7f0;
 }
