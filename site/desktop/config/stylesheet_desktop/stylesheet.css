@@ -43,6 +43,7 @@ body {
   width: 100vw;
   height: 100vh;
   display: grid;
+  background-color: #dfe6e9;
   grid-template-columns: 20% 1fr 1fr 10%;
   grid-template-rows: 10% 1fr 1fr 5%;
   grid-template-areas:
@@ -156,20 +157,20 @@ body {
   transform: scaleX(1);
 }
 @keyframes scale_x {
-  from {transform-origin: left;transform: scaleX(0);}
-  to {transform-origin: left;transform: scaleX(1);}
+  from {transform-origin: left;transform: scaleX(0); background: none;}
+  to {transform-origin: left;transform: scaleX(1); background-color: white;}
 }
 @keyframes scale_x_reverse {
-  from {transform-origin: left;transform: scaleX(1);}
-  to {transform-origin: left;transform: scaleX(0);}
+  from {transform-origin: left;transform: scaleX(1); background-color: white;}
+  to {transform-origin: left;transform: scaleX(0); background: none;}
 }
 @keyframes navbar_ease_in {
-  from {width: 0%;}
-  to {width: 100%;}
+  from {width: 0%; background: none;}
+  to {width: 100%; background-color: white;}
 }
 @keyframes navbar_ease_out {
-  from {width: 100%;}
-  to {width: 0%;}
+  from {width: 100%; background-color: white;}
+  to {width: 0%; background: none;}
 }
 
 
