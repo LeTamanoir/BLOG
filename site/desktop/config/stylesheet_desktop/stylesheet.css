@@ -357,7 +357,7 @@ body {
   overflow-y: scroll;
   border: solid thin;
   height: 70vh;
-	width: 80vw;
+	width: 90vw;
 }
 #output > a {
   text-decoration: underline;
