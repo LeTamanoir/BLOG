@@ -306,6 +306,8 @@ body {
   display: flex;
   flex-direction: column;
   margin: 1vw;
+  width: auto;
+
 }
 .tool-list {
   display: flex;
@@ -321,8 +323,8 @@ body {
   background-color: white;
   border: none;
 	display: inline-block;
-  height: 4vw;
-  width: 4vw;
+  height: 100%;
+  width: 80%;
 }
 #container_navbar_font_size {
   box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.75);
@@ -337,8 +339,8 @@ body {
   display: block;
 }
 .image_text_editor,#image_text_editor_2 {
-  height: 3vw;
-  width: 3vw;
+  height: 90%;
+  width: 80%;
 }
 
 .tool--btn:hover {
