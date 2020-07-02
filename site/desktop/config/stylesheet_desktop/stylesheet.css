@@ -47,8 +47,8 @@ body {
   grid-template-rows: 10% 1fr 1fr 5%;
   grid-template-areas:
   "navbar middle_navbar middle_navbar profil"
-  "navbar main main none"
-  "navbar main main none"
+  "navbar main main ."
+  "navbar main main ."
   "footer footer footer footer";
 }
 .login-grid-container {
@@ -63,9 +63,9 @@ body {
 @media only screen and (max-width: 800px) {
   .grid-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 10% 40% 40% 10%;
     grid-template-rows: 10% 10% 75% 5%;
-    grid-template-areas: "navbar navbar navbar profil" "middle_navbar middle_navbar middle_navbar middle_navbar" "main main main main" "footer footer footer footer";
+    grid-template-areas: "navbar navbar navbar profil" "middle_navbar middle_navbar middle_navbar middle_navbar" ". main main ." "footer footer footer footer";
   }
   .login-grid-container {
     width: 100vw;
@@ -207,9 +207,10 @@ body {
 }
 .middle_navbar_content::after {
   margin-top: 0.25vh;
+  margin-left: auto;
   display: block;
   content: "";
-  width: 100%;
+  width: 80%;
   height: 2px;
   background-color: black;
   visibility: hidden;
@@ -227,9 +228,9 @@ body {
   font-size: 1.75vh;
 }
 .middle_navbar_content_image {
-  margin-bottom: -3.5vh;
-  width: 3.5vh;
-  height: 3.5vh;
+  margin-bottom: -3vh;
+  width: 3vh;
+  height: 3vh;
 }
 .middle_navbar_content:hover .middle_navbar_content_text {
   animation: text_upscale 0.1s forwards;
