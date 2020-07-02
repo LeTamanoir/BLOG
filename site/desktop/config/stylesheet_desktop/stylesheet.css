@@ -498,7 +498,13 @@ body {
 .texte_login_2:hover {
   text-decoration: underline;
 }
-
+.login_button,.login_button_text_editor:hover {
+  cursor: pointer;
+  animation: login_info 0.5s forwards;
+}
+.login_info:hover {
+  cursor: pointer;
+}
 
 
 /* webkit scroll-bar */
