@@ -59,15 +59,23 @@ body {
   display: grid;
   grid-template-columns: 33% 1fr 33%;
   grid-template-rows: 20% 50% 20% 10%;
-  grid-template-areas: ". . ." ". login-connexion ." ". . ." "login-footer login-footer login-footer";
+  grid-template-areas:
+  ". . ."
+  ". login-connexion ."
+  ". . ."
+  "login-footer login-footer login-footer";
 }
 
 @media only screen and (max-width: 1200px) {
   .grid-container {
     display: grid;
-    grid-template-columns: 10% 40% 40% 10%;
+    grid-template-columns: 10% 40% 30% 20%;
     grid-template-rows: 10% 20% 65% 5%;
-    grid-template-areas: "navbar navbar navbar profil" "middle_navbar middle_navbar middle_navbar middle_navbar" ". main main ." "footer footer footer footer";
+    grid-template-areas:
+    "navbar navbar navbar profil"
+    "middle_navbar middle_navbar middle_navbar middle_navbar"
+    "main main main main"
+    "footer footer footer footer";
   }
   .login-grid-container {
     width: 100vw;
@@ -75,7 +83,11 @@ body {
     display: grid;
     grid-template-columns: 10% 1fr 10%;
     grid-template-rows: 10% 70% 10% 10%;
-    grid-template-areas: ". . ." ". login-connexion ." ". . ." "login-footer login-footer login-footer";
+    grid-template-areas:
+    ". . ."
+    ". login-connexion ."
+    ". . ."
+    "login-footer login-footer login-footer";
   }
 }
 
@@ -359,7 +371,7 @@ body {
   overflow-y: scroll;
   border: solid thin;
   height: 70vh;
-	width: 90vw;
+	width: 80vw;
 }
 #output > a {
   text-decoration: underline;
