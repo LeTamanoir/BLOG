@@ -60,11 +60,11 @@ body {
   grid-template-areas: ". . ." ". login-connexion ." ". . ." "login-footer login-footer login-footer";
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1200px) {
   .grid-container {
     display: grid;
     grid-template-columns: 10% 40% 40% 10%;
-    grid-template-rows: 10% 10% 75% 5%;
+    grid-template-rows: 10% 20% 65% 5%;
     grid-template-areas: "navbar navbar navbar profil" "middle_navbar middle_navbar middle_navbar middle_navbar" ". main main ." "footer footer footer footer";
   }
   .login-grid-container {
@@ -101,8 +101,6 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
-  background-color: white;
-
   height: auto;
 }
 #container_button {
@@ -284,7 +282,6 @@ body {
   display: block;
   height: 100%;
   width: 100%;
-
 }
 #container_iframe {
   border: none;
@@ -301,7 +298,10 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-around;
   background: none;
+  width: 100vw;
+  height: 100vh;
 }
 .tool-bar {
   display: flex;
@@ -356,7 +356,7 @@ body {
   overflow-y: scroll;
   border: solid thin;
   height: 70vh;
-	width: 95vw;
+	width: 80vw;
 }
 #output > a {
   text-decoration: underline;
