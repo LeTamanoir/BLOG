@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" content="width=device-width" name="viewport">
-    <title></title>
+    <title>Accueil</title>
     <link rel="stylesheet" href="/site/desktop/config/stylesheet_desktop/stylesheet.css">
     <script src="/site/desktop/functions/mainFunctions.js"></script>
 
