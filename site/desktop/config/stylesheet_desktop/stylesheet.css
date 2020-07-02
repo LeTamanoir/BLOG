@@ -53,6 +53,14 @@ body {
   "navbar main main none"
   "footer footer footer footer";
 }
+.login-grid-container {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 33% 1fr 33%;
+  grid-template-rows: 20% 50% 20% 10%;
+  grid-template-areas: ". . ." ". login-connexion ." ". . ." "login-footer login-footer login-footer";
+}
 
 @media only screen and (max-width: 800px) {
   .grid-container {
@@ -60,6 +68,14 @@ body {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 10% 10% 75% 5%;
     grid-template-areas: "navbar navbar navbar profil" "middle_navbar middle_navbar middle_navbar middle_navbar" "main main main main" "footer footer footer footer";
+  }
+  .login-grid-container {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 10% 1fr 10%;
+    grid-template-rows: 10% 70% 10% 10%;
+    grid-template-areas: ". . ." ". login-connexion ." ". . ." "login-footer login-footer login-footer";
   }
 }
 
@@ -77,9 +93,6 @@ body {
   transform: scaleX(0);
   flex-direction: column;
   background-color: white;
-  border-bottom: solid thin;
-  border-right: solid thin;
-
 }
 #capteur_navbar {
   align-self: flex-start;
@@ -91,7 +104,9 @@ body {
   flex-direction: column;
   background-color: white;
   width: 100%;
-  height: 100%;
+  height: auto;
+}
+#container_button {
 }
 #navbar_image {
   width: 6vh;
@@ -152,12 +167,12 @@ body {
   to {transform-origin: left;transform: scaleX(0);}
 }
 @keyframes navbar_ease_in {
-  from {width: 0%;border-right: none;}
-  to {width: 100%;border-right: solid thin;}
+  from {width: 0%;}
+  to {width: 100%;}
 }
 @keyframes navbar_ease_out {
-  from {width: 100%;border-right: solid thin;}
-  to {width: 0%;border-right: none;}
+  from {width: 100%;}
+  to {width: 0%;}
 }
 
 
@@ -377,4 +392,112 @@ body {
   border-radius: 5px;
   border: solid thin #70a1ff;
   box-shadow: 0px 0px 4px 0px #70a1ff;
+}
+
+
+
+
+
+/* LOGIN  */
+
+
+.login-connexion {
+  grid-area: login-connexion;
+}
+
+.login-footer {
+  grid-area: login-footer;
+}
+
+.password_container {
+  align-self: center;
+  display: flex;
+  justify-content: flex-end;
+  width: 60%;
+}
+.login_info_password + .unmask {
+  position: absolute;
+}
+.unmask {
+  display: inline-block;
+  background: none;
+  border: none;
+}
+#image_eye {
+  height: 5vh;
+  width: 5vh;
+
+}
+#image_login {
+  height: 8vh;
+  width: 8vh;
+  transition-timing-function: Linear;
+}
+.login_button {
+  align-self: center;
+  display: flex;
+  width: 40vh;
+  height: auto;
+  padding: 0.5vh;
+  border-style: solid;
+  border-color: #8bb7f0;
+  border-radius: 100px;
+}
+@keyframes login_translate {
+  from {transform-origin: left;transform: translateX(0);}
+  to {transform-origin: left;transform: translateX(30.5vh);}
+}
+
+.login_info_username {
+  align-self: center;
+  border: none;
+  display: block;
+  font-family: Ubuntu-Bold;
+  border-bottom: solid thin;
+  font-size: 2vh;
+  width: 60%;
+  height: 5vh;
+}
+.login_info_password {
+  align-self: center;
+  border: none;
+  display: block;
+  font-family: Ubuntu-Bold;
+  border-bottom: solid thin;
+  font-size: 2vh;
+  width: 100%;
+  height: 5vh;
+}
+
+.login_info:focus {
+  border-color: #8bb7f0;
+  box-shadow: inset 0px -80px 5px -80px #8bb7f0;
+}
+#login_info_container {
+  display: flex;
+  flex-direction: column;
+}
+#container_connexion {
+  border: solid thin;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  width: 100%;
+}
+
+.texte_login {
+  color: black;
+  font-family: Ubuntu-Regular;
+  text-align: center;
+  font-size: 3vh;
+  margin-top: 1vw;
+}
+.texte_login_2 {
+  color: black;
+  text-align: center;
+  font-family: Ubuntu-Regular;
+}
+.texte_login_2:hover {
+  text-decoration: underline;
 }

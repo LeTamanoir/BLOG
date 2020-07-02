@@ -22,6 +22,10 @@ function show_navbar()
     document.getElementById("container_navbar").style.animation = "scale_x 0.2s forwards";
     document.getElementById("container_navbar").style.display = "flex";
     document.getElementById("capteur_navbar").style.animation = "navbar_ease_in 0.2s forwards";
+    document.getElementById("container_navbar_all").style.borderRight = "solid thin";
+    document.getElementById("container_navbar_all").style.borderBottom = "solid thin";
+
+
 
     container_navbar=1;
   }
@@ -29,7 +33,41 @@ function show_navbar()
     document.getElementById("navbar_image").src = "../../../../icons/navbar/100px/navbar.png";
     document.getElementById("container_navbar").style.animation = "scale_x_reverse 0.2s forwards";
     document.getElementById("capteur_navbar").style.animation = "navbar_ease_out 0.2s forwards";
+    document.getElementById("container_navbar_all").style.borderBottom = "none";
+    document.getElementById("container_navbar_all").style.borderRight = "none";
+
+
+
     container_navbar=0;
+  }
+}
+
+// ================= login translate ================ //
+
+
+
+function login_translate() {
+  document.getElementById("image_login").style.animation = "login_translate 1s forwards";
+}
+
+
+
+
+// ================= eye view passwd ================= //
+
+
+
+eye_status = 0
+function switch_eye() {
+  if (eye_status==0)
+  {
+    document.getElementById("image_eye").src = "../../../icons/login/100px/no_eye.png";
+    eye_status = 1
+  }
+  else if (eye_status==1)
+  {
+    document.getElementById("image_eye").src = "../../../icons/login/100px/eye.png";
+    eye_status = 0
   }
 }
 
