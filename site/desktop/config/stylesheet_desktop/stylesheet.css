@@ -113,7 +113,6 @@ body {
 }
 .container_navbar_content_text {
   padding: 1vw;
-
 }
 
 .navbar_content_text {
@@ -184,13 +183,16 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
 }
 .middle_navbar_content {
   display: flex;
   flex-direction: column;
+  border: solid thin;
   padding: .5vh 1.25vh .5vh 1.25vh;
   margin-left: 1vw;
   margin-right: 1vw;
+
 }
 .middle_navbar_content::after {
   margin-top: 0.25vh;
