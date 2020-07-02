@@ -161,38 +161,36 @@ function retrieve_cookie(name) {
 
 
 
-// ===================== viez password ===================== //
+// ===================== view password ===================== //
 
-function changeType(x, type)
-{
-  if(x.prop('type') == type)
-  return x;
-  try
-  {
-    return x.prop('type', type);
-  }
-  catch(e)
-  {
-    var html = $("<div>").append(x.clone()).html();
-    var regex = /type=(\")?([^\"\s]+)(\")?/;
-    var tmp = $(html.match(regex) == null ?
-       html.replace(">", ' type="' + type + '">') :
-       html.replace(regex, 'type="' + type + '"') );
 
-    tmp.data('type', x.data('type') );
-    var events = x.data('events');
-    var cb = function(events) {
-       return function() {
-          for(i in events) {
-             var y = events[i];
-             for(j in y) tmp.bind(i, y[j].handler);
-          }
-       }
-    }(events);
-    x.replaceWith(tmp);
-    setTimeout(cb, 10);
-    return tmp;
-  }
+function changeType(x, type) {
+   if(x.prop('type') == type)
+      return x;
+   try {
+      return x.prop('type', type);
+   }
+   catch(e) {
+      var html = $("<div>").append(x.clone()).html();
+      var regex = /type=(\")?([^\"\s]+)(\")?/;
+      var tmp = $(html.match(regex) == null ?
+         html.replace(">", ' type="' + type + '">') :
+         html.replace(regex, 'type="' + type + '"') );
+
+      tmp.data('type', x.data('type') );
+      var events = x.data('events');
+      var cb = function(events) {
+         return function() {
+            for(i in events) {
+               var y = events[i];
+               for(j in y) tmp.bind(i, y[j].handler);
+            }
+         }
+      }(events);
+      x.replaceWith(tmp);
+      setTimeout(cb, 10);
+      return tmp;
+   }
 }
 
 
@@ -253,7 +251,7 @@ function showIframe(x)
   }
   else if (x==8 && last_onclick!='8')
   {
-    document.getElementById("container_iframe").src = "/site/desktop/view/Public/viewTextEditor.php";
+    document.getElementById("container_iframe").src = "/site/desktop/controller/controllerProfil.php";
     document.getElementById("container_iframe").style.display = "inline";
     last_onclick = x;
   }

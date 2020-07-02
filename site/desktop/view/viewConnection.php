@@ -17,7 +17,7 @@
           <input class=login_info_username type="text" name="username" placeholder="Nom d'utilisateur / Email">
           <div class=password_container>
             <input class=login_info_password type="password" name="password" placeholder="Mot de passe">
-            <button class="unmask" type="button" title="Mask/Unmask" onclick=switch_eye()><img id=image_eye src="/icons/login/100px/eye.png" alt="voir mdp"></button>
+            <button class="unmask" type="button" title="Mask/Unmask" onclick="switch_eye()"><img id=image_eye src="/icons/login/100px/eye.png" alt="voir mdp"></button>
           </div>
             <a class=texte_login_2 href="#">Mot de passe oublié ?</a>
           <button class=login_button type="submit" name="submit" onmouseover=login_translate()><img id=image_login src="/icons/login/100px/login_2.png" alt="voir mdp"></button>
@@ -33,22 +33,20 @@
 
       </div>
     </div>
+
+    <script>
+    $('.unmask').on('click', function(){
+
+      if($(this).prev('input').attr('type') == 'password')
+        changeType($(this).prev('input'), 'text');
+
+      else
+        changeType($(this).prev('input'), 'password');
+
+    return false;
+    });
+
+    </script>
   </body>
-  <script>
 
-  function login_translate() {
-    document.getElementById("image_login").style.animation = "login_translate 1s forwards";
-  }
-  $('.unmask').on('click', function(){
-
-  if($(this).prev('input').attr('type') == 'password')
-    changeType($(this).prev('input'), 'text');
-
-  else
-    changeType($(this).prev('input'), 'password');
-
-  return false;
-  });
-
-  </script>
 </html>
