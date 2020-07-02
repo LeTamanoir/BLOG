@@ -399,12 +399,15 @@ body {
 .login_button_text_editor {
   background-color: #f1f2f6;
   font-family: Ubuntu-Regular;
-  font-size: 2vw;
+  font-size: 4vh;
   padding: 0.5vw;
   margin: 1vw;
   border-radius: 5px;
   border: solid thin #70a1ff;
   box-shadow: 0px 0px 4px 0px #70a1ff;
+}
+.login_button_text_editor:hover {
+  background-color: #70a1ff;
 }
 @keyframes scale_y {
   from {transform-origin: top;transform: scaleY(0);}
