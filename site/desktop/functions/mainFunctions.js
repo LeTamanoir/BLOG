@@ -14,7 +14,7 @@ document.getElementById('container_body').style.background = value;
 
 
 container_navbar = 0;
-function show_navbar()
+async function show_navbar()
 {
   if (container_navbar==0)
   {
@@ -33,6 +33,9 @@ function show_navbar()
     document.getElementById("navbar_image").src = "../../../../icons/navbar/100px/navbar.png";
     document.getElementById("container_navbar").style.animation = "scale_x_reverse 0.2s forwards";
     document.getElementById("capteur_navbar").style.animation = "navbar_ease_out 0.2s forwards";
+    await new Promise(r => setTimeout(r, 100));
+    document.getElementById("container_navbar").style.display = "none";
+
     document.getElementById("container_navbar_all").style.borderBottom = "none";
     document.getElementById("container_navbar_all").style.borderRight = "none";
 
