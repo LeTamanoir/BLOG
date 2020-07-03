@@ -33,7 +33,7 @@
             <li class=navbar_content><img class=navbar_content_image src="/icons/navbar/100px/user_list.png"><div class=container_navbar_content_text><a class=navbar_content_text onclick="showIframe(6);show_navbar()" href="#">Liste des utilisateurs</a></div></li>
             <li class=navbar_content><img class=navbar_content_image src="/icons/navbar/100px/settings.png"><div class=container_navbar_content_text><a class=navbar_content_text onclick="showIframe(7);show_navbar()" href="#">Paramètres</a></div></li>
             <li class=navbar_content><img class=navbar_content_image src="/icons/navbar/100px/user.png"><div class=container_navbar_content_text><a class=navbar_content_text onclick="showIframe(8);show_navbar()" href="#">Mon profil</a></div></li>
-            <li class=navbar_content><img class=navbar_content_image src="/icons/navbar/100px/logout.png"><div class=container_navbar_content_text><a class=navbar_content_text href="/site/desktop/functions/mainFunctions.php">Déconnexion</a></div></li>
+            <li class=navbar_content><img class=navbar_content_image src="/icons/navbar/100px/logout.png"><div class=container_navbar_content_text><a class=navbar_content_text href="/site/desktop/functions/logout.php">Déconnexion</a></div></li>
           </ul>
         </nav>
         </div>

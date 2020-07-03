@@ -19,6 +19,7 @@ if(isset($_POST['submit']))
       $_SESSION['name'] = $userinfo['name'];
       $_SESSION['photo'] = $userinfo['photo'];
       $_SESSION['password'] = $userinfo['password'];
+      $_SESSION['mail'] = $userinfo['mail'];
 
 
       if($_SESSION['username'] == 'admin')
