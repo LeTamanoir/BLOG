@@ -58,31 +58,49 @@ function login_translate() {
 
 
 
-eye_status_1 = 0;
-eye_status_2 = 0;
+eye_status_1 = "open";
+eye_status_2 = "open";
 
 function switch_eye(x) {
   var name ="image_eye_"+x;
-  if (eye_status_1==0)
+
+  if (x=="1")
   {
-    document.getElementById(name).src = "../../../icons/login/100px/no_eye.png";
-    eye_status_1 = 1;
+    if (eye_status_1=="open")
+    {
+      document.getElementById(name).src = "../../../icons/login/100px/no_eye.png";
+      console.log(document.getElementById(name).src)
+      eye_status_1 = "close";
+    }
+    else if (eye_status_1=="close")
+    {
+      document.getElementById(name).src = "../../../icons/login/100px/eye.png";
+      console.log(document.getElementById(name).src)
+      eye_status_1 = "open";
+    }
   }
-  else if (eye_status_1==1)
+  else if (x=="2")
   {
-    document.getElementById(name).src = "../../../icons/login/100px/eye.png";
-    eye_status_1 = 0;
+    if (eye_status_2=="open")
+    {
+      document.getElementById(name).src = "../../../icons/login/100px/no_eye.png";
+      console.log(document.getElementById(name).src)
+      eye_status_2 = "close";
+    }
+    else if (eye_status_2=="close")
+    {
+      document.getElementById(name).src = "../../../icons/login/100px/eye.png";
+      console.log(document.getElementById(name).src)
+      eye_status_2 = "open";
+    }
   }
-  else if (eye_status_2==0)
-  {
-    document.getElementById(name).src = "../../../icons/login/100px/no_eye.png";
-    eye_status_2 = 1;
-  }
-  else if (eye_status_2==1)
-  {
-    document.getElementById(name).src = "../../../icons/login/100px/eye.png";
-    eye_status_2 = 0;
-  }
+
+
+
+
+
+
+
 }
 
 
