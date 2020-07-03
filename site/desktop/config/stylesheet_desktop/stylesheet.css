@@ -66,7 +66,7 @@ body {
   "login-footer login-footer login-footer";
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1000px) {
   .grid-container {
     display: grid;
     grid-template-columns: 10% 40% 30% 20%;
@@ -453,15 +453,15 @@ body {
   width: 5vh;
 }
 #image_login {
-  height: 8vh;
-  width: 8vh;
+  height: 100%;
+  width: 33.5%;
   transition-timing-function: Linear;
 }
 .login_button {
   align-self: center;
   display: flex;
-  width: 30vh;
-  height: auto;
+  width: 20vh;
+  height: 7.5vh;
   padding: 0.5vh;
   border-style: solid;
   border-color: #8bb7f0;
@@ -469,7 +469,7 @@ body {
 }
 @keyframes login_translate {
   from {transform-origin: left;transform: translateX(0);}
-  to {transform-origin: left;transform: translateX(20.5vh);}
+  to {transform-origin: left;transform: translateX(200%);}
 }
 
 .login_info_username {
