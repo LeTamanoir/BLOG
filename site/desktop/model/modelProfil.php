@@ -25,14 +25,14 @@ elseif (isset($_POST['updatePassword']))
 }
 elseif (isset($_POST['updateMail']))
 {
-  /*$mail = htmlspecialchars($_POST['mail']);
-  $insert = $bdd->prepare("UPDATE clients SET mail = ? WHERE id = ?");
-  $insert->execute(array($_POST['mail'],$_SESSION['id'));
-  echo "updated";*/
   $email = htmlspecialchars($_POST['mail']);
-  $insert = $bdd->prepare("UPDATE clients SET mail = ? WHERE id = ?");
-  $insert->execute(array($email,$_SESSION['id']));
-  echo "updated";
+  $email2 = htmlspecialchars($_POST['mail2']);
+  if ($email == $email2)
+  {
+    $insert = $bdd->prepare("UPDATE clients SET mail = ? WHERE id = ?");
+    $insert->execute(array($email,$_SESSION['id']));
+    echo "updated";
+  }
 }
 
 elseif(isset($_POST['updatePhoto']))

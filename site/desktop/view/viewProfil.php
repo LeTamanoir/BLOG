@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8"/>
     <title>Profil</title>
-    <!--<link rel="stylesheet" href="/site/desktop/config/stylesheet_desktop/stylesheet.css">-->
+    <link rel="stylesheet" href="/site/desktop/config/stylesheet_desktop/stylesheet.css">
     <script src="/site/desktop/functions/mainFunctions.js"></script>
   </head>
 
@@ -12,37 +12,71 @@
 
 
     ?>
+
+
+
+
+
     <form action="" method="post">
-      <input type='text' name='username' value='<?=$_SESSION['username']?>'>
-      <button type='submit' name="updateUser">Confirmer</button><br>
+    <div class="profil-grid-container">
+    <div class="profil-container-username">
+      <div class="profil-username">
+        <input type='text' name='username' class=input-profil placeholder='<?=$_SESSION['username']?>'>
+      </div>
+      <div class="profil-submit-username">
+        <button type='submit' class=button-profil name="updateUser">Confirmer</button>
+      </div>
+    </div>
 
-      <input type='password' name='password' placeholder="Nouveau mot de passe">
-      <input id="password" type='password' name='password2' placeholder="Confirmer mot de passe">
-      <button id="unmask" class="unmask" type="button" title="Mask/Unmask">mask/unmask</button>
-      <button type='submit' name="updatePassword">Confirmer</button><br>
+    <div class="profil-container-password">
+      <div class="profil-password">
+        <input id="password1" type='password' name='password' class=input-profil-password placeholder="Nouveau mot de passe">
+        <button id="unmask" class="unmask_2" type="button" class=button-profil title="Mask/Unmask" onclick="seePass(1);switch_eye(1)"><img id=image_eye_1 src="/icons/login/100px/eye.png" alt="voir mdp"></button>
+      </div>
 
-      <input type='text' name='mail' value='<?=$_SESSION['mail']?>'>
-      <button type='submit' name="updateMail">Confirmer</button><br>
+      <div class="profil-confirm-password">
+        <input id="password2" type='password' class=input-profil-password name='password2' placeholder="Confirmer mot de passe">
+        <button id="unmask" class="unmask_2" type="button" class=button-profil title="Mask/Unmask" onclick="seePass(2);switch_eye(2)"><img id=image_eye_2 src="/icons/login/100px/eye.png" alt="voir mdp"></button>
+      </div>
+      <div class="profil-submit-password">
+        <button type='submit' class=button-profil name="updatePassword">Confirmer</button>
+      </div>
+    </div>
 
-      <input type='text' name='text' value='<?=$_SESSION['photo']?>'>
-      <button type='submit' name="updatePhoto">Confirmer</button>
+    <div class="profil-container-email">
+      <div class="profil-email">
+        <input type='text' name='mail' class=input-profil-email placeholder='<?=$_SESSION['mail']?>'>
+
+      </div>
+      <div class="profil-confirm-email">
+        <input type='text' name='mail2' class=input-profil-email placeholder='<?=$_SESSION['mail']?>'>
+
+      </div>
+      <div class="profil-submit-email">
+        <button type='submit' class=button-profil name="updateMail">Confirmer</button>
+
+      </div>
+    </div>
+
+    <div class="profil-container-image"></div>
+    </div>
     </form>
 
-<br>
-    <form action="" method="post" enctype="multipart/form-data">
-      Choisis une nouvelle photo de profil:
-      <input type="file" name="fileToUpload" accept=".jpg, .jpeg, .png">
+    <?php/*
 
-      <input type="submit" value="Upload Image" name="updatePhoto">
-    </form>
+    $icon = '/icons/profil_icon/icon_profil_';
+     for($i = 1;$i<31;$i++){
+       ?>
+       <img src="<?=$icon.$i.'.png'?>">
+    <?php
+  }*/ ?>
 
   </body>
 
   <script>
-    var pwd = document.getElementById('password');
-    var eye = document.getElementById('unmask');
 
-    eye.addEventListener('click',seePass);
+
+
 
   </script>
 

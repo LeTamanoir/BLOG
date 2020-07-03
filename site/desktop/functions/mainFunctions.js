@@ -58,17 +58,30 @@ function login_translate() {
 
 
 
-eye_status = 0
-function switch_eye() {
-  if (eye_status==0)
+eye_status_1 = 0;
+eye_status_2 = 0;
+
+function switch_eye(x) {
+  var name ="image_eye_"+x;
+  if (eye_status_1==0)
   {
-    document.getElementById("image_eye").src = "../../../icons/login/100px/no_eye.png";
-    eye_status = 1
+    document.getElementById(name).src = "../../../icons/login/100px/no_eye.png";
+    eye_status_1 = 1;
   }
-  else if (eye_status==1)
+  else if (eye_status_1==1)
   {
-    document.getElementById("image_eye").src = "../../../icons/login/100px/eye.png";
-    eye_status = 0
+    document.getElementById(name).src = "../../../icons/login/100px/eye.png";
+    eye_status_1 = 0;
+  }
+  else if (eye_status_2==0)
+  {
+    document.getElementById(name).src = "../../../icons/login/100px/no_eye.png";
+    eye_status_2 = 1;
+  }
+  else if (eye_status_2==1)
+  {
+    document.getElementById(name).src = "../../../icons/login/100px/eye.png";
+    eye_status_2 = 0;
   }
 }
 
@@ -163,14 +176,21 @@ function retrieve_cookie(name) {
 
 // ===================== view password ===================== //
 
-function seePass(){
-  if(pwd.type == 'password'){
-    pwd.type = 'text'
-  }else{
-    pwd.type = 'password';
 
+
+function seePass(x){
+  var pwd = document.getElementById('password'+x);
+
+  if(pwd.type == 'password')
+  {
+    pwd.type = 'text'
+  }
+  else
+  {
+    pwd.type = 'password';
   }
 }
+
 
 
 
