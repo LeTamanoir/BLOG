@@ -38,18 +38,6 @@ elseif (isset($_POST['updateMail']))
 elseif(isset($_POST['updatePhoto']))
 {
 
-  /*$uploadOk = 1;
-  $imageFileType = strtolower(pathinfo($_FILES["fileToUpload"]["name"],PATHINFO_EXTENSION));
-  // Check if image file is a actual image or fake image
-  $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
-  if($check !== false) {
-    echo "File is an image - " . $check["mime"] . ".";
-    $uploadOk = 1;
-  } else {
-    echo "File is not an image.";
-    $uploadOk = 0;
-  }
-*/
   $extension = pathinfo($_FILES["fileToUpload"]["name"], PATHINFO_EXTENSION);
 
   if($extension=='jpg' || $extension=='jpeg' || $extension=='png')
