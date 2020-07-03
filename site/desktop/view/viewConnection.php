@@ -5,6 +5,7 @@
     <title>Connexion</title>
     <script src="/site/desktop/functions/mainFunctions.js"></script>
 
+
     <link rel="stylesheet" href="/site/desktop/config/stylesheet_desktop/stylesheet.css">
 
   </head>
@@ -16,8 +17,8 @@
           <div class=texte_login> Connectez-vous : </div>
           <input class=login_info_username type="text" name="username" placeholder="Nom d'utilisateur / Email">
           <div class=password_container>
-            <input id="password" class=login_info_password type="password" name="password" placeholder="Mot de passe">
-            <button id="unmask" class="unmask" type="button" title="Mask/Unmask" onclick="switch_eye()"><img id=image_eye src="/icons/login/100px/eye.png" alt="voir mdp"></button>
+            <input id="password" class=login_info_password type="password" name="password" placeholder="Mot de passe" >
+            <button id="unmask" class="unmask" type="button" title="Mask/Unmask" onclick="switch_eye();seePass()"><img id=image_eye src="/icons/login/100px/eye.png" alt="voir mdp"></button>
           </div>
             <a class=texte_login_2 href="#">Mot de passe oublié ?</a>
           <button class=login_button type="submit" name="submit" onmouseover=login_translate()><img id=image_login src="/icons/login/100px/login_2.png" alt="voir mdp"></button>
@@ -39,8 +40,4 @@
 
 <script>
   var pwd = document.getElementById('password');
-  var eye = document.getElementById('unmask');
-
-  eye.addEventListener('click',seePass);
-
 </script>
