@@ -8,7 +8,7 @@
 
   </head>
   <body>
-    <div class="grid-container">
+    <div id="grid-container">
 
       <div class="middle_navbar">
         <ul id=middle_navbar>

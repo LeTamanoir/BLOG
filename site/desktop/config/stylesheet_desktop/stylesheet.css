@@ -64,9 +64,11 @@ body,form {
   width: 100%;
   display: grid;
   grid-template-columns: 80% 20%;
-  grid-template-rows: 1fr;
-  grid-template-areas: "profil-username profil-submit-username";
+  grid-template-rows: 0.75fr 0.5fr 1fr 0.75fr;
+  grid-template-areas: ". ." "profil-title ." "profil-username profil-submit-username" ". .";
   grid-area: profil-container-username;
+  border-bottom: solid thin;
+
 }
 
 
@@ -75,9 +77,10 @@ body,form {
   width: 100%;
   display: grid;
   grid-template-columns: 80% 20%;
-  grid-template-rows: 1fr 1fr;
-  grid-template-areas: "profil-password profil-submit-password" "profil-confirm-password profil-submit-password";
+  grid-template-rows: 0.75fr 0.5fr 1fr 1fr 0.75fr;
+  grid-template-areas: ". ." "profil-title ." "profil-password profil-submit-password" "profil-confirm-password profil-submit-password" ". .";
   grid-area: profil-container-password;
+  border-bottom: solid thin;
 }
 
 .profil-container-email {
@@ -85,13 +88,17 @@ body,form {
   width: 100%;
   display: grid;
   grid-template-columns: 80% 20%;
-  grid-template-rows: 1fr 1fr;
-  grid-template-areas: "profil-email profil-submit-email" "profil-confirm-email profil-submit-email";
+  grid-template-rows: 0.75fr 0.5fr 1fr 1fr 0.75fr;
+  grid-template-areas: ". ." "profil-title ." "profil-email profil-submit-email" "profil-confirm-email profil-submit-email" ". .";
   grid-area: profil-container-email;
+  border-bottom: solid thin;
+
 }
 
 
 .profil-email {
+  height: 100%;
+  width: 100%;
   grid-area: profil-email;
   display: flex;
   justify-content: center;
@@ -99,6 +106,8 @@ body,form {
 }
 
 .profil-confirm-email {
+  height: 100%;
+  width: 100%;
   grid-area: profil-confirm-email;
   display: flex;
   justify-content: center;
@@ -106,6 +115,8 @@ body,form {
 }
 
 .profil-submit-email {
+  height: 100%;
+  width: 100%;
   grid-area: profil-submit-email;
   display: flex;
   justify-content: center;
@@ -113,16 +124,22 @@ body,form {
 }
 
 .profil-container-image {
+  height: 100%;
+  width: 100%;
   grid-area: profil-container-image;
 }
 
 .profil-password {
+  height: 100%;
+  width: 100%;
   grid-area: profil-password;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .profil-confirm-password {
+  height: 100%;
+  width: 100%;
   grid-area: profil-confirm-password;
   display: flex;
   justify-content: center;
@@ -130,11 +147,10 @@ body,form {
 
 }
 
-.profil-container-password {
-  grid-area: profil-container-password;
-}
 
 .profil-submit-password {
+  height: 100%;
+  width: 100%;
   grid-area: profil-submit-password;
   display: flex;
   justify-content: center;
@@ -142,6 +158,8 @@ body,form {
 }
 
 .profil-username {
+  height: 100%;
+  width: 100%;
   grid-area: profil-username;
   display: flex;
   justify-content: center;
@@ -149,6 +167,8 @@ body,form {
 }
 
 .profil-submit-username {
+  height: 100%;
+  width: 100%;
   grid-area: profil-submit-username;
   display: flex;
   justify-content: center;
@@ -175,8 +195,8 @@ body,form {
   font-size: 2vh;
   width: 80%;
   height: 80%;
-
 }
+
 .input-profil {
   display: inline-block;
   border: none;
@@ -186,7 +206,13 @@ body,form {
   width: 80%;
   height: 80%;
 }
-
+.profil-title {
+  grid-area: profil-title;
+  display: block;
+  font-family: Ubuntu-Regular;
+  text-align: center;
+  font-size: 1.75vh;
+}
 .unmask_2 {
   display: block;
   width: 10%;

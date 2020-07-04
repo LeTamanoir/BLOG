@@ -20,6 +20,7 @@
     <form action="" method="post">
     <div class="profil-grid-container">
     <div class="profil-container-username">
+      <div class="profil-title">Nom d'utilisateur</div>
       <div class="profil-username">
         <input type='text' name='username' class=input-profil placeholder='<?=$_SESSION['username']?>'>
       </div>
@@ -29,6 +30,7 @@
     </div>
 
     <div class="profil-container-password">
+      <div class="profil-title">Mot de passe</div>
       <div class="profil-password">
         <input id="password1" type='password' name='password' class=input-profil-password placeholder="Nouveau mot de passe">
         <button id="unmask" class="unmask_2" type="button" class=button-profil title="Mask/Unmask" onclick="seePass(1);switch_eye(1)"><img id=image_eye_1 src="/icons/login/100px/eye.png" alt="voir mdp"></button>
@@ -44,6 +46,7 @@
     </div>
 
     <div class="profil-container-email">
+      <div class="profil-title">Adresse mail</div>
       <div class="profil-email">
         <input type='text' name='mail' class=input-profil-email placeholder='<?=$_SESSION['mail']?>'>
 
@@ -58,18 +61,25 @@
       </div>
     </div>
 
+    <button style="display:inline" onclick="newPdp()">Nouvelle photo de profil</button>
+
+
+
+
+
+    <script>
+
+
+
+    function newPdp(){
+      window.open("/site/desktop/view/viewPhotoProfil.php");
+      
+    }
+    </script>
+
     <div class="profil-container-image"></div>
     </div>
     </form>
-
-    <?php/*
-
-    $icon = '/icons/profil_icon/icon_profil_';
-     for($i = 1;$i<31;$i++){
-       ?>
-       <img src="<?=$icon.$i.'.png'?>">
-    <?php
-  }*/ ?>
 
   </body>
 

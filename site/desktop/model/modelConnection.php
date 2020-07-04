@@ -22,7 +22,7 @@ if(isset($_POST['submit']))
       $_SESSION['mail'] = $userinfo['mail'];
 
 
-      if($_SESSION['username'] == 'admin')
+      if($_SESSION['status'] == 'admin')
       {
         $accountKey = random_acc(60);
         $_SESSION['accountKey'] = $accountKey;
