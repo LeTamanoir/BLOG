@@ -210,12 +210,12 @@ body,form {
 
 
 
-.grid-container {
+#grid-container {
   width: 100vw;
   height: 100vh;
   display: grid;
   background-color: #dfe6e9;
-  grid-template-columns: 20% 1fr 1fr 10%;
+  grid-template-columns: 15% 1fr 1fr 15%;
   grid-template-rows: 10% 1fr 1fr 5%;
   grid-template-areas:
   "navbar middle_navbar middle_navbar profil"
@@ -238,7 +238,7 @@ body,form {
 }
 
 @media only screen and (max-width: 1000px) {
-  .grid-container {
+  #grid-container {
     display: grid;
     grid-template-columns: 10% 40% 30% 20%;
     grid-template-rows: 10% 15% 70% 5%;

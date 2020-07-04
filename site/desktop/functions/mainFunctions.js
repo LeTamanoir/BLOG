@@ -15,9 +15,11 @@ document.getElementById('container_body').style.background = value;
 
 container_navbar = 0;
 iframe_status = ''
-
+window_status = ''
 function show_navbar()
 {
+
+
   var x = window.matchMedia("(max-width: 1000px)")
   if (container_navbar==0)
   {
@@ -28,6 +30,7 @@ function show_navbar()
     document.getElementById("capteur_navbar").style.borderRight = "solid thin";
     document.getElementById("container_navbar").style.borderRight = "solid thin";
     document.getElementById("container_navbar").style.borderBottom = "solid thin";
+
     screeenSize(x)
     container_navbar=1;
   }
@@ -45,6 +48,10 @@ function show_navbar()
       document.getElementById("container_iframe").style.display = "inline";
       console.log(iframe_status)
     }
+    else if (window_status == "desktop"){
+      document.getElementById('grid-container').style.gridTemplateColumns = "10% 1fr 1fr 10%";
+    }
+
   }
 }
 
@@ -54,20 +61,22 @@ function screeenSize(x) {
     if (document.getElementById("container_iframe").style.display == "inline")
     {
       document.getElementById("container_iframe").style.display = "none";
+      document.getElementById('grid-container').style.gridTemplateAreas = "10% 40% 30% 20%";
       return iframe_status = "inline"
-
     }
     else
     {
       document.getElementById("container_iframe").style.display = "none";
       return iframe_status = "none"
     }
+    return window_status = "mobile"
   }
   else {
     document.getElementById("middle_navbar").style.display = "flex";
+    document.getElementById('grid-container').style.gridTemplateColumns = "20% 1fr 1fr 10%";
+    return window_status = "desktop"
   }
 }
-
 
 
 // ================= login translate ================ //
