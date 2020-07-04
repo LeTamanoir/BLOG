@@ -14,8 +14,11 @@ document.getElementById('container_body').style.background = value;
 
 
 container_navbar = 0;
+iframe_status = ''
+
 function show_navbar()
 {
+  var x = window.matchMedia("(max-width: 1000px)")
   if (container_navbar==0)
   {
     document.getElementById("navbar_image").src = "../../../../icons/navbar/100px/cross.png";
@@ -25,9 +28,7 @@ function show_navbar()
     document.getElementById("capteur_navbar").style.borderRight = "solid thin";
     document.getElementById("container_navbar").style.borderRight = "solid thin";
     document.getElementById("container_navbar").style.borderBottom = "solid thin";
-
-
-
+    screeenSize(x)
     container_navbar=1;
   }
   else if (container_navbar!=0) {
@@ -37,11 +38,37 @@ function show_navbar()
     document.getElementById("capteur_navbar").style.borderRight = "none";
     document.getElementById("container_navbar").style.borderRight = "none";
     document.getElementById("container_navbar").style.borderBottom = "none";
-
-
+    document.getElementById("middle_navbar").style.display = "flex";
     container_navbar=0;
+    if (iframe_status == "inline")
+    {
+      document.getElementById("container_iframe").style.display = "inline";
+      console.log(iframe_status)
+    }
   }
 }
+
+function screeenSize(x) {
+  if (x.matches) { // If media query matches
+    document.getElementById("middle_navbar").style.display = "none";
+    if (document.getElementById("container_iframe").style.display == "inline")
+    {
+      document.getElementById("container_iframe").style.display = "none";
+      return iframe_status = "inline"
+
+    }
+    else
+    {
+      document.getElementById("container_iframe").style.display = "none";
+      return iframe_status = "none"
+    }
+  }
+  else {
+    document.getElementById("middle_navbar").style.display = "flex";
+  }
+}
+
+
 
 // ================= login translate ================ //
 
