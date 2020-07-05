@@ -20,7 +20,7 @@
       </div>
 
       <div class="profil">
-        <div id=container_profil><img class=profil_image src="/icons/profil_icon/icon_profil_1.png"><?php echo $_SESSION['username']; ?></div>
+        <div id=container_profil><img class=profil_image src="<?=$_SESSION['photo']?>"><?php echo $_SESSION['username']; ?></div>
       </div>
 
       <div class="navbar">

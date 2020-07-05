@@ -9,7 +9,7 @@
 
   <body>
     <form action="" method="post">
-    <div class="profil-grid-container">
+    <div id="profil-grid-container">
     <div class="profil-container-username">
       <div class="profil-title">Nom d'utilisateur</div>
       <div class="profil-username">
@@ -66,7 +66,7 @@
     <div id=container_pop_up>
       <button id=close_profil_pop_up type="button" onclick=newPdp(2)><img class=profil-image-new src="/icons/navbar/100px/cross.png"></button>
 
-      <iframe id=pop_up_profil src="/site/desktop/view\viewPhotoProfil.php"></iframe>
+      <iframe id=pop_up_profil src="/site/desktop/view/viewPhotoProfil.php"></iframe>
 
 
     </div>
