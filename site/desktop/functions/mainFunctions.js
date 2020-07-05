@@ -10,6 +10,34 @@ document.getElementById('container_body').style.background = value;
 
 */
 
+
+
+
+
+// ===================== newPdp ===================== //
+
+
+
+
+function newPdp(x)
+{
+  if (x=="1")
+  {
+    document.getElementById('container_pop_up').style.animation = "scale_profil 0.25s forwards";
+    document.getElementById("profil-grid-container").style.filter = "blur(5px)";
+  }
+  else if (x=="2")
+  {
+    document.getElementById('container_pop_up').style.animation = "scale_profil_reverse 0.25s forwards";
+    document.getElementById("profil-grid-container").style.filter = "blur(0px)";
+  }
+}
+
+
+
+
+
+
 // ===================== show_navbar ===================== //
 
 
@@ -61,7 +89,7 @@ function screeenSize(x) {
     if (document.getElementById("container_iframe").style.display == "inline")
     {
       document.getElementById("container_iframe").style.display = "none";
-      document.getElementById('grid-container').style.gridTemplateAreas = "10% 40% 30% 20%";
+      document.getElementById('grid-container').style.gridTemplateColumns = "10% 40% 30% 20%";
       return iframe_status = "inline"
     }
     else

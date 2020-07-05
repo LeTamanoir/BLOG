@@ -19,7 +19,6 @@ ul {
   margin: 0;
 }
 button {
-  display: none;
   background: none;
   border: none;
   padding: 0;
@@ -50,7 +49,7 @@ body,form {
 
 
 
-.profil-grid-container {
+#profil-grid-container {
   height: 100vh;
   width: 100vw;
   display: grid;
@@ -127,6 +126,9 @@ body,form {
   height: 100%;
   width: 100%;
   grid-area: profil-container-image;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .profil-password {
@@ -219,6 +221,93 @@ body,form {
   margin-left: -10%;
 }
 
+.input-profil-password:focus,.input-profil-email:focus,.input-profil:focus {
+  border-color: #8bb7f0;
+  box-shadow: inset 0px -80px 5px -80px #8bb7f0;
+}
+
+.image_pdp {
+  margin: 1vw;
+  border: solid thin;
+  border-radius: 100%;
+}
+.image_pdp:hover{
+  cursor: pointer;
+  animation: blur_image 0.25s forwards;
+}
+@keyframes blur_image {
+  from {
+    filter: blur(4px);
+    transform: scale(1,1);
+  }
+  to {
+    filter: blur(0px);
+    transform: scale(1.1,1.1);
+  }
+}
+.profil-image-pop-up {
+  display: block;
+  font-size: 2vh;
+  font-family: Ubuntu-Regular;
+}
+.profil-image-pop-up:hover {
+  cursor: pointer;
+
+  text-decoration: underline;
+}
+.profil-image-new {
+  width: 3vw;
+  height: 3vw;
+  margin-right: 1vw;
+}
+
+#container_pop_up {
+  position: absolute;
+  top: 5vh;
+  left: 20vw;
+  display: block;
+  transform: scale(0);
+  padding: 0;
+  margin: 0;
+}
+
+
+#pop_up_profil {
+  display: block;
+  border: solid thin;
+  width: 60vw;
+  height: 60vh;
+}
+
+#close_profil_pop_up {
+  margin: 1vw;
+  margin-left: auto;
+  display: block;
+}
+#close_profil_pop_up:hover .profil-image-new {
+  cursor: pointer;
+  animation: rotate-90-cw 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+
+}
+@keyframes scale_profil {
+  from {transform: scale(0); transform-origin: center; filter: blur(100px);}
+  to {transform: scale(1); transform-origin: center;}
+}
+
+@keyframes scale_profil_reverse {
+  from {transform: scale(1); transform-origin: center; filter: blur(100px);}
+  to {transform: scale(0); transform-origin: center;}
+}
+
+@keyframes rotate-90-cw {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
 
 
 
@@ -296,6 +385,12 @@ body,form {
   }
 
 }
+
+
+
+
+
+
 
 
 
@@ -635,7 +730,6 @@ body,form {
 
 .login-connexion {
   grid-area: login-connexion;
-  background-color: white;
 }
 
 .login-footer {
@@ -679,7 +773,16 @@ body,form {
   from {transform-origin: left;transform: translateX(0);}
   to {transform-origin: left;transform: translateX(200%);}
 }
-
+@keyframes shadow-pop-tr {
+  0% {
+    box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
+    transform: translateX(0) translateY(0);
+  }
+  100% {
+    box-shadow: 1px -1px #3e3e3e, 2px -2px #3e3e3e, 3px -3px #3e3e3e, 4px -4px #3e3e3e, 5px -5px #3e3e3e, 6px -6px #3e3e3e, 7px -7px #3e3e3e, 8px -8px #3e3e3e;
+    transform: translateX(-8px) translateY(8px);
+  }
+}
 .login_info_username {
   align-self: center;
   border: none;
@@ -710,6 +813,9 @@ body,form {
   flex-direction: column;
 }
 #container_connexion {
+  animation: shadow-pop-tr 0.3s cubic-bezier(0.470, 0.000, 0.745, 0.715) forwards;
+  background-color: white;
+
   border: solid thin;
   display: flex;
   flex-direction: column;

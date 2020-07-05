@@ -8,17 +8,8 @@
   </head>
 
   <body>
-    <?php
-
-
-    ?>
-
-
-
-
-
     <form action="" method="post">
-    <div class="profil-grid-container">
+    <div id="profil-grid-container">
     <div class="profil-container-username">
       <div class="profil-username">
         <input type='text' name='username' class=input-profil placeholder='username'>
@@ -58,27 +49,24 @@
       </div>
     </div>
 
-    <div class="profil-container-image"></div>
+
+    <div class="profil-container-image">
+      <img class=profil-image-new src="../../../icons/profil/100px/new_picture.png">
+      <button class="profil-image-pop-up" type="button" onclick="newPdp(1)">Nouvelle photo de profil</button>
+      </div>
+    </div>
+
+
+    </div>
+
+
+    <div id=container_pop_up>
+      <button id=close_profil_pop_up type="button" onclick=newPdp(2)><img class=profil-image-new src="../../../icons/navbar/100px/cross.png"></button>
+
+      <iframe id=pop_up_profil src="viewPhotoProfil.html"></iframe>
+
+
     </div>
     </form>
-
-  <!--  <?php/*
-
-    $icon = '/icons/profil_icon/icon_profil_';
-     for($i = 1;$i<31;$i++){
-       ?>
-       <img src="<?=$icon.$i.'.png'?>">
-    <?php
-  }*/ ?> -->
-
   </body>
-
-  <script>
-
-
-
-
-  </script>
-
-
 </html>

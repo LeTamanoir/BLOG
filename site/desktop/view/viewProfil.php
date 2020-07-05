@@ -8,15 +8,6 @@
   </head>
 
   <body>
-    <?php
-
-
-    ?>
-
-
-
-
-
     <form action="" method="post">
     <div class="profil-grid-container">
     <div class="profil-container-username">
@@ -61,34 +52,24 @@
       </div>
     </div>
 
-    <button style="display:inline" onclick="newPdp()">Nouvelle photo de profil</button>
+
+    <div class="profil-container-image">
+      <img class=profil-image-new src="/icons/profil/100px/new_picture.png">
+      <button class="profil-image-pop-up" type="button" onclick="newPdp(1)">Nouvelle photo de profil</button>
+      </div>
+    </div>
 
 
+    </div>
 
 
+    <div id=container_pop_up>
+      <button id=close_profil_pop_up type="button" onclick=newPdp(2)><img class=profil-image-new src="/icons/navbar/100px/cross.png"></button>
 
-    <script>
+      <iframe id=pop_up_profil src="/site/desktop/view\viewPhotoProfil.php"></iframe>
 
 
-
-    function newPdp(){
-      window.open("/site/desktop/view/viewPhotoProfil.php");
-      
-    }
-    </script>
-
-    <div class="profil-container-image"></div>
     </div>
     </form>
-
   </body>
-
-  <script>
-
-
-
-
-  </script>
-
-
 </html>
