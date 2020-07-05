@@ -1,7 +1,7 @@
 console.log("service worker running :) ")
 var cacheName = 'blog-pwa';
 var filesToCache = [
-  '/',
+  '/site/',
   '/site/desktop/view/Administration/viewDefaultAdministration.html',
   '/site/desktop/config/stylesheet_desktop/stylesheet.css',
   '/site/desktop/functions/mainFunctions.js'
