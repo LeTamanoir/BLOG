@@ -10,7 +10,14 @@ document.getElementById('container_body').style.background = value;
 
 */
 
+window.onload = () => {
+  'use strict';
 
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker
+             .register('./sw.js');
+  }
+}
 
 
 // ===================== newPdp ===================== //

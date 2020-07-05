@@ -1,4 +1,4 @@
-
+console.log("service worker running :) ")
 var cacheName = 'blog-pwa';
 var filesToCache = [
   '/',
