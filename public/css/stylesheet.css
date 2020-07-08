@@ -1,0 +1,160 @@
+:root {
+
+    /* TEXT-SIZES */
+  
+    --text-small: 16px;
+    --text-medium: 24px;
+    --text-big: 32px;
+    --text-large: 48px;
+  
+    /* IMAGES-SIZES */
+  
+    --image-small: 2em;
+    --image-medium: 4em;
+    --image-big: 6em;
+    --image-large: 8em;
+  
+    /* COLORS */
+  
+    --color-blue: #74b9ff;
+    --color-dark-blue: #0984e3;
+    --color-light-grey: #dfe6e9;
+    --color-grey: #b2bec3;
+    --color-dark-grey: #636e72;
+    --color-black: #2d3436;
+    --color-white: white;
+  
+    /* MARGIN */
+  
+    --margin-small: 1em;
+    --margin-medium: 2em;
+    --margin-big: 3em; 
+    --margin-large: 4em;
+    --margin-top: 2em 0 0 0;
+    --margin-bottom: 0 0 2em 0;
+    --margin-right: 0 2em 0 0;
+    --margin-left: 0 0 0 2em;
+    
+    /* PADDING */
+  
+    --padding-small: 1em;
+    --padding-medium: 2em;
+    --padding-big: 3em; 
+    --padding-large: 4em;
+    --padding-top: 2em 0 0 0;
+    --padding-bottom: 0 0 2em 0;
+    --padding-right: 0 2em 0 0;
+    --padding-left: 0 0 0 2em;
+    
+    /* MARGIN DOM */
+  
+    --margin-main: ;
+    --margin-navbar: ;
+    --margin-header: ;
+  
+}
+body,html,p,button,input {
+  padding: 0;
+  margin: 0;
+  outline: 0;
+}
+
+/* PREMADE CLASS */
+
+/* GRID */
+
+
+
+
+/* MEDIA */
+
+@media only screen and (max-width: 600px) {
+  
+}
+
+/* KEY-FRAMES */
+
+
+
+
+/* TEXT */
+
+.text_small {
+  font-size: var(--text-small);
+}
+.text_medium {
+  font-size: var(--text-medium);
+}
+.text_big {
+  font-size: var(--text-big);
+}
+.text_large {
+  font-size: var(--text-large);
+}
+
+/* COLOR */
+
+.color-blue {
+    color: var(--color-blue)
+}
+.color-dark-blue {
+    color: var(--color-dark-blue)
+}
+.color-light-grey {
+    color: var(--color-light-grey)
+}
+.color-grey {
+    color: var(--color-grey)
+}
+.color-dark-grey {
+    color: var(--color-dark-grey)
+}
+.color-black {
+    color: var(--color-black)
+}
+.color-white {
+    color: var(--color-white)
+}
+
+
+
+
+/* DOM */
+
+body {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--color-light-grey);
+
+}
+
+#navbar {
+  background-color: var(--color-dark-blue);
+  width: 0%;
+  height: 100vh;
+}
+#navbar__capteur {
+  width: var(--image-big);
+}
+#navbar__content {
+  background-color: var(--color-light-grey);
+}
+
+#main {
+  background-color: var(--color-blue);
+  width: 100%;
+  height: 100vh;
+}
+#header {
+  background-color: var(--color-dark-grey);
+
+
+}
+
+#footer {
+  background-color: var(--color-grey);
+
+
+}
+
+
