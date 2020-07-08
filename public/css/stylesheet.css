@@ -53,10 +53,19 @@
     --margin-header: ;
   
 }
-body,html,p,button,input {
+body,html,p,button,input,a {
   padding: 0;
   margin: 0;
   outline: 0;
+  text-decoration: none;
+}
+@font-face {
+  font-family: Ubuntu-Regular;
+  src: url('/public/fonts/Ubuntu-Regular.ttf');
+}
+@font-face {
+  font-family: Ubuntu-Bold;
+  src: url('/public/fonts/Ubuntu-Bold.ttf');
 }
 
 /* PREMADE CLASS */
@@ -68,51 +77,167 @@ body,html,p,button,input {
 
 /* MEDIA */
 
-@media only screen and (max-width: 600px) {
-  
+@media only screen and (max-width: 1000px) {
+  #container__body {
+    display: flex;
+    flex-direction: column;
+  }
+  #navbar__content {
+    display: flex;
+    flex-direction: row;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  #container__body {
+    display: flex;
+    flex-direction: row;
+  }
+  #navbar__content {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 /* KEY-FRAMES */
 
+@keyframes navbar__in {
+  from {width: 6em;}
+  to {width: 24em;}
+}
+@keyframes navbar__out {
+  from {width: 24em;}
+  to {width: 6em;}
+}
 
+/* POSITION */
+
+.center {
+  margin: auto;
+}
+.underline {
+  text-decoration: underline;
+}
+.underline_hover:hover {
+  text-decoration: underline;
+}
+
+
+/* PADDING MARGIN */
+
+.padding_left {
+  padding: var(--padding-left);
+}
+.padding_right {
+  padding: var(--padding-right);
+}
+.padding_top {
+  padding: var(--padding-top);
+}
+.padding_bottom {
+  padding: var(--padding-bottom);
+}
+
+
+.padding_small {
+  padding: var(--padding-small);
+}
+.padding_medium {
+  padding: var(--padding-medium);
+}
+.padding_big {
+  padding: var(--padding-big);
+}
+.padding_large {
+  padding: var(--padding-large);
+}
+
+
+.margin_small {
+  margin: var(--margin-small);
+}
+.margin_medium {
+  margin: var(--margin-medium);
+}
+.margin_big {
+  margin: var(--margin-big);
+}
+.margin_large {
+  margin: var(--margin-large);
+}
+
+
+.margin_left {
+  margin: var(--margin-left);
+}
+.margin_right {
+  margin: var(--margin-right);
+}
+.margin_top {
+  margin: var(--margin-top);
+}
+.margin_bottom {
+  margin: var(--margin-bottom);
+}
 
 
 /* TEXT */
 
 .text_small {
   font-size: var(--text-small);
+  font-family: Ubuntu-Regular;
 }
 .text_medium {
   font-size: var(--text-medium);
+  font-family: Ubuntu-Regular;
+
 }
 .text_big {
   font-size: var(--text-big);
+  font-family: Ubuntu-Regular;
+
 }
 .text_large {
   font-size: var(--text-large);
+  font-family: Ubuntu-Regular;
+
+}
+
+/* IMAGE */
+
+.image_small {
+  width: var(--image-small);
+}
+.image_medium {
+  width: var(--image-medium);
+}
+.image_big {
+  width: var(--image-big);
+}
+.image_large {
+  width: var(--image-large);
 }
 
 /* COLOR */
 
-.color-blue {
+.color_blue {
     color: var(--color-blue)
 }
-.color-dark-blue {
+.color_dark_blue {
     color: var(--color-dark-blue)
 }
-.color-light-grey {
+.color_light_grey {
     color: var(--color-light-grey)
 }
-.color-grey {
+.color_grey {
     color: var(--color-grey)
 }
-.color-dark-grey {
+.color_dark_grey {
     color: var(--color-dark-grey)
 }
-.color-black {
+.color_black {
     color: var(--color-black)
 }
-.color-white {
+.color_white {
     color: var(--color-white)
 }
 
@@ -121,39 +246,51 @@ body,html,p,button,input {
 
 /* DOM */
 
-body {
-  display: flex;
-  flex-direction: row;
+#container__body {
+  z-index: -1;
+  height: 100vh;
+  width: 100%;
   background-color: var(--color-light-grey);
-
 }
 
 #navbar {
-  background-color: var(--color-dark-blue);
-  width: 0%;
-  height: 100vh;
-}
-#navbar__capteur {
-  width: var(--image-big);
-}
-#navbar__content {
   background-color: var(--color-light-grey);
+  height: 100%;
+  width: 6em;
+  display: flex;
+  flex-direction: column;
+  animation-timing-function: linear;
+
+}
+
+#navbar__capteur {
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+#navbar__content {
+  
+}
+
+.navbar__content__child {
+  display: flex;
+  flex-direction: row;
+
 }
 
 #main {
   background-color: var(--color-blue);
+  height: 100%;
   width: 100%;
-  height: 100vh;
 }
 #header {
   background-color: var(--color-dark-grey);
-
 
 }
 
 #footer {
   background-color: var(--color-grey);
-
 
 }
 
