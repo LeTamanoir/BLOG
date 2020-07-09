@@ -1,11 +1,11 @@
-//window.onload = () => {
-//    'use strict';
-//    console.log("hello world !")
-//  
-//    if ('serviceWorker' in navigator) {
-//      navigator.serviceWorker.register('./serviceWorker.js');
-//  }
-//}
+window.onload = () => {
+    'use strict';
+    console.log("hello world !")
+  
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js');
+  }
+}
 console.log("hello world !")
   
   

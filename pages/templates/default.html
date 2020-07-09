@@ -3,14 +3,16 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
     <link href="/public/css/stylesheet.css" rel="stylesheet">
-    <title><?= App::getInstance()->title; ?></title>
+    <link rel="manifest" href="/manifest.json">
+    <title><!--?= App::getInstance()->title; ?--></title>
 </head>
 
 <body id=container__body>
 
     <nav id="navbar">
-        <div class="flex_row border_bottom">
+        <div class="flex_row">
             <title id=navbar__title class="color_dark_blue text_big center_block">BLOG Prototype</title>
             <input id=navbar__capteur class="image_big" type="image" src="/public/icons/navbar/navbar.png">
         </div>
@@ -41,7 +43,7 @@
         </header>
         
         <div id="content" class="padding_small background_color_white">
-            <?= $content; ?>
+            <!--?= $content; ?-->
         </div>
 
     </main>
