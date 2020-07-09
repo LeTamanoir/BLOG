@@ -1,7 +1,6 @@
 var cacheName = 'blog';
 var filesToCache = [
     '/public/',
-    '/pages/templates/default.html',
     '/public/css/stylesheet.css',
     '/public/js/mainFunctions.js'
 ];

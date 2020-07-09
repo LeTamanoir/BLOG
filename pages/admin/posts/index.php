@@ -1,0 +1,1 @@
+<p>Ici mon admin</p>

@@ -1,4 +1,6 @@
 <?php
+
+use Core\Auth\DBAuth;
 define('ROOT',dirname(__DIR__));
 require ROOT.'/app/App.php';
 App::load();
@@ -9,13 +11,19 @@ if(isset($_GET['p'])){
     $page = 'home';
 }
 
+$app = App::getInstance();
+$auth = new DBAuth($app->getDb());
+if(!$auth->logged()){
+    $app->forbidden();
+}
+
 ob_start();
 if($page === 'login'){
-    require ROOT . '/pages/posts/home.php';
+    require ROOT . '/pages/admin/posts/home.php';
 }elseif($page === 'posts.category'){
-    require ROOT . '/pages/posts/category.php';
+    require ROOT . '/pages/admin/posts/category.php';
 }elseif($page === 'posts.show'){
-    require ROOT . '/pages/posts/show.php';
+    require ROOT . '/pages/admin/posts/show.php';
 }
 $content = ob_get_clean();
-require ROOT. '/pages/templates/default.php';
+require ROOT. '/pages/templates/admin/default.php';?>

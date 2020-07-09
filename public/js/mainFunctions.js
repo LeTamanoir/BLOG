@@ -1,14 +1,12 @@
-window.onload = () => {
-    'use strict';
-    console.log("hello world !")
-  
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/sw.js');
-  }
-}
+//window.onload = () => {
+//    'use strict';
+//    console.log("hello world !")
+//  
+//    if ('serviceWorker' in navigator) {
+//      navigator.serviceWorker.register('/sw.js');
+//  }
+//}
 console.log("hello world !")
-  
-  
  
   
 navbar__status = 1
@@ -73,6 +71,86 @@ function screenSize(x) {
   }
   screenSizeStatus2 = 1
 }
+
+
+
+
+eye_status_1 = "open";
+eye_status_2 = "open";
+
+function switch_eye(x) {
+  var name ="image_eye_"+x;
+
+  if (x=="1")
+  {
+    if (eye_status_1=="open")
+    {
+      document.getElementById(name).src = "/public/icons/login/100px/no_eye.png";
+      console.log(document.getElementById(name).src)
+      eye_status_1 = "close";
+    }
+    else if (eye_status_1=="close")
+    {
+      document.getElementById(name).src = "/public/icons/login/100px/eye.png";
+      console.log(document.getElementById(name).src)
+      eye_status_1 = "open";
+    }
+  }
+  else if (x=="2")
+  {
+    if (eye_status_2=="open")
+    {
+      document.getElementById(name).src = "/public/icons/login/100px/no_eye.png";
+      console.log(document.getElementById(name).src)
+      eye_status_2 = "close";
+    }
+    else if (eye_status_2=="close")
+    {
+      document.getElementById(name).src = "/public/icons/login/100px/eye.png";
+      console.log(document.getElementById(name).src)
+      eye_status_2 = "open";
+    }
+  }
+}
+
+
+function seePass(x){
+  var pwd = document.getElementById('password'+x);
+
+  if(pwd.type == 'password')
+  {
+    pwd.type = 'text'
+  }
+  else
+  {
+    pwd.type = 'password';
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 var x = window.matchMedia("(max-width: 1000px)")
 screenSize(x)
