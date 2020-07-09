@@ -21,7 +21,7 @@ $form = new \Core\HTML\BootstrapForm($_POST);
     <div class="flex__form__login padding_big"><?= $form->input('username',"username : ", ['placeholder' => 'username']);?></div>
     <div class="flex__form__login padding_big"><?= $form->input('password','password : ', ['type' => 'password','placeholder' => 'password','id' => 'password1']);?>
     
-    <button type="button" title="Mask/Unmask" onclick="switch_eye(1);seePass(1)"><img class="image_medium" id=image_eye_1 src="/public/icons/login/100px/eye.png" alt="voir mdp"></button>
+    <button type="button" title="Mask/Unmask" onclick="switch_eye(1);seePass(1)"><img class="image_medium" id=image_eye_1 src="/public/icons/login/eye.png" alt="voir mdp"></button>
     </div>
 
     

@@ -85,13 +85,13 @@ function switch_eye(x) {
   {
     if (eye_status_1=="open")
     {
-      document.getElementById(name).src = "/public/icons/login/100px/no_eye.png";
+      document.getElementById(name).src = "/public/icons/login/no_eye.png";
       console.log(document.getElementById(name).src)
       eye_status_1 = "close";
     }
     else if (eye_status_1=="close")
     {
-      document.getElementById(name).src = "/public/icons/login/100px/eye.png";
+      document.getElementById(name).src = "/public/icons/login/eye.png";
       console.log(document.getElementById(name).src)
       eye_status_1 = "open";
     }
@@ -100,13 +100,13 @@ function switch_eye(x) {
   {
     if (eye_status_2=="open")
     {
-      document.getElementById(name).src = "/public/icons/login/100px/no_eye.png";
+      document.getElementById(name).src = "/public/icons/login/no_eye.png";
       console.log(document.getElementById(name).src)
       eye_status_2 = "close";
     }
     else if (eye_status_2=="close")
     {
-      document.getElementById(name).src = "/public/icons/login/100px/eye.png";
+      document.getElementById(name).src = "/public/icons/login/eye.png";
       console.log(document.getElementById(name).src)
       eye_status_2 = "open";
     }

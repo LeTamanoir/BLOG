@@ -2,17 +2,17 @@
 
 ## Refonte Design
 
-[logoHTML]: https://github.com/darkshark400/BLOG/blob/master/icons/presentation/html.png
-[logoCSS]: https://github.com/darkshark400/BLOG/blob/master/icons/presentation/css.png
-[logoJS]: https://github.com/darkshark400/BLOG/blob/master/icons/presentation/js.png
-[logoANDROID]: https://github.com/darkshark400/BLOG/blob/master/icons/presentation/android.png
-[logoIOS]: https://github.com/darkshark400/BLOG/blob/master/icons/presentation/ios.png
-[logoDESKTOP]: https://github.com/darkshark400/BLOG/blob/master/icons/presentation/desktop.png
-[logoHTTPS]: https://github.com/darkshark400/BLOG/blob/master/icons/presentation/https.png
-[logoSQL]: https://github.com/darkshark400/BLOG/blob/master/icons/presentation/sql.png
-[logoPHPMYADMIN]: https://github.com/darkshark400/BLOG/blob/master/icons/presentation/phpMyAdmin.png
-[logoPHP]: https://github.com/darkshark400/BLOG/blob/master/icons/presentation/php.png
-[logoMD5]: https://github.com/darkshark400/BLOG/blob/master/icons/presentation/md5.png
+[logoHTML]: https://github.com/darkshark400/BLOG/blob/master/public/icons/presentation/html.png
+[logoCSS]: https://github.com/darkshark400/BLOG/blob/master/public/icons/presentation/css.png
+[logoJS]: https://github.com/darkshark400/BLOG/blob/master/public/icons/presentation/js.png
+[logoANDROID]: https://github.com/darkshark400/BLOG/blob/master/public/icons/presentation/android.png
+[logoIOS]: https://github.com/darkshark400/BLOG/blob/master/public/icons/presentation/ios.png
+[logoDESKTOP]: https://github.com/darkshark400/BLOG/blob/master/public/icons/presentation/desktop.png
+[logoHTTPS]: https://github.com/darkshark400/BLOG/blob/master/public/icons/presentation/https.png
+[logoSQL]: https://github.com/darkshark400/BLOG/blob/master/public/icons/presentation/sql.png
+[logoPHPMYADMIN]: https://github.com/darkshark400/BLOG/blob/master/public/icons/presentation/phpMyAdmin.png
+[logoPHP]: https://github.com/darkshark400/BLOG/blob/master/public/icons/presentation/php.png
+[logoMD5]: https://github.com/darkshark400/BLOG/blob/master/public/icons/presentation/md5.png
 
 ![logoHTML] ![logoCSS] ![logoJS] ![logoPHP]
 
