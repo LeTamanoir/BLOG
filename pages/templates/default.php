@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <link href="/public/css/stylesheet.css" rel="stylesheet">
-    <title><?= App\App::getTitle() ?></title>
+    <title><?= App::getInstance()->title; ?></title>
 </head>
 
 <body id=container__body>
@@ -36,19 +36,19 @@
         </div>
     </nav>  
     <main id="main">
-        <header id="header" class="text_center">
-            this is header
+        <header id="header" class="text_center background_color_blue flex_row">
+            <p class="text_big center_vertical">This is header | </p><a href="index.php" class="text_big color_black center_vertical underline_hover">Accueil</a>
         </header>
         
-        <div id="content" class="center_block">
+        <div id="content" class="padding_small background_color_white">
             <?= $content; ?>
         </div>
 
-        <footer id="footer" class="text_center">
+    </main>
+    <footer id="footer" class="text_center background_color_dark_blue">
             this is footer
         
-        </footer>
-    </main>
+    </footer>
     <script src="/public/js/mainFunctions.js"></script>
 </body>
 </html>

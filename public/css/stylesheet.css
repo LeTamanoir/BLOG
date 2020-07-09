@@ -53,11 +53,12 @@
     --margin-header: ;
   
 }
-body,html,p,button,input,a {
+body,html,p,button,input,a,ul,li {
   padding: 0;
   margin: 0;
   outline: 0;
   text-decoration: none;
+  list-style: none;
 }
 @font-face {
   font-family: Ubuntu-Regular;
@@ -151,6 +152,7 @@ body,html,p,button,input,a {
 .flex_row {
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
 .flex_column {
   display: flex;
@@ -163,6 +165,11 @@ body,html,p,button,input,a {
   margin-left: auto;
   margin-right: auto;
 }
+.center_vertical {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
 .text_center {
   text-align: center;
 }
@@ -231,7 +238,14 @@ body,html,p,button,input,a {
   margin: var(--margin-bottom);
 }
 
+/* TEXT */
 
+.list_bullet {
+  list-style: circle;
+}
+.list_number {
+  list-style: decimal;
+}
 /* TEXT */
 
 .text_small {
@@ -251,7 +265,6 @@ body,html,p,button,input,a {
 .text_large {
   font-size: var(--text-large);
   font-family: Ubuntu-Regular;
-
 }
 
 /* IMAGE */
@@ -272,26 +285,51 @@ body,html,p,button,input,a {
 /* COLOR */
 
 .color_blue {
-    color: var(--color-blue)
+    color: var(--color-blue);
 }
 .color_dark_blue {
-    color: var(--color-dark-blue)
+    color: var(--color-dark-blue);
 }
 .color_light_grey {
-    color: var(--color-light-grey)
+    color: var(--color-light-grey);
 }
 .color_grey {
-    color: var(--color-grey)
+    color: var(--color-grey);
 }
 .color_dark_grey {
-    color: var(--color-dark-grey)
+    color: var(--color-dark-grey);
 }
 .color_black {
-    color: var(--color-black)
+    color: var(--color-black);
 }
 .color_white {
-    color: var(--color-white)
+    color: var(--color-white);
 }
+
+/* BACKGROUND-COLOR */
+
+.background_color_blue {
+  background-color: var(--color-blue);
+}
+.background_color_dark_blue {
+  background-color: var(--color-dark-blue);
+}
+.background_color_light_grey {
+  background-color: var(--color-light-grey);
+}
+.background_color_grey {
+  background-color: var(--color-grey);
+}
+.background_color_dark_grey {
+  background-color: var(--color-dark-grey);
+}
+.background_color_black {
+  background-color: var(--color-black);
+}
+.background_color_white {
+  background-color: var(--color-white);
+}
+
 
 /* BORDER */
 
@@ -335,23 +373,22 @@ body,html,p,button,input,a {
 }
 
 #main {
-  background-color: var(--color-blue);
   height: 100%;
   width: 100%;
 }
 #header {
-  background-color: var(--color-dark-grey);
   height: 7%;
 
 }
 #content {
-  background-color: var(--color-dark-blue);
   height: 89%;
+  overflow-y: scroll;
 }
 #footer {
-  background-color: var(--color-grey);
   height: 4%;
-
+  width: 100%;
+  position: fixed;
+  bottom: 0;
 }
 
 
