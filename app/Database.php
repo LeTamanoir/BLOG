@@ -41,9 +41,9 @@ class Database{
 
     }
 
-    public function prepare($statement, $values, $class_name, $one = false){
+    public function prepare($statement, $attributes, $class_name, $one = false){
         $req = $this->getPDO()->prepare($statement);
-        $req->execute($values);
+        $req->execute($attributes);
         $req->setFetchMode(PDO::FETCH_CLASS, $class_name);
         if($one){
             $datas =  $req->fetch();

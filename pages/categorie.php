@@ -1,6 +1,6 @@
 <?php
 use App\Table\Categorie;
-use App\Table\Article;
+use App\Table\Post;
 use App\App;
 
 $categorie = Categorie::find($_GET['id']);
@@ -8,7 +8,7 @@ if($categorie === false){
     App::notFound();
 
 }
-$articles = Article::lastByCategory($_GET['id']);
+$articles = Post::lastByCategory($_GET['id']);
 $categories = Categorie::all();
 ?>
 <h1><?= $categorie->title ?></h1>

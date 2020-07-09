@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <link href="/public/css/stylesheet.css" rel="stylesheet">
-    <title>Home</title>
+    <title><?= App\App::getTitle() ?></title>
 </head>
 
 <body id=container__body>
