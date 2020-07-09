@@ -25,7 +25,8 @@
     --color-white: white;
   
     /* MARGIN */
-  
+
+    --margin-x-small: 0.5em;
     --margin-small: 1em;
     --margin-medium: 2em;
     --margin-big: 3em; 
@@ -37,6 +38,7 @@
     
     /* PADDING */
   
+    --padding-x-small: 0.5em;
     --padding-small: 1em;
     --padding-medium: 2em;
     --padding-big: 3em; 
@@ -71,8 +73,23 @@ body,html,p,button,input,a,ul,li {
 
 /* PREMADE CLASS */
 
-/* GRID */
+/* SCROLL-BAR */
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
 
 
 
@@ -115,9 +132,13 @@ body,html,p,button,input,a,ul,li {
   #navbar__content {
     display: flex;
     flex-direction: column;
+    height: auto;
   }
   .navbar__content__child {
     flex-direction: row;
+  }
+  #navbar__contaier {
+    display: block;
   }
   #navbar {
     height: 100%;
@@ -143,20 +164,28 @@ body,html,p,button,input,a,ul,li {
   to {height: auto;transform: scaleY(1); transform-origin: top;}
 }
 @keyframes navbar__mobile__out {
-  from {height: auto;transform: scaleY(1); transform-origin: top;}
-  to {height: 0;transform: scaleY(0); transform-origin: top;}
+  from {transform: scaleY(1); transform-origin: top;}
+  to {transform: scaleY(0); transform-origin: top;}
 }
 
 /* POSITION */
-
+.inline {
+  display: inline;
+}
+.block {
+  display: block;
+}
 .flex_row {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
 }
 .flex_column {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .center_block {
   margin: auto;
@@ -196,7 +225,9 @@ body,html,p,button,input,a,ul,li {
   padding: var(--padding-bottom);
 }
 
-
+.padding_x_small {
+  padding: var(--padding-x-small);
+}
 .padding_small {
   padding: var(--padding-small);
 }
@@ -210,7 +241,9 @@ body,html,p,button,input,a,ul,li {
   padding: var(--padding-large);
 }
 
-
+.margin_x_small {
+  margin: var(--margin-x-small);
+}
 .margin_small {
   margin: var(--margin-small);
 }
@@ -353,12 +386,6 @@ body,html,p,button,input,a,ul,li {
   z-index: -1;
   height: 100vh;
   width: 100%;
-  background-color: var(--color-light-grey);
-}
-
-#navbar {
-  background-color: var(--color-light-grey);
-  animation-timing-function: linear;
 }
 
 #navbar__content {
@@ -377,15 +404,15 @@ body,html,p,button,input,a,ul,li {
   width: 100%;
 }
 #header {
-  height: 7%;
+  height: auto;
 
 }
 #content {
-  height: 89%;
+  height: 80vh;
   overflow-y: scroll;
 }
 #footer {
-  height: 4%;
+  height: auto;
   width: 100%;
   position: fixed;
   bottom: 0;

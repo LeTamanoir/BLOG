@@ -1,7 +1,7 @@
 {
   "name": "BLOG",
   "short_name": "blog-fr",
-  "start_url": "/pages/templates/default.html",
+  "start_url": "/public/",
   "display": "standalone",
   "background_color": "white",
   "description": "A simple prototype of a fucking blog",

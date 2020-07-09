@@ -17,6 +17,8 @@ function show_navbar_desktop() {
   {
     navbar__status = 0;
     document.getElementById("navbar").style.animation = "navbar__desktop__in 0.1s forwards";
+    document.getElementById("navbar__container").style.borderRight = "solid 2px var(--color-dark-blue)";
+    document.getElementById("navbar__container").style.borderBottom = "solid 2px var(--color-dark-blue)";
     document.getElementById("navbar__capteur").src = "/public/icons/navbar/cross.png";
 
   }
@@ -24,6 +26,8 @@ function show_navbar_desktop() {
   {
     navbar__status = 1;
     document.getElementById("navbar").style.animation = "navbar__desktop__out 0.1s forwards";
+    document.getElementById("navbar__container").style.borderRight = "none";
+    document.getElementById("navbar__container").style.borderBottom = "none";
     document.getElementById("navbar__capteur").src = "/public/icons/navbar/navbar.png";
 
 
@@ -34,12 +38,14 @@ function show_navbar_mobile() {
   {
     navbar__status = 0;
     document.getElementById("navbar__content").style.animation = "navbar__mobile__in 0.4s forwards";
+    document.getElementById("navbar__container").style.borderBottom = "solid 2px var(--color-dark-blue)";
     document.getElementById("navbar__capteur").src = "/public/icons/navbar/cross.png";
   }
   else if (navbar__status==0)
   {
     navbar__status = 1;
     document.getElementById("navbar__content").style.animation = "navbar__mobile__out 0.1s forwards";
+    document.getElementById("navbar__container").style.borderBottom = "none";
     document.getElementById("navbar__capteur").src = "/public/icons/navbar/navbar.png";
 
 
