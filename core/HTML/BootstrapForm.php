@@ -23,11 +23,13 @@ class BootstrapForm extends Form{
         if(isset($options['placeholder'])){
             $placeholder = $options['placeholder'];
         }
-        $label = '<label class="text_big align_self_start">'. $label . '</label>';
+        $label = '<label class="text_big center_vertical">'. $label . '</label>';
         if($type === 'textarea'){
             $input = '<textarea name="' . $name .'" class="form-control">'. $this->getValue($name) .'</textarea>';
+        }elseif($name === 'password'){
+            $input = '<div><input type="'. $type .'" name="' . $name .'" id="'.$id.'" placeholder= "'. $placeholder . '" value="'. $this->getValue($name) .'" class="text_big padding_x_small border_grey radius">';
         }else{
-            $input = '<input type="'. $type .'" name="' . $name .'" id="'.$id.'" placeholder= "'. $placeholder . '" value="'. $this->getValue($name) .'" class="text_big align_self_end">';
+            $input = '<input type="'. $type .'" name="' . $name .'" id="'.$id.'" placeholder= "'. $placeholder . '" value="'. $this->getValue($name) .'" class="text_big padding_x_small border_grey radius">';
         }
         return $this->surround($label . $input);
     }

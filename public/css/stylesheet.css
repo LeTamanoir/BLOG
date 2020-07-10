@@ -9,7 +9,7 @@
   
     /* IMAGES-SIZES */
   
-    --image-small: 2em;
+    --image-small: 3em;
     --image-medium: 4em;
     --image-big: 6em;
     --image-large: 8em;
@@ -38,7 +38,7 @@
     
     /* PADDING */
   
-    --padding-x-small: 0.5em;
+    --padding-x-small: 0.5rem;
     --padding-small: 1em;
     --padding-medium: 2em;
     --padding-big: 3em; 
@@ -55,7 +55,10 @@ body,html,p,button,input,a,ul,li {
   outline: 0;
   text-decoration: none;
   list-style: none;
+  border: none;
+
 }
+
 @font-face {
   font-family: Ubuntu-Regular;
   src: url('/public/fonts/Ubuntu-Regular.ttf');
@@ -194,6 +197,13 @@ body,html,p,button,input,a,ul,li {
 
 /* POSITION */
 
+.image_in_button  {
+  background: none;
+  border: none;
+  position: absolute;
+  margin: var(--padding-x-small);
+  margin-left: calc(var(--image-small) * -1.25);
+}
 .inline {
   display: inline;
 }
@@ -203,6 +213,7 @@ body,html,p,button,input,a,ul,li {
 .flex__form__login {
   display: flex;
   width: 80%;
+  align-self: center;
   justify-content: space-between;
 }
 .flex_row {
@@ -374,6 +385,9 @@ body,html,p,button,input,a,ul,li {
 .color_white {
     color: var(--color-white);
 }
+.color_error {
+  color: red;
+}
 
 /* BACKGROUND-COLOR */
 
@@ -401,11 +415,17 @@ body,html,p,button,input,a,ul,li {
 
 
 /* BORDER */
+.cursor {
+  cursor: pointer;
+}
 .radius {
   border-radius: var(--text-small);
 }
 .border {
   border: solid 2px var(--color-dark-blue);
+}
+.border_grey {
+  border: solid 2px var(--color-dark-grey);
 }
 .border_top {
   border-top: solid 2px var(--color-dark-blue);
