@@ -55,4 +55,10 @@ class App{
         header('Location: index.php');
     }
 
+    public function verif(){
+        
+        
+    }
+
 }
+

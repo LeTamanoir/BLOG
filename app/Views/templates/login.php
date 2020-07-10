@@ -11,7 +11,7 @@
 </head>
 
 <body id=container__body class=flex_row>
-    <div class="padding_small border radius"><?= $content; ?></div>
+    <?= $content; ?>
     <script src="/public/js/mainFunctions.js"></script>
 </body>
 </html>

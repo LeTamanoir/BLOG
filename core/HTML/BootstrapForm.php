@@ -4,12 +4,14 @@ namespace Core\HTML;
 
 class BootstrapForm extends Form{
 
+    public $surround = 'div class="flex_row" ';
+
     /**
      * @param $html Code HTML à entourer
     * @return string
     */
     public function surround($html){
-        return $html;
+        return "<{$this->surround}>{$html}";
     }
     /**
      * @param $name
@@ -17,21 +19,18 @@ class BootstrapForm extends Form{
     * @param array options
     * @return string
     */
-    public function input($name,$label,$options = []){
+    public function input($name,$label,$options = [], $Surround = true){
+        
         $type = isset($options['type']) ? $options['type']: 'text';
         $id = isset($options['id']) ? $options['id']: '';
-        if(isset($options['placeholder'])){
-            $placeholder = $options['placeholder'];
+        $placeholder = isset($options['placeholder']) ? $options['placeholder'] : '';
+        $label = '<label class="text_big center_vertical padding_right">'. $label . '</label>';
+        $input = '<input type="'. $type .'" name="' . $name .'" id="'.$id.'" placeholder= "'. $placeholder . '" value="'. $this->getValue($name) .'" class="text_big padding_x_small border_dark_grey radius input_form">';
+        if($Surround === true){
+            return $label. $this->surround($input);
         }
-        $label = '<label class="text_big center_vertical">'. $label . '</label>';
-        if($type === 'textarea'){
-            $input = '<textarea name="' . $name .'" class="form-control">'. $this->getValue($name) .'</textarea>';
-        }elseif($name === 'password'){
-            $input = '<div><input type="'. $type .'" name="' . $name .'" id="'.$id.'" placeholder= "'. $placeholder . '" value="'. $this->getValue($name) .'" class="text_big padding_x_small border_grey radius">';
-        }else{
-            $input = '<input type="'. $type .'" name="' . $name .'" id="'.$id.'" placeholder= "'. $placeholder . '" value="'. $this->getValue($name) .'" class="text_big padding_x_small border_grey radius">';
-        }
-        return $this->surround($label . $input);
+        return $label.$input;
+
     }
 
     /**

@@ -28,7 +28,7 @@
                 <img class="image_medium padding_right" src="/public/icons/navbar/settings.png" alt="settings"><a href=# class="text_medium center_block color_black underline_hover">settings</a>
             </div>
             <div class="navbar__content__child margin_top padding_small">
-                <img class="image_medium padding_right" src="/public/icons/navbar/logout.png" alt="logout"><a href="<?= App::getInstance()->logout(); ?>" class="text_medium center_block color_black underline_hover">logout</a>
+                <img class="image_medium padding_right" src="/public/icons/navbar/logout.png" alt="logout"><a href="#" class="text_medium center_block color_black underline_hover">logout</a>
             </div>
         </div>
         </div>
@@ -40,7 +40,7 @@
         
         <div id="content" class="background_color_white">
             <div class="padding_small">
-                <?= $content; ?>
+                <?php $content ?>
             </div>
         </div>
 

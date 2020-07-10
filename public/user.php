@@ -1,5 +1,4 @@
 <?php
-
 use Core\Auth\DBAuth;
 define('ROOT',dirname(__DIR__));
 require ROOT.'/app/App.php';
@@ -16,15 +15,15 @@ $auth = new DBAuth($app->getDb());
 if(!$auth->logged()){
     $app->forbidden();
 }
-App::verif();
-
 ob_start();
 if($page === 'home'){
     require ROOT . '/app/Views/posts/home.php';
 }elseif($page === 'posts.category'){
-    require ROOT . '/app/Views/admin/posts/category.php';
+    require ROOT . '/app/Views/posts/category.php';
 }elseif($page === 'posts.show'){
-    require ROOT . '/app/Views/admin/posts/show.php';
+    require ROOT . '/app/Views/posts/show.php';
 }
-$content = ob_get_clean();
-require ROOT. '/app/Views/templates/admin/default.php';?>
+$content2 = ob_get_clean();
+require ROOT. '/app/Views/templates/users/default.php';?>
+
+

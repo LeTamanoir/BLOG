@@ -11,7 +11,7 @@ if(isset($_GET['p'])){
 
 ob_start();
 if($page === 'login'){
-    require ROOT . '/pages/users/login.php';
+    require ROOT . '/app/Views/users/login.php';
 }
 $content = ob_get_clean();
-require ROOT. '/pages/templates/login.php';
+require ROOT. '/app/Views/templates/login.php';

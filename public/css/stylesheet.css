@@ -1,7 +1,7 @@
 :root {
 
     /* TEXT-SIZES */
-  
+
     --text-small: 16px;
     --text-medium: 24px;
     --text-big: 32px;
@@ -105,12 +105,27 @@ body,html,p,button,input,a,ul,li {
   
     /* IMAGES-SIZES */
   
-    --image-small: 1em;
-    --image-medium: 2em;
+    --image-small: 2em;
+    --image-medium: 3em;
     --image-big: 4em;
     --image-large: 6em;
-  }
 
+    /* PADDING */
+  
+    --padding-x-small: 0.25rem;
+    --padding-small: 0.5em;
+    --padding-medium: 1em;
+    --padding-big: 2em; 
+    --padding-large: 3em;
+    --padding-top: 1em 0 0 0;
+    --padding-bottom: 0 0 1em 0;
+    --padding-right: 0 1em 0 0;
+    --padding-left: 0 0 0 1em;
+  }
+  .flex__form__login {
+    align-items: center;
+    flex-direction: column;
+  }
   #container__body {
     display: flex;
     flex-direction: column;
@@ -144,10 +159,20 @@ body,html,p,button,input,a,ul,li {
   .show_desktop {
     display: none;
   }
+  .input_form {
+    width: 60%;
+  }
+
 }
 @media only screen and (min-width: 1000px) {
+  .input_form {
+    width: auto;
+  }
   #container__body {
     display: flex;
+    flex-direction: row;
+  }
+  .flex__form__login {
     flex-direction: row;
   }
   #navbar__content {
@@ -200,7 +225,6 @@ body,html,p,button,input,a,ul,li {
 .image_in_button  {
   background: none;
   border: none;
-  position: absolute;
   margin: var(--padding-x-small);
   margin-left: calc(var(--image-small) * -1.25);
 }
@@ -212,7 +236,6 @@ body,html,p,button,input,a,ul,li {
 }
 .flex__form__login {
   display: flex;
-  width: 80%;
   align-self: center;
   justify-content: space-between;
 }
@@ -271,7 +294,10 @@ body,html,p,button,input,a,ul,li {
 .padding_bottom {
   padding: var(--padding-bottom);
 }
-
+.padding_vertical {
+  padding-top: var(--padding-big);
+  padding-bottom: var(--padding-big);
+}
 .padding_x_small {
   padding: var(--padding-x-small);
 }
@@ -421,11 +447,17 @@ body,html,p,button,input,a,ul,li {
 .radius {
   border-radius: var(--text-small);
 }
+.radius_small {
+  border-radius: calc(var(--text-small)*0.5);
+}
 .border {
   border: solid 2px var(--color-dark-blue);
 }
-.border_grey {
+.border_dark_grey {
   border: solid 2px var(--color-dark-grey);
+}
+.border_light_grey {
+  border: solid 2px var(--color-light-grey);
 }
 .border_top {
   border-top: solid 2px var(--color-dark-blue);
@@ -479,7 +511,7 @@ body,html,p,button,input,a,ul,li {
   bottom: 0;
 }
 .form__container {
-  width: 800px;
+  width: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
