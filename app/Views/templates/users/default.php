@@ -15,7 +15,7 @@
         <div id="navbar__container">
         <div class="flex_row">
             <title id=navbar__title class="color_dark_blue text_big center_block">BLOG Prototype</title>
-            <input id=navbar__capteur class="image_big" type="image" src="/public/icons/navbar/navbar.png">
+            <input class="shapeshifter" id="navbar__capteur" type="button">
         </div>
         <div id="navbar__content">
             <div class="navbar__content__child margin_top padding_small">
@@ -34,7 +34,7 @@
         </div>
     </nav>  
     <main id="main" class=background_color_white>
-        <header id="header" class="text_center background_color_grey flex_row">
+        <header id="header" class="text_center flex_row">
             <p class="text_big color_black show_desktop">BLOG Prototype | </p><a href="index.php" class="text_big color_black inline underline_hover">Accueil</a>
         </header>
         

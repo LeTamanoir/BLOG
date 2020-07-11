@@ -16,32 +16,32 @@
         <div id="navbar__container">
         <div class="flex_row">
             <p class="color_dark_blue show_mobile text_big center_block">BLOG Prototype</p>
-            <input id=navbar__capteur class="image_big" type="image" src="/public/icons/navbar/navbar.png">
+            <input class="shapeshifter" id="navbar__capteur" type="button">
         </div>
         <div id="navbar__content">
-            <div class="navbar__content__child margin_top padding_small">
+            <div class="navbar__content__child padding_small">
                 <img class="image_medium padding_right" src="/public/icons/navbar/dashboard.png" alt="dashboard"><a href=# class="text_medium center_block color_black underline_hover">dashboard</a>
             </div>
-            <div class="navbar__content__child margin_top padding_small">
+            <div class="navbar__content__child padding_small">
                 <img class="image_medium padding_right" src="/public/icons/navbar/database.png" alt="database"><a href=# class="text_medium center_block color_black underline_hover">database</a>
             </div>
-            <div class="navbar__content__child margin_top padding_small">
-                <img class="image_medium padding_right" src="/public/icons/navbar/user_list.png" alt="user list"><a href=# class="text_medium center_block color_black underline_hover">user list</a>
+            <div class="navbar__content__child">
+                <div class="padding_small"><input id=user_list class="shapeshifter play" type="button"></div><a href=# class="text_medium center_block color_black underline_hover">user list</a>
             </div>
-            <div class="navbar__content__child margin_top padding_small">
-                <img class="image_medium padding_right" src="/public/icons/navbar/user.png" alt="user"><a href=# class="text_medium center_block color_black underline_hover">user</a>
+            <div class="navbar__content__child">
+                <div class="padding_small"><input id=user class="shapeshifter play"  type="button"></div><a href=# class="text_medium center_block color_black underline_hover">user</a>
             </div>
-            <div class="navbar__content__child margin_top padding_small">
+            <div class="navbar__content__child padding_small">
                 <img class="image_medium padding_right" src="/public/icons/navbar/settings.png" alt="settings"><a href=# class="text_medium center_block color_black underline_hover">settings</a>
             </div>
-            <div class="navbar__content__child margin_top padding_small">
+            <div class="navbar__content__child padding_small">
                 <img class="image_medium padding_right" src="/public/icons/navbar/logout.png" alt="logout"><a href=# class="text_medium center_block color_black underline_hover">logout</a>
             </div>
         </div>
         </div>
     </nav>  
     <main id="main" class=background_color_white>
-        <header id="header" class="text_center background_color_grey flex_row">
+        <header id="header" class="text_center flex_row">
             <p class="text_big color_black show_desktop">BLOG Prototype | </p><a href="index.php" class="text_big color_black inline underline_hover">Accueil</a>
         </header>
         
