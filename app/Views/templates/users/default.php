@@ -15,20 +15,17 @@
         <div id="navbar__container">
         <div class="flex_row">
             <title id=navbar__title class="color_dark_blue text_big center_block">BLOG Prototype</title>
-            <input class="shapeshifter" id="navbar__capteur" type="button">
+            <input class="shapeshifter cursor" id="navbar__capteur" type="button">
         </div>
         <div id="navbar__content">
-            <div class="navbar__content__child margin_top padding_small">
-                <img class="image_medium padding_right" src="/public/icons/navbar/dashboard.png" alt="dashboard"><a href=# class="text_medium center_block color_black underline_hover">dashboard</a>
+            <div class="navbar__content__child padding_right">
+                <div class="padding_horizontal_navbar"><input id=user class="shapeshifter play"  type="button"></div><a href=# class="text_medium padding_x_small center_block color_black underline_hover">user</a>
             </div>
-            <div class="navbar__content__child margin_top padding_small">
-                <img class="image_medium padding_right" src="/public/icons/navbar/user.png" alt="user"><a href=# class="text_medium center_block color_black underline_hover">user</a>
+            <div class="navbar__content__child padding_right">
+                <div class="padding_horizontal_navbar"><input id=settings class="shapeshifter play"  type="button"></div><a href=# class="text_medium padding_x_small center_block color_black underline_hover">settings</a>
             </div>
-            <div class="navbar__content__child margin_top padding_small">
-                <img class="image_medium padding_right" src="/public/icons/navbar/settings.png" alt="settings"><a href=# class="text_medium center_block color_black underline_hover">settings</a>
-            </div>
-            <div class="navbar__content__child margin_top padding_small">
-                <img class="image_medium padding_right" src="/public/icons/navbar/logout.png" alt="logout"><a href="#" class="text_medium center_block color_black underline_hover">logout</a>
+            <div class="navbar__content__child padding_right">
+                <div class="padding_horizontal_navbar"><input id=logout class="shapeshifter play"  type="button"></div><a href=# class="text_medium padding_x_small center_block color_black underline_hover">logout</a>
             </div>
         </div>
         </div>

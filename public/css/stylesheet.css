@@ -98,7 +98,7 @@ body,html,p,button,input,a,ul,li {
 
 /* MEDIA */
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 800px) {
   :root {
 
     /* TEXT-SIZES */
@@ -144,6 +144,7 @@ body,html,p,button,input,a,ul,li {
   }
   .navbar__content__child {
     flex-direction: column;
+    align-items: center;
   }
   .navbar__content__child > .padding_right {
     padding-left: 1em;
@@ -173,7 +174,7 @@ body,html,p,button,input,a,ul,li {
     width: 50px;
     height: 50px;
   }
-  @keyframes play18 {
+  @keyframes animate {
     0% {
       background-position: 0px 0px;
     }
@@ -181,7 +182,7 @@ body,html,p,button,input,a,ul,li {
       background-position: -900px 0px;
     }
   }
-  @keyframes play18_reverse {
+  @keyframes animate_reverse {
     0% {
       background-position: -900px 0px;
     }
@@ -190,7 +191,75 @@ body,html,p,button,input,a,ul,li {
     }
   }
 }
-@media only screen and (min-width: 1000px) {
+
+@media only screen and (min-width: 800px) and (max-width: 1500px) {
+  :root {
+    --navbar-width: 110px;
+  }
+  .shapeshifter {
+    width: 75px;
+    height: 75px;
+  }
+  .input_form {
+    width: auto;
+  }
+  #container__body {
+    display: flex;
+    flex-direction: row;
+  }
+  .flex__form__login {
+    flex-direction: row;
+  }
+  #navbar__content {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+  .navbar__content__child {
+    flex-direction: row;
+  }
+  #navbar__container {
+    display: block;
+    border-right: solid 2px var(--color-dark-blue);
+    border-bottom: solid 2px var(--color-dark-blue);
+
+  }
+  #navbar {
+    height: 100%;
+    width: var(--navbar-width);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+
+  }
+  .show_mobile {
+    display: none;
+  }
+  .show_desktop {
+    display: inline;
+  }
+  @keyframes animate {
+    0% {
+      background-position: 0px 0px;
+    }
+    100% {
+      background-position: -1350px 0px;
+    }
+  }
+  @keyframes animate_reverse {
+    0% {
+      background-position: -1350px 0px;
+    }
+    100% {
+      background-position: 0px 0px;
+    }
+  }
+}
+@media only screen and (min-width: 1500px) {
+  :root {
+    --navbar-width: 140px;
+  }
+
   .shapeshifter {
     width: 100px;
     height: 100px;
@@ -221,7 +290,7 @@ body,html,p,button,input,a,ul,li {
   }
   #navbar {
     height: 100%;
-    width: 8em;
+    width: var(--navbar-width);
     overflow-y: auto;
     display: flex;
     flex-direction: column;
@@ -233,7 +302,7 @@ body,html,p,button,input,a,ul,li {
   .show_desktop {
     display: inline;
   }
-  @keyframes play18 {
+  @keyframes animate {
     0% {
       background-position: 0px 0px;
     }
@@ -241,7 +310,7 @@ body,html,p,button,input,a,ul,li {
       background-position: -1800px 0px;
     }
   }
-  @keyframes play18_reverse {
+  @keyframes animate_reverse {
     0% {
       background-position: -1800px 0px;
     }
@@ -254,12 +323,12 @@ body,html,p,button,input,a,ul,li {
 /* KEY-FRAMES */
 
 @keyframes navbar__desktop__in {
-  from {width: 8em;}
+  from {width: var(--navbar-width);}
   to {width: 24em;}
 }
 @keyframes navbar__desktop__out {
   from {width: 24em;}
-  to {width: 8em;}
+  to {width: var(--navbar-width);}
 }
 @keyframes navbar__mobile__in {
   from {height: auto;filter: blur(2px);}
@@ -280,13 +349,12 @@ body,html,p,button,input,a,ul,li {
   animation-timing-function: steps(18);
   animation-fill-mode: forwards;
   background-repeat: no-repeat;
-  cursor: pointer;
 }
 .shapeshifter.play {
-  animation-name: play18;
+  animation-name: animate;
 }
 .shapeshifter.exit {
-  animation-name: play18_reverse;
+  animation-name: animate_reverse;
 }
 
 
@@ -367,6 +435,10 @@ body,html,p,button,input,a,ul,li {
 .padding_vertical {
   padding-top: var(--padding-big);
   padding-bottom: var(--padding-big);
+}
+.padding_horizontal_navbar {
+  padding-right: var(--padding-small);
+  padding-left: var(--padding-small);
 }
 .padding_x_small {
   padding: var(--padding-x-small);
