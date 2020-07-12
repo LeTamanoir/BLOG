@@ -20,22 +20,22 @@
         </div>
         <div id="navbar__content">
             <div class="navbar__content__child padding_right">
-                <div class="padding_horizontal_navbar"><input id=dashboard class="shapeshifter play"  type="button"></div><a href=# class="text_medium padding_x_small center_block color_black underline_hover">dashboard</a>
+                <div class="padding_horizontal_navbar"><input id=dashboard class="shapeshifter play"  type="button"></div><a href=# class="text_medium text_navbar padding_x_small center_block color_black underline_hover">dashboard</a>
             </div>
             <div class="navbar__content__child padding_right">
-                <div class="padding_horizontal_navbar"><input id=database class="shapeshifter play"  type="button"></div><a href=# class="text_medium padding_x_small center_block color_black underline_hover">database</a>
+                <div class="padding_horizontal_navbar"><input id=database class="shapeshifter play"  type="button"></div><a href=# class="text_medium text_navbar padding_x_small center_block color_black underline_hover">database</a>
             </div>
             <div class="navbar__content__child padding_right">
-                <div class="padding_horizontal_navbar"><input id=user_list class="shapeshifter play" type="button"></div><a href=# class="text_medium padding_x_small center_block color_black underline_hover">user list</a>
+                <div class="padding_horizontal_navbar"><input id=user_list class="shapeshifter play" type="button"></div><a href=# class="text_medium text_navbar padding_x_small center_block color_black underline_hover">user list</a>
             </div>
             <div class="navbar__content__child padding_right">
-                <div class="padding_horizontal_navbar"><input id=user class="shapeshifter play"  type="button"></div><a href=# class="text_medium padding_x_small center_block color_black underline_hover">user</a>
+                <div class="padding_horizontal_navbar"><input id=user class="shapeshifter play"  type="button"></div><a href=# class="text_medium text_navbar padding_x_small center_block color_black underline_hover">user</a>
             </div>
             <div class="navbar__content__child padding_right">
-                <div class="padding_horizontal_navbar"><input id=settings class="shapeshifter play"  type="button"></div><a href=# class="text_medium padding_x_small center_block color_black underline_hover">settings</a>
+                <div class="padding_horizontal_navbar"><input id=settings class="shapeshifter play"  type="button"></div><a href=# class="text_medium text_navbar padding_x_small center_block color_black underline_hover">settings</a>
             </div>
             <div class="navbar__content__child padding_right">
-                <div class="padding_horizontal_navbar"><input id=logout class="shapeshifter play"  type="button"></div><a href=# class="text_medium padding_x_small center_block color_black underline_hover">logout</a>
+                <div class="padding_horizontal_navbar"><input id=logout class="shapeshifter play"  type="button"></div><a href=# class="text_medium text_navbar padding_x_small center_block color_black underline_hover">logout</a>
             </div>
         </div>
         </div>

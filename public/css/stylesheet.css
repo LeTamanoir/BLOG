@@ -141,6 +141,7 @@ body,html,p,button,input,a,ul,li {
     justify-content: center;
     flex-wrap: wrap;
     height: 0;
+    transition: height 0.3s;
   }
   .navbar__content__child {
     flex-direction: column;
@@ -171,20 +172,20 @@ body,html,p,button,input,a,ul,li {
     width: 60%;
   }
   .shapeshifter {
-    width: 50px;
-    height: 50px;
+    width: 75px;
+    height: 75px;
   }
   @keyframes animate {
     0% {
       background-position: 0px 0px;
     }
     100% {
-      background-position: -900px 0px;
+      background-position: -1350px 0px;
     }
   }
   @keyframes animate_reverse {
     0% {
-      background-position: -900px 0px;
+      background-position: -1350px 0px;
     }
     100% {
       background-position: 0px 0px;
@@ -192,13 +193,13 @@ body,html,p,button,input,a,ul,li {
   }
 }
 
-@media only screen and (min-width: 800px) and (max-width: 1500px) {
+@media only screen and (min-width: 800px) and (max-width: 1400px) {
   :root {
-    --navbar-width: 110px;
+    --navbar-width: 90px;
   }
   .shapeshifter {
-    width: 75px;
-    height: 75px;
+    width: 50px;
+    height: 50px;
   }
   .input_form {
     width: auto;
@@ -243,19 +244,19 @@ body,html,p,button,input,a,ul,li {
       background-position: 0px 0px;
     }
     100% {
-      background-position: -1350px 0px;
+      background-position: -900px 0px;
     }
   }
   @keyframes animate_reverse {
     0% {
-      background-position: -1350px 0px;
+      background-position: -900px 0px;
     }
     100% {
       background-position: 0px 0px;
     }
   }
 }
-@media only screen and (min-width: 1500px) {
+@media only screen and (min-width: 1400px) {
   :root {
     --navbar-width: 140px;
   }
@@ -330,14 +331,7 @@ body,html,p,button,input,a,ul,li {
   from {width: 24em;}
   to {width: var(--navbar-width);}
 }
-@keyframes navbar__mobile__in {
-  from {height: auto;filter: blur(2px);}
-  to {height: auto;filter: none;}
-}
-@keyframes navbar__mobile__out {
-  from {height: 0;}
-  to {height: 0;}
-}
+
 
 
 
@@ -495,7 +489,9 @@ body,html,p,button,input,a,ul,li {
   list-style: decimal;
 }
 /* TEXT */
-
+.text_navbar {
+  white-space: nowrap;
+}
 .text_small {
   font-size: var(--text-small);
   font-family: Ubuntu-Regular;
@@ -625,9 +621,6 @@ body,html,p,button,input,a,ul,li {
   width: 100%;
 }
 
-#navbar__content {
-  display: flex;
-}
 #navbar__capteur {
   margin-left: auto;
   margin-right: auto;
