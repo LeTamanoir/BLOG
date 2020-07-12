@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link href="/public/css/stylesheet.css" rel="stylesheet">
+    <link rel="icon" href="/public/icons/favicon/favicon.ico">
+    <link rel="manifest" href="/manifest.json">
+    <title><?= App::getInstance()->title; ?></title>
+</head>
+
+<body id=container__body>
+
+    <nav id="navbar">
+        <div id="navbar__container">
+        <div class="flex_row">
+            <p class="color_dark_blue show_mobile text_big center_block">BLOG Prototype</p>
+            <button class="shapeshifter cursor margin_x_small" id="navbar__capteur" type="button"></button>
+        </div>
+        <div id="navbar__content">
+            <a class="navbar__content__child padding_x_small cursor" href="#">
+                <div id=dashboard class="shapeshifter play margin_horizontal"></div><p class="text_medium text_navbar text_center padding_x_small center_block color_black underline_hover">dashboard</p>
+            </a>
+            <a class="navbar__content__child padding_x_small cursor" href="#">
+                <div id=database class="shapeshifter play margin_horizontal" ></div><p class="text_medium text_navbar text_center padding_x_small center_block color_black underline_hover">database</p>
+            </a>
+            <a class="navbar__content__child padding_x_small cursor" href="#">
+                <div id=user_list class="shapeshifter play margin_horizontal"></div><p class="text_medium text_navbar text_center padding_x_small center_block color_black underline_hover">user list</p>
+            </a>
+            <a class="navbar__content__child padding_x_small cursor" href="#">
+                <div id=user class="shapeshifter play margin_horizontal" ></div><p class="text_medium text_navbar text_center padding_x_small center_block color_black underline_hover">user</p>
+            </a>
+            <a class="navbar__content__child padding_x_small cursor" href="#">
+                <div id=settings class="shapeshifter play margin_horizontal" ></div><p class="text_medium text_navbar text_center padding_x_small center_block color_black underline_hover">settings</p>
+            </a>
+            <a class="navbar__content__child padding_x_small cursor" href="#">
+                <div id=logout class="shapeshifter play margin_horizontal" ></div><p class="text_medium text_navbar text_center padding_x_small center_block color_black underline_hover">logout</p>
+            </a>
+        </div>
+        </div>
+    </nav>
+    <main id="main" class="">
+        <header id="header" class="text_center flex_row">
+            <p class="text_big color_black show_desktop">BLOG Prototype | </p><a href="index.php" class="text_big color_black inline underline_hover">Accueil</a>
+        </header>
+        
+        <div id="content" class="">
+            <div class="padding_small">
+                <?= $content; ?>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos laudantium, iure, non aperiam magnam tenetur a perspiciatis fugit eos eaque ipsa fugiat inventore nisi voluptatem pariatur. Assumenda quod, praesentium, ad dolore similique cum quibusdam ea maiores
+                 molestias officiis laboriosam illum quae ut omnis animi ipsum aperiam dolorem. Labore eveniet omnis, harum ab, optio voluptates, cumque pariatur iste ex totam officiis architecto sequi? Nisi sequi fuga harum sint, maiores ut, nesciunt inventore perferendis odit iusto
+                 temporibus tempora cupiditate pariatur, quis quo eius iure tenetur nam illum repellendus suscipit optio asperiores! Ratione praesentium nemo eligendi ut veniam at natus laborum labore fuga!
+            </div>
+        </div>
+
+    </main>
+    <footer id="footer" class="flex_column ">
+        <div class=padding_x_small>
+            <p class="text_small">this is footer</p>
+        </div>
+    </footer>
+    <div id=container_background></div>
+    <script src="/public/js/mainFunctions.js"></script>
+</body>
+</html>

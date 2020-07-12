@@ -8,26 +8,29 @@
 //}
 console.log("hello world !")
  
-  
+
+
 navbar__status = 1
 function show_navbar_desktop() {
   if (navbar__status==1)
   {
     navbar__status = 0;
-    document.getElementById("navbar").style.animation = "navbar__desktop__in 0.3s forwards";
-    document.getElementById("navbar__container").style.borderRight = "solid 2px var(--color-error)";
-    document.getElementById("navbar__container").style.borderBottom = "solid 2px var(--color-error)";
-    this.classList.add('play');
-    this.classList.remove('exit');
+    document.getElementById("navbar__content").style.transform = "scale(1)";
+    document.getElementById("navbar__capteur").style.transform = "translateX(175px)";
+    document.getElementById("container_background").style.animationName = "background-move";
+    document.getElementById("container_background").style.zIndex = "1";
+    animateNavbar("play")
+
   }
   else if (navbar__status==0)
   {
     navbar__status = 1;
-    document.getElementById("navbar").style.animation = "navbar__desktop__out 0.3s forwards";
-    document.getElementById("navbar__container").style.borderRight = "solid 2px var(--color-dark-blue)";
-    document.getElementById("navbar__container").style.borderBottom = "solid 2px var(--color-dark-blue)";
-    this.classList.add('exit');
-    this.classList.remove('play');
+    document.getElementById("container_background").style.animationName = "background-move-reverse";
+    document.getElementById("navbar__content").style.transform = "scale(0)";
+    document.getElementById("container_background").style.zIndex = "-1";
+    document.getElementById("navbar__capteur").style.transform = "translateX(0px)";
+    animateNavbar("exit")
+
 
   }
 }
@@ -35,18 +38,19 @@ function show_navbar_mobile() {
   if (navbar__status==1)
   {
     navbar__status = 0;
-    document.getElementById("navbar__content").style.height = "auto";
-    document.getElementById("navbar__container").style.borderBottom = "solid 2px var(--color-error)";
-    this.classList.add('play');
-    this.classList.remove('exit');
+    document.getElementById("navbar__content").style.transform = "scaleY(1)";
+    document.getElementById("container_background").style.animationName = "background-move";
+    document.getElementById("container_background").style.zIndex = "1";
+    animateNavbar("play")
   }
   else if (navbar__status==0)
   {
     navbar__status = 1;
-    document.getElementById("navbar__content").style.height = "0";
-    document.getElementById("navbar__container").style.borderBottom = "solid 2px var(--color-dark-blue)";
-    this.classList.add('exit');
-    this.classList.remove('play');
+    document.getElementById("navbar__content").style.transform = "scaleY(0)";
+    document.getElementById("container_background").style.animationName = "background-move-reverse";
+    document.getElementById("container_background").style.zIndex = "-1";
+
+    animateNavbar("exit")
 
   }
 }
@@ -68,27 +72,33 @@ screen_res_desktop.addListener(screen_desktop);
 function screen_mobile(screen){
   if(screen.matches) {
     document.getElementById("navbar__capteur").addEventListener("click", show_navbar_mobile);
-
+    document.getElementById("container_background").style.backgroundImage = "url(/public/icons/backgrounds/background-mobile.svg)";
+    
     console.log("mobile")
-    definebackground("75px");
+    definebackground();
     
   }
 }
 function screen_laptop(screen){
   if(screen.matches) {
     document.getElementById("navbar__capteur").addEventListener("click", show_navbar_desktop);
+    document.getElementById("container_background").style.backgroundImage = "url(/public/icons/backgrounds/background-720p.svg)";
 
+    
     console.log("laptop")
-    definebackground("50px");
+    definebackground();
     
   }
 }
 function screen_desktop(screen){
   if(screen.matches) {
     document.getElementById("navbar__capteur").addEventListener("click", show_navbar_desktop);
+    document.getElementById("container_background").style.backgroundImage = "url(/public/icons/backgrounds/background-1080p.svg)";
+
+
     console.log("desktop");
     
-    definebackground("100px");
+    definebackground();
 
     
   }
@@ -101,17 +111,17 @@ function screen_reload() {
 
 
 
-function definebackground(x) {
+function definebackground() {
   try {
-    document.getElementById("navbar__capteur").style.backgroundImage = "url(/public/icons/navbar/animated_svg/"+x+"/navbar.svg)";
-    document.getElementById("user").style.backgroundImage = "url(/public/icons/navbar/animated_svg/"+x+"/user.svg)";
-    document.getElementById("settings").style.backgroundImage = "url(/public/icons/navbar/animated_svg/"+x+"/settings.svg)";
-    document.getElementById("logout").style.backgroundImage = "url(/public/icons/navbar/animated_svg/"+x+"/logout.svg)";
+    document.getElementById("navbar__capteur").style.backgroundImage = "url(/public/icons/navbar/animated_svg/navbar.svg)";
+    document.getElementById("user").style.backgroundImage = "url(/public/icons/navbar/animated_svg/user.svg)";
+    document.getElementById("settings").style.backgroundImage = "url(/public/icons/navbar/animated_svg/settings.svg)";
+    document.getElementById("logout").style.backgroundImage = "url(/public/icons/navbar/animated_svg/logout.svg)";
   }catch (errot){}
   try {
-    document.getElementById("user_list").style.backgroundImage = "url(/public/icons/navbar/animated_svg/"+x+"/user_list.svg)";
-    document.getElementById("dashboard").style.backgroundImage = "url(/public/icons/navbar/animated_svg/"+x+"/dashboard.svg)";
-    document.getElementById("database").style.backgroundImage = "url(/public/icons/navbar/animated_svg/"+x+"/database.svg)";
+    document.getElementById("user_list").style.backgroundImage = "url(/public/icons/navbar/animated_svg/user_list.svg)";
+    document.getElementById("dashboard").style.backgroundImage = "url(/public/icons/navbar/animated_svg/dashboard.svg)";
+    document.getElementById("database").style.backgroundImage = "url(/public/icons/navbar/animated_svg/database.svg)";
   }catch (error) {}
   document.getElementById("user").addEventListener("mouseover", animate);
   document.getElementById("settings").addEventListener("mouseover", animate);
@@ -119,13 +129,45 @@ function definebackground(x) {
   document.getElementById("user_list").addEventListener("mouseover", animate);
   document.getElementById("dashboard").addEventListener("mouseover", animate);
   document.getElementById("database").addEventListener("mouseover", animate);
+  
+  
+  var navbar__content__child_lenght = document.getElementsByClassName('navbar__content__child');
+
+  for (i=0; i<navbar__content__child_lenght.length; i++) {
+    document.getElementsByClassName("navbar__content__child")[i].addEventListener("click", deployBackground);
+  }
 };
 
 
+async function deployBackground () {
+  document.getElementById("container_background").style.animationName = "background-move-2";
+  await new Promise(r => setTimeout(r, 150));
+  document.getElementById("container_background").style.backgroundColor = "var(--color-dark-blue)";
+  await new Promise(r => setTimeout(r, 500));
+  document.getElementById("container_background").style.animationName = "background-move-2-reverse";
+  document.getElementById("container_background").style.backgroundColor = "transparent";
+
+  // temporaire //
+
+  retractNavbar()
+}
 
 
+function retractNavbar() {
+  show_navbar_desktop()
+  animateNavbar("exit")
+}
 
-
+function animateNavbar(x) {
+  if (x=="exit") {
+    document.getElementById("navbar__capteur").classList.add('exit');
+    document.getElementById("navbar__capteur").classList.remove('play');
+  }
+  else if (x=="play") {
+    document.getElementById("navbar__capteur").classList.remove('exit');
+    document.getElementById("navbar__capteur").classList.add('play');  
+  }
+}
 
 
 
