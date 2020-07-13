@@ -69,6 +69,15 @@
     --padding-left: 0 0 0 2em;
   
 }
+
+#container_background {
+  position: absolute;
+  z-index: 2;
+  
+  width: 100vw;
+  height: 100vh;
+}
+
 .navbar_background {
   position: absolute;
   height: 100vh;
@@ -76,10 +85,12 @@
 }
 #navbar_background_1 {
   fill: var(--color-light-blue);
-  transform: scale(1);
+  transform: scale(0.75);
   transform-origin: top left;
   transition: all 0.2s linear;
 }
+
+
 #navbar_background_2 {
   fill:var(--color-light-blue);
   transform: scale(0);
@@ -818,13 +829,6 @@ body,html,p,button,input,a,ul,li {
 /* DOM */
 
 
-#container_background {
-  position: absolute;
-  z-index: -1;
-  
-  width: 100vw;
-  height: 100vh;
-}
 
 #main {
   z-index: 1;

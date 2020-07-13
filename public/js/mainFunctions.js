@@ -145,6 +145,7 @@ function defineElements() {
     document.getElementById("settings").addEventListener("mouseover", animate);
     document.getElementById("logout").addEventListener("mouseover", animate);
     
+    
   }catch (errot){}
   try {
     document.getElementById("user_list").style.backgroundImage = "url(/public/icons/navbar/animated_svg/user_list.svg)";
@@ -282,3 +283,5 @@ async function animate() {
   this.classList.remove('exit');
   this.classList.add('play');
 };
+
+
