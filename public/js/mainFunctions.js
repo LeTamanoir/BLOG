@@ -1,7 +1,6 @@
 window.onload = () => {
   'use strict';
   console.log("hello world !")
-  document.getElementById("container__body").style.animation = "bounce-top 0.9s both";
   
   //if ('serviceWorker' in navigator) {
   //  navigator.serviceWorker.register('/sw.js');
@@ -46,7 +45,7 @@ function show_navbar_mobile() {
   if (navbar__status==1)
   {
     navbar__status = 0;
-    document.getElementById("navbar__content").style.transform = "scaleY(1)";
+    document.getElementById("navbar__content").style.transform = "scale(1)";
     document.getElementById("navbar_background_1_mobile").style.transform = "scale(1)";
     document.getElementById("navbar_background_1_mobile").style.fill = "var(--color-blue)";
     document.getElementById("container_background").style.zIndex = "1";
