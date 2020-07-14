@@ -15,28 +15,28 @@
     <nav id="navbar">
         <div id="navbar__container">
         <div class="flex_row">
-            <p class="color_dark_blue show_mobile text_big center_block">BLOG Prototype |</p>
-            <a href="index.php"><div id=favicon_mobile class="favicon_svg"></div></a>
-            <button class="shapeshifter cursor margin_x_small" id="navbar__capteur" type="button"></button>
+            <a href="#" class="center_block flex_row" id=navbar__header><p class="color_dark_blue show_mobile text_big center_block">BLOG Prototype |</p>
+            <div id=favicon_mobile class="favicon_svg"></div></a>
+            <button class="icons_navbar cursor margin_x_small" id="navbar__capteur" type="button"></button>
         </div>
         <div id="navbar__content">
             <a class="navbar__content__child padding_x_small cursor" href="#">
-                <div id=dashboard class="shapeshifter play margin_horizontal"></div><p class="text_medium text_navbar text_center padding_x_small center_block color_black underline_hover">dashboard</p>
+                <div id=dashboard class="icons_navbar margin_horizontal"></div><p class="text_medium text_navbar text_center padding_x_small center_block color_black underline_hover">dashboard</p>
             </a>
             <a class="navbar__content__child padding_x_small cursor" href="#">
-                <div id=database class="shapeshifter play margin_horizontal" ></div><p class="text_medium text_navbar text_center padding_x_small center_block color_black underline_hover">database</p>
+                <div id=database class="icons_navbar margin_horizontal" ></div><p class="text_medium text_navbar text_center padding_x_small center_block color_black underline_hover">database</p>
             </a>
             <a class="navbar__content__child padding_x_small cursor" href="#">
-                <div id=user_list class="shapeshifter play margin_horizontal"></div><p class="text_medium text_navbar text_center padding_x_small center_block color_black underline_hover">user list</p>
+                <div id=user_list class="icons_navbar margin_horizontal"></div><p class="text_medium text_navbar text_center padding_x_small center_block color_black underline_hover">user list</p>
             </a>
             <a class="navbar__content__child padding_x_small cursor" href="#">
-                <div id=user class="shapeshifter play margin_horizontal" ></div><p class="text_medium text_navbar text_center padding_x_small center_block color_black underline_hover">user</p>
+                <div id=user class="icons_navbar margin_horizontal" ></div><p class="text_medium text_navbar text_center padding_x_small center_block color_black underline_hover">user</p>
             </a>
             <a class="navbar__content__child padding_x_small cursor" href="#">
-                <div id=settings class="shapeshifter play margin_horizontal" ></div><p class="text_medium text_navbar text_center padding_x_small center_block color_black underline_hover">settings</p>
+                <div id=settings class="icons_navbar margin_horizontal" ></div><p class="text_medium text_navbar text_center padding_x_small center_block color_black underline_hover">settings</p>
             </a>
             <a class="navbar__content__child padding_x_small cursor" href="#">
-                <div id=logout class="shapeshifter play margin_horizontal" ></div><p class="text_medium text_navbar text_center padding_x_small center_block color_black underline_hover">logout</p>
+                <div id=logout class="icons_navbar margin_horizontal" ></div><p class="text_medium text_navbar text_center padding_x_small center_block color_black underline_hover">logout</p>
             </a>
         </div>
         </div>
@@ -44,7 +44,7 @@
     <main id="main" class="">
         <header id="header" class="text_center flex_row">
             <p class="text_big color_black show_desktop">BLOG Prototype | </p>
-            <a href="index.php"><div id=favicon_desktop class="favicon_svg"></div></a>
+            <a href="#"><div id=favicon_desktop class="favicon_svg"></div></a>
         </header>
         
         <div id="content" class="">

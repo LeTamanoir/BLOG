@@ -161,24 +161,24 @@ function defineElements() {
     if (desktop==true && mobile==false) {
       animateElement("favicon_desktop","url(/public/icons/favicon/favicon.svg)","play_favicon");
 
-    } else if (desktop==false && mobile==true) {
+    } 
+    if (desktop==false && mobile==true) {
       animateElement("favicon_mobile","url(/public/icons/favicon/favicon.svg)","play_favicon");
     }
+    console.log(desktop)
+    console.log(mobile)
+
     document.getElementById("navbar__capteur").style.backgroundImage = "url(/public/icons/navbar/animated_svg/navbar.svg)";
-    document.getElementById("user").style.backgroundImage = "url(/public/icons/navbar/animated_svg/user.svg)";
-    document.getElementById("dashboard").style.backgroundImage = "url(/public/icons/navbar/animated_svg/dashboard.svg)";
-    document.getElementById("settings").style.backgroundImage = "url(/public/icons/navbar/animated_svg/settings.svg)";
-    document.getElementById("logout").style.backgroundImage = "url(/public/icons/navbar/animated_svg/logout.svg)";
-    document.getElementById("user").addEventListener("mouseover", animate);
-    document.getElementById("settings").addEventListener("mouseover", animate);
-    document.getElementById("logout").addEventListener("mouseover", animate);
-    document.getElementById("dashboard").addEventListener("mouseover", animate);
+    animateElement("user","url(/public/icons/navbar/animated_svg/user.svg)","animate_navbar_icons");
+    animateElement("settings","url(/public/icons/navbar/animated_svg/settings.svg)","animate_navbar_icons");
+    animateElement("logout","url(/public/icons/navbar/animated_svg/logout.svg)","animate_navbar_icons");
+    animateElement("dashboard","url(/public/icons/navbar/animated_svg/dashboard.svg)","animate_navbar_icons");
+
+
   }
   if (adminExist==true) {
-    document.getElementById("user_list").style.backgroundImage = "url(/public/icons/navbar/animated_svg/user_list.svg)";
-    document.getElementById("database").style.backgroundImage = "url(/public/icons/navbar/animated_svg/database.svg)";
-    document.getElementById("user_list").addEventListener("mouseover", animate);
-    document.getElementById("database").addEventListener("mouseover", animate);
+    animateElement("user_list","url(/public/icons/navbar/animated_svg/user_list.svg)","animate_navbar_icons");
+    animateElement("database","url(/public/icons/navbar/animated_svg/database.svg)","animate_navbar_icons");
   }
 };
 
@@ -338,6 +338,9 @@ function show_navbar_mobile() {
     document.getElementById("navbar_background_1_mobile").style.transform = "scale(1)";
     document.getElementById("navbar_background_1_mobile").style.fill = "var(--color-blue)";
     document.getElementById("container_background").style.zIndex = "1";
+    document.getElementById("navbar__header").style.transform = "translateY(-200%)";
+    document.getElementById("navbar__header").style.height = "var(--shape-shifter-width)";
+
     animateNavbar("play")
   }
   else if (navbar__status==0)
@@ -347,24 +350,12 @@ function show_navbar_mobile() {
     document.getElementById("navbar_background_1_mobile").style.transform = "scale(0)";
     document.getElementById("navbar_background_1_mobile").style.fill = "var(--color-light-blue)";
     document.getElementById("container_background").style.zIndex = "-1";
+    document.getElementById("navbar__header").style.transform = "translateY(0)";
+    document.getElementById("navbar__header").style.height = "125px";
+
     animateNavbar("exit")
   }
 }
-
-
-// ========================
-// ===== NAVBAR --> animate
-// ========================
-
-
-async function animate() {
-  this.classList.add('exit');
-  this.classList.remove('play');
-
-  await new Promise(r => setTimeout(r, 500));
-  this.classList.remove('exit');
-  this.classList.add('play');
-};
 
 
 // ==============================
@@ -389,12 +380,10 @@ function retractNavbarMobile() {
 
 function animateNavbar(x) {
   if (x=="exit") {
-    document.getElementById("navbar__capteur").classList.add('exit');
-    document.getElementById("navbar__capteur").classList.remove('play');
+    document.getElementById("navbar__capteur").style.animationName = "animate_navbar_icons_reverse";
   }
   else if (x=="play") {
-    document.getElementById("navbar__capteur").classList.remove('exit');
-    document.getElementById("navbar__capteur").classList.add('play');  
+    document.getElementById("navbar__capteur").style.animationName = "animate_navbar_icons";
   }
 }
 

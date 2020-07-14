@@ -271,7 +271,7 @@ body,html,p,button,input,a,ul,li {
   #favicon_mobile {
     display: block;
   }
-  #favicon_mobile {
+  #favicon_desktop {
     display: none;
   }
   #background_desktop {
@@ -336,9 +336,13 @@ body,html,p,button,input,a,ul,li {
     margin: 0;
     position: relative;
   }
+  .favicon_svg {
+    transform: scale(0.75);
+    margin: -15.625px;
+  }
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 380px) {
   :root {
     /* SVG */
     --shape-shifter-background-y: 50px;
@@ -359,6 +363,10 @@ body,html,p,button,input,a,ul,li {
     transform: scale(0);
     transform-origin: top right;
     transition: all 0.2s ease;
+  }
+  .favicon_svg {
+    transform: scale(0.75);
+    margin: -15.625px;
   }
 }
 
@@ -519,7 +527,7 @@ body,html,p,button,input,a,ul,li {
 
 /* SVG */
 
-@keyframes animate {
+@keyframes animate_navbar_icons {
   0% {
     background-position: 0px 0px;
   }
@@ -527,7 +535,7 @@ body,html,p,button,input,a,ul,li {
     background-position: var(--shape-shifter-background-animation) 0px;
   }
 }
-@keyframes animate_reverse {
+@keyframes animate_navbar_icons_reverse {
   0% {
     background-position: var(--shape-shifter-background-animation) 0px;
   }
@@ -535,7 +543,7 @@ body,html,p,button,input,a,ul,li {
     background-position: 0px 0px;
   }
 }
-.shapeshifter {
+.icons_navbar {
   animation-duration: 300ms;
   animation-timing-function: steps(18);
   animation-fill-mode: forwards;
@@ -543,14 +551,14 @@ body,html,p,button,input,a,ul,li {
   width: var(--shape-shifter-width);
   height: var(--shape-shifter-height);
   background-size: var(--shape-shifter-background-x) var(--shape-shifter-background-y);
+  animation-name: animate_navbar_icons;
 }
-.shapeshifter.play {
-  animation-name: animate;
+#navbar__capteur {
+  animation-name: none;
 }
-.shapeshifter.exit {
-  animation-name: animate_reverse;
+#navbar__header {
+  transition: all 0.4s cubic-bezier(.68,-0.55,.27,1.55);
 }
-
 
 /* POSITION */
 
