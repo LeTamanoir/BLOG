@@ -101,13 +101,12 @@ screen_res_desktop.addListener(screen_desktop);
 
 function screen_mobile(screen){
   if(screen.matches) {
-    if (navbarExist==true) {
-      document.getElementById("navbar__capteur").addEventListener("click", show_navbar_mobile);
-    }
-    screen_format = 0;
-    console.log("mobile")
-    defineElements();
+    mobile = true;
+    desktop = false;
 
+    console.log("mobile")
+    defineNavbar(0)
+    defineElements();
   }
 }
 
@@ -119,14 +118,12 @@ function screen_mobile(screen){
 
 function screen_laptop(screen){
   if(screen.matches) {
-    if (navbarExist==true) {
-      document.getElementById("navbar__capteur").addEventListener("click", show_navbar_desktop);
-    }
+    desktop = true;
+    mobile = false;
 
-    screen_format = 1
     console.log("laptop")
+    defineNavbar(1)
     defineElements();
-    window.addEventListener('resize', relaodScreen);
   }
 }
 
@@ -138,26 +135,16 @@ function screen_laptop(screen){
 
 function screen_desktop(screen){
   if(screen.matches) {
-    if (navbarExist==true) {
-      document.getElementById("navbar__capteur").addEventListener("click", show_navbar_desktop);
-    }
-
-    screen_format = 1
+    desktop = true;
+    mobile = false;
+    
     console.log("desktop");
+    defineNavbar(1)
     defineElements();
-    window.addEventListener('resize', relaodScreen);
   }
 }
 
 
-// =======================================
-// ===== DEFINE ELEMENTS ---> relaodScreen
-// =======================================
-
-
-function relaodScreen() {
-  location.reload();
-}
 
 
 // =========================================
@@ -167,14 +154,16 @@ function relaodScreen() {
 
 function defineElements() {
   if (loginExist==true) {
-    document.getElementById("container_logo_login").style.backgroundImage = "url(/public/icons/login/blog.svg)";
-    document.getElementById("container_logo_login").addEventListener("mouseover", async function() {
-      document.getElementById("container_logo_login").style.animationName = "play_logo_reverse";
-      await new Promise(r => setTimeout(r, 500));
-      document.getElementById("container_logo_login").style.animationName = "play_logo";
-    });
+    animateElement("container_logo_login","url(/public/icons/login/blog.svg)","play_logo");
   }
   if (navbarExist==true) {
+
+    if (desktop==true && mobile==false) {
+      animateElement("favicon_desktop","url(/public/icons/favicon/favicon.svg)","play_favicon");
+
+    } else if (desktop==false && mobile==true) {
+      animateElement("favicon_mobile","url(/public/icons/favicon/favicon.svg)","play_favicon");
+    }
     document.getElementById("navbar__capteur").style.backgroundImage = "url(/public/icons/navbar/animated_svg/navbar.svg)";
     document.getElementById("user").style.backgroundImage = "url(/public/icons/navbar/animated_svg/user.svg)";
     document.getElementById("dashboard").style.backgroundImage = "url(/public/icons/navbar/animated_svg/dashboard.svg)";
@@ -190,11 +179,52 @@ function defineElements() {
     document.getElementById("database").style.backgroundImage = "url(/public/icons/navbar/animated_svg/database.svg)";
     document.getElementById("user_list").addEventListener("mouseover", animate);
     document.getElementById("database").addEventListener("mouseover", animate);
-  } 
+  }
 };
 
 
+// =========================================
+// ===== DEFINE ELEMENTS ---> animateElement
+// =========================================
 
+
+function animateElement(x, y, z) {
+  document.getElementById(x).style.backgroundImage = y;
+  document.getElementById(x).addEventListener("mouseover", async function() {
+    document.getElementById(x).style.animationName = z+"_reverse";
+    await new Promise(r => setTimeout(r, 500));
+    document.getElementById(x).style.animationName = z;
+  });
+}
+
+
+// =======================================
+// ===== DEFINE ELEMENTS ---> defineNavbar
+// =======================================
+
+
+function defineNavbar(x) {
+  if (navbarExist==true) {
+    if (x==1) {
+      document.getElementById("navbar__capteur").removeEventListener("click", show_navbar_mobile);
+      document.getElementById("navbar__capteur").addEventListener("click", show_navbar_desktop);
+      var navbar__content__child_lenght = document.getElementsByClassName('navbar__content__child');
+      for (i=0; i<navbar__content__child_lenght.length; i++) {
+        document.getElementsByClassName("navbar__content__child")[i].removeEventListener("click", deployBackgroundMobile);
+        document.getElementsByClassName("navbar__content__child")[i].addEventListener("click", deployBackgroundDesktop);
+      }
+    }
+    else if (x==0) {
+        document.getElementById("navbar__capteur").removeEventListener("click", show_navbar_desktop);
+        document.getElementById("navbar__capteur").addEventListener("click", show_navbar_mobile);
+        var navbar__content__child_lenght = document.getElementsByClassName('navbar__content__child');
+        for (i=0; i<navbar__content__child_lenght.length; i++) {
+          document.getElementsByClassName("navbar__content__child")[i].removeEventListener("click", deployBackgroundDesktop);
+          document.getElementsByClassName("navbar__content__child")[i].addEventListener("click", deployBackgroundMobile);
+      } 
+    }
+  }
+}
 
 
 
@@ -342,11 +372,15 @@ async function animate() {
 // ==============================
 
 
-function retractNavbar() {
+function retractNavbarDesktop() {
   show_navbar_desktop()
   animateNavbar("exit")
 }
 
+function retractNavbarMobile() {
+  show_navbar_mobile()
+  animateNavbar("exit")
+}
 
 // ==============================
 // ===== NAVBAR --> animateNavbar
@@ -371,17 +405,17 @@ function animateNavbar(x) {
 
 
 async function deployBackgroundDesktop () {
-  document.getElementById("navbar_background_3").style.transform = "scale(1)";
+  document.getElementById("navbar_background_3").style.transform = "scaleX(1)";
   document.getElementById("navbar_background_3").style.fill = "var(--color-dark-blue)";
   await new Promise(r => setTimeout(r, 200));
   document.getElementById("container_background").style.backgroundColor = "var(--color-dark-blue)";
   await new Promise(r => setTimeout(r, 500));
   document.getElementById("container_background").style.backgroundColor = "transparent";
-  document.getElementById("navbar_background_3").style.transform = "scale(0)";
+  document.getElementById("navbar_background_3").style.transform = "scaleX(0)";
   document.getElementById("navbar_background_3").style.fill = "var(--color-blue)";
   document.getElementById("navbar_background_2").style.transform = "scale(0)";
   document.getElementById("navbar_background_2").style.fill = "var(--color-light-blue)";
-  retractNavbar()
+  retractNavbarDesktop()
 }
 
 
@@ -391,33 +425,16 @@ async function deployBackgroundDesktop () {
 
 
 async function deployBackgroundMobile () {
-  document.getElementById("navbar_background_2_mobile").style.transform = "scale(1)";
+  document.getElementById("navbar_background_2_mobile").style.transform = "scaleY(1)";
   document.getElementById("navbar_background_2_mobile").style.fill = "var(--color-dark-blue)";
   await new Promise(r => setTimeout(r, 200));
   document.getElementById("container_background").style.backgroundColor = "var(--color-dark-blue)";
   await new Promise(r => setTimeout(r, 500));
   document.getElementById("container_background").style.backgroundColor = "transparent";
-  document.getElementById("navbar_background_2_mobile").style.transform = "scale(0)";
+  document.getElementById("navbar_background_2_mobile").style.transform = "scaleY(0)";
   document.getElementById("navbar_background_2_mobile").style.fill = "var(--color-blue)";
   document.getElementById("navbar_background_1_mobile").style.transform = "scale(0)";
   document.getElementById("navbar_background_1_mobile").style.fill = "var(--color-light-blue)";
-  retractNavbar()
+  retractNavbarMobile()
 }
 
-// =======================================
-// ===== NAVBAR --> deployBackgroundMobile
-// =======================================
-
-
-var navbar__content__child_lenght = document.getElementsByClassName('navbar__content__child');
-if (screen_format==1)
-{
-  for (i=0; i<navbar__content__child_lenght.length; i++) {
-    document.getElementsByClassName("navbar__content__child")[i].addEventListener("click", deployBackgroundDesktop);
-  }
-}
-else {
-  for (i=0; i<navbar__content__child_lenght.length; i++) {
-    document.getElementsByClassName("navbar__content__child")[i].addEventListener("click", deployBackgroundMobile);
-  }
-}

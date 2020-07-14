@@ -101,13 +101,13 @@
 }
 #navbar_background_2_mobile {
   fill:var(--color-blue);
-  transform: scale(0);
+  transform: scaleY(0);
   transform-origin: top right;
   transition: all 0.2s linear;
 }
 #navbar_background_3  {
   fill:var(--color-blue);
-  transform: scale(0);
+  transform: scaleX(0);
   transform-origin: top left;
   transition: all 0.2s linear;
 }
@@ -139,6 +139,38 @@
   }
 }
 
+@keyframes play_favicon {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: -3750px 0px;
+  }
+}
+@keyframes play_favicon_reverse {
+  0% {
+    background-position: -3750px 0px;
+  }
+  100% {
+    background-position: 0px 0px;
+  }
+}
+.favicon_svg {
+  animation-duration: 500ms;
+  animation-timing-function: steps(30);
+  width: 125px;
+  height: 125px;
+  animation-fill-mode: forwards;
+  background-repeat: no-repeat;
+  animation-name: play_favicon;
+
+}
+#favicon_mobile {
+  display: none;
+}
+#favicon_desktop {
+  display: block;
+}
 body,html,p,button,input,a,ul,li {
   padding: 0;
   margin: 0;
@@ -194,14 +226,10 @@ body,html,p,button,input,a,ul,li {
 
 /* MEDIA */
 
+
 @media only screen and (max-width: 1150px) {
   :root {
     /* SVG */
-
-    --image-login-background-width: 6200px;
-    --image-login-move: -6000px;
-    --image-login-width: 200px;
-    
     --shape-shifter-background-y: 75px;
     --shape-shifter-background-x: 1425px;
 
@@ -209,6 +237,10 @@ body,html,p,button,input,a,ul,li {
 
     --shape-shifter-width: 75px;
     --shape-shifter-height: 75px;
+
+    --image-login-background-width: 6200px;
+    --image-login-move: -6000px;
+    --image-login-width: 200px;
 
     /* TEXT-SIZES */
 
@@ -235,6 +267,12 @@ body,html,p,button,input,a,ul,li {
     --padding-bottom: 0 0 1em 0;
     --padding-right: 0 1em 0 0;
     --padding-left: 0 0 0 1em;
+  }
+  #favicon_mobile {
+    display: block;
+  }
+  #favicon_mobile {
+    display: none;
   }
   #background_desktop {
     display: none;
@@ -300,6 +338,31 @@ body,html,p,button,input,a,ul,li {
   }
 }
 
+@media only screen and (max-width: 700px) {
+  :root {
+    /* SVG */
+    --shape-shifter-background-y: 50px;
+    --shape-shifter-background-x: 950px;
+    --shape-shifter-background-animation: -900px;
+    --shape-shifter-width: 50px;
+    --shape-shifter-height: 50px;
+  }
+  #navbar__content {
+    z-index: 2;
+    display: flex;
+    width: 100vw;
+    height: 35vh;
+    align-content: space-evenly;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: absolute;
+    transform: scale(0);
+    transform-origin: top right;
+    transition: all 0.2s ease;
+  }
+}
+
+
 @media only screen and (min-width: 1150px) and (max-width: 1500px){
   :root {
     --navbar-width: 90px;
@@ -318,14 +381,7 @@ body,html,p,button,input,a,ul,li {
 
     --shape-shifter-width: 75px;
     --shape-shifter-height: 75px;
-    /*
-    --shape-shifter-background-y: 50px;
-    --shape-shifter-background-x: 950px;
-
-    --shape-shifter-background-animation: -900px;
-
-    --shape-shifter-width: 50px;
-    --shape-shifter-height: 50px;*/
+    
   }
   #background_desktop {
     display: block;
@@ -360,7 +416,7 @@ body,html,p,button,input,a,ul,li {
   }
   #navbar__capteur {
     transform: translateX(0px);
-    transition: all 0.2s linear;
+    transition: all 0.2s cubic-bezier(.68,-0.55,.27,1.55);
   }
   #navbar__content {
     display: flex;
@@ -385,6 +441,7 @@ body,html,p,button,input,a,ul,li {
     display: inline;
   }
 }
+
 @media only screen and (min-width: 1500px){
   :root {
     --navbar-width: 140px;
@@ -419,7 +476,7 @@ body,html,p,button,input,a,ul,li {
   }
   #navbar__capteur {
     transform: translateX(0px);
-    transition: all 0.2s linear;
+    transition: all 0.2s cubic-bezier(.68,-0.55,.27,1.55);
   }
   #navbar__content {
     display: flex;
@@ -773,10 +830,10 @@ body,html,p,button,input,a,ul,li {
   height: 100%;
 }
 #header {
-  height: 7.5%;
+  height: auto;
 }
 #content {
-  height: 87.5%;
+  height: 82.5%;
   overflow-y: scroll;
 }
 #footer {
