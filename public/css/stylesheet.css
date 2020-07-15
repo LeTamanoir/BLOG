@@ -162,14 +162,14 @@
   height: 125px;
   animation-fill-mode: forwards;
   background-repeat: no-repeat;
-  animation-name: play_favicon;
 
 }
-#favicon_mobile {
+#navbar__header__mobile {
+  flex-wrap: wrap;
   display: none;
 }
-#favicon_desktop {
-  display: block;
+#navbar__header__desktop {
+  display: flex;
 }
 body,html,p,button,input,a,ul,li {
   padding: 0;
@@ -268,10 +268,10 @@ body,html,p,button,input,a,ul,li {
     --padding-right: 0 1em 0 0;
     --padding-left: 0 0 0 1em;
   }
-  #favicon_mobile {
-    display: block;
+  #navbar__header__mobile {
+    display: flex;
   }
-  #favicon_desktop {
+  #navbar__header__desktop {
     display: none;
   }
   #background_desktop {
@@ -362,11 +362,11 @@ body,html,p,button,input,a,ul,li {
     position: absolute;
     transform: scale(0);
     transform-origin: top right;
-    transition: all 0.2s ease;
+    transition: all 0.5s ease;
   }
   .favicon_svg {
-    transform: scale(0.75);
-    margin: -15.625px;
+    transform: scale(0.5);
+    margin: -31.25px;
   }
 }
 

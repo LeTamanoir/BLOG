@@ -159,41 +159,62 @@ function defineElements() {
   if (navbarExist==true) {
 
     if (desktop==true && mobile==false) {
-      animateElement("favicon_desktop","url(/public/icons/favicon/favicon.svg)","play_favicon");
+      
+      animateElementHeader("publier_une_pause_desktop","url(/public/icons/favicon/favicon.svg)","play_favicon");
+      animateElementHeader("pause_public_desktop","url(/public/icons/favicon/favicon.svg)","play_favicon");
+      animateElementHeader("pause_private_desktop","url(/public/icons/favicon/favicon.svg)","play_favicon");
+      animateElementHeader("correct_pause_desktop","url(/public/icons/favicon/favicon.svg)","play_favicon");
+    
+      
 
     } 
     if (desktop==false && mobile==true) {
-      animateElement("favicon_mobile","url(/public/icons/favicon/favicon.svg)","play_favicon");
+      animateElementHeader("publier_une_pause_mobile","url(/public/icons/favicon/favicon.svg)","play_favicon");
+      animateElementHeader("pause_public_mobile","url(/public/icons/favicon/favicon.svg)","play_favicon");
+      animateElementHeader("pause_private_mobile","url(/public/icons/favicon/favicon.svg)","play_favicon");
+      animateElementHeader("correct_pause_mobile","url(/public/icons/favicon/favicon.svg)","play_favicon");
     }
     console.log(desktop)
     console.log(mobile)
 
     document.getElementById("navbar__capteur").style.backgroundImage = "url(/public/icons/navbar/animated_svg/navbar.svg)";
-    animateElement("user","url(/public/icons/navbar/animated_svg/user.svg)","animate_navbar_icons");
-    animateElement("settings","url(/public/icons/navbar/animated_svg/settings.svg)","animate_navbar_icons");
-    animateElement("logout","url(/public/icons/navbar/animated_svg/logout.svg)","animate_navbar_icons");
-    animateElement("dashboard","url(/public/icons/navbar/animated_svg/dashboard.svg)","animate_navbar_icons");
+    animateElementNavbar("user","url(/public/icons/navbar/animated_svg/user.svg)","animate_navbar_icons");
+    animateElementNavbar("settings","url(/public/icons/navbar/animated_svg/settings.svg)","animate_navbar_icons");
+    animateElementNavbar("logout","url(/public/icons/navbar/animated_svg/logout.svg)","animate_navbar_icons");
+    animateElementNavbar("dashboard","url(/public/icons/navbar/animated_svg/dashboard.svg)","animate_navbar_icons");
 
 
   }
   if (adminExist==true) {
-    animateElement("user_list","url(/public/icons/navbar/animated_svg/user_list.svg)","animate_navbar_icons");
-    animateElement("database","url(/public/icons/navbar/animated_svg/database.svg)","animate_navbar_icons");
+    animateElementNavbar("user_list","url(/public/icons/navbar/animated_svg/user_list.svg)","animate_navbar_icons");
+    animateElementNavbar("database","url(/public/icons/navbar/animated_svg/database.svg)","animate_navbar_icons");
   }
 };
 
 
-// =========================================
-// ===== DEFINE ELEMENTS ---> animateElement
-// =========================================
+// ===============================================
+// ===== DEFINE ELEMENTS ---> animateElementNavbar
+// ===============================================
 
 
-function animateElement(x, y, z) {
+function animateElementNavbar(x, y, z) {
   document.getElementById(x).style.backgroundImage = y;
   document.getElementById(x).addEventListener("mouseover", async function() {
     document.getElementById(x).style.animationName = z+"_reverse";
     await new Promise(r => setTimeout(r, 500));
     document.getElementById(x).style.animationName = z;
+  });
+}
+
+
+
+function animateElementHeader(x, y, z) {
+  document.getElementById(x).style.backgroundImage = y;
+  document.getElementById(x).addEventListener("mouseover", function() {
+    document.getElementById(x).style.animationName = z;
+  });
+  document.getElementById(x).addEventListener("mouseleave", function() {
+    document.getElementById(x).style.animationName = z+"_reverse";
   });
 }
 
@@ -338,8 +359,8 @@ function show_navbar_mobile() {
     document.getElementById("navbar_background_1_mobile").style.transform = "scale(1)";
     document.getElementById("navbar_background_1_mobile").style.fill = "var(--color-blue)";
     document.getElementById("container_background").style.zIndex = "1";
-    document.getElementById("navbar__header").style.transform = "translateY(-200%)";
-    document.getElementById("navbar__header").style.height = "var(--shape-shifter-width)";
+    document.getElementById("navbar__header__mobile").style.transform = "translateY(-200%)";
+    document.getElementById("navbar__header__mobile").style.height = "var(--shape-shifter-width)";
 
     animateNavbar("play")
   }
@@ -350,8 +371,8 @@ function show_navbar_mobile() {
     document.getElementById("navbar_background_1_mobile").style.transform = "scale(0)";
     document.getElementById("navbar_background_1_mobile").style.fill = "var(--color-light-blue)";
     document.getElementById("container_background").style.zIndex = "-1";
-    document.getElementById("navbar__header").style.transform = "translateY(0)";
-    document.getElementById("navbar__header").style.height = "125px";
+    document.getElementById("navbar__header__mobile").style.transform = "translateY(0)";
+    document.getElementById("navbar__header__mobile").style.height = "125px";
 
     animateNavbar("exit")
   }
