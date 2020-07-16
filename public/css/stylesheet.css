@@ -12,6 +12,7 @@
 
     --shape-shifter-width: 100px;
     --shape-shifter-height: 100px;
+
     --navbar__capteur-path: 150px;
 
     /* TEXT-SIZES */
@@ -164,6 +165,35 @@
   background-repeat: no-repeat;
 
 }
+@keyframes animate_navbar_icons {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: -1800px 0px;
+  }
+}
+@keyframes animate_navbar_icons_reverse {
+  0% {
+    background-position: -1800px 0px;
+  }
+  100% {
+    background-position: 0px 0px;
+  }
+}
+.icons_navbar {
+  animation-duration: 300ms;
+  animation-timing-function: steps(18);
+  animation-fill-mode: forwards;
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+  animation-name: animate_navbar_icons;
+}
+#navbar__capteur {
+  animation-name: none;
+}
+
 #navbar__header__mobile {
   flex-wrap: wrap;
   display: none;
@@ -230,13 +260,6 @@ body,html,p,button,input,a,ul,li {
 @media only screen and (max-width: 1150px) {
   :root {
     /* SVG */
-    --shape-shifter-background-y: 75px;
-    --shape-shifter-background-x: 1425px;
-
-    --shape-shifter-background-animation: -1350px;
-
-    --shape-shifter-width: 75px;
-    --shape-shifter-height: 75px;
 
     --image-login-background-width: 6200px;
     --image-login-move: -6000px;
@@ -270,6 +293,7 @@ body,html,p,button,input,a,ul,li {
   }
   #navbar__header__mobile {
     display: flex;
+    flex-direction: row;
   }
   #navbar__header__desktop {
     display: none;
@@ -293,14 +317,18 @@ body,html,p,button,input,a,ul,li {
   #navbar__content {
     z-index: 2;
     display: flex;
-    width: 100vw;
-    flex-direction: row;
+    width: auto;
+    margin: 0 4vh 0 4vh;
+    align-self: center;
+    padding: 4vh 0 4vh 0;
     justify-content: center;
     flex-wrap: wrap;
-    position: absolute;
-    transform: scale(0);
-    transform-origin: top right;
-    transition: all 0.2s ease;
+    transform: translateY(-200%);
+    transform-origin: top;
+    transition: all 0.4s cubic-bezier(.68,-0.55,.27,1.55);
+    box-shadow: 0px 0px 20px 2px var(--color-blue);
+    background-color: var(--color-white);
+    border-radius: 15px;
   }
   .navbar__content__child {
     flex-direction: column;
@@ -340,33 +368,23 @@ body,html,p,button,input,a,ul,li {
     transform: scale(0.75);
     margin: -15.625px;
   }
+  .icons_navbar {
+    transform: scale(0.7);
+    margin: -15px;
+    
+  }
+  
 }
 
-@media only screen and (max-width: 380px) {
-  :root {
-    /* SVG */
-    --shape-shifter-background-y: 50px;
-    --shape-shifter-background-x: 950px;
-    --shape-shifter-background-animation: -900px;
-    --shape-shifter-width: 50px;
-    --shape-shifter-height: 50px;
-  }
-  #navbar__content {
-    z-index: 2;
-    display: flex;
-    width: 100vw;
-    height: 35vh;
-    align-content: space-evenly;
-    flex-direction: column;
-    flex-wrap: wrap;
-    position: absolute;
-    transform: scale(0);
-    transform-origin: top right;
-    transition: all 0.5s ease;
-  }
+@media only screen and (max-width: 500px) {
   .favicon_svg {
     transform: scale(0.5);
     margin: -31.25px;
+  }
+  .icons_navbar {
+    transform: scale(0.5);
+    margin: -25px;
+    
   }
 }
 
@@ -382,13 +400,10 @@ body,html,p,button,input,a,ul,li {
 
     --navbar__capteur-path: 100px;
     
-    --shape-shifter-background-y: 75px;
-    --shape-shifter-background-x: 1425px;
-
-    --shape-shifter-background-animation: -1350px;
-
-    --shape-shifter-width: 75px;
-    --shape-shifter-height: 75px;
+  }
+  .icons_navbar {
+    transform: scale(0.85);
+    margin: -7.5px;
     
   }
   #background_desktop {
@@ -422,17 +437,21 @@ body,html,p,button,input,a,ul,li {
   #navbar__container {
     display: block;
   }
-  #navbar__capteur {
+
+  #navbar__capteur__container {
     transform: translateX(0px);
     transition: all 0.2s cubic-bezier(.68,-0.55,.27,1.55);
   }
   #navbar__content {
     display: flex;
     position: absolute;
-    transform: scale(0);
+    transform: translateX(-110%);
     transform-origin: left top;
     flex-direction: column;
-    transition: all 0.2s ease;
+    transition: all 0.4s cubic-bezier(.68,-0.55,.27,1.55);
+    box-shadow: 0px 0px 20px 2px var(--color-blue);
+    background-color: var(--color-white);
+    border-radius: 15px;
     
   }
   #navbar {
@@ -447,6 +466,10 @@ body,html,p,button,input,a,ul,li {
   }
   .show_desktop {
     display: inline;
+  }
+  .favicon_svg {
+    transform: scale(0.85);
+    margin: -9.375px;
   }
 }
 
@@ -482,18 +505,20 @@ body,html,p,button,input,a,ul,li {
   .flex__form__login {
     flex-direction: row;
   }
-  #navbar__capteur {
+  #navbar__capteur__container {
     transform: translateX(0px);
-    transition: all 0.2s cubic-bezier(.68,-0.55,.27,1.55);
+    transition: all 0.4s cubic-bezier(.68,-0.55,.27,1.55);
   }
   #navbar__content {
     display: flex;
     position: absolute;
-    transform: scale(0);
+    transform: translateX(-110%);
     transform-origin: left top;
     flex-direction: column;
-    transition: all 0.2s ease-out;
-    
+    transition: all 0.4s cubic-bezier(.68,-0.55,.27,1.55);
+    box-shadow: 0px 0px 20px 2px var(--color-blue);
+    background-color: var(--color-white);
+    border-radius: 15px;
   }
   .navbar__content__child {
     display: flex;
@@ -501,8 +526,6 @@ body,html,p,button,input,a,ul,li {
   }
   #navbar__container {
     display: block;
-    
-
   }
   #navbar {
     z-index: 3;
@@ -527,38 +550,7 @@ body,html,p,button,input,a,ul,li {
 
 /* SVG */
 
-@keyframes animate_navbar_icons {
-  0% {
-    background-position: 0px 0px;
-  }
-  100% {
-    background-position: var(--shape-shifter-background-animation) 0px;
-  }
-}
-@keyframes animate_navbar_icons_reverse {
-  0% {
-    background-position: var(--shape-shifter-background-animation) 0px;
-  }
-  100% {
-    background-position: 0px 0px;
-  }
-}
-.icons_navbar {
-  animation-duration: 300ms;
-  animation-timing-function: steps(18);
-  animation-fill-mode: forwards;
-  background-repeat: no-repeat;
-  width: var(--shape-shifter-width);
-  height: var(--shape-shifter-height);
-  background-size: var(--shape-shifter-background-x) var(--shape-shifter-background-y);
-  animation-name: animate_navbar_icons;
-}
-#navbar__capteur {
-  animation-name: none;
-}
-#navbar__header {
-  transition: all 0.4s cubic-bezier(.68,-0.55,.27,1.55);
-}
+
 
 /* POSITION */
 

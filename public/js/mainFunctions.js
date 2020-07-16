@@ -153,6 +153,8 @@ function screen_desktop(screen){
 
 
 function defineElements() {
+  print(loginExist)
+  print(navbarExist)
   if (loginExist==true) {
     animateElement("container_logo_login","url(/public/icons/login/blog.svg)","play_logo");
   }
@@ -231,8 +233,8 @@ function defineNavbar(x) {
       document.getElementById("navbar__capteur").addEventListener("click", show_navbar_desktop);
       var navbar__content__child_lenght = document.getElementsByClassName('navbar__content__child');
       for (i=0; i<navbar__content__child_lenght.length; i++) {
-        document.getElementsByClassName("navbar__content__child")[i].removeEventListener("click", deployBackgroundMobile);
-        document.getElementsByClassName("navbar__content__child")[i].addEventListener("click", deployBackgroundDesktop);
+        document.getElementsByClassName("navbar__content__child")[i].removeEventListener("click", retractNavbarMobile);
+        document.getElementsByClassName("navbar__content__child")[i].addEventListener("click", retractNavbarDesktop);
       }
     }
     else if (x==0) {
@@ -240,8 +242,8 @@ function defineNavbar(x) {
         document.getElementById("navbar__capteur").addEventListener("click", show_navbar_mobile);
         var navbar__content__child_lenght = document.getElementsByClassName('navbar__content__child');
         for (i=0; i<navbar__content__child_lenght.length; i++) {
-          document.getElementsByClassName("navbar__content__child")[i].removeEventListener("click", deployBackgroundDesktop);
-          document.getElementsByClassName("navbar__content__child")[i].addEventListener("click", deployBackgroundMobile);
+          document.getElementsByClassName("navbar__content__child")[i].removeEventListener("click", retractNavbarDesktop);
+          document.getElementsByClassName("navbar__content__child")[i].addEventListener("click", retractNavbarMobile);
       } 
     }
   }
@@ -325,10 +327,8 @@ function show_navbar_desktop() {
   if (navbar__status==1)
   {
     navbar__status = 0;
-    document.getElementById("navbar__content").style.transform = "scale(1)";
-    document.getElementById("navbar__capteur").style.transform = "translateX(175px)";
-    document.getElementById("navbar_background_2").style.transform = "scale(1)";
-    document.getElementById("navbar_background_2").style.fill = "var(--color-blue)";
+    document.getElementById("navbar__content").style.transform = "translateX(1vw)";
+    document.getElementById("navbar__capteur__container").style.transform = "translateX(175px)";
     document.getElementById("container_background").style.zIndex = "1";
     animateNavbar("play")
 
@@ -336,11 +336,9 @@ function show_navbar_desktop() {
   else if (navbar__status==0)
   {
     navbar__status = 1;
-    document.getElementById("navbar_background_2").style.transform = "scale(0)";
-    document.getElementById("navbar_background_2").style.fill = "var(--color-light-blue)";
-    document.getElementById("navbar__content").style.transform = "scale(0)";
+    document.getElementById("navbar__content").style.transform = "translateX(-110%)";
     document.getElementById("container_background").style.zIndex = "-1";
-    document.getElementById("navbar__capteur").style.transform = "translateX(0px)";
+    document.getElementById("navbar__capteur__container").style.transform = "translateX(0px)";
     animateNavbar("exit")
   }
 }
@@ -355,24 +353,16 @@ function show_navbar_mobile() {
   if (navbar__status==1)
   {
     navbar__status = 0;
-    document.getElementById("navbar__content").style.transform = "scale(1)";
-    document.getElementById("navbar_background_1_mobile").style.transform = "scale(1)";
-    document.getElementById("navbar_background_1_mobile").style.fill = "var(--color-blue)";
+    document.getElementById("navbar__content").style.transform = "translateY(1vw)";
     document.getElementById("container_background").style.zIndex = "1";
-    document.getElementById("navbar__header__mobile").style.transform = "translateY(-200%)";
-    document.getElementById("navbar__header__mobile").style.height = "var(--shape-shifter-width)";
 
     animateNavbar("play")
   }
   else if (navbar__status==0)
   {
     navbar__status = 1;
-    document.getElementById("navbar__content").style.transform = "scale(0)";
-    document.getElementById("navbar_background_1_mobile").style.transform = "scale(0)";
-    document.getElementById("navbar_background_1_mobile").style.fill = "var(--color-light-blue)";
+    document.getElementById("navbar__content").style.transform = "translateY(-200%)";
     document.getElementById("container_background").style.zIndex = "-1";
-    document.getElementById("navbar__header__mobile").style.transform = "translateY(0)";
-    document.getElementById("navbar__header__mobile").style.height = "125px";
 
     animateNavbar("exit")
   }
@@ -406,45 +396,5 @@ function animateNavbar(x) {
   else if (x=="play") {
     document.getElementById("navbar__capteur").style.animationName = "animate_navbar_icons";
   }
-}
-
-
-// ========================================
-// ===== NAVBAR --> deployBackgroundDesktop
-// ========================================
-
-
-async function deployBackgroundDesktop () {
-  document.getElementById("navbar_background_3").style.transform = "scaleX(1)";
-  document.getElementById("navbar_background_3").style.fill = "var(--color-dark-blue)";
-  await new Promise(r => setTimeout(r, 200));
-  document.getElementById("container_background").style.backgroundColor = "var(--color-dark-blue)";
-  await new Promise(r => setTimeout(r, 500));
-  document.getElementById("container_background").style.backgroundColor = "transparent";
-  document.getElementById("navbar_background_3").style.transform = "scaleX(0)";
-  document.getElementById("navbar_background_3").style.fill = "var(--color-blue)";
-  document.getElementById("navbar_background_2").style.transform = "scale(0)";
-  document.getElementById("navbar_background_2").style.fill = "var(--color-light-blue)";
-  retractNavbarDesktop()
-}
-
-
-// =======================================
-// ===== NAVBAR --> deployBackgroundMobile
-// =======================================
-
-
-async function deployBackgroundMobile () {
-  document.getElementById("navbar_background_2_mobile").style.transform = "scaleY(1)";
-  document.getElementById("navbar_background_2_mobile").style.fill = "var(--color-dark-blue)";
-  await new Promise(r => setTimeout(r, 200));
-  document.getElementById("container_background").style.backgroundColor = "var(--color-dark-blue)";
-  await new Promise(r => setTimeout(r, 500));
-  document.getElementById("container_background").style.backgroundColor = "transparent";
-  document.getElementById("navbar_background_2_mobile").style.transform = "scaleY(0)";
-  document.getElementById("navbar_background_2_mobile").style.fill = "var(--color-blue)";
-  document.getElementById("navbar_background_1_mobile").style.transform = "scale(0)";
-  document.getElementById("navbar_background_1_mobile").style.fill = "var(--color-light-blue)";
-  retractNavbarMobile()
 }
 
