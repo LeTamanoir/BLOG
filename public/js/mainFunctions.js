@@ -153,28 +153,29 @@ function screen_desktop(screen){
 
 
 function defineElements() {
-  print(loginExist)
-  print(navbarExist)
+  console.log("login :",loginExist)
+  console.log("navbar :",navbarExist)
   if (loginExist==true) {
-    animateElement("container_logo_login","url(/public/icons/login/blog.svg)","play_logo");
+    console.log("hello world")
+    animateElementNavbar("container_logo_login","url(/public/icons/login/blog.svg)","play_logo");
   }
   if (navbarExist==true) {
 
     if (desktop==true && mobile==false) {
-      
-      animateElementHeader("publier_une_pause_desktop","url(/public/icons/favicon/favicon.svg)","play_favicon");
-      animateElementHeader("pause_public_desktop","url(/public/icons/favicon/favicon.svg)","play_favicon");
-      animateElementHeader("pause_private_desktop","url(/public/icons/favicon/favicon.svg)","play_favicon");
-      animateElementHeader("correct_pause_desktop","url(/public/icons/favicon/favicon.svg)","play_favicon");
+      animateElementNavbar("publier_une_pause_desktop","url(/public/icons/navbar/animated_svg/publish.svg)","play_favicon");
+      animateElementNavbar("pause_public_desktop","url(/public/icons/navbar/animated_svg/public.svg)","play_favicon");
+      animateElementNavbar("pause_private_desktop","url(/public/icons/navbar/animated_svg/private.svg)","play_favicon");
+      animateElementNavbar("correct_pause_desktop","url(/public/icons/navbar/animated_svg/correct.svg)","play_favicon");
+
     
       
 
     } 
     if (desktop==false && mobile==true) {
-      animateElementHeader("publier_une_pause_mobile","url(/public/icons/favicon/favicon.svg)","play_favicon");
-      animateElementHeader("pause_public_mobile","url(/public/icons/favicon/favicon.svg)","play_favicon");
-      animateElementHeader("pause_private_mobile","url(/public/icons/favicon/favicon.svg)","play_favicon");
-      animateElementHeader("correct_pause_mobile","url(/public/icons/favicon/favicon.svg)","play_favicon");
+      animateElementNavbar("publier_une_pause_mobile","url(/public/icons/navbar/animated_svg/publish.svg)","play_favicon");
+      animateElementNavbar("pause_public_mobile","url(/public/icons/navbar/animated_svg/public.svg)","play_favicon");
+      animateElementNavbar("pause_private_mobile","url(/public/icons/navbar/animated_svg/private.svg)","play_favicon");
+      animateElementNavbar("correct_pause_mobile","url(/public/icons/navbar/animated_svg/correct.svg)","play_favicon");
     }
     console.log(desktop)
     console.log(mobile)
@@ -210,15 +211,7 @@ function animateElementNavbar(x, y, z) {
 
 
 
-function animateElementHeader(x, y, z) {
-  document.getElementById(x).style.backgroundImage = y;
-  document.getElementById(x).addEventListener("mouseover", function() {
-    document.getElementById(x).style.animationName = z;
-  });
-  document.getElementById(x).addEventListener("mouseleave", function() {
-    document.getElementById(x).style.animationName = z+"_reverse";
-  });
-}
+
 
 
 // =======================================
@@ -231,19 +224,19 @@ function defineNavbar(x) {
     if (x==1) {
       document.getElementById("navbar__capteur").removeEventListener("click", show_navbar_mobile);
       document.getElementById("navbar__capteur").addEventListener("click", show_navbar_desktop);
-      var navbar__content__child_lenght = document.getElementsByClassName('navbar__content__child');
-      for (i=0; i<navbar__content__child_lenght.length; i++) {
-        document.getElementsByClassName("navbar__content__child")[i].removeEventListener("click", retractNavbarMobile);
-        document.getElementsByClassName("navbar__content__child")[i].addEventListener("click", retractNavbarDesktop);
+      var navbar__content__child__lenght = document.getElementsByClassName('navbar__content__child__link');
+      for (i=0; i<navbar__content__child__lenght.length; i++) {
+        document.getElementsByClassName("navbar__content__child__link")[i].removeEventListener("click", retractNavbarMobile);
+        document.getElementsByClassName("navbar__content__child__link")[i].addEventListener("click", retractNavbarDesktop);
       }
     }
     else if (x==0) {
         document.getElementById("navbar__capteur").removeEventListener("click", show_navbar_desktop);
         document.getElementById("navbar__capteur").addEventListener("click", show_navbar_mobile);
-        var navbar__content__child_lenght = document.getElementsByClassName('navbar__content__child');
-        for (i=0; i<navbar__content__child_lenght.length; i++) {
-          document.getElementsByClassName("navbar__content__child")[i].removeEventListener("click", retractNavbarDesktop);
-          document.getElementsByClassName("navbar__content__child")[i].addEventListener("click", retractNavbarMobile);
+        var navbar__content__child__lenght = document.getElementsByClassName('navbar__content__child__link');
+        for (i=0; i<navbar__content__child__lenght.length; i++) {
+          document.getElementsByClassName("navbar__content__child__link")[i].removeEventListener("click", retractNavbarDesktop);
+          document.getElementsByClassName("navbar__content__child__link")[i].addEventListener("click", retractNavbarMobile);
       } 
     }
   }
@@ -353,7 +346,7 @@ function show_navbar_mobile() {
   if (navbar__status==1)
   {
     navbar__status = 0;
-    document.getElementById("navbar__content").style.transform = "translateY(1vw)";
+    document.getElementById("navbar__content").style.transform = "translateY(2vh)";
     document.getElementById("container_background").style.zIndex = "1";
 
     animateNavbar("play")
