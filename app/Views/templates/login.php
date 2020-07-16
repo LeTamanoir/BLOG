@@ -11,7 +11,7 @@
 </head>
 
 <body id=container__body class=flex_row>
-    <div class="flex_column radius padding_small inside_border">
+    <div class="flex_column radius padding_small inside_border background_color_white">
     <div id=container_logo_login></div>
     <?= $content; ?>
     </div>

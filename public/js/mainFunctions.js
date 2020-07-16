@@ -164,29 +164,26 @@ function defineElements() {
     if (desktop==true && mobile==false) {
       animateElementNavbar("publier_une_pause_desktop","url(/public/icons/navbar/animated_svg/publish.svg)","play_favicon");
       animateElementNavbar("pause_public_desktop","url(/public/icons/navbar/animated_svg/public.svg)","play_favicon");
-      animateElementNavbar("pause_private_desktop","url(/public/icons/navbar/animated_svg/private.svg)","play_favicon");
-      animateElementNavbar("correct_pause_desktop","url(/public/icons/navbar/animated_svg/correct.svg)","play_favicon");
-
-    
-      
-
+      if (adminExist==true) {
+        animateElementNavbar("pause_private_desktop","url(/public/icons/navbar/animated_svg/private.svg)","play_favicon");
+        animateElementNavbar("correct_pause_desktop","url(/public/icons/navbar/animated_svg/correct.svg)","play_favicon");
+      }
     } 
     if (desktop==false && mobile==true) {
       animateElementNavbar("publier_une_pause_mobile","url(/public/icons/navbar/animated_svg/publish.svg)","play_favicon");
       animateElementNavbar("pause_public_mobile","url(/public/icons/navbar/animated_svg/public.svg)","play_favicon");
-      animateElementNavbar("pause_private_mobile","url(/public/icons/navbar/animated_svg/private.svg)","play_favicon");
-      animateElementNavbar("correct_pause_mobile","url(/public/icons/navbar/animated_svg/correct.svg)","play_favicon");
+      if (adminExist==true) {
+        animateElementNavbar("pause_private_mobile","url(/public/icons/navbar/animated_svg/private.svg)","play_favicon");
+        animateElementNavbar("correct_pause_mobile","url(/public/icons/navbar/animated_svg/correct.svg)","play_favicon");
+      }
     }
     console.log(desktop)
     console.log(mobile)
-
     document.getElementById("navbar__capteur").style.backgroundImage = "url(/public/icons/navbar/animated_svg/navbar.svg)";
     animateElementNavbar("user","url(/public/icons/navbar/animated_svg/user.svg)","animate_navbar_icons");
     animateElementNavbar("settings","url(/public/icons/navbar/animated_svg/settings.svg)","animate_navbar_icons");
     animateElementNavbar("logout","url(/public/icons/navbar/animated_svg/logout.svg)","animate_navbar_icons");
     animateElementNavbar("dashboard","url(/public/icons/navbar/animated_svg/dashboard.svg)","animate_navbar_icons");
-
-
   }
   if (adminExist==true) {
     animateElementNavbar("user_list","url(/public/icons/navbar/animated_svg/user_list.svg)","animate_navbar_icons");
@@ -320,8 +317,7 @@ function show_navbar_desktop() {
   if (navbar__status==1)
   {
     navbar__status = 0;
-    document.getElementById("navbar__content").style.transform = "translateX(1vw)";
-    document.getElementById("navbar__capteur__container").style.transform = "translateX(175px)";
+    document.getElementById("navbar__content").style.transform = "translateX(0)";
     document.getElementById("container_background").style.zIndex = "1";
     animateNavbar("play")
 
@@ -331,7 +327,6 @@ function show_navbar_desktop() {
     navbar__status = 1;
     document.getElementById("navbar__content").style.transform = "translateX(-110%)";
     document.getElementById("container_background").style.zIndex = "-1";
-    document.getElementById("navbar__capteur__container").style.transform = "translateX(0px)";
     animateNavbar("exit")
   }
 }

@@ -14,11 +14,11 @@
         <div class="flex_row">
             <div class="padding_small center_block" id=navbar__header__mobile>
                 <div class="flex_column"><a href="#"><p class="text_medium color_black underline text_center">Publier</p></a><div id=publier_une_pause_mobile class="favicon_svg"></div></div>
-                <div class="flex_column"><a href="#"><p class="text_medium color_black underline text_center">Corriger</p></a><div id=pause_public_mobile class="favicon_svg"></div></div>
-                <div class="flex_column"><a href="#"><p class="text_medium color_black underline text_center">Public</p></a><div id=pause_private_mobile class="favicon_svg"></div></div>
-                <div class="flex_column"><a href="#"><p class="text_medium color_black underline text_center">Private</p></a><div id=correct_pause_mobile class="favicon_svg"></div></div>
+                <div class="flex_column"><a href="#"><p class="text_medium color_black underline text_center">Public</p></a><div id=pause_public_mobile class="favicon_svg"></div></div>
+                <div class="flex_column"><a href="#"><p class="text_medium color_black underline text_center">Private</p></a><div id=pause_private_mobile class="favicon_svg"></div></div>
+                <div class="flex_column"><a href="#"><p class="text_medium color_black underline text_center">Corriger</p></a><div id=correct_pause_mobile class="favicon_svg"></div></div>
             </div>
-            <div id=navbar__capteur__container class=margin_x_small><button class="icons_navbar cursor" id="navbar__capteur" type="button"></button></div>
+            <div class=margin_x_small><button class="icons_navbar cursor" id="navbar__capteur" type="button"></button></div>
         </div>
         <div id="navbar__content">
             <div class="navbar__content__child padding_x_small cursor">
@@ -46,9 +46,9 @@
         <header id="header" class="text_center flex_row margin_small">
             <div class="center_block flex_row" id=navbar__header__desktop>
                 <div class="flex_column padding_horizontal"><a href="#"><div id=publier_une_pause_desktop class="favicon_svg" title="publish"></div><p class="text_medium underline_hover color_black text_center">Publish</p></a></div>
-                <div class="flex_column padding_horizontal"><a href="#"><div id=pause_public_desktop class="favicon_svg" title="public"></div><p class="text_medium underline_hover color_black text_center">Correct</p></a></div>
-                <div class="flex_column padding_horizontal"><a href="#"><div id=pause_private_desktop class="favicon_svg" title="private"></div><p class="text_medium underline_hover color_black text_center">Public</p></a></div>
-                <div class="flex_column padding_horizontal"><a href="#"><div id=correct_pause_desktop class="favicon_svg" title="corriger"></div><p class="text_medium underline_hover color_black text_center">Private</p></a></div>
+                <div class="flex_column padding_horizontal"><a href="#"><div id=pause_public_desktop class="favicon_svg" title="public"></div><p class="text_medium underline_hover color_black text_center">Public</p></a></div>
+                <div class="flex_column padding_horizontal"><a href="#"><div id=pause_private_desktop class="favicon_svg" title="private"></div><p class="text_medium underline_hover color_black text_center">Private</p></a></div>
+                <div class="flex_column padding_horizontal"><a href="#"><div id=correct_pause_desktop class="favicon_svg" title="corriger"></div><p class="text_medium underline_hover color_black text_center">Correct</p></a></div>
             </div>
         </header>
         <div id="content" class="">
