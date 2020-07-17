@@ -160,25 +160,12 @@ function defineElements() {
     animateElementNavbar("container_logo_login","url(/public/icons/login/blog.svg)","play_logo");
   }
   if (navbarExist==true) {
-
-    if (desktop==true && mobile==false) {
-      animateElementNavbar("publier_une_pause_desktop","url(/public/icons/navbar/animated_svg/publish.svg)","play_favicon");
-      animateElementNavbar("pause_public_desktop","url(/public/icons/navbar/animated_svg/public.svg)","play_favicon");
-      if (adminExist==true) {
-        animateElementNavbar("pause_private_desktop","url(/public/icons/navbar/animated_svg/private.svg)","play_favicon");
-        animateElementNavbar("correct_pause_desktop","url(/public/icons/navbar/animated_svg/correct.svg)","play_favicon");
-      }
-    } 
-    if (desktop==false && mobile==true) {
-      animateElementNavbar("publier_une_pause_mobile","url(/public/icons/navbar/animated_svg/publish.svg)","play_favicon");
-      animateElementNavbar("pause_public_mobile","url(/public/icons/navbar/animated_svg/public.svg)","play_favicon");
-      if (adminExist==true) {
-        animateElementNavbar("pause_private_mobile","url(/public/icons/navbar/animated_svg/private.svg)","play_favicon");
-        animateElementNavbar("correct_pause_mobile","url(/public/icons/navbar/animated_svg/correct.svg)","play_favicon");
-      }
+    animateElementNavbar("publier_une_pause","url(/public/icons/navbar/animated_svg/publish.svg)","play_favicon");
+    animateElementNavbar("pause_public","url(/public/icons/navbar/animated_svg/public.svg)","play_favicon");
+    if (adminExist==true) {
+      animateElementNavbar("pause_private","url(/public/icons/navbar/animated_svg/private.svg)","play_favicon");
+      animateElementNavbar("correct_pause","url(/public/icons/navbar/animated_svg/correct.svg)","play_favicon");
     }
-    console.log(desktop)
-    console.log(mobile)
     document.getElementById("navbar__capteur").style.backgroundImage = "url(/public/icons/navbar/animated_svg/navbar.svg)";
     animateElementNavbar("user","url(/public/icons/navbar/animated_svg/user.svg)","animate_navbar_icons");
     animateElementNavbar("settings","url(/public/icons/navbar/animated_svg/settings.svg)","animate_navbar_icons");
