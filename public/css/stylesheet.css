@@ -1,7 +1,4 @@
 :root {
-
-    
-
     /* TEXT-SIZES */
 
     --text-small: 16px;
@@ -95,57 +92,24 @@ body,html,p,button,input,a,ul,li {
 
 /* KEY-FRAMES */
 
-
 @keyframes animate_navbar_icons {
-  0% {
-    background-position: 0px 0px;
-  }
-  100% {
-    background-position: -1800px 0px;
-  }
-}
+  0% {background-position: 0px 0px;}
+  100% {background-position: -1800px 0px;}}
 @keyframes animate_navbar_icons_reverse {
-  0% {
-    background-position: -1800px 0px;
-  }
-  100% {
-    background-position: 0px 0px;
-  }
-}
-
+  0% {background-position: -1800px 0px;}
+  100% {background-position: 0px 0px;}}
 @keyframes play_logo {
-  0% {
-    background-position: 0px 0px;
-  }
-  100% {
-    background-position: -15000px 0px;
-  }
-}
+  0% {background-position: 0px 0px;}
+  100% {background-position: -15000px 0px;}}
 @keyframes play_logo_reverse {
-  0% {
-    background-position: -15000px 0px;
-  }
-  100% {
-    background-position: 0px 0px;
-  }
-}
-
+  0% {background-position: -15000px 0px;}
+  100% {background-position: 0px 0px;}}
 @keyframes play_favicon {
-  0% {
-    background-position: 0px 0px;
-  }
-  100% {
-    background-position: -3750px 0px;
-  }
-}
+  0% {background-position: 0px 0px;}
+  100% {background-position: -3750px 0px;}}
 @keyframes play_favicon_reverse {
-  0% {
-    background-position: -3750px 0px;
-  }
-  100% {
-    background-position: 0px 0px;
-  }
-}
+  0% {background-position: -3750px 0px;}
+  100% {background-position: 0px 0px;}}
 
 /* POSITION */
 
@@ -424,7 +388,6 @@ body,html,p,button,input,a,ul,li {
   z-index: 1;
   height: 100%;
   width: 100vw;
-  overflow-y: scroll;
 }
 #navbar {
   z-index: 3;
@@ -528,6 +491,7 @@ body,html,p,button,input,a,ul,li {
 }
 #container__body {
   background-color: #ecf0f1;
+  overflow-y: scroll;
 }
 
 .input_form {
@@ -597,7 +561,7 @@ body,html,p,button,input,a,ul,li {
     padding: 4vh 0 4vh 0;
     justify-content: center;
     flex-wrap: wrap;
-    transform: translateY(-200%);
+    transform: translateY(-150%);
     transform-origin: top;
     border-radius: 10px;
   }
