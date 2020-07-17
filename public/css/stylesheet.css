@@ -348,8 +348,7 @@ body,html,p,button,input,a,ul,li {
   cursor: pointer;
 }
 .inside_border {
-  box-shadow: 0px 0px 20px 2px var(--color-blue);
-
+  box-shadow: -10px -10px 35px 0 white, 5px 5px 30px 0 var(--color-grey);
 }
 .radius {
   border-radius: var(--text-small);
@@ -407,6 +406,7 @@ body,html,p,button,input,a,ul,li {
 #header {
   height: auto;
 }
+
 #content::before {
   display: block; 
   content: "";
@@ -417,7 +417,7 @@ body,html,p,button,input,a,ul,li {
 
 }
 #content {
-  height: 100%;
+  height: auto;
 }
 #footer {
   height: 5%;
@@ -476,22 +476,17 @@ body,html,p,button,input,a,ul,li {
   transform: scale(0.9);
 }
 #navbar__capteur {
-  box-shadow: -10px -10px 10px 0 var(--color-white), 5px 5px 10px 0 var(--color-grey);
+  box-shadow: -10px -10px 25px 0 white, 2.5px 2.5px 20px 0 var(--color-grey);
   animation-name: none;
   background-color: #ecf0f1;
   border-radius: 10px;
 }
 
-#navbar__header__mobile {
-  flex-wrap: wrap;
-  display: none;
-}
-#navbar__header__desktop {
-  display: flex;
-}
+
 #container__body {
   background-color: #ecf0f1;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .input_form {
@@ -535,12 +530,9 @@ body,html,p,button,input,a,ul,li {
     --padding-right: 0 1em 0 0;
     --padding-left: 0 0 0 1em;
   }
-  #navbar__header__mobile {
-    display: flex;
-    flex-direction: row;
-  }
-  #navbar__header__desktop {
-    display: none;
+  #navbar__header {
+    padding-left: 100px;
+    flex-wrap: wrap;
   }
   .flex__form__login {
     align-items: center;
@@ -555,10 +547,10 @@ body,html,p,button,input,a,ul,li {
   #navbar__content {
     z-index: 2;
     display: flex;
-    width: auto;
-    margin: 0 4vh 0 4vh;
-    align-self: center;
+    position: absolute;
+    margin: 0 4vw 0 4vw;
     padding: 4vh 0 4vh 0;
+    width: 92vw;
     justify-content: center;
     flex-wrap: wrap;
     transform: translateY(-150%);
@@ -572,13 +564,8 @@ body,html,p,button,input,a,ul,li {
   
   #navbar {
     z-index: 2;
-    height: 10%;
-    width: 100%;
     display: flex;
     flex-direction: column;
-  }
-  #navbar__title {
-    display: inline;
   }
   .show_mobile {
     display: inline;
@@ -588,9 +575,6 @@ body,html,p,button,input,a,ul,li {
   }
   .input_form {
     width: 80%;
-  }
-  #navbar {
-    position: relative;
   }
 
   .favicon_svg {
@@ -607,7 +591,7 @@ body,html,p,button,input,a,ul,li {
   }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 550px) {
   .favicon_svg {
     transform: scale(0.4);
     margin: -30px;
@@ -664,10 +648,6 @@ body,html,p,button,input,a,ul,li {
     display: block;
   }
 
-  #navbar__capteur__container {
-    transform: translateX(0px);
-    transition: all 0.4s cubic-bezier(.68,-0.55,.27,1.55);
-  }
   #navbar__content {
     display: flex;
     position: absolute;
@@ -690,7 +670,6 @@ body,html,p,button,input,a,ul,li {
 
   .shapeshifter {
     width: 100px;
-    
     height: 100px;
   }
   .input_form {
@@ -705,10 +684,7 @@ body,html,p,button,input,a,ul,li {
   .flex__form__login {
     flex-direction: row;
   }
-  #navbar__capteur__container {
-    transform: translateX(0px);
-    transition: all 0.4s cubic-bezier(.68,-0.55,.27,1.55);
-  }
+  
   #navbar__content {
     display: flex;
     position: absolute;

@@ -1,8 +1,6 @@
 var cacheName = 'blog';
 var filesToCache = [
-    '/public/',
-    '/public/css/stylesheet.css',
-    '/public/js/mainFunctions.js'
+    '/public/'
 ];
 /* Start the service worker and cache all of the app's content */
 self.addEventListener('install', function(e) {
