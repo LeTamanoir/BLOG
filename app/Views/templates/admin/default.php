@@ -3,6 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
+    <meta name="theme-color" content="#ecf0f1">
+    <link rel="apple-touch-icon" href="/public/icons/favicon/favicon-256.png">
     <link href="/public/css/stylesheet.css" rel="stylesheet">
     <link rel="icon" href="/public/icons/favicon/favicon.ico">
     <link rel="manifest" href="/manifest.json">

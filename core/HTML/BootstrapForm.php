@@ -24,7 +24,7 @@ class BootstrapForm extends Form{
         $type = isset($options['type']) ? $options['type']: 'text';
         $id = isset($options['id']) ? $options['id']: '';
         $placeholder = isset($options['placeholder']) ? $options['placeholder'] : '';
-        $label = '<label class="text_big center_vertical padding_right">'. $label . '</label>';
+        $label = '<label class="text_big center_vertical label_form">'. $label . '</label>';
         $input = '<input type="'. $type .'" name="' . $name .'" id="'.$id.'" placeholder= "'. $placeholder . '" value="'. $this->getValue($name) .'" class="text_big padding_x_small input_form">';
         if($Surround === true){
             return $label. $this->surround($input);

@@ -4,6 +4,7 @@
   "start_url": "/public/",
   "display": "standalone",
   "background_color": "white",
+  "theme_color": "#ecf0f1",
   "description": "A simple prototype of a fucking blog",
   "icons": [{
     "src": "/public/icons/favicon/favicon-128.png",
@@ -17,5 +18,10 @@
     "src": "/public/icons/favicon/favicon-512.png",
     "sizes": "512x512",
     "type": "image/png"
+  },{
+    "src": "/public/icons/favicon/maskable_icon.png",
+    "sizes": "465X465",
+    "type": "image/png",
+    "purpose": "any maskable"
   }]
 }

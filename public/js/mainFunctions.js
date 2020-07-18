@@ -328,7 +328,7 @@ function show_navbar_mobile() {
   if (navbar__status==1)
   {
     navbar__status = 0;
-    document.getElementById("navbar__content").style.transform = "translateY(2vh)";
+    document.getElementById("navbar__content").style.opacity = "1";
     document.getElementById("container_background").style.zIndex = "1";
 
     animateNavbar("play")
@@ -336,7 +336,7 @@ function show_navbar_mobile() {
   else if (navbar__status==0)
   {
     navbar__status = 1;
-    document.getElementById("navbar__content").style.transform = "translateY(-200%)";
+    document.getElementById("navbar__content").style.opacity = "0"
     document.getElementById("container_background").style.zIndex = "-1";
 
     animateNavbar("exit")
