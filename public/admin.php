@@ -25,6 +25,8 @@ if($page === 'home'){
     require ROOT . '/app/Views/admin/posts/category.php';
 }elseif($page === 'posts.show'){
     require ROOT . '/app/Views/admin/posts/show.php';
+}elseif($page === 'logout'){
+    $app->logout();
 }
 $content = ob_get_clean();
 require ROOT. '/app/Views/templates/admin/default.php';

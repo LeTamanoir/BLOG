@@ -33,7 +33,7 @@
                 <div id=settings class="icons_navbar margin_horizontal"></div><a href="#" class="center_block navbar__content__child__link"><p class="text_medium text_navbar text_center padding_x_small center_block color_black underline_hover">settings</p></a>
             </div>
             <div class="navbar__content__child padding_x_small cursor">
-                <div id=logout class="icons_navbar margin_horizontal"></div><a href="#" class="center_block navbar__content__child__link"><p class="text_medium text_navbar text_center padding_x_small center_block color_black underline_hover">logout</p></a>
+                <div id=logout class="icons_navbar margin_horizontal"></div><a href="admin.php?p=logout" class="center_block navbar__content__child__link"><p class="text_medium text_navbar text_center padding_x_small center_block color_black underline_hover">logout</p></a>
             </div>
         </div>
         </div>
