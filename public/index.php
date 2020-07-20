@@ -1,4 +1,7 @@
 <?php
+use App\Controller\UsersController;
+use App\Controller\HomeController;
+
 define('ROOT',dirname(__DIR__));
 require ROOT.'/app/App.php';
 App::load();
@@ -9,9 +12,10 @@ if(isset($_GET['p'])){
     $page = 'login';
 }
 
-ob_start();
 if($page === 'login'){
-    require ROOT . '/app/Views/users/login.php';
+    $controller = new UsersController();
+    $controller->login();
+}elseif($page === 'home'){
+    $controller = new HomeController();
+    $controller->home();
 }
-$content = ob_get_clean();
-require ROOT. '/app/Views/templates/login.php';

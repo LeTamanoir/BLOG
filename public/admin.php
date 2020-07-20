@@ -27,4 +27,5 @@ if($page === 'home'){
     require ROOT . '/app/Views/admin/posts/show.php';
 }
 $content = ob_get_clean();
-require ROOT. '/app/Views/templates/admin/default.php';?>
+require ROOT. '/app/Views/templates/admin/default.php';
+?>

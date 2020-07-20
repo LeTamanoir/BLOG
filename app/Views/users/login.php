@@ -1,22 +1,3 @@
-<?php 
-if(!empty($_POST)){
-    $_SESSION['error'] = '';
-    $auth = new \Core\Auth\DBAuth(App::getInstance()->getDb());
-    if($auth->login($_POST['username'], $_POST['password'])){
-        
-        if($_POST['username'] === "admin"){
-            header('Location: admin.php');
-        }else{
-            header('Location: user.php');
-        }
-    }else{
-        $_SESSION['error'] = 'Identifiants incorrects';
-    }
-}
-$form = new \Core\HTML\BootstrapForm($_POST); 
-
-?>
-
 <form method="post" action="" class="form__container padding_small">
     <div class="flex__form__login padding_medium"><?= $form->input('username',"username : ", ['placeholder' => 'username'], false);?></div>
     <div class="flex__form__login padding_medium"><?= $form->input('password','password : ', ['type' => 'password','placeholder' => 'password','id' => 'password1']);?>

@@ -14,7 +14,7 @@
     <nav id="navbar">
         <div id="navbar__container">
         <div class="flex_row">
-            <div class=margin_x_small><button class="icons_navbar cursor" id="navbar__capteur" type="button"></button></div>
+            <div class=margin_small><button class="icons_navbar cursor" id="navbar__capteur" type="button"></button></div>
         </div>
         <div id="navbar__content">
             <div class="navbar__content__child padding_x_small cursor">
