@@ -6,6 +6,7 @@ use App;
 
 class UsersController extends AppController{
 
+
     public function login(){
 
         if(!empty($_POST)){
@@ -23,7 +24,7 @@ class UsersController extends AppController{
         }
         $error = $_SESSION['error'];
         $form = new \Core\HTML\BootstrapForm($_POST); 
-        $this->render('users.login', compact('form','error'));
+        $this->render('users.login', compact('form'));
     }
 }
 

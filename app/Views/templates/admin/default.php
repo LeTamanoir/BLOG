@@ -41,7 +41,7 @@
     <main id="main" class="">
         <header id="header" class="text_center flex_row margin_small">
             <div class="center_block flex_row" id=navbar__header>
-                <div class="flex_column padding_horizontal"><a href="#"><div id=publier_une_pause class="favicon_svg" title="publish"></div><p class="text_medium underline_hover color_black text_center">Publish</p></a></div>
+                <div class="flex_column padding_horizontal"><a href="admin.php?p=textEditor"><div id=publier_une_pause class="favicon_svg" title="publish"></div><p class="text_medium underline_hover color_black text_center">Publish</p></a></div>
                 <div class="flex_column padding_horizontal"><a href="#"><div id=pause_public class="favicon_svg" title="public"></div><p class="text_medium underline_hover color_black text_center">Public</p></a></div>
                 <div class="flex_column padding_horizontal"><a href="#"><div id=pause_private class="favicon_svg" title="private"></div><p class="text_medium underline_hover color_black text_center">Private</p></a></div>
                 <div class="flex_column padding_horizontal"><a href="#"><div id=correct_pause class="favicon_svg" title="corriger"></div><p class="text_medium underline_hover color_black text_center">Correct</p></a></div>

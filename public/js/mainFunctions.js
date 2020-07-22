@@ -4,6 +4,9 @@ window.onload = () => {
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/sw.js');
   }
+  if (Exist404==true) {
+    display404()
+  }
 }
 
 
@@ -21,6 +24,14 @@ window.onload = () => {
 //                                 ||
 //===================================
 
+async function display404() {
+  document.getElementsByClassName("image-404")[0].classList.add("enter-404");
+  await new Promise(r => setTimeout(r, 1000));
+  document.getElementsByClassName("image-404")[0].addEventListener("onmouseover", function(){
+    document.getElementsByClassName("image-404")[0].classList.replace("enter-404","hover-404");
+  });
+
+}
 
 
 // ==========================
@@ -39,6 +50,14 @@ if(typeof(checkNavbar) != 'undefined' && checkNavbar != null){
 }
 else{
   navbarExist = false;
+}
+
+var checkNavbar = document.getElementById("404");
+if(typeof(checkNavbar) != 'undefined' && checkNavbar != null){
+  Exist404 = true;
+}
+else{
+  Exist404 = false;
 }
 
 

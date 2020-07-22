@@ -503,6 +503,47 @@ body,html,p,button,input,a,ul,li {
   margin: auto 2em auto 0;
 }
 
+@keyframes enter-404 {
+  0% {background-position: 0px 0px;}
+  100% {background-position: -48000px 0px;}}
+
+@keyframes hover-404 {
+  0% {background-position: 0px 0px;}
+  100% {background-position: -14400px 0px;}}
+@keyframes hover-404-reverse {
+  0% {background-position: -14400px 0px;}
+  100% {background-position: 0px 0px;}}
+
+.image-404 {
+  width: 800px;
+  height: 500px;
+  background-repeat: no-repeat;
+}
+.image-404.enter-404 {
+  background-image: url(/public/icons/404/404-enter.svg);
+  animation-duration: 1000ms;
+  animation-timing-function: steps(60);
+  animation-name: enter-404;
+  animation-fill-mode: forwards;
+  
+}
+.image-404.hover-404 {
+  background-image: url(/public/icons/404/404-hover.svg);
+  animation-duration: 300ms;
+  animation-timing-function: steps(18);
+  animation-fill-mode: forwards;
+
+}
+.image-404.hover-404:hover {
+  background-image: url(/public/icons/404/404-hover.svg);
+  animation-duration: 300ms;
+  animation-timing-function: steps(18);
+  animation-name: hover-404;
+  animation-fill-mode: forwards;
+
+}
+
+
 
 /* MEDIA */
 

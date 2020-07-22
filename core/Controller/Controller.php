@@ -7,7 +7,7 @@ class Controller{
     protected $viewPath;
     protected $template;
 
-    public function render($view, $variables = []){
+    public function render($view,$variables = []){
 
         ob_start();
         extract($variables);

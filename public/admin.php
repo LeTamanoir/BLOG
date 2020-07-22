@@ -1,6 +1,8 @@
 <?php
-
 use Core\Auth\DBAuth;
+use App\Controller\HomeController;
+use App\Controller\TextEditor;
+
 define('ROOT',dirname(__DIR__));
 require ROOT.'/app/App.php';
 App::load();
@@ -16,18 +18,18 @@ $auth = new DBAuth($app->getDb());
 if(!$auth->logged()){
     $app->forbidden();
 }
-App::verif();
 
-ob_start();
 if($page === 'home'){
-    require ROOT . '/app/Views/posts/home.php';
-}elseif($page === 'posts.category'){
-    require ROOT . '/app/Views/admin/posts/category.php';
-}elseif($page === 'posts.show'){
-    require ROOT . '/app/Views/admin/posts/show.php';
-}elseif($page === 'logout'){
-    $app->logout();
+    $controller = new HomeController();
+    $controller->home();
 }
-$content = ob_get_clean();
-require ROOT. '/app/Views/templates/admin/default.php';
+elseif($page === 'textEditor'){
+    $controller = new TextEditor();
+    $controller->textEditor();
+}
+elseif($page === 'logout'){
+    $app->logout();
+}else{
+    $app->notFound();
+}
 ?>

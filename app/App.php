@@ -44,8 +44,7 @@ class App{
     }
 
     public function notFound(){
-        header('HTTP/1.0 404 Not Found');
-        die('Page introuvable');
+        require_once(ROOT.'/app/Views/error/404.php');
     }
 
     public function logout(){
@@ -53,11 +52,6 @@ class App{
         $_SESSION = array();
         session_destroy();
         header('Location: index.php');
-    }
-
-    public function verif(){
-        
-        
     }
 
 }
