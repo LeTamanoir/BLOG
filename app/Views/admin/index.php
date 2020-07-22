@@ -1,1 +1,1 @@
-<p>Wsh c'est l'admin !!</p>
+<p>Hey c'est l'admin</p>

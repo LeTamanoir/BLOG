@@ -31,7 +31,7 @@ class UsersController extends AppController{
 
         $this->template = 'admin/default';
         $form = new \Core\HTML\TextEditorForm($_POST);
-        $this->render('users.textEditor');
+        $this->render('users.textEditor', compact('form'));
     }
 }
 
