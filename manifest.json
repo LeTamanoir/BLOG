@@ -20,7 +20,9 @@
     "type": "image/png"
   },{
     "src": "/public/icons/favicon/maskable_icon.png",
-    "sizes": "465X465",
+    "sizes": "465x465",
+    "width": "465",
+    "height": "465",
     "type": "image/png",
     "purpose": "any maskable"
   }]

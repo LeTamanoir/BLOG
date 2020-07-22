@@ -26,6 +26,13 @@ class UsersController extends AppController{
         $form = new \Core\HTML\BootstrapForm($_POST); 
         $this->render('users.login', compact('form'));
     }
+
+    public function textEditor(){
+
+        $this->template = 'admin/default';
+        $form = new \Core\HTML\TextEditorForm($_POST);
+        $this->render('users.textEditor');
+    }
 }
 
 ?>

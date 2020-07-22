@@ -12,7 +12,7 @@
 </head>
 <body id=container__body class=flex_column>
     <div id=404 class=flex_column>
-        <div class="image-404"></div>
+        <div id="image-404"></div>
         <div class="text_large color_error"> ERROR 404 </div>
     </div>
     <script src="/public/js/mainFunctions.js"></script>

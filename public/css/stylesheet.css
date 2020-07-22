@@ -1,5 +1,10 @@
 :root {
     /* TEXT-SIZES */
+    --image-404-size: 60vh;
+    --icon-navbar-size: 10vh;
+    --icon-header-size: 7vh;
+    --image-login: 30vh;
+
 
     --text-small: 16px;
     --text-medium: 24px;
@@ -93,24 +98,35 @@ body,html,p,button,input,a,ul,li {
 
 /* KEY-FRAMES */
 
-@keyframes animate_navbar_icons {
-  0% {background-position: 0px 0px;}
-  100% {background-position: -1800px 0px;}}
-@keyframes animate_navbar_icons_reverse {
-  0% {background-position: -1800px 0px;}
-  100% {background-position: 0px 0px;}}
+
 @keyframes play_logo {
   0% {background-position: 0px 0px;}
-  100% {background-position: -15000px 0px;}}
+  100% {background-position: calc(-30*var(--image-login)) 0px;}}
 @keyframes play_logo_reverse {
-  0% {background-position: -15000px 0px;}
+  0% {background-position: calc(-30*var(--image-login)) 0px;}
   100% {background-position: 0px 0px;}}
-@keyframes play_favicon {
+@keyframes animate_header_icons {
   0% {background-position: 0px 0px;}
-  100% {background-position: -3750px 0px;}}
-@keyframes play_favicon_reverse {
-  0% {background-position: -3750px 0px;}
+  100% {background-position: calc(-30*var(--icon-header-size)) 0px;}}
+@keyframes animate_header_icons_reverse {
+  0% {background-position: calc(-30*var(--icon-header-size)) 0px;}
   100% {background-position: 0px 0px;}}
+@keyframes animate_navbar_icons {
+  0% {background-position: 0px 0px;}
+  100% {background-position: calc(-18*var(--icon-navbar-size)) 0px;}}
+@keyframes animate_navbar_icons_reverse {
+  0% {background-position: calc(-18*var(--icon-navbar-size)) 0px;}
+  100% {background-position: 0px 0px;}}
+@keyframes enter-404 {
+  0% {background-position: 0px 0px;}
+  100% {background-position: calc(-60*calc(var(--image-404-size)*1.6)) 0px;}}
+@keyframes hover-404 {
+  0% {background-position: 0px 0px;}
+  100% {background-position: calc(-18*calc(var(--image-404-size)*1.6)) 0px;}}
+@keyframes hover-404-reverse {
+  0% {background-position: calc(-18*calc(var(--image-404-size)*1.6)) 0px;}
+  100% {background-position: 0px 0px;}}
+
 
 /* POSITION */
 
@@ -445,25 +461,22 @@ body,html,p,button,input,a,ul,li {
   animation-duration: 500ms;
   animation-timing-function: steps(30);
   animation-fill-mode: forwards;
-  width: 500px;
-  height: 500px;
   background-repeat: no-repeat;
   animation-name: play_logo;
-  transform: scale(0.8);
-  margin: -40px;
+  background-size: calc(31*var(--image-login)) var(--image-login);
+  width: var(--image-login);
+  height: var(--image-login);
 }
 
 .favicon_svg {
   animation-duration: 500ms;
   animation-timing-function: steps(30);
-  width: 125px;
-  height: 125px;
-  animation-name: play_favicon;
+  animation-name: animate_header_icons;
   animation-fill-mode: forwards;
   background-repeat: no-repeat;
-  transform: scale(0.7);
-  margin: -18.75px;
-
+  background-size: calc(31*var(--icon-header-size)) var(--icon-header-size);
+  width: var(--icon-header-size);
+  height: var(--icon-header-size);
 }
 
 .icons_navbar {
@@ -471,10 +484,11 @@ body,html,p,button,input,a,ul,li {
   animation-timing-function: steps(18);
   animation-fill-mode: forwards;
   background-repeat: no-repeat;
-  width: 100px;
-  height: 100px;
   animation-name: animate_navbar_icons;
-  transform: scale(0.9);
+  background-size: calc(19*var(--icon-navbar-size)) var(--icon-navbar-size);
+  width: var(--icon-navbar-size);
+  height: var(--icon-navbar-size);
+
 }
 #navbar__capteur {
   box-shadow: -10px -10px 25px 0 white, 2.5px 2.5px 20px 0 var(--color-grey);
@@ -503,44 +517,30 @@ body,html,p,button,input,a,ul,li {
   margin: auto 2em auto 0;
 }
 
-@keyframes enter-404 {
-  0% {background-position: 0px 0px;}
-  100% {background-position: -48000px 0px;}}
-
-@keyframes hover-404 {
-  0% {background-position: 0px 0px;}
-  100% {background-position: -14400px 0px;}}
-@keyframes hover-404-reverse {
-  0% {background-position: -14400px 0px;}
-  100% {background-position: 0px 0px;}}
-
-.image-404 {
-  width: 800px;
-  height: 500px;
+#image-404 {
+  background-size: calc(61*calc(var(--image-404-size)*1.6)) var(--image-404-size);
+  width: calc(var(--image-404-size)*1.6);
+  height: var(--image-404-size);
   background-repeat: no-repeat;
 }
-.image-404.enter-404 {
+#image-404.enter-404 {
   background-image: url(/public/icons/404/404-enter.svg);
   animation-duration: 1000ms;
   animation-timing-function: steps(60);
   animation-name: enter-404;
   animation-fill-mode: forwards;
-  
 }
-.image-404.hover-404 {
+#image-404.hover-404 {
   background-image: url(/public/icons/404/404-hover.svg);
   animation-duration: 300ms;
   animation-timing-function: steps(18);
   animation-fill-mode: forwards;
+  background-size: calc(19*calc(var(--image-404-size)*1.6)) var(--image-404-size);
 
-}
-.image-404.hover-404:hover {
-  background-image: url(/public/icons/404/404-hover.svg);
-  animation-duration: 300ms;
-  animation-timing-function: steps(18);
   animation-name: hover-404;
-  animation-fill-mode: forwards;
-
+}
+#image-404.hover-404:hover {
+  animation-name: hover-404-reverse;
 }
 
 
@@ -578,7 +578,7 @@ body,html,p,button,input,a,ul,li {
     --padding-left: 0 0 0 1em;
   }
   #navbar__header {
-    padding-right: 100px;
+    padding-right: 12vh;
     flex-wrap: wrap;
   }
   .flex__form__login {
@@ -624,19 +624,6 @@ body,html,p,button,input,a,ul,li {
   .input_form {
     width: 80%;
   }
-
-  .favicon_svg {
-    transform: scale(0.6);
-    margin: -25px;
-  }
-  .icons_navbar {
-    transform: scale(0.8);
-    margin: -10px;
-  }
-  #container_logo_login {
-    transform: scale(0.4);
-    margin: -150px;
-  }
   .container_login {
     width: 60%;
     height: auto;
@@ -647,21 +634,6 @@ body,html,p,button,input,a,ul,li {
 }
 
 @media only screen and (max-width: 550px) {
-  .favicon_svg {
-    transform: scale(0.35);
-    margin: -35px;
-  }
-  .icons_navbar {
-    transform: scale(0.7);
-  }
-  #navbar__capteur {
-    margin: -15px;
-
-  }
-  #container_logo_login {
-    transform: scale(0.25);
-    margin: -180px;
-  }
   .container_login {
     width: 80%;
     height: auto;
@@ -680,16 +652,6 @@ body,html,p,button,input,a,ul,li {
 
     --navbar__capteur-path: 100px;
     
-  }
-  .icons_navbar {
-    transform: scale(0.85);
-    margin: -7.5px;
-    
-  }
-    
-  #container_logo_login {
-    transform: scale(0.5);
-    margin: -120px;
   }
   .input_form {
     width: auto;

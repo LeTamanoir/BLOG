@@ -4,9 +4,6 @@ window.onload = () => {
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/sw.js');
   }
-  if (Exist404==true) {
-    display404()
-  }
 }
 
 
@@ -24,14 +21,6 @@ window.onload = () => {
 //                                 ||
 //===================================
 
-async function display404() {
-  document.getElementsByClassName("image-404")[0].classList.add("enter-404");
-  await new Promise(r => setTimeout(r, 1000));
-  document.getElementsByClassName("image-404")[0].addEventListener("onmouseover", function(){
-    document.getElementsByClassName("image-404")[0].classList.replace("enter-404","hover-404");
-  });
-
-}
 
 
 // ==========================
@@ -174,16 +163,19 @@ function screen_desktop(screen){
 function defineElements() {
   console.log("login :",loginExist)
   console.log("navbar :",navbarExist)
+  if (Exist404==true) {
+    display404()
+  }
   if (loginExist==true) {
     console.log("hello world")
     animateElementNavbar("container_logo_login","url(/public/icons/login/blog.svg)","play_logo");
   }
   if (navbarExist==true) {
-    animateElementNavbar("publier_une_pause","url(/public/icons/navbar/animated_svg/publish.svg)","play_favicon");
-    animateElementNavbar("pause_public","url(/public/icons/navbar/animated_svg/public.svg)","play_favicon");
+    animateElementNavbar("publier_une_pause","url(/public/icons/navbar/animated_svg/publish.svg)","animate_header_icons");
+    animateElementNavbar("pause_public","url(/public/icons/navbar/animated_svg/public.svg)","animate_header_icons");
     if (adminExist==true) {
-      animateElementNavbar("pause_private","url(/public/icons/navbar/animated_svg/private.svg)","play_favicon");
-      animateElementNavbar("correct_pause","url(/public/icons/navbar/animated_svg/correct.svg)","play_favicon");
+      animateElementNavbar("pause_private","url(/public/icons/navbar/animated_svg/private.svg)","animate_header_icons");
+      animateElementNavbar("correct_pause","url(/public/icons/navbar/animated_svg/correct.svg)","animate_header_icons");
     }
     document.getElementById("navbar__capteur").style.backgroundImage = "url(/public/icons/navbar/animated_svg/navbar.svg)";
     animateElementNavbar("user","url(/public/icons/navbar/animated_svg/user.svg)","animate_navbar_icons");
@@ -243,6 +235,21 @@ function defineNavbar(x) {
       } 
     }
   }
+}
+
+
+// =====================================
+// ===== DEFINE ELEMENTS ---> display404
+// =====================================
+
+
+async function display404() {
+  document.getElementById("image-404").classList.add("enter-404");
+  await new Promise(r => setTimeout(r, 1000));
+  document.getElementById("image-404").addEventListener("mouseover", function(){
+    console.log("hello")
+    document.getElementById("image-404").classList.replace("enter-404","hover-404");
+  });
 }
 
 

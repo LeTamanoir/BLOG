@@ -1,7 +1,7 @@
 <?php
 use Core\Auth\DBAuth;
 use App\Controller\HomeController;
-use App\Controller\TextEditor;
+use App\Controller\UsersController;
 
 define('ROOT',dirname(__DIR__));
 require ROOT.'/app/App.php';
@@ -24,7 +24,7 @@ if($page === 'home'){
     $controller->home();
 }
 elseif($page === 'textEditor'){
-    $controller = new TextEditor();
+    $controller = new UsersController();
     $controller->textEditor();
 }
 elseif($page === 'logout'){
