@@ -16,12 +16,12 @@
 
 
 <script>
-    let size_text = '';
+    /*let size_text = '';
     function size(x)
     {
       size_text = x;
 
-    }
+    }*/
 
     let output = document.getElementById('output');
     let buttons = document.getElementsByClassName('tool--btn');
