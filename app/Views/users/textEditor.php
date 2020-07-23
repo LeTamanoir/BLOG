@@ -11,16 +11,25 @@
     <?= $form->button('createlink','Clip-Link'); ?>
   </div>
   <form action="" method="post">
-  
-    <?php $text = "<div id=output autofocus contenteditable=true></div>" ; ?>
-    <?= $text ?>
-    <input type="text" value=<?= $text ?>/>
+  <input type="text" name="title" placeholder="Veuillez rentrer un titre"/>
+  <div id=output autofocus contenteditable=true></div>
+    <input id=output2 type=hidden name="content" value=""/>
     <div class=flex_row><input type="submit" class="color_black underline_hover padding_x_small text_medium background_color_white cursor" name="submit" value="Envoyer"/></div>
   </form>
 </div>
+  
+
 
 
 <script>
+  var oSrce = document.getElementById('output');
+  var oDest = document.getElementById('output2');
+  oSrce.onkeyup = function(){
+    oDest.innerHTML = oSrce.innerHTML;
+    oDest.value = oSrce.innerHTML;
+     
+  };
+
     /*let size_text = '';
     function size(x)
     {
