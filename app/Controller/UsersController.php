@@ -28,8 +28,14 @@ class UsersController extends AppController{
     }
 
     public function textEditor(){
-
+        
         $this->template = 'admin/default';
+        
+        if(!empty($_POST)){
+            die(var_dump($_POST));
+        }else{
+            echo 'nope';
+        }
         $form = new \Core\HTML\TextEditorForm($_POST);
         $this->render('users.textEditor', compact('form'));
     }

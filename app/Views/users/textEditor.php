@@ -1,4 +1,3 @@
-<p>Arthur est un gros chauve de mort qui met des br dans son html miskine <p>
 <div class="flex_column">
   <div id=tool_list_text_editor>
     <?= $form->button('bold','Bold'); ?>
@@ -10,10 +9,14 @@
     <?= $form->button('insertOrderedList','Ordered-List'); ?>
     <?= $form->button('insertUnorderedList','Unordered-List'); ?>
     <?= $form->button('createlink','Clip-Link'); ?>
-    
   </div>
-  <div id="output" contenteditable="true"></div>
-  <div class=flex_row><input type="submit" class="color_black underline_hover padding_x_small text_medium background_color_white cursor" name="submit" value="Envoyer"/></div>
+  <form action="" method="post">
+  
+    <?php $text = "<div id=output autofocus contenteditable=true></div>" ; ?>
+    <?= $text ?>
+    <input type="text" value=<?= $text ?>/>
+    <div class=flex_row><input type="submit" class="color_black underline_hover padding_x_small text_medium background_color_white cursor" name="submit" value="Envoyer"/></div>
+  </form>
 </div>
 
 
@@ -36,7 +39,6 @@
         {
           let url = prompt("Enter the link here: ", "http:\/\/");
           document.execCommand(cmd, false, url);
-
         }
         else if (cmd === "FontSize")
         {
@@ -46,6 +48,5 @@
         {
           document.execCommand(cmd, false, null);
         }
-        
       })
     }</script>
