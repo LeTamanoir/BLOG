@@ -41,6 +41,19 @@ else{
   navbarExist = false;
 }
 
+// ===============================================
+// ===== CHECK ELEMENTS ---> tool_list_text_editor
+// ===============================================
+
+
+var checkNavbar = document.getElementById("tool_list_text_editor");
+if(typeof(checkNavbar) != 'undefined' && checkNavbar != null){
+  text_editorExist = true;
+}
+else{
+  text_editorExist = false;
+}
+
 var checkNavbar = document.getElementById("404");
 if(typeof(checkNavbar) != 'undefined' && checkNavbar != null){
   Exist404 = true;
@@ -163,6 +176,19 @@ function screen_desktop(screen){
 function defineElements() {
   console.log("login :",loginExist)
   console.log("navbar :",navbarExist)
+  if (text_editorExist==true){
+    console.log("hello")
+    defineSVG("Bold","url(/public/icons/text_editor/bold.svg)")
+    defineSVG("Justify-Right","url(/public/icons/text_editor/right.svg)")
+    defineSVG("Justify-Left","url(/public/icons/text_editor/left.svg)")
+    defineSVG("Center","url(/public/icons/text_editor/center.svg)")
+    defineSVG("Italic","url(/public/icons/text_editor/italic.svg)")
+    defineSVG("Underline","url(/public/icons/text_editor/underline.svg)")
+    defineSVG("Ordered-List","url(/public/icons/text_editor/number.svg)")
+    defineSVG("Unordered-List","url(/public/icons/text_editor/bullet.svg)")
+    defineSVG("Clip-Link","url(/public/icons/text_editor/link.svg)")
+
+  }
   if (Exist404==true) {
     display404()
   }
@@ -251,6 +277,16 @@ async function display404() {
     document.getElementById("image-404").classList.replace("enter-404","hover-404");
   });
 }
+
+// ====================================
+// ===== DEFINE ELEMENTS ---> defineSVG
+// ====================================
+
+
+function defineSVG(x, y) {
+  document.getElementById(x).style.backgroundImage = y;
+}
+
 
 
 

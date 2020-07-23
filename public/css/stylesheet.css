@@ -1,22 +1,21 @@
 :root {
     /* TEXT-SIZES */
     --image-404-size: 60vh;
-    --icon-navbar-size: 10vh;
+    --icon-navbar-size: 9vh;
     --icon-header-size: 7vh;
     --image-login: 30vh;
+    --facteur-size: 1;
 
-
-    --text-small: 16px;
-    --text-medium: 24px;
-    --text-big: 32px;
-    --text-large: 48px;
+    --text-small: calc(16px*var(--facteur-size));
+    --text-medium: calc(24px*var(--facteur-size));
+    --text-big: calc(32px*var(--facteur-size));
+    --text-large: calc(48px*var(--facteur-size));
   
     /* IMAGES-SIZES */
-    --image-navbar: 100px;
-    --image-small: 3em;
-    --image-medium: 4em;
-    --image-big: 6em;
-    --image-large: 8em;
+    --image-small: calc(3em*var(--facteur-size));
+    --image-medium: calc(4em*var(--facteur-size));
+    --image-big: calc(6em*var(--facteur-size));
+    --image-large: calc(8em*var(--facteur-size));
   
     /* COLORS */
 
@@ -33,27 +32,27 @@
   
     /* MARGIN */
 
-    --margin-x-small: 0.5em;
-    --margin-small: 1em;
-    --margin-medium: 2em;
-    --margin-big: 3em; 
-    --margin-large: 4em;
-    --margin-top: 2em 0 0 0;
-    --margin-bottom: 0 0 2em 0;
-    --margin-right: 0 2em 0 0;
-    --margin-left: 0 0 0 2em;
+    --margin-x-small: calc(0.5em*var(--facteur-size));
+    --margin-small: calc(1em*var(--facteur-size));
+    --margin-medium: calc(2em*var(--facteur-size));
+    --margin-big: calc(3em*var(--facteur-size)); 
+    --margin-large: calc(4em*var(--facteur-size));
+    --margin-top: calc(2em*var(--facteur-size)) 0 0 0;
+    --margin-bottom: 0 0 calc(2em*var(--facteur-size)) 0;
+    --margin-right: 0 calc(2em*var(--facteur-size)) 0 0;
+    --margin-left: 0 0 0 calc(2em*var(--facteur-size));
     
     /* PADDING */
   
-    --padding-x-small: 0.5rem;
-    --padding-small: 1em;
-    --padding-medium: 2em;
-    --padding-big: 3em; 
-    --padding-large: 4em;
-    --padding-top: 2em 0 0 0;
-    --padding-bottom: 0 0 2em 0;
-    --padding-right: 0 2em 0 0;
-    --padding-left: 0 0 0 2em;
+    --padding-x-small: calc(0.5rem*var(--facteur-size));
+    --padding-small: calc(1em*var(--facteur-size));
+    --padding-medium: calc(2em*var(--facteur-size));
+    --padding-big: calc(3em*var(--facteur-size)); 
+    --padding-large: calc(4em*var(--facteur-size));
+    --padding-top: calc(2em*var(--facteur-size)) 0 0 0;
+    --padding-bottom: 0 0 calc(2em*var(--facteur-size)) 0;
+    --padding-right: 0 calc(2em*var(--facteur-size)) 0 0;
+    --padding-left: 0 0 0 calc(2em*var(--facteur-size));
   
 }
 
@@ -66,7 +65,7 @@
   src: url('/public/fonts/Ubuntu-Bold.ttf');
 }
 
-body,html,p,button,input,a,ul,li {
+body,html,p,button,input,a,ul,li,ol {
   padding: 0;
   margin: 0;
   outline: 0;
@@ -292,9 +291,7 @@ body,html,p,button,input,a,ul,li {
 }
 
 /* IMAGE */
-.image_navbar {
-  width: var(--image-navbar);
-}
+
 .image_small {
   width: var(--image-small);
 }
@@ -494,7 +491,7 @@ body,html,p,button,input,a,ul,li {
   box-shadow: -10px -10px 25px 0 white, 2.5px 2.5px 20px 0 var(--color-grey);
   animation-name: none;
   background-color: var(--color-light-white);
-  border-radius: 10px;
+  border-radius: .75vw;
 }
 .container_login {
   width: auto;
@@ -542,7 +539,68 @@ body,html,p,button,input,a,ul,li {
 #image-404.hover-404:hover {
   animation-name: hover-404-reverse;
 }
+.button_text_editor {
+  display: block;
+  padding: 0.75vh 1vh 0.75vh;
+  background-color: var(--color-white);
+  border: solid thin var(--color-grey);
+  /*border-bottom: solid thin var(--color-grey);
+  border-left: solid thin var(--color-grey);*/
+}
+/*
+.button_text_editor:last-child {
+  border-right: solid thin var(--color-grey);
+  border-top-right-radius: 1vh;
+  border-bottom-right-radius: 1vh;
 
+}
+.button_text_editor:first-child {
+  border-top-left-radius: 1vh;
+  border-bottom-left-radius: 1vh;
+}*/
+
+
+.button_text_editor:hover {
+  background-color: var(--color-grey);
+  cursor: pointer;
+}
+.text_editor_icon {
+  display: block;
+  margin: auto;
+  width: 3vw;
+  height: 3vw;
+}
+#tool_list_text_editor {
+  justify-content: center;
+  display: flex;
+  margin: 2vh auto 1vh;
+  flex-wrap: wrap;
+}
+#output {
+  margin: 2vh auto 1vh;
+  padding: 2vh;
+  width: 85vw;
+  height: 50vh;
+  background-color: var(--color-white);
+  border: solid thin var(--color-grey);
+}
+#output ul {
+  display: list-item;
+  padding: .5vh 3vh .5vh;
+}
+#output ol {
+  display: list-item;
+  padding: .5vh 3vh .5vh;
+}
+#output ol li{
+  list-style: decimal;
+}
+#output ul li{
+  list-style: disc;
+}
+#output:focus {
+  outline: none;
+}
 
 
 /* MEDIA */
@@ -550,36 +608,18 @@ body,html,p,button,input,a,ul,li {
 
 @media only screen and (max-width: 1150px) {
   :root {
-
-    /* TEXT-SIZES */
-
-    --text-small: 8px;
-    --text-medium: 16px;
-    --text-big: 24px;
-    --text-large: 32px;
-  
-    /* IMAGES-SIZES */
-  
-    --image-small: 2em;
-    --image-medium: 3em;
-    --image-big: 4em;
-    --image-large: 6em;
-
-    /* PADDING */
-  
-    --padding-x-small: 0.25rem;
-    --padding-small: 0.5em;
-    --padding-medium: 1em;
-    --padding-big: 2em; 
-    --padding-large: 3em;
-    --padding-top: 1em 0 0 0;
-    --padding-bottom: 0 0 1em 0;
-    --padding-right: 0 1em 0 0;
-    --padding-left: 0 0 0 1em;
+    --facteur-size: 0.5;
   }
   #navbar__header {
     padding-right: 12vh;
     flex-wrap: wrap;
+  }
+  #output {
+    order: -1;
+  }
+  .text_editor_icon {
+    width: 6vw;
+    height: 6vw;
   }
   .flex__form__login {
     align-items: center;
@@ -608,7 +648,6 @@ body,html,p,button,input,a,ul,li {
     flex-direction: column;
     align-items: center;
   }
-  
   #navbar {
     z-index: 2;
     right: 0;
@@ -643,15 +682,7 @@ body,html,p,button,input,a,ul,li {
 
 @media only screen and (min-width: 1150px) and (max-width: 1500px){
   :root {
-    --navbar-width: 90px;
-
-    /* SVG */
-    --image-login-background-width: 9687.5px;
-    --image-login-move: -9375px;
-    --image-login-width: 312.5px;
-
-    --navbar__capteur-path: 100px;
-    
+    --facteur-size: 0.75;      
   }
   .input_form {
     width: auto;
@@ -689,9 +720,6 @@ body,html,p,button,input,a,ul,li {
 }
 
 @media only screen and (min-width: 1500px){
-  :root {
-    --navbar-width: 140px;
-  }
 
   .shapeshifter {
     width: 100px;

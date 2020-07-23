@@ -1,18 +1,20 @@
-<p>beta Text Editor</p>
-<?= $form->button('justifyCenter','Center'); ?>
-<?= $form->button('justifyLeft','Justify Left'); ?>
-<?= $form->button('justifyRight','Justify Right'); ?>
-<?= $form->button('bold','Bold'); ?>
-<?= $form->button('italic','Italic'); ?>
-<?= $form->button('underline','Underline'); ?>
-<?= $form->button('insertOrderedList','List'); ?>
-<?= $form->button('insertUnorderedList','List #2'); ?>
-<?= $form->button('createlink','Create Link'); ?>
-
-<div id="output" contenteditable="true"></div>
-
-<input type="submit" class=login_button_text_editor name="submit" value="Envoyer"/>
-
+<p>Arthur est un gros chauve de mort qui met des br dans son html miskine <p>
+<div class="flex_column">
+  <div id=tool_list_text_editor>
+    <?= $form->button('bold','Bold'); ?>
+    <?= $form->button('italic','Italic'); ?>
+    <?= $form->button('underline','Underline'); ?>
+    <?= $form->button('justifyLeft','Justify-Left'); ?>
+    <?= $form->button('justifyCenter','Center'); ?>
+    <?= $form->button('justifyRight','Justify-Right'); ?>
+    <?= $form->button('insertOrderedList','Ordered-List'); ?>
+    <?= $form->button('insertUnorderedList','Unordered-List'); ?>
+    <?= $form->button('createlink','Clip-Link'); ?>
+    
+  </div>
+  <div id="output" contenteditable="true"></div>
+  <div class=flex_row><input type="submit" class="color_black underline_hover padding_x_small text_medium background_color_white cursor" name="submit" value="Envoyer"/></div>
+</div>
 
 
 <script>
@@ -24,7 +26,7 @@
     }*/
 
     let output = document.getElementById('output');
-    let buttons = document.getElementsByClassName('tool--btn');
+    let buttons = document.getElementsByClassName('button_text_editor');
 
 
     for (let btn of buttons) {
@@ -44,5 +46,6 @@
         {
           document.execCommand(cmd, false, null);
         }
+        
       })
     }</script>
