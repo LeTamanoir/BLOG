@@ -21,18 +21,18 @@ class Table{
         return $this->query('SELECT * FROM ' . $this->table);
     }
 
-    public function query($statement, $attributes = null, $one = false){
+    public function query($statement, $attributes = null){
         if($attributes){
             return $this->db->prepare(
             $statement,
             $attributes,
             str_replace('Table','Entity', get_class($this)),
-            $one);
+            );
         }else{
             return $this->db->query(
             $statement,
             str_replace('Table','Entity', get_class($this)),
-            $one);
+            );
 
         }
     }
@@ -62,10 +62,9 @@ class Table{
         foreach($fields as $k => $v){
             $sql_parts[] = "$k = ?";
             $attributes[] = $v;
-
         }
         $sql_part = implode(', ',$sql_parts);
-        return $this->query("INSERT INTO {$this->table} SET $sql_part", $attributes, true);
+        return $this->query("INSERT INTO {$this->table} SET $sql_part", $attributes, null);
     }
 
 }

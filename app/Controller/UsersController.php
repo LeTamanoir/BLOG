@@ -1,12 +1,11 @@
 <?php 
-
 namespace App\Controller;
 use Core\Controller\Controller;
-use Core\Table\Table;
 use App;
+use Core\Table\Table;
+
 
 class UsersController extends AppController{
-
 
     public function login(){
 
@@ -32,12 +31,17 @@ class UsersController extends AppController{
         $this->template = 'admin/default';
 
         if(!empty($_POST)){
-            //$attributes = [$_POST['title'],$_POST['content']];
-            //$this->query("INSERT INTO posts SET title = ?, content = ?", $attributes, true);
-            die('ok');
+            $postTable = App::getInstance()->getTable('Post');
+            $result = $postTable->create([
+                'title'=>$_POST['title'],
+                'content'=>$_POST['content'],
+                'date'=>date('Y-m-d H:i:s')
+            ]);
+            $success = "Post has been added !";
+            
         }
         $form = new \Core\HTML\TextEditorForm($_POST);
-        $this->render('users.textEditor', compact('form'));
+        $this->render('users.textEditor', compact('form','success'), true);
     }
 }
 

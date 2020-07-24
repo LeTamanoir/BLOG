@@ -6,15 +6,16 @@ use Core\Table\Table;
 
 class PostTable extends Table{
 
+    protected $table = "posts";
+
     /**
      * Récupère les derniers articles
      * @return array
      */
     public function last(){
         return $this->query("
-        SELECT posts.id, posts.title, posts.content, posts.date, categories.title as categorie
+        SELECT posts.id, posts.title, posts.content, posts.date
         FROM posts
-        LEFT JOIN categories ON category_id = categories.id
         ORDER BY posts.date DESC"
         );
     }
@@ -47,6 +48,7 @@ class PostTable extends Table{
         ORDER BY posts.date DESC
         ", [$category_id]);
     }
+
     
 
     

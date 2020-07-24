@@ -10,6 +10,8 @@
     <?= $form->button('insertUnorderedList','Unordered-List'); ?>
     <?= $form->button('createlink','Clip-Link'); ?>
   </div>
+  
+  <p style="color: green"><?= $success ?></p>
   <form action="" method="post">
   <input type="text" name="title" placeholder="Veuillez rentrer un titre"/>
   <div id=output autofocus contenteditable=true></div>
@@ -18,9 +20,6 @@
   </form>
 </div>
   
-
-
-
 <script>
   var oSrce = document.getElementById('output');
   var oDest = document.getElementById('output2');
@@ -29,17 +28,8 @@
     oDest.value = oSrce.innerHTML;
      
   };
-
-    /*let size_text = '';
-    function size(x)
-    {
-      size_text = x;
-
-    }*/
-
     let output = document.getElementById('output');
     let buttons = document.getElementsByClassName('button_text_editor');
-
 
     for (let btn of buttons) {
       btn.addEventListener('click', () => {

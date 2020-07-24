@@ -1,4 +1,5 @@
 <?php
+
 use Core\Auth\DBAuth;
 use App\Controller\HomeController;
 use App\Controller\UsersController;

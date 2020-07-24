@@ -14,8 +14,6 @@ class Controller{
         require($this->viewPath . str_replace('.','/', $view) . '.php');
         $content = ob_get_clean();
         require($this->viewPath . 'templates/'.$this->template . '.php');
-
-
     }
     
 }
