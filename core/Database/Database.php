@@ -11,8 +11,7 @@ class Database{
     private $db_host;
     private $pdo;
 
-    public function __construct($db_name, $db_user = 'dbu931678', $db_pass = 'd@t@b@se_BLOG2', $db_host = '
-    db5000559545.hosting-data.io'){
+    public function __construct($db_name, $db_user = 'user', $db_pass = 'password', $db_host = 'host'){
 
         $this->db_name = $db_name;
         $this->db_user = $db_user;
@@ -22,7 +21,7 @@ class Database{
 
     private function getPDO(){
         if($this->pdo == null){
-            $pdo = new PDO('mysql:dbname=dbs537210;host=db5000559545.hosting-data.io', 'dbu931678', 'd@t@b@se_BLOG2');
+            $pdo = new PDO('mysql:dbname=dname;host=host', 'user', 'password');
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $this->pdo = $pdo;
         }        
